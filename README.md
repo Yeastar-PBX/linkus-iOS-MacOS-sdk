@@ -1,1 +1,1 @@
-# linkus-ios-sdk
+# linkus-ios-sdk-vivo
