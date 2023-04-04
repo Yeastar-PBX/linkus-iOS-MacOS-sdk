@@ -22,6 +22,6 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo.git", :tag => "#{spec.version}" }
 
-  spec.vendored_frameworks ='YeastarLinkus.framework'
+  spec.vendored_frameworks ='Bugly.framework'
 
 end
