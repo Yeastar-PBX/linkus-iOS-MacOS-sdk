@@ -1,0 +1,6 @@
+framework module YeastarLinkus {
+  umbrella header "YeastarLinkus.h"
+
+  export *
+  module * { export * }
+}
