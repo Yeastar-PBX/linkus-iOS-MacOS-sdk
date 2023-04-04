@@ -12,6 +12,6 @@
 #import <YeastarLinkus/YLSCallManager.h>
 #import <YeastarLinkus/YLSCallStatusManager.h>
 #import <YeastarLinkus/YLSPJRegister.h>
-#import <YeastarLinkus/NetWorkStatusObserver.h>
+//#import <YeastarLinkus/NetWorkStatusObserver.h>
 
 

@@ -22,7 +22,6 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo.git", :tag => "#{spec.version}" }
 
-
-  spec.source_files  = "GroupedData/GroupedData/GroupData/**/*.{h,m}"
+  spec.vendored_frameworks ='YeastarLinkus.framework'
 
 end

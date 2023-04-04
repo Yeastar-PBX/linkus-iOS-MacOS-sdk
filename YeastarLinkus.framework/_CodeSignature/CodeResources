@@ -8,10 +8,6 @@
 		<data>
 		CMnpvkt5fqsmU5JQf5D0OmSQ4IE=
 		</data>
-		<key>Headers/NetWorkStatusObserver.h</key>
-		<data>
-		r42VMvpLddWc9nTRXubN/qdlnCI=
-		</data>
 		<key>Headers/YLSCallManager.h</key>
 		<data>
 		eGx3CTG/B0vOGALdrH+2lTRUvo4=
@@ -34,7 +30,7 @@
 		</data>
 		<key>Headers/YeastarLinkus.h</key>
 		<data>
-		8FldgJ8dEP0vBtXt9hjHfVC2eas=
+		EQ/CJFe9ABlT40lGBs7pbK1Dx4g=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -84,17 +80,6 @@
 			<key>hash2</key>
 			<data>
 			9CAa7BTsUR9IFN8zkFSeRRFOU7qXjtG+TaSCXdk9PnE=
-			</data>
-		</dict>
-		<key>Headers/NetWorkStatusObserver.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			r42VMvpLddWc9nTRXubN/qdlnCI=
-			</data>
-			<key>hash2</key>
-			<data>
-			o+Hn0H707mbXTKF/HUdtJCyjTXV5faAV1z1ESDGFxo0=
 			</data>
 		</dict>
 		<key>Headers/YLSCallManager.h</key>
@@ -156,11 +141,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8FldgJ8dEP0vBtXt9hjHfVC2eas=
+			EQ/CJFe9ABlT40lGBs7pbK1Dx4g=
 			</data>
 			<key>hash2</key>
 			<data>
-			1hW2iDH+p67wXDMe2yS20iAipeHkbq64iQMMxjlVhZo=
+			Vl1VpPUNt45xEAmKjwimtvDGFjjJ55k7bUupsQxKF78=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
