@@ -30,15 +30,23 @@
 		</data>
 		<key>Headers/YeastarLinkus.h</key>
 		<data>
-		EQ/CJFe9ABlT40lGBs7pbK1Dx4g=
+		8FldgJ8dEP0vBtXt9hjHfVC2eas=
 		</data>
 		<key>Info.plist</key>
 		<data>
 		XWaxpPZeC+i4uka581LyzZuRqzI=
 		</data>
+		<key>LICENSE</key>
+		<data>
+		vB+8EGyMPmX9iEJqamraEzQM6hY=
+		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		Z5T9oJ+cfRsNF5cDHYFxlZ+Lczc=
+		</data>
+		<key>README.md</key>
+		<data>
+		37dTP+LxW9Nu0ucLmPZbs1qXR0Y=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -113,11 +121,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EQ/CJFe9ABlT40lGBs7pbK1Dx4g=
+			8FldgJ8dEP0vBtXt9hjHfVC2eas=
 			</data>
 			<key>hash2</key>
 			<data>
-			Vl1VpPUNt45xEAmKjwimtvDGFjjJ55k7bUupsQxKF78=
+			1hW2iDH+p67wXDMe2yS20iAipeHkbq64iQMMxjlVhZo=
+			</data>
+		</dict>
+		<key>LICENSE</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vB+8EGyMPmX9iEJqamraEzQM6hY=
+			</data>
+			<key>hash2</key>
+			<data>
+			3mcak3UDMwjbTdYqXeAv11+NBEHAabLm0B+zGC1+0jA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -129,6 +148,17 @@
 			<key>hash2</key>
 			<data>
 			ttPokWt255z01m6+deTcFmeE6TizLr/fgltgYAphnkA=
+			</data>
+		</dict>
+		<key>README.md</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			37dTP+LxW9Nu0ucLmPZbs1qXR0Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			4E4xWnOI/+D9W/sQksgB8bzX67imV4l39dvjKOIt6ps=
 			</data>
 		</dict>
 	</dict>
