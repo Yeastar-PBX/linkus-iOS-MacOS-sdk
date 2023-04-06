@@ -31,7 +31,7 @@
     pushRegistry.delegate = self;
     pushRegistry.desiredPushTypes = [NSSet setWithObject:PKPushTypeVoIP];
 
-//    [[NetWorkStatusObserver sharedNetWorkStatusObserver] startMonitoring];
+    [[NetWorkStatusObserver sharedNetWorkStatusObserver] startMonitoring];
     
     return YES;
 }
