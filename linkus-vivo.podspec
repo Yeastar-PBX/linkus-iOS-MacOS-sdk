@@ -23,6 +23,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true  
   spec.platform     = :ios, "11.0"
   spec.vendored_frameworks ='YeastarLinkus.framework'
-  spec.library = 'xmls','c++'
+  spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libc++" }
 
 end
