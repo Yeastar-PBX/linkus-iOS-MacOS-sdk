@@ -1,7 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (macOS)/Pods-LinkusDemo (macOS)-frameworks.sh
-${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
-${BUILT_PRODUCTS_DIR}/OptimizedSQLCipher/sqlcipher.framework
-${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
-${BUILT_PRODUCTS_DIR}/SDWebImageSwiftUI/SDWebImageSwiftUI.framework
-${BUILT_PRODUCTS_DIR}/SQLiteRepair/sqliterk.framework
-${BUILT_PRODUCTS_DIR}/WCDBSwift/WCDBSwift.framework
