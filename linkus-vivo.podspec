@@ -4,15 +4,14 @@
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#  spec.vendored_frameworks ='Bugly.framework'
 #  spec.frameworks = 'SystemConfiguration','Security'
-#  spec.library = 'z','c++'
+#  
 
 
 Pod::Spec.new do |spec|
 
   spec.name         = "linkus-vivo"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.4"
   spec.summary      = "为V消息提供Sip通话能力"
 
   spec.homepage     = "https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo.git"
@@ -23,6 +22,7 @@ Pod::Spec.new do |spec|
 
   spec.requires_arc = true  
   spec.platform     = :ios, "11.0"
-  spec.source_files  = "GroupedData/GroupedData/GroupData/**/*.{h,m}"
+  spec.vendored_frameworks ='YeastarLinkus.framework'
+  spec.library = 'xmls','c++'
 
 end
