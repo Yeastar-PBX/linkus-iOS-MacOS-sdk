@@ -3,213 +3,697 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59D0F0C529DE6129006BC5A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0F0C429DE6129006BC5A5 /* AppDelegate.m */; };
-		59D0F0C829DE6129006BC5A5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0F0C729DE6129006BC5A5 /* SceneDelegate.m */; };
-		59D0F0CB29DE6129006BC5A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0F0CA29DE6129006BC5A5 /* ViewController.m */; };
-		59D0F0CE29DE6129006BC5A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D0F0CC29DE6129006BC5A5 /* Main.storyboard */; };
-		59D0F0D029DE612B006BC5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D0F0CF29DE612B006BC5A5 /* Assets.xcassets */; };
-		59D0F0D329DE612B006BC5A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D0F0D129DE612B006BC5A5 /* LaunchScreen.storyboard */; };
-		59D0F0D629DE612B006BC5A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0F0D529DE612B006BC5A5 /* main.m */; };
-		59D0F0F429DE738F006BC5A5 /* YeastarLinkus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0F0F329DE738F006BC5A5 /* YeastarLinkus.framework */; };
-		59D0F0F529DE738F006BC5A5 /* YeastarLinkus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 59D0F0F329DE738F006BC5A5 /* YeastarLinkus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C392DD729D56FB2006C8E6F /* LinkusDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C392DC629D56FB0006C8E6F /* LinkusDemoApp.swift */; };
+		0C392DD929D56FB2006C8E6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C392DC729D56FB0006C8E6F /* ContentView.swift */; };
+		0C392DDA29D56FB2006C8E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C392DC829D56FB2006C8E6F /* Assets.xcassets */; };
+		0C392DDB29D56FB2006C8E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C392DC829D56FB2006C8E6F /* Assets.xcassets */; };
+		494ECB49BD690BE7A5B795DB /* Pods_LinkusDemo__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */; };
+		59029FF829D5838E00E41926 /* CalllogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FC529D5838D00E41926 /* CalllogsViewController.m */; };
+		59029FF929D5838E00E41926 /* DialpadViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FC829D5838D00E41926 /* DialpadViewCell.m */; };
+		59029FFA29D5838E00E41926 /* DialpadCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FCD29D5838D00E41926 /* DialpadCallView.m */; };
+		59029FFB29D5838E00E41926 /* DialPadTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FCE29D5838D00E41926 /* DialPadTextField.m */; };
+		59029FFC29D5838E00E41926 /* DialpadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FCF29D5838D00E41926 /* DialpadView.m */; };
+		59029FFD29D5838E00E41926 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FD229D5838D00E41926 /* Contact.m */; };
+		59029FFE29D5838E00E41926 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FD529D5838D00E41926 /* LoginViewController.m */; };
+		59029FFF29D5838E00E41926 /* YLSUnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FD629D5838D00E41926 /* YLSUnderlineTextField.m */; };
+		5902A00029D5838E00E41926 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FD929D5838D00E41926 /* AppDelegate.m */; };
+		5902A00129D5838E00E41926 /* AudioRouteHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FDC29D5838D00E41926 /* AudioRouteHandler.m */; };
+		5902A00229D5838E00E41926 /* MenuPanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FDD29D5838D00E41926 /* MenuPanModel.m */; };
+		5902A00329D5838E00E41926 /* MenuPanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FE029D5838E00E41926 /* MenuPanView.m */; };
+		5902A00429D5838E00E41926 /* PanHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FE429D5838E00E41926 /* PanHandler.m */; };
+		5902A00529D5838E00E41926 /* MenuPanViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FE529D5838E00E41926 /* MenuPanViewCell.m */; };
+		5902A00629D5838E00E41926 /* CallWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FE829D5838E00E41926 /* CallWaitingView.m */; };
+		5902A00729D5838E00E41926 /* CallTransferView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FEA29D5838E00E41926 /* CallTransferView.m */; };
+		5902A00829D5838E00E41926 /* MarqueeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FEB29D5838E00E41926 /* MarqueeView.m */; };
+		5902A00929D5838E00E41926 /* CallMemberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FEC29D5838E00E41926 /* CallMemberView.m */; };
+		5902A00A29D5838E00E41926 /* DialKeypadViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FF429D5838E00E41926 /* DialKeypadViewCell.m */; };
+		5902A00B29D5838E00E41926 /* DialKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FF529D5838E00E41926 /* DialKeypadView.m */; };
+		5902A00C29D5838E00E41926 /* CallProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FF629D5838E00E41926 /* CallProvider.m */; };
+		5902A00D29D5838E00E41926 /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FF729D5838E00E41926 /* CallViewController.m */; };
+		5902A00F29D5849E00E41926 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902A00E29D5849E00E41926 /* UIKit.framework */; };
+		5902A02C29D5887600E41926 /* UIImage+YLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A01529D5887600E41926 /* UIImage+YLS.m */; };
+		5902A02D29D5887600E41926 /* UIView+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A01829D5887600E41926 /* UIView+Alert.m */; };
+		5902A02E29D5887600E41926 /* UIDevice+YLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A01B29D5887600E41926 /* UIDevice+YLS.m */; };
+		5902A02F29D5887600E41926 /* NSString+YLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A01D29D5887600E41926 /* NSString+YLS.m */; };
+		5902A03029D5887600E41926 /* UIViewController+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A02129D5887600E41926 /* UIViewController+Hierarchy.m */; };
+		5902A03129D5887600E41926 /* UITextField+YLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A02429D5887600E41926 /* UITextField+YLS.m */; };
+		5902A03229D5887600E41926 /* DefActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A02729D5887600E41926 /* DefActionView.m */; };
+		5902A03329D5887600E41926 /* NotifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A02829D5887600E41926 /* NotifyView.m */; };
+		5902A03429D5887600E41926 /* QualityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A02929D5887600E41926 /* QualityView.m */; };
+		5902A03C29D58C7500E41926 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5902A03B29D58C7500E41926 /* Storyboard.storyboard */; };
+		5902AED629D6A8E300E41926 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
+		5902AEFD29D6ACAA00E41926 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AEF929D6AC0E00E41926 /* libc++.tbd */; };
+		5937A8EB29D577550089B0A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5937A8EA29D577550089B0A2 /* main.m */; };
+		A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		59D0F0E029DE6170006BC5A5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				59D0F0F529DE738F006BC5A5 /* YeastarLinkus.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		59D0F0C029DE6129006BC5A5 /* LinkusDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkusDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		59D0F0C329DE6129006BC5A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		59D0F0C429DE6129006BC5A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		59D0F0C629DE6129006BC5A5 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		59D0F0C729DE6129006BC5A5 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		59D0F0C929DE6129006BC5A5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		59D0F0CA29DE6129006BC5A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		59D0F0CD29DE6129006BC5A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		59D0F0CF29DE612B006BC5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		59D0F0D229DE612B006BC5A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		59D0F0D429DE612B006BC5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59D0F0D529DE612B006BC5A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		59D0F0F329DE738F006BC5A5 /* YeastarLinkus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YeastarLinkus.framework; sourceTree = "<group>"; };
+		0C392DC629D56FB0006C8E6F /* LinkusDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkusDemoApp.swift; sourceTree = "<group>"; };
+		0C392DC729D56FB0006C8E6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0C392DC829D56FB2006C8E6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C392DCD29D56FB2006C8E6F /* LinkusDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkusDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C392DD329D56FB2006C8E6F /* LinkusDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkusDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C392DD529D56FB2006C8E6F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		16F932768551D1340252FA57 /* Pods-LinkusDemo (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (macOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (macOS)/Pods-LinkusDemo (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		307EF8EE4F0D0BE6AA7F6F55 /* Pods-LinkusDemo (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (macOS).release.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (macOS)/Pods-LinkusDemo (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		30895D9E68FA529573BE55AA /* Pods-LinkusDemo (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).release.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		59029FC529D5838D00E41926 /* CalllogsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalllogsViewController.m; sourceTree = "<group>"; };
+		59029FC629D5838D00E41926 /* CalllogsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalllogsViewController.h; sourceTree = "<group>"; };
+		59029FC829D5838D00E41926 /* DialpadViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialpadViewCell.m; sourceTree = "<group>"; };
+		59029FC929D5838D00E41926 /* DialPadTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialPadTextField.h; sourceTree = "<group>"; };
+		59029FCA29D5838D00E41926 /* DialpadCallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialpadCallView.h; sourceTree = "<group>"; };
+		59029FCB29D5838D00E41926 /* DialpadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialpadView.h; sourceTree = "<group>"; };
+		59029FCC29D5838D00E41926 /* DialpadViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialpadViewCell.h; sourceTree = "<group>"; };
+		59029FCD29D5838D00E41926 /* DialpadCallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialpadCallView.m; sourceTree = "<group>"; };
+		59029FCE29D5838D00E41926 /* DialPadTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialPadTextField.m; sourceTree = "<group>"; };
+		59029FCF29D5838D00E41926 /* DialpadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialpadView.m; sourceTree = "<group>"; };
+		59029FD029D5838D00E41926 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		59029FD229D5838D00E41926 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		59029FD329D5838D00E41926 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		59029FD529D5838D00E41926 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		59029FD629D5838D00E41926 /* YLSUnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSUnderlineTextField.m; sourceTree = "<group>"; };
+		59029FD729D5838D00E41926 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		59029FD829D5838D00E41926 /* YLSUnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSUnderlineTextField.h; sourceTree = "<group>"; };
+		59029FD929D5838D00E41926 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		59029FDC29D5838D00E41926 /* AudioRouteHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioRouteHandler.m; sourceTree = "<group>"; };
+		59029FDD29D5838D00E41926 /* MenuPanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuPanModel.m; sourceTree = "<group>"; };
+		59029FDE29D5838D00E41926 /* MenuPanViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPanViewCell.h; sourceTree = "<group>"; };
+		59029FDF29D5838D00E41926 /* PanHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanHandler.h; sourceTree = "<group>"; };
+		59029FE029D5838E00E41926 /* MenuPanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuPanView.m; sourceTree = "<group>"; };
+		59029FE129D5838E00E41926 /* MenuPanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPanModel.h; sourceTree = "<group>"; };
+		59029FE229D5838E00E41926 /* AudioRouteHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioRouteHandler.h; sourceTree = "<group>"; };
+		59029FE329D5838E00E41926 /* MenuPanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPanView.h; sourceTree = "<group>"; };
+		59029FE429D5838E00E41926 /* PanHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanHandler.m; sourceTree = "<group>"; };
+		59029FE529D5838E00E41926 /* MenuPanViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuPanViewCell.m; sourceTree = "<group>"; };
+		59029FE729D5838E00E41926 /* MarqueeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeView.h; sourceTree = "<group>"; };
+		59029FE829D5838E00E41926 /* CallWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallWaitingView.m; sourceTree = "<group>"; };
+		59029FE929D5838E00E41926 /* CallMemberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallMemberView.h; sourceTree = "<group>"; };
+		59029FEA29D5838E00E41926 /* CallTransferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallTransferView.m; sourceTree = "<group>"; };
+		59029FEB29D5838E00E41926 /* MarqueeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeView.m; sourceTree = "<group>"; };
+		59029FEC29D5838E00E41926 /* CallMemberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallMemberView.m; sourceTree = "<group>"; };
+		59029FED29D5838E00E41926 /* CallWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallWaitingView.h; sourceTree = "<group>"; };
+		59029FEE29D5838E00E41926 /* CallTransferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallTransferView.h; sourceTree = "<group>"; };
+		59029FEF29D5838E00E41926 /* CallProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallProvider.h; sourceTree = "<group>"; };
+		59029FF029D5838E00E41926 /* CallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallViewController.h; sourceTree = "<group>"; };
+		59029FF229D5838E00E41926 /* DialKeypadViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialKeypadViewCell.h; sourceTree = "<group>"; };
+		59029FF329D5838E00E41926 /* DialKeypadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialKeypadView.h; sourceTree = "<group>"; };
+		59029FF429D5838E00E41926 /* DialKeypadViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialKeypadViewCell.m; sourceTree = "<group>"; };
+		59029FF529D5838E00E41926 /* DialKeypadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialKeypadView.m; sourceTree = "<group>"; };
+		59029FF629D5838E00E41926 /* CallProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallProvider.m; sourceTree = "<group>"; };
+		59029FF729D5838E00E41926 /* CallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallViewController.m; sourceTree = "<group>"; };
+		5902A00E29D5849E00E41926 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5902A01029D584E100E41926 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5902A01429D5887600E41926 /* UIImage+YLS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YLS.h"; sourceTree = "<group>"; };
+		5902A01529D5887600E41926 /* UIImage+YLS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YLS.m"; sourceTree = "<group>"; };
+		5902A01729D5887600E41926 /* UIView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Alert.h"; sourceTree = "<group>"; };
+		5902A01829D5887600E41926 /* UIView+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Alert.m"; sourceTree = "<group>"; };
+		5902A01A29D5887600E41926 /* UIDevice+YLS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+YLS.h"; sourceTree = "<group>"; };
+		5902A01B29D5887600E41926 /* UIDevice+YLS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+YLS.m"; sourceTree = "<group>"; };
+		5902A01D29D5887600E41926 /* NSString+YLS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YLS.m"; sourceTree = "<group>"; };
+		5902A01E29D5887600E41926 /* NSString+YLS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YLS.h"; sourceTree = "<group>"; };
+		5902A02029D5887600E41926 /* UIViewController+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Hierarchy.h"; sourceTree = "<group>"; };
+		5902A02129D5887600E41926 /* UIViewController+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Hierarchy.m"; sourceTree = "<group>"; };
+		5902A02329D5887600E41926 /* UITextField+YLS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+YLS.h"; sourceTree = "<group>"; };
+		5902A02429D5887600E41926 /* UITextField+YLS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+YLS.m"; sourceTree = "<group>"; };
+		5902A02629D5887600E41926 /* QualityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QualityView.h; sourceTree = "<group>"; };
+		5902A02729D5887600E41926 /* DefActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefActionView.m; sourceTree = "<group>"; };
+		5902A02829D5887600E41926 /* NotifyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyView.m; sourceTree = "<group>"; };
+		5902A02929D5887600E41926 /* QualityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QualityView.m; sourceTree = "<group>"; };
+		5902A02A29D5887600E41926 /* NotifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyView.h; sourceTree = "<group>"; };
+		5902A02B29D5887600E41926 /* DefActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefActionView.h; sourceTree = "<group>"; };
+		5902A03629D589A800E41926 /* LocalFontConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFontConfig.h; sourceTree = "<group>"; };
+		5902A03729D589A800E41926 /* LocalPathConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalPathConfig.h; sourceTree = "<group>"; };
+		5902A03829D589A800E41926 /* LocalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalConfig.h; sourceTree = "<group>"; };
+		5902A03929D589A800E41926 /* LoginConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginConfig.h; sourceTree = "<group>"; };
+		5902A03A29D58A6D00E41926 /* LinkusDemo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkusDemo--iOS--Info.plist"; sourceTree = "<group>"; };
+		5902A03B29D58C7500E41926 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		5902AED529D6A8CF00E41926 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
+		5902AEF929D6AC0E00E41926 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
+		5937A8E529D576470089B0A2 /* LinkusDemo (iOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinkusDemo (iOS)-Bridging-Header.h"; sourceTree = "<group>"; };
+		5937A8EA29D577550089B0A2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		59D0F0BD29DE6129006BC5A5 /* Frameworks */ = {
+		0C392DCA29D56FB2006C8E6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59D0F0F429DE738F006BC5A5 /* YeastarLinkus.framework in Frameworks */,
+				5902AEFD29D6ACAA00E41926 /* libc++.tbd in Frameworks */,
+				5902AED629D6A8E300E41926 /* libxml2.tbd in Frameworks */,
+				5902A00F29D5849E00E41926 /* UIKit.framework in Frameworks */,
+				A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C392DD029D56FB2006C8E6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494ECB49BD690BE7A5B795DB /* Pods_LinkusDemo__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		59D0F0B729DE6129006BC5A5 = {
+		0C392DC029D56FB0006C8E6F = {
 			isa = PBXGroup;
 			children = (
-				59D0F0C229DE6129006BC5A5 /* LinkusDemo */,
-				59D0F0C129DE6129006BC5A5 /* Products */,
-				59D0F0DC29DE6170006BC5A5 /* Frameworks */,
+				5937A8E429D576030089B0A2 /* iOS */,
+				0C392DD429D56FB2006C8E6F /* macOS */,
+				0C392DC529D56FB0006C8E6F /* Shared */,
+				5937A8E929D576B30089B0A2 /* Supporting Files */,
+				0C392DCE29D56FB2006C8E6F /* Products */,
+				5937A8EC29D5778F0089B0A2 /* Frameworks */,
+				E354D6B2201469225EE7F4BA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
-		59D0F0C129DE6129006BC5A5 /* Products */ = {
+		0C392DC529D56FB0006C8E6F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				59D0F0C029DE6129006BC5A5 /* LinkusDemo.app */,
+				0C392DC629D56FB0006C8E6F /* LinkusDemoApp.swift */,
+				0C392DC729D56FB0006C8E6F /* ContentView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		0C392DCE29D56FB2006C8E6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C392DCD29D56FB2006C8E6F /* LinkusDemo.app */,
+				0C392DD329D56FB2006C8E6F /* LinkusDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		59D0F0C229DE6129006BC5A5 /* LinkusDemo */ = {
+		0C392DD429D56FB2006C8E6F /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				59D0F0C329DE6129006BC5A5 /* AppDelegate.h */,
-				59D0F0C429DE6129006BC5A5 /* AppDelegate.m */,
-				59D0F0C629DE6129006BC5A5 /* SceneDelegate.h */,
-				59D0F0C729DE6129006BC5A5 /* SceneDelegate.m */,
-				59D0F0C929DE6129006BC5A5 /* ViewController.h */,
-				59D0F0CA29DE6129006BC5A5 /* ViewController.m */,
-				59D0F0CC29DE6129006BC5A5 /* Main.storyboard */,
-				59D0F0CF29DE612B006BC5A5 /* Assets.xcassets */,
-				59D0F0D129DE612B006BC5A5 /* LaunchScreen.storyboard */,
-				59D0F0D429DE612B006BC5A5 /* Info.plist */,
-				59D0F0D529DE612B006BC5A5 /* main.m */,
+				0C392DD529D56FB2006C8E6F /* macOS.entitlements */,
 			);
-			path = LinkusDemo;
+			path = macOS;
 			sourceTree = "<group>";
 		};
-		59D0F0DC29DE6170006BC5A5 /* Frameworks */ = {
+		59029FC429D5838D00E41926 /* Calllogs */ = {
 			isa = PBXGroup;
 			children = (
-				59D0F0F329DE738F006BC5A5 /* YeastarLinkus.framework */,
+				59029FC629D5838D00E41926 /* CalllogsViewController.h */,
+				59029FC529D5838D00E41926 /* CalllogsViewController.m */,
+				59029FC729D5838D00E41926 /* Dialpad */,
+			);
+			path = Calllogs;
+			sourceTree = "<group>";
+		};
+		59029FC729D5838D00E41926 /* Dialpad */ = {
+			isa = PBXGroup;
+			children = (
+				59029FCB29D5838D00E41926 /* DialpadView.h */,
+				59029FCF29D5838D00E41926 /* DialpadView.m */,
+				59029FCC29D5838D00E41926 /* DialpadViewCell.h */,
+				59029FC829D5838D00E41926 /* DialpadViewCell.m */,
+				59029FC929D5838D00E41926 /* DialPadTextField.h */,
+				59029FCE29D5838D00E41926 /* DialPadTextField.m */,
+				59029FCA29D5838D00E41926 /* DialpadCallView.h */,
+				59029FCD29D5838D00E41926 /* DialpadCallView.m */,
+			);
+			path = Dialpad;
+			sourceTree = "<group>";
+		};
+		59029FD129D5838D00E41926 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				59029FD329D5838D00E41926 /* Contact.h */,
+				59029FD229D5838D00E41926 /* Contact.m */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		59029FD429D5838D00E41926 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				59029FD729D5838D00E41926 /* LoginViewController.h */,
+				59029FD529D5838D00E41926 /* LoginViewController.m */,
+				59029FD829D5838D00E41926 /* YLSUnderlineTextField.h */,
+				59029FD629D5838D00E41926 /* YLSUnderlineTextField.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		59029FDA29D5838D00E41926 /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				59029FEF29D5838E00E41926 /* CallProvider.h */,
+				59029FF629D5838E00E41926 /* CallProvider.m */,
+				59029FF029D5838E00E41926 /* CallViewController.h */,
+				59029FF729D5838E00E41926 /* CallViewController.m */,
+				59029FE629D5838E00E41926 /* CallMemberView */,
+				59029FF129D5838E00E41926 /* DialkeypadView */,
+				59029FDB29D5838D00E41926 /* MenuPanView */,
+			);
+			path = Call;
+			sourceTree = "<group>";
+		};
+		59029FDB29D5838D00E41926 /* MenuPanView */ = {
+			isa = PBXGroup;
+			children = (
+				59029FE329D5838E00E41926 /* MenuPanView.h */,
+				59029FE029D5838E00E41926 /* MenuPanView.m */,
+				59029FE129D5838E00E41926 /* MenuPanModel.h */,
+				59029FDD29D5838D00E41926 /* MenuPanModel.m */,
+				59029FDE29D5838D00E41926 /* MenuPanViewCell.h */,
+				59029FE529D5838E00E41926 /* MenuPanViewCell.m */,
+				59029FE229D5838E00E41926 /* AudioRouteHandler.h */,
+				59029FDC29D5838D00E41926 /* AudioRouteHandler.m */,
+				59029FDF29D5838D00E41926 /* PanHandler.h */,
+				59029FE429D5838E00E41926 /* PanHandler.m */,
+			);
+			path = MenuPanView;
+			sourceTree = "<group>";
+		};
+		59029FE629D5838E00E41926 /* CallMemberView */ = {
+			isa = PBXGroup;
+			children = (
+				59029FE929D5838E00E41926 /* CallMemberView.h */,
+				59029FEC29D5838E00E41926 /* CallMemberView.m */,
+				59029FEE29D5838E00E41926 /* CallTransferView.h */,
+				59029FEA29D5838E00E41926 /* CallTransferView.m */,
+				59029FED29D5838E00E41926 /* CallWaitingView.h */,
+				59029FE829D5838E00E41926 /* CallWaitingView.m */,
+				59029FE729D5838E00E41926 /* MarqueeView.h */,
+				59029FEB29D5838E00E41926 /* MarqueeView.m */,
+			);
+			path = CallMemberView;
+			sourceTree = "<group>";
+		};
+		59029FF129D5838E00E41926 /* DialkeypadView */ = {
+			isa = PBXGroup;
+			children = (
+				59029FF329D5838E00E41926 /* DialKeypadView.h */,
+				59029FF529D5838E00E41926 /* DialKeypadView.m */,
+				59029FF229D5838E00E41926 /* DialKeypadViewCell.h */,
+				59029FF429D5838E00E41926 /* DialKeypadViewCell.m */,
+			);
+			path = DialkeypadView;
+			sourceTree = "<group>";
+		};
+		5902A01129D5884700E41926 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				5902A02529D5887600E41926 /* CustomControls */,
+				5902A01229D5887600E41926 /* Category */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		5902A01229D5887600E41926 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5902A01329D5887600E41926 /* UIImage */,
+				5902A01629D5887600E41926 /* Alert */,
+				5902A01929D5887600E41926 /* UIDevice */,
+				5902A01C29D5887600E41926 /* NSString */,
+				5902A01F29D5887600E41926 /* UIViewController */,
+				5902A02229D5887600E41926 /* UITextField */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5902A01329D5887600E41926 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				5902A01429D5887600E41926 /* UIImage+YLS.h */,
+				5902A01529D5887600E41926 /* UIImage+YLS.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		5902A01629D5887600E41926 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				5902A01729D5887600E41926 /* UIView+Alert.h */,
+				5902A01829D5887600E41926 /* UIView+Alert.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		5902A01929D5887600E41926 /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				5902A01A29D5887600E41926 /* UIDevice+YLS.h */,
+				5902A01B29D5887600E41926 /* UIDevice+YLS.m */,
+			);
+			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		5902A01C29D5887600E41926 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				5902A01E29D5887600E41926 /* NSString+YLS.h */,
+				5902A01D29D5887600E41926 /* NSString+YLS.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		5902A01F29D5887600E41926 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5902A02029D5887600E41926 /* UIViewController+Hierarchy.h */,
+				5902A02129D5887600E41926 /* UIViewController+Hierarchy.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		5902A02229D5887600E41926 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				5902A02329D5887600E41926 /* UITextField+YLS.h */,
+				5902A02429D5887600E41926 /* UITextField+YLS.m */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		5902A02529D5887600E41926 /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				5902A02629D5887600E41926 /* QualityView.h */,
+				5902A02729D5887600E41926 /* DefActionView.m */,
+				5902A02829D5887600E41926 /* NotifyView.m */,
+				5902A02929D5887600E41926 /* QualityView.m */,
+				5902A02A29D5887600E41926 /* NotifyView.h */,
+				5902A02B29D5887600E41926 /* DefActionView.h */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		5902A03529D589A800E41926 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				5902A03829D589A800E41926 /* LocalConfig.h */,
+				5902A03629D589A800E41926 /* LocalFontConfig.h */,
+				5902A03729D589A800E41926 /* LocalPathConfig.h */,
+				5902A03929D589A800E41926 /* LoginConfig.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		5937A8E429D576030089B0A2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				59029FD029D5838D00E41926 /* AppDelegate.h */,
+				59029FD929D5838D00E41926 /* AppDelegate.m */,
+				5902A03529D589A800E41926 /* Config */,
+				59029FDA29D5838D00E41926 /* Call */,
+				59029FC429D5838D00E41926 /* Calllogs */,
+				59029FD129D5838D00E41926 /* Contact */,
+				59029FD429D5838D00E41926 /* Login */,
+				5902A01129D5884700E41926 /* Expand */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		5937A8E929D576B30089B0A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5902A03A29D58A6D00E41926 /* LinkusDemo--iOS--Info.plist */,
+				5937A8EA29D577550089B0A2 /* main.m */,
+				5902A03B29D58C7500E41926 /* Storyboard.storyboard */,
+				5902A01029D584E100E41926 /* PrefixHeader.pch */,
+				5937A8E529D576470089B0A2 /* LinkusDemo (iOS)-Bridging-Header.h */,
+				0C392DC829D56FB2006C8E6F /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5937A8EC29D5778F0089B0A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5902AEF929D6AC0E00E41926 /* libc++.tbd */,
+				5902AED529D6A8CF00E41926 /* libxml2.tbd */,
+				5902A00E29D5849E00E41926 /* UIKit.framework */,
+				7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */,
+				775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E354D6B2201469225EE7F4BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */,
+				30895D9E68FA529573BE55AA /* Pods-LinkusDemo (iOS).release.xcconfig */,
+				16F932768551D1340252FA57 /* Pods-LinkusDemo (macOS).debug.xcconfig */,
+				307EF8EE4F0D0BE6AA7F6F55 /* Pods-LinkusDemo (macOS).release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		59D0F0BF29DE6129006BC5A5 /* LinkusDemo */ = {
+		0C392DCC29D56FB2006C8E6F /* LinkusDemo (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 59D0F0D929DE612B006BC5A5 /* Build configuration list for PBXNativeTarget "LinkusDemo" */;
+			buildConfigurationList = 0C392DDE29D56FB2006C8E6F /* Build configuration list for PBXNativeTarget "LinkusDemo (iOS)" */;
 			buildPhases = (
-				59D0F0BC29DE6129006BC5A5 /* Sources */,
-				59D0F0BD29DE6129006BC5A5 /* Frameworks */,
-				59D0F0BE29DE6129006BC5A5 /* Resources */,
-				59D0F0E029DE6170006BC5A5 /* Embed Frameworks */,
+				E4EE8D82E4F88BB8284724FD /* [CP] Check Pods Manifest.lock */,
+				0C392DC929D56FB2006C8E6F /* Sources */,
+				0C392DCA29D56FB2006C8E6F /* Frameworks */,
+				0C392DCB29D56FB2006C8E6F /* Resources */,
+				22B1B14DB2FD729DE45EEEE2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = LinkusDemo;
-			productName = LinkusDemo;
-			productReference = 59D0F0C029DE6129006BC5A5 /* LinkusDemo.app */;
+			name = "LinkusDemo (iOS)";
+			productName = "LinkusDemo (iOS)";
+			productReference = 0C392DCD29D56FB2006C8E6F /* LinkusDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C392DD229D56FB2006C8E6F /* LinkusDemo (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C392DE129D56FB2006C8E6F /* Build configuration list for PBXNativeTarget "LinkusDemo (macOS)" */;
+			buildPhases = (
+				4ACB27D2D8C234600E2C864E /* [CP] Check Pods Manifest.lock */,
+				0C392DCF29D56FB2006C8E6F /* Sources */,
+				0C392DD029D56FB2006C8E6F /* Frameworks */,
+				0C392DD129D56FB2006C8E6F /* Resources */,
+				8FA94F5758F226625B148996 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LinkusDemo (macOS)";
+			productName = "LinkusDemo (macOS)";
+			productReference = 0C392DD329D56FB2006C8E6F /* LinkusDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		59D0F0B829DE6129006BC5A5 /* Project object */ = {
+		0C392DC129D56FB0006C8E6F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1410;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					59D0F0BF29DE6129006BC5A5 = {
-						CreatedOnToolsVersion = 14.1;
+					0C392DCC29D56FB2006C8E6F = {
+						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1420;
+					};
+					0C392DD229D56FB2006C8E6F = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 59D0F0BB29DE6129006BC5A5 /* Build configuration list for PBXProject "LinkusDemo" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = 0C392DC429D56FB0006C8E6F /* Build configuration list for PBXProject "LinkusDemo" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 59D0F0B729DE6129006BC5A5;
-			productRefGroup = 59D0F0C129DE6129006BC5A5 /* Products */;
+			mainGroup = 0C392DC029D56FB0006C8E6F;
+			productRefGroup = 0C392DCE29D56FB2006C8E6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				59D0F0BF29DE6129006BC5A5 /* LinkusDemo */,
+				0C392DCC29D56FB2006C8E6F /* LinkusDemo (iOS) */,
+				0C392DD229D56FB2006C8E6F /* LinkusDemo (macOS) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		59D0F0BE29DE6129006BC5A5 /* Resources */ = {
+		0C392DCB29D56FB2006C8E6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59D0F0D329DE612B006BC5A5 /* LaunchScreen.storyboard in Resources */,
-				59D0F0D029DE612B006BC5A5 /* Assets.xcassets in Resources */,
-				59D0F0CE29DE6129006BC5A5 /* Main.storyboard in Resources */,
+				0C392DDA29D56FB2006C8E6F /* Assets.xcassets in Resources */,
+				5902A03C29D58C7500E41926 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C392DD129D56FB2006C8E6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C392DDB29D56FB2006C8E6F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		22B1B14DB2FD729DE45EEEE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4ACB27D2D8C234600E2C864E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LinkusDemo (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FA94F5758F226625B148996 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (macOS)/Pods-LinkusDemo (macOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (macOS)/Pods-LinkusDemo (macOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (macOS)/Pods-LinkusDemo (macOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4EE8D82E4F88BB8284724FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LinkusDemo (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		59D0F0BC29DE6129006BC5A5 /* Sources */ = {
+		0C392DC929D56FB2006C8E6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59D0F0CB29DE6129006BC5A5 /* ViewController.m in Sources */,
-				59D0F0C529DE6129006BC5A5 /* AppDelegate.m in Sources */,
-				59D0F0D629DE612B006BC5A5 /* main.m in Sources */,
-				59D0F0C829DE6129006BC5A5 /* SceneDelegate.m in Sources */,
+				5902A03129D5887600E41926 /* UITextField+YLS.m in Sources */,
+				59029FFE29D5838E00E41926 /* LoginViewController.m in Sources */,
+				5902A00B29D5838E00E41926 /* DialKeypadView.m in Sources */,
+				59029FFC29D5838E00E41926 /* DialpadView.m in Sources */,
+				5902A02D29D5887600E41926 /* UIView+Alert.m in Sources */,
+				5902A02E29D5887600E41926 /* UIDevice+YLS.m in Sources */,
+				5902A00D29D5838E00E41926 /* CallViewController.m in Sources */,
+				5902A00A29D5838E00E41926 /* DialKeypadViewCell.m in Sources */,
+				5902A03229D5887600E41926 /* DefActionView.m in Sources */,
+				5902A00229D5838E00E41926 /* MenuPanModel.m in Sources */,
+				5902A00929D5838E00E41926 /* CallMemberView.m in Sources */,
+				5902A00829D5838E00E41926 /* MarqueeView.m in Sources */,
+				5902A03429D5887600E41926 /* QualityView.m in Sources */,
+				5902A03029D5887600E41926 /* UIViewController+Hierarchy.m in Sources */,
+				5902A00329D5838E00E41926 /* MenuPanView.m in Sources */,
+				5902A02F29D5887600E41926 /* NSString+YLS.m in Sources */,
+				5937A8EB29D577550089B0A2 /* main.m in Sources */,
+				59029FF929D5838E00E41926 /* DialpadViewCell.m in Sources */,
+				5902A00629D5838E00E41926 /* CallWaitingView.m in Sources */,
+				5902A02C29D5887600E41926 /* UIImage+YLS.m in Sources */,
+				5902A00429D5838E00E41926 /* PanHandler.m in Sources */,
+				5902A00729D5838E00E41926 /* CallTransferView.m in Sources */,
+				5902A00029D5838E00E41926 /* AppDelegate.m in Sources */,
+				5902A00129D5838E00E41926 /* AudioRouteHandler.m in Sources */,
+				59029FFA29D5838E00E41926 /* DialpadCallView.m in Sources */,
+				59029FFD29D5838E00E41926 /* Contact.m in Sources */,
+				59029FFB29D5838E00E41926 /* DialPadTextField.m in Sources */,
+				5902A03329D5887600E41926 /* NotifyView.m in Sources */,
+				5902A00C29D5838E00E41926 /* CallProvider.m in Sources */,
+				59029FFF29D5838E00E41926 /* YLSUnderlineTextField.m in Sources */,
+				59029FF829D5838E00E41926 /* CalllogsViewController.m in Sources */,
+				5902A00529D5838E00E41926 /* MenuPanViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C392DCF29D56FB2006C8E6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C392DD929D56FB2006C8E6F /* ContentView.swift in Sources */,
+				0C392DD729D56FB2006C8E6F /* LinkusDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		59D0F0CC29DE6129006BC5A5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59D0F0CD29DE6129006BC5A5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		59D0F0D129DE612B006BC5A5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59D0F0D229DE612B006BC5A5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		59D0F0D729DE612B006BC5A5 /* Debug */ = {
+		0C392DDC29D56FB2006C8E6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -253,21 +737,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		59D0F0D829DE612B006BC5A5 /* Release */ = {
+		0C392DDD29D56FB2006C8E6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -305,31 +789,32 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		59D0F0DA29DE612B006BC5A5 /* Debug */ = {
+		0C392DDF29D56FB2006C8E6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E5BHZ9VK49;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				ENABLE_PREVIEWS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Supporting Files/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LinkusDemo/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/LinkusDemo--iOS--Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Used to open Microphone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Storyboard.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -338,30 +823,36 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yeastar.LinkusSDK.LinkusDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeastar.LinkusDemo;
+				PRODUCT_NAME = LinkusDemo;
+				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/LinkusDemo (iOS)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		59D0F0DB29DE612B006BC5A5 /* Release */ = {
+		0C392DE029D56FB2006C8E6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30895D9E68FA529573BE55AA /* Pods-LinkusDemo (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E5BHZ9VK49;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				ENABLE_PREVIEWS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Supporting Files/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LinkusDemo/Info.plist;
+				INFOPLIST_FILE = "Supporting Files/LinkusDemo--iOS--Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Used to open Microphone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Storyboard.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -370,35 +861,106 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yeastar.LinkusSDK.LinkusDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeastar.LinkusDemo;
+				PRODUCT_NAME = LinkusDemo;
+				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/LinkusDemo (iOS)-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C392DE229D56FB2006C8E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16F932768551D1340252FA57 /* Pods-LinkusDemo (macOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E5BHZ9VK49;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeastar.LinkusPush.LinkusDemo;
+				PRODUCT_NAME = LinkusDemo;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0C392DE329D56FB2006C8E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 307EF8EE4F0D0BE6AA7F6F55 /* Pods-LinkusDemo (macOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E5BHZ9VK49;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeastar.LinkusPush.LinkusDemo;
+				PRODUCT_NAME = LinkusDemo;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		59D0F0BB29DE6129006BC5A5 /* Build configuration list for PBXProject "LinkusDemo" */ = {
+		0C392DC429D56FB0006C8E6F /* Build configuration list for PBXProject "LinkusDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59D0F0D729DE612B006BC5A5 /* Debug */,
-				59D0F0D829DE612B006BC5A5 /* Release */,
+				0C392DDC29D56FB2006C8E6F /* Debug */,
+				0C392DDD29D56FB2006C8E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59D0F0D929DE612B006BC5A5 /* Build configuration list for PBXNativeTarget "LinkusDemo" */ = {
+		0C392DDE29D56FB2006C8E6F /* Build configuration list for PBXNativeTarget "LinkusDemo (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59D0F0DA29DE612B006BC5A5 /* Debug */,
-				59D0F0DB29DE612B006BC5A5 /* Release */,
+				0C392DDF29D56FB2006C8E6F /* Debug */,
+				0C392DE029D56FB2006C8E6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C392DE129D56FB2006C8E6F /* Build configuration list for PBXNativeTarget "LinkusDemo (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C392DE229D56FB2006C8E6F /* Debug */,
+				0C392DE329D56FB2006C8E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 59D0F0B829DE6129006BC5A5 /* Project object */;
+	rootObject = 0C392DC129D56FB0006C8E6F /* Project object */;
 }

@@ -22,6 +22,7 @@ Pod::Spec.new do |spec|
 
   spec.requires_arc = true  
   spec.platform     = :ios, "11.0"
+  spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
   spec.vendored_frameworks ='YeastarLinkus.framework'
 
 end

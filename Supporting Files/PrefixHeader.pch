@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.h
+//  LinkusDemo (iOS)
+//
+//  Created by 杨桂福 on 2023/3/30.
+//
+
+#ifndef PrefixHeader_h
+#define PrefixHeader_h
+
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
+
+#import "LocalPathConfig.h"
+#import "LocalConfig.h"
+#import "LocalFontConfig.h"
+
+#import <YeastarLinkus/YeastarLinkus.h>
+
+#import "Masonry.h"
+#import <ReactiveObjC/ReactiveObjC.h>
+#import "YYCategories.h"
+#import "UIViewController+Hierarchy.h"
+#import "UIDevice+YLS.h"
+
+#endif /* PrefixHeader_h */

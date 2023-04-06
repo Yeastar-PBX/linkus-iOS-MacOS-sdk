@@ -1,0 +1,97 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - AliyunOSSiOS (2.10.16)
+  - HWPanModal (0.8.9)
+  - linkus-vivo (0.0.4)
+  - Masonry (1.1.0)
+  - ObjectMapper (4.2.0)
+  - OpenSSL-Universal (1.0.2.20):
+    - OpenSSL-Universal/Static (= 1.0.2.20)
+  - OpenSSL-Universal/Static (1.0.2.20)
+  - OptimizedSQLCipher (1.2.2)
+  - ReactiveObjC (3.1.1)
+  - SDWebImage (5.15.5):
+    - SDWebImage/Core (= 5.15.5)
+  - SDWebImage/Core (5.15.5)
+  - SDWebImageSwiftUI (2.2.2):
+    - SDWebImage (~> 5.10)
+  - SQLiteRepair (1.2.2):
+    - OptimizedSQLCipher
+  - SVProgressHUD (2.2.5)
+  - Toast (4.0.0)
+  - WCDBSwift (1.0.2):
+    - OptimizedSQLCipher
+    - SQLiteRepair
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 4.0.1)
+  - AliyunOSSiOS (~> 2.10.13)
+  - HWPanModal (~> 0.8.9)
+  - linkus-vivo
+  - Masonry (~> 1.1.0)
+  - ObjectMapper
+  - OpenSSL-Universal (~> 1.0.2.20)
+  - ReactiveObjC (~> 3.1.1)
+  - SDWebImageSwiftUI
+  - SVProgressHUD (~> 2.2.5)
+  - Toast (~> 4.0.0)
+  - WCDBSwift
+  - YYCategories (~> 1.0.4)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - AliyunOSSiOS
+    - HWPanModal
+    - linkus-vivo
+    - Masonry
+    - ObjectMapper
+    - OpenSSL-Universal
+    - OptimizedSQLCipher
+    - ReactiveObjC
+    - SDWebImage
+    - SDWebImageSwiftUI
+    - SQLiteRepair
+    - SVProgressHUD
+    - Toast
+    - WCDBSwift
+    - YYCategories
+
+SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  AliyunOSSiOS: d624effdd24535da414a2bacf0027bedf64cc90e
+  HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
+  linkus-vivo: 136413af78d27ccb830128370dfea36a78bc4899
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
+  OptimizedSQLCipher: 92a1bf5cc94139e1da49de9c883ff9891bcd2a37
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
+  SDWebImageSwiftUI: 54ded4115b4ac6cd60b78f61415f86d070892d98
+  SQLiteRepair: 65ac4472667ac8cdeb93c3765f2fcae4dd259204
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  WCDBSwift: 6687dc2d4bebce2b237017ca367730f5f8409e67
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+
+PODFILE CHECKSUM: c5086fd73eadd1d5123de38a3a8a2504696889fd
+
+COCOAPODS: 1.11.3
