@@ -8,10 +8,6 @@
 		<data>
 		CMnpvkt5fqsmU5JQf5D0OmSQ4IE=
 		</data>
-		<key>Headers/NetWorkStatusObserver.h</key>
-		<data>
-		r42VMvpLddWc9nTRXubN/qdlnCI=
-		</data>
 		<key>Headers/YLSCallManager.h</key>
 		<data>
 		eGx3CTG/B0vOGALdrH+2lTRUvo4=
@@ -40,17 +36,9 @@
 		<data>
 		DwpcfyJFejiWXgKBlpp+Kka+L74=
 		</data>
-		<key>LICENSE</key>
-		<data>
-		vB+8EGyMPmX9iEJqamraEzQM6hY=
-		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		Z5T9oJ+cfRsNF5cDHYFxlZ+Lczc=
-		</data>
-		<key>README.md</key>
-		<data>
-		37dTP+LxW9Nu0ucLmPZbs1qXR0Y=
 		</data>
 		<key>codec.ccode</key>
 		<data>
@@ -92,17 +80,6 @@
 			<key>hash2</key>
 			<data>
 			9CAa7BTsUR9IFN8zkFSeRRFOU7qXjtG+TaSCXdk9PnE=
-			</data>
-		</dict>
-		<key>Headers/NetWorkStatusObserver.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			r42VMvpLddWc9nTRXubN/qdlnCI=
-			</data>
-			<key>hash2</key>
-			<data>
-			o+Hn0H707mbXTKF/HUdtJCyjTXV5faAV1z1ESDGFxo0=
 			</data>
 		</dict>
 		<key>Headers/YLSCallManager.h</key>
@@ -171,17 +148,6 @@
 			1hW2iDH+p67wXDMe2yS20iAipeHkbq64iQMMxjlVhZo=
 			</data>
 		</dict>
-		<key>LICENSE</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			vB+8EGyMPmX9iEJqamraEzQM6hY=
-			</data>
-			<key>hash2</key>
-			<data>
-			3mcak3UDMwjbTdYqXeAv11+NBEHAabLm0B+zGC1+0jA=
-			</data>
-		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
@@ -191,17 +157,6 @@
 			<key>hash2</key>
 			<data>
 			ttPokWt255z01m6+deTcFmeE6TizLr/fgltgYAphnkA=
-			</data>
-		</dict>
-		<key>README.md</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			37dTP+LxW9Nu0ucLmPZbs1qXR0Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			4E4xWnOI/+D9W/sQksgB8bzX67imV4l39dvjKOIt6ps=
 			</data>
 		</dict>
 		<key>codec.ccode</key>

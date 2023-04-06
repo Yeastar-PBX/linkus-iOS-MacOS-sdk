@@ -45,9 +45,9 @@
 		5902A03329D5887600E41926 /* NotifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A02829D5887600E41926 /* NotifyView.m */; };
 		5902A03429D5887600E41926 /* QualityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A02929D5887600E41926 /* QualityView.m */; };
 		5902A03C29D58C7500E41926 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5902A03B29D58C7500E41926 /* Storyboard.storyboard */; };
-		5902AED629D6A8E300E41926 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
-		5902AEFD29D6ACAA00E41926 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AEF929D6AC0E00E41926 /* libc++.tbd */; };
 		5937A8EB29D577550089B0A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5937A8EA29D577550089B0A2 /* main.m */; };
+		5987172329DEE44A0023936C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AEF929D6AC0E00E41926 /* libc++.tbd */; };
+		5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
 		A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,8 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5902AEFD29D6ACAA00E41926 /* libc++.tbd in Frameworks */,
-				5902AED629D6A8E300E41926 /* libxml2.tbd in Frameworks */,
+				5987172329DEE44A0023936C /* libc++.tbd in Frameworks */,
+				5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */,
 				5902A00F29D5849E00E41926 /* UIKit.framework in Frameworks */,
 				A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */,
 			);

@@ -16,8 +16,9 @@ PODS:
     - AFNetworking/NSURLSession
   - AliyunOSSiOS (2.10.16)
   - HWPanModal (0.8.9)
-  - linkus-vivo (0.0.7):
+  - linkus-vivo (0.0.8):
     - AFNetworking (~> 4.0.1)
+    - OpenSSL-Universal (~> 1.0.2.20)
   - Masonry (1.1.0)
   - ObjectMapper (4.2.0)
   - OpenSSL-Universal (1.0.2.20):
@@ -44,7 +45,7 @@ PODS:
 DEPENDENCIES:
   - AliyunOSSiOS (~> 2.10.13)
   - HWPanModal (~> 0.8.9)
-  - linkus-vivo (~> 0.0.7)
+  - linkus-vivo (~> 0.0.8)
   - Masonry (~> 1.1.0)
   - ObjectMapper
   - OpenSSL-Universal (~> 1.0.2.20)
@@ -78,7 +79,7 @@ SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   AliyunOSSiOS: d624effdd24535da414a2bacf0027bedf64cc90e
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
-  linkus-vivo: 4216673920481b4c05efed5bd006ada070e597a8
+  linkus-vivo: be97305bd84176e275302338123b83b8fac0e9b3
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
@@ -92,6 +93,6 @@ SPEC CHECKSUMS:
   WCDBSwift: 6687dc2d4bebce2b237017ca367730f5f8409e67
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 87e2bf462f4fb3c6ac2a71975b9074dd06bdb498
+PODFILE CHECKSUM: f39a1354655d757d18895c7a8de3637af04cb081
 
 COCOAPODS: 1.11.3
