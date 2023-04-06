@@ -52,6 +52,34 @@
 		<data>
 		37dTP+LxW9Nu0ucLmPZbs1qXR0Y=
 		</data>
+		<key>codec.ccode</key>
+		<data>
+		3mlG7yHJDe+LiZbzjzFfLktGBGw=
+		</data>
+		<key>codecext.ccode</key>
+		<data>
+		dCBLcUlYOV28MMvKtWK2jaD+VfU=
+		</data>
+		<key>extensionfunctions.ccode</key>
+		<data>
+		0mt6UJSPpMHV4chz/hXlHPdyxC4=
+		</data>
+		<key>libwxsqlite3.so</key>
+		<data>
+		mIX4W+djarhw6l2xDoaxxSiz9AI=
+		</data>
+		<key>rijndael.ccode</key>
+		<data>
+		B2MN5/GO8yt2t3YGqYU8OFeK9kQ=
+		</data>
+		<key>sha2.ccode</key>
+		<data>
+		C/d3tiuiApSw9g/jC27lI4/ofCc=
+		</data>
+		<key>sqlite3.ccode</key>
+		<data>
+		RIQrxU8I/N+NUUdKI7jeN8M2ELs=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -174,6 +202,83 @@
 			<key>hash2</key>
 			<data>
 			4E4xWnOI/+D9W/sQksgB8bzX67imV4l39dvjKOIt6ps=
+			</data>
+		</dict>
+		<key>codec.ccode</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3mlG7yHJDe+LiZbzjzFfLktGBGw=
+			</data>
+			<key>hash2</key>
+			<data>
+			Y2AbMsdKEODj52zWgcY6jn3qH3p8kOjHboFiCMxSipE=
+			</data>
+		</dict>
+		<key>codecext.ccode</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dCBLcUlYOV28MMvKtWK2jaD+VfU=
+			</data>
+			<key>hash2</key>
+			<data>
+			eCjYWmVmV0hXFAfz1qUBcIL7xy0HmfoUh2YThuaV/3o=
+			</data>
+		</dict>
+		<key>extensionfunctions.ccode</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0mt6UJSPpMHV4chz/hXlHPdyxC4=
+			</data>
+			<key>hash2</key>
+			<data>
+			3Vi32h8WIaPzbem+s/Mnbt5tJukFA7pQZ4g6Z7uJPwI=
+			</data>
+		</dict>
+		<key>libwxsqlite3.so</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mIX4W+djarhw6l2xDoaxxSiz9AI=
+			</data>
+			<key>hash2</key>
+			<data>
+			dDwHxT1l63pdVNGNgir9RmX10v+PrqEMeRj5Hll5k+s=
+			</data>
+		</dict>
+		<key>rijndael.ccode</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			B2MN5/GO8yt2t3YGqYU8OFeK9kQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			sc0JSx/6V6voL6+xJ9+gj3Xvvswt6BURFJND6kl+KIA=
+			</data>
+		</dict>
+		<key>sha2.ccode</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			C/d3tiuiApSw9g/jC27lI4/ofCc=
+			</data>
+			<key>hash2</key>
+			<data>
+			08qRq3zPXOPzIAae1duHPkuySdxVfKHF46cuaxhtSbY=
+			</data>
+		</dict>
+		<key>sqlite3.ccode</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RIQrxU8I/N+NUUdKI7jeN8M2ELs=
+			</data>
+			<key>hash2</key>
+			<data>
+			ASzHwecCNMXrNp2/Qm3WOTB43vq/nMXHBeP3YT5nX7Q=
 			</data>
 		</dict>
 	</dict>
