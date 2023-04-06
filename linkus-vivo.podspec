@@ -4,7 +4,10 @@
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
+#  spec.vendored_frameworks ='Bugly.framework'
+#  spec.frameworks = 'SystemConfiguration','Security'
+#  spec.library = 'z','c++'
+
 
 Pod::Spec.new do |spec|
 
@@ -16,12 +19,10 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => 'MIT' }
   spec.author       = { "杨桂福" => "ygf@yeastar.com" }
 
-  spec.platform     = :ios
-  spec.platform     = :ios, "11.0"
-
-
   spec.source       = { :git => "https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo.git", :tag => "#{spec.version}" }
 
-  spec.vendored_frameworks ='Bugly.framework'
+  spec.requires_arc = true  
+  spec.platform     = :ios, "11.0"
+  spec.source_files  = "GroupedData/GroupedData/GroupData/**/*.{h,m}"
 
 end
