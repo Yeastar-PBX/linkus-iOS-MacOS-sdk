@@ -12,7 +12,7 @@ platform :ios, '11.0'
     pod 'HWPanModal', '~> 0.8.9'
     pod 'Masonry', '~> 1.1.0'
     pod 'ReactiveObjC', '~> 3.1.1'
-    pod 'linkus-vivo', '~> 0.0.11'
+    pod 'linkus-vivo', '~> 0.0.12'
 end
 
 target 'LinkusDemo (macOS)' do

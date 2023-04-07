@@ -1,7 +1,7 @@
 PODS:
   - AliyunOSSiOS (2.10.16)
   - HWPanModal (0.8.9)
-  - linkus-vivo (0.0.10):
+  - linkus-vivo (0.0.11):
     - OpenSSL-Universal (~> 1.0.2.20)
   - Masonry (1.1.0)
   - ObjectMapper (4.2.0)
@@ -29,7 +29,7 @@ PODS:
 DEPENDENCIES:
   - AliyunOSSiOS (~> 2.10.13)
   - HWPanModal (~> 0.8.9)
-  - linkus-vivo (~> 0.0.10)
+  - linkus-vivo (~> 0.0.11)
   - Masonry (~> 1.1.0)
   - ObjectMapper
   - OpenSSL-Universal (~> 1.0.2.20)
@@ -61,7 +61,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AliyunOSSiOS: d624effdd24535da414a2bacf0027bedf64cc90e
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
-  linkus-vivo: fc0b4d4c9687c69959d63f280ffb475124c81b4f
+  linkus-vivo: 491538d8d4f552126c793b6f0a3e2365565122de
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
@@ -75,6 +75,6 @@ SPEC CHECKSUMS:
   WCDBSwift: 6687dc2d4bebce2b237017ca367730f5f8409e67
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 804169d9f1e3c98651f8b331902dce56cc27198b
+PODFILE CHECKSUM: c709b0283618e62e2bf8dedca7d8a98511dff69b
 
 COCOAPODS: 1.11.3

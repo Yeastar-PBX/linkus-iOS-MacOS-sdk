@@ -8,6 +8,10 @@
 		<data>
 		CMnpvkt5fqsmU5JQf5D0OmSQ4IE=
 		</data>
+		<key>Headers/NetWorkStatusObserver.h</key>
+		<data>
+		rePs9ZR/P+cQmweRMY+CY42irPU=
+		</data>
 		<key>Headers/YLSCallManager.h</key>
 		<data>
 		eGx3CTG/B0vOGALdrH+2lTRUvo4=
@@ -39,6 +43,14 @@
 		<key>Modules/module.modulemap</key>
 		<data>
 		Z5T9oJ+cfRsNF5cDHYFxlZ+Lczc=
+		</data>
+		<key>Sounds.bundle/Alerting.wav</key>
+		<data>
+		fTwykb97FVH+62XOWYoVUAp/pLE=
+		</data>
+		<key>Sounds.bundle/Hangup.wav</key>
+		<data>
+		jhcidhIFo5/FaY36RDc/faNJcuA=
 		</data>
 		<key>codec.ccode</key>
 		<data>
@@ -80,6 +92,17 @@
 			<key>hash2</key>
 			<data>
 			9CAa7BTsUR9IFN8zkFSeRRFOU7qXjtG+TaSCXdk9PnE=
+			</data>
+		</dict>
+		<key>Headers/NetWorkStatusObserver.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rePs9ZR/P+cQmweRMY+CY42irPU=
+			</data>
+			<key>hash2</key>
+			<data>
+			o8NsDNPRfeqJ0fjQpy35fk1GUydq7Deg4ta5tVjX01c=
 			</data>
 		</dict>
 		<key>Headers/YLSCallManager.h</key>
@@ -157,6 +180,28 @@
 			<key>hash2</key>
 			<data>
 			ttPokWt255z01m6+deTcFmeE6TizLr/fgltgYAphnkA=
+			</data>
+		</dict>
+		<key>Sounds.bundle/Alerting.wav</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fTwykb97FVH+62XOWYoVUAp/pLE=
+			</data>
+			<key>hash2</key>
+			<data>
+			EGRrsJbFSJvTD+wKO3O/I6uv39DyKSY9Mpqa3p2i5Ho=
+			</data>
+		</dict>
+		<key>Sounds.bundle/Hangup.wav</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jhcidhIFo5/FaY36RDc/faNJcuA=
+			</data>
+			<key>hash2</key>
+			<data>
+			oOuEB1THIm4mVp4mZFfnm0+i21GfpBFRlKyPdrt9b5c=
 			</data>
 		</dict>
 		<key>codec.ccode</key>
