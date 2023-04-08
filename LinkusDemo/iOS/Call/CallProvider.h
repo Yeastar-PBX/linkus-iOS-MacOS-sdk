@@ -7,7 +7,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, DialCallType) {
+    DialCallTypeNormal        = 0,
+    DialCallTypeTransfer      = 1,
+    DialCallTypeBlind         = 2,
+};
+
 @interface CallProvider : NSObject
+
+@property (nonatomic, assign) DialCallType dialCallType;
 
 + (instancetype)shareCallProvider;
 

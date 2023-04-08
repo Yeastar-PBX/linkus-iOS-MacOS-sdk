@@ -112,10 +112,6 @@
     [callView.actionBtn setImage:[UIImage imageNamed:@"Call_DialKeypadView_Call"] forState:UIControlStateNormal];
     callView.actionBtn.backgroundColor = [UIColor colorWithRGB:0x20C161];
     callView.nameLabel.text = @"Call";
-    UILongPressGestureRecognizer *gest = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(onLongCallAction:)];
-    gest.numberOfTouchesRequired = 1;
-    gest.minimumPressDuration = 1;
-    [callView.actionBtn addGestureRecognizer:gest];
     [callView.actionBtn addTarget:self action:@selector(callAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:callView];
 
@@ -285,24 +281,14 @@
 #pragma mark - Call Action
 - (void)callAction:(UIButton *)sender {
     if (self.textField.text.length > 0) {
-        if ([self.delegate respondsToSelector:@selector(dialKeypadViewTransferTo:longPress:)]) {
+        if ([self.delegate respondsToSelector:@selector(dialKeypadViewTransferTo:)]) {
             sender.userInteractionEnabled = NO;
-            [self.delegate dialKeypadViewTransferTo:self.textField.text longPress:NO];
+            [self.delegate dialKeypadViewTransferTo:self.textField.text];
             double delayInSeconds = 0.25f;
             dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
             dispatch_after(delayTime, dispatch_get_main_queue(), ^(void){
                 sender.userInteractionEnabled = YES;
             });
-        }
-    }
-}
-
-- (void)onLongCallAction:(UILongPressGestureRecognizer *)gesture {
-    if (gesture.state == UIGestureRecognizerStateBegan) {
-        if (self.textField.text.length > 0) {
-            if ([self.delegate respondsToSelector:@selector(dialKeypadViewTransferTo:longPress:)]) {
-                [self.delegate dialKeypadViewTransferTo:self.textField.text longPress:YES];
-            }
         }
     }
 }

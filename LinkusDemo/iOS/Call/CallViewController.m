@@ -57,7 +57,6 @@
     [[YLSCallManager shareCallManager] addDelegate:self];
     [[YLSCallStatusManager shareCallStatusManager] addDelegate:self];
 //    [[PJRegister sharePJRegister] addDelegate:self];
-//    [[NetWorkStatusObserver sharedNetWorkStatusObserver] addDelegate:self];
 }
 
 - (void)setupData {
@@ -85,7 +84,129 @@
     [self.transferView callNormal:transferCall];
     [self.menuView callNormal:currentCall waitingCall:callWaitingCall transferCall:transferCall];
     self.waitingView.hidden = !callWaitingCall;
-    self.transferView.hidden = !transferCall;;
+    self.transferView.hidden = !transferCall;
+    [self dialKeypadViewAnimation:NO];
+}
+
+#pragma mark - CallManagerDelegate
+- (void)callManagerRecordType:(YLSCallManager *)callManager {
+    YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+    [self.menuView callReload:sipCall];
+}
+
+#pragma mark - NetWorkStatusDelegate
+//- (void)netWorkStatus:(NetWorkStatus)netWorkStatus {
+//    if (netWorkStatus == NetWorkStatusNone) {
+//        [NotifyView notifyView:LocalizedString(@"sip_nonetwork") showView:self.containerView hidden:NO];
+//    }else{
+//        [NotifyView notifyView:LocalizedString(@"sip_nonetwork") showView:self.containerView hidden:YES];
+//    }
+//    SipCallInfo *currentCall = [CallManager shareCallManager].currentCall;
+//    if (netWorkStatus == NetWorkStatusWWAN && currentCall.videoType == VideoTypeAnswerViedo) {
+//        [self showToastWithText:LocalizedString(@"call_video_wwan_tip")];
+//    }
+//}
+
+#pragma mark- MenuPanViewDelegate
+- (void)menuPanView:(MenuPanView *)menuPanView touch:(MenuPanViewType)type selected:(BOOL)selected {
+    if (type == MenuPanViewTypeHold) {
+        YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+        if (sipCall.mute) {//hold住的时候，取消静音
+            sipCall.mute = NO;
+            [[CallTool shareCallTool] setMute:sipCall];
+        }
+        sipCall.onHold = !selected;
+        [[CallTool shareCallTool] setHeld:sipCall];
+        [self.menuView reloadData];
+    }else if (type == MenuPanViewTypeMute) {
+        YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+        sipCall.mute = !selected;
+        [[CallTool shareCallTool] setMute:sipCall];
+        [self.menuView reloadData];
+    }else if (type == MenuPanViewTypeHangup) {
+        YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+        sipCall.hangUpType = HangUpTypeByHand;
+        [[CallTool shareCallTool] endCall:sipCall];
+    }else if (type == MenuPanViewTypeCancelFlip) {
+        
+    }else if (type == MenuPanViewTypeCamera) {
+        
+    }else if (type == MenuPanViewTypeRecord) {
+        YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+        if (sipCall.onHold) {
+            [self showHUDInfoWithText:@"Please stop holding the call"];
+        }else{
+            BOOL isSuc = [[CallTool shareCallTool] setRecord:sipCall];
+            if (!isSuc) {
+                [self showHUDInfoWithText:@"Record failed"];
+            }
+        }
+    }else if (type == MenuPanViewTypeCallFlip) {
+        
+    }else {
+        if (type == MenuPanViewTypeAttended && selected) {
+            YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+            [[CallTool shareCallTool] transferConsultation:sipCall];
+        }else{
+            if (type == MenuPanViewTypeKeypad) {
+                self.keypadView.dtmf = YES;
+            }else{
+                self.keypadView.dtmf = NO;
+                YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+                if (!sipCall.onHold) {
+                    sipCall.onHold = YES;
+                    [[CallTool shareCallTool] setHeld:sipCall];
+                }
+                if (sipCall.mute) {
+                    sipCall.mute = NO;
+                    [[CallTool shareCallTool] setMute:sipCall];
+                }
+                [self.menuView reloadData];
+            }
+            if (type == MenuPanViewTypeAttended) {
+                [CallProvider shareCallProvider].dialCallType = DialCallTypeTransfer;
+            }else if (type == MenuPanViewTypeBlind) {
+                [CallProvider shareCallProvider].dialCallType = DialCallTypeBlind;
+            }else if (type == MenuPanViewTypeAddCall) {
+
+            }
+            [self dialKeypadViewAnimation:YES];
+        }
+    }
+}
+
+#pragma mark - CallWaitingViewDelegate
+- (void)callWaitingView:(CallWaitingView *)waitingView callInfo:(YLSSipCall *)SipCall {
+    if ([YLSCallManager shareCallManager].currenCallArr.count == 2) {
+        [[YLSCallStatusManager shareCallStatusManager] callChange:SipCall];
+    }
+}
+
+#pragma mark - DialKeypadViewDelegate
+- (void)dialKeypadViewContacts:(UIButton *)button {
+    
+}
+
+- (void)dialKeypadViewHistory:(UIButton *)button {
+    
+}
+
+- (void)dialKeypadViewTransferTo:(NSString *)text {
+    [CallProvider baseCallByNumber:text];
+}
+
+- (void)dialKeypadViewCancel:(UIButton *)button {
+    [self dialKeypadViewAnimation:NO];
+    YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+    if (sipCall.onHold) {
+        sipCall.onHold = NO;
+        [[CallTool shareCallTool] setHeld:sipCall];
+        [self.menuView reloadData];
+    }
+}
+
+- (void)dialKeypadViewDtmf:(NSString *)str {
+    [[CallTool shareCallTool] setDTMF:[YLSCallManager shareCallManager].currentSipCall string:str];
 }
 
 #pragma mark - UI
@@ -114,7 +235,7 @@
     self.qualityButton = qualityButton;
     qualityButton.backgroundColor = [UIColor colorWithRGB:0x000000 alpha:0.24];
     [qualityButton setImage:[UIImage imageNamed:@"Call_Quality"] forState:UIControlStateNormal];
-//    [qualityButton addTarget:self action:@selector(qualityAction) forControlEvents:UIControlEventTouchUpInside];
+    [qualityButton addTarget:self action:@selector(qualityAction) forControlEvents:UIControlEventTouchUpInside];
     qualityButton.layer.cornerRadius = 4;
     qualityButton.layer.masksToBounds = YES;
     [containerView addSubview:qualityButton];
@@ -186,6 +307,40 @@
         make.top.mas_equalTo(self.containerView.mas_top).offset(StatusBarHeight + 4);
         make.height.mas_equalTo(40);
     }];
+}
+
+- (void)qualityAction {
+    YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+    if (sipCall.status == CallStatusBridge) {
+//        [QualityView qualityViewData:^CallQualityModel *{
+//            return [[CallTool shareCallTool] callQuality];
+//        } showInView:self.view];
+    }
+}
+
+#pragma mark - Private
+- (void)dialKeypadViewAnimation:(BOOL)show {
+    if (show) {
+        CABasicAnimation *anima = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        anima.fromValue = [NSNumber numberWithFloat:0.0f];
+        anima.toValue = [NSNumber numberWithFloat:1.0f];
+        anima.duration = 0.25f;
+        [self.keypadView.layer addAnimation:anima forKey:@"scaleAnimation"];
+    }else{
+        CABasicAnimation *anima = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        anima.fromValue = [NSNumber numberWithFloat:1.0f];
+        anima.toValue = [NSNumber numberWithFloat:0.0f];
+        anima.duration = 0.25f;
+        [self.keypadView.layer addAnimation:anima forKey:@"scaleAnimation"];
+    }
+    
+    if (show) {
+        self.keypadView.hidden = NO;
+        self.containerView.hidden = YES;
+    }else{
+        self.keypadView.hidden = YES;
+        self.containerView.hidden = NO;
+    }
 }
 
 @end

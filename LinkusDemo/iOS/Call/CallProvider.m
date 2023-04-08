@@ -76,6 +76,7 @@
                 if (!find) {
                     CallViewController *audioCall = [[CallViewController alloc] init];
                     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:audioCall];
+                    mainNav.modalPresentationStyle = UIModalPresentationFullScreen;
                     [TopestViewController presentViewController:mainNav animated:YES completion:nil];
                 }
             })

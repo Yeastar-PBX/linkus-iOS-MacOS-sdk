@@ -18,7 +18,7 @@
 
 - (void)dialKeypadViewHistory:(UIButton *)button;
 
-- (void)dialKeypadViewTransferTo:(NSString *)text longPress:(BOOL)isLong;
+- (void)dialKeypadViewTransferTo:(NSString *)text;
 
 - (void)dialKeypadViewDtmf:(NSString*)str;
 

@@ -21,6 +21,14 @@
 
 @implementation DialKeypadViewCell
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupControls];
+    }
+    return self;
+}
+
 - (void)setupControls {
     UIButton *actionBtn = [[UIButton alloc] init];
     self.actionBtn = actionBtn;
