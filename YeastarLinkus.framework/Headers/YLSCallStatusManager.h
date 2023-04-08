@@ -5,32 +5,9 @@
 //  Created by 杨桂福 on 2023/3/28.
 //
 
-#import <Foundation/Foundation.h>
-#import "YLSSipCall.h"
+#import <YeastarLinkus/YLSCallProtocol.h>
 
-@class YLSCallStatusManager;
-
-@protocol CallStatusManagerDelegate <NSObject>
-
-@optional
-
-/**
- *  界面消失，没有通话
- */
-- (void)callStatusManagerDissmiss:(YLSCallStatusManager *)callStatusManager;
-
-/**
- *  普通来电
- */
-- (void)callStatusManager:(YLSCallStatusManager *)callStatusManager currentCall:(YLSSipCall *)currentCall;
-
-/**
- *  呼叫等待转移
- */
-- (void)callStatusManager:(YLSCallStatusManager *)callStatusManager currentCall:(YLSSipCall *)currentCall
-              callWaiting:(YLSSipCall *)callWaitingCall transferCall:(YLSSipCall *)transferCall;
-
-@end
+NS_ASSUME_NONNULL_BEGIN
 
 @interface YLSCallStatusManager : NSObject
 
@@ -49,3 +26,5 @@
 - (void)removeDelegate:(id<CallStatusManagerDelegate>)delegate;
 
 @end
+
+NS_ASSUME_NONNULL_END

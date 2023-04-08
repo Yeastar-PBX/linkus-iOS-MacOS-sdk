@@ -5,28 +5,9 @@
 //  Created by 杨桂福 on 2023/3/28.
 //
 
-#import <Foundation/Foundation.h>
-#import "YLSSipCall.h"
+#import <YeastarLinkus/YLSCallProtocol.h>
 
-@class YLSCallManager;
-
-@protocol CallManagerDelegate <NSObject>
-
-@optional
-
-//系统来电
-- (void)callManager:(YLSCallManager *)callManager systemCall:(BOOL)systemCall;
-
-//来电
-- (void)callManager:(YLSCallManager *)callManager contact:(void (^)(id<YLSContactProtocol> (^block)(NSString *number)))contact completion:(void (^)(void (^controllerBlock)(void),void (^errorBlock)(NSError *error)))completion;
-
-//通话状态
-- (void)callManager:(YLSCallManager *)callManager callInfoStatus:(NSMutableArray<YLSSipCall *> *)currenCallArr;
-
-//录音状态
-- (void)callManagerRecordType:(YLSCallManager *)callManager;
-
-@end
+NS_ASSUME_NONNULL_BEGIN
 
 @interface YLSCallManager : NSObject
 
@@ -51,3 +32,5 @@
 - (void)removeDelegate:(id<CallManagerDelegate>)delegate;
 
 @end
+
+NS_ASSUME_NONNULL_END

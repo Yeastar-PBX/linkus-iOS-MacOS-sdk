@@ -5,18 +5,9 @@
 //  Created by 杨桂福 on 2023/3/14.
 //
 
-#import <Foundation/Foundation.h>
+#import <YeastarLinkus/YLSCallProtocol.h>
 
-@class YLSPJRegister;
-
-@protocol PJRegisterDelegate <NSObject>
-
-@optional
-
-//通话状况：Yes 差   No 好
-- (void)pjRegister:(YLSPJRegister *)pjRegister callid:(int)callid callStatus:(BOOL)quality;
-
-@end
+NS_ASSUME_NONNULL_BEGIN
 
 @interface YLSPJRegister : NSObject
 
@@ -37,3 +28,5 @@
 - (void)removeDelegate:(id<PJRegisterDelegate>)delegate;
 
 @end
+
+NS_ASSUME_NONNULL_END

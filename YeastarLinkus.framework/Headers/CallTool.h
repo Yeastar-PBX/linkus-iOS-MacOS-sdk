@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YLSSipCall.h"
+#import <YeastarLinkus/YLSSipCall.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface CallTool : NSObject
 
@@ -38,4 +40,9 @@
 
 - (void)tranforBlind:(YLSSipCall *)sipCall;
 
+//通话质量
+- (NSString *)callQuality;
+
 @end
+
+NS_ASSUME_NONNULL_END

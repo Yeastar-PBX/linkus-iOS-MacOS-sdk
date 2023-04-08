@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YLSContactProtocol.h"
+#import <YeastarLinkus/YLSCallProtocol.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 #define DefaultSipCallID       -1 //本地默认通话ID为-1
 
@@ -123,3 +125,5 @@ typedef void(^hasAnswerCallSuc)(void);
 - (BOOL)isPlayHangupVoice;
 
 @end
+
+NS_ASSUME_NONNULL_END

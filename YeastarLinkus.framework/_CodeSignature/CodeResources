@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CallTool.h</key>
 		<data>
-		CMnpvkt5fqsmU5JQf5D0OmSQ4IE=
+		Smfe3pE0vH7pDxrIDQp+pYJ0mUA=
 		</data>
 		<key>Headers/NetWorkStatusObserver.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Headers/YLSCallManager.h</key>
 		<data>
-		eGx3CTG/B0vOGALdrH+2lTRUvo4=
+		Od4oGQKuRkmdEs5WIBJTtnWQh9k=
+		</data>
+		<key>Headers/YLSCallProtocol.h</key>
+		<data>
+		WhL1EjiZ5hD6Onq4c4jhkLCDllU=
 		</data>
 		<key>Headers/YLSCallStatusManager.h</key>
 		<data>
-		jnDmA0ICGlhYYXFO8GSz+QLWHqk=
-		</data>
-		<key>Headers/YLSContactProtocol.h</key>
-		<data>
-		ES1/nPcJKPgPLLOgMwRSfpOc0KM=
+		2wEcycgi5fgNlu7SNKALj/CEujQ=
 		</data>
 		<key>Headers/YLSPJRegister.h</key>
 		<data>
-		i77ew748Y4E96N8Mv76KfRIxT7o=
+		sPfhjfP020Ha+trX7vCLFygPpqw=
 		</data>
 		<key>Headers/YLSSipCall.h</key>
 		<data>
-		+jMg2Y6a922PH2LrhOm4ce1nsLs=
+		BATjhMQs2j6PUdBOAtOXwJeheQc=
 		</data>
 		<key>Headers/YeastarLinkus.h</key>
 		<data>
-		8FldgJ8dEP0vBtXt9hjHfVC2eas=
+		ENg0r5yG6BIV2ZzuJ+Pv9wqtD1I=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -43,14 +43,6 @@
 		<key>Modules/module.modulemap</key>
 		<data>
 		Z5T9oJ+cfRsNF5cDHYFxlZ+Lczc=
-		</data>
-		<key>Sounds.bundle/Alerting.wav</key>
-		<data>
-		fTwykb97FVH+62XOWYoVUAp/pLE=
-		</data>
-		<key>Sounds.bundle/Hangup.wav</key>
-		<data>
-		jhcidhIFo5/FaY36RDc/faNJcuA=
 		</data>
 		<key>codec.ccode</key>
 		<data>
@@ -87,11 +79,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CMnpvkt5fqsmU5JQf5D0OmSQ4IE=
+			Smfe3pE0vH7pDxrIDQp+pYJ0mUA=
 			</data>
 			<key>hash2</key>
 			<data>
-			9CAa7BTsUR9IFN8zkFSeRRFOU7qXjtG+TaSCXdk9PnE=
+			et1ZIBErA8dY5NcGDKYvrmpDoEnrioiSDKrelZ3VwHw=
 			</data>
 		</dict>
 		<key>Headers/NetWorkStatusObserver.h</key>
@@ -109,66 +101,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eGx3CTG/B0vOGALdrH+2lTRUvo4=
+			Od4oGQKuRkmdEs5WIBJTtnWQh9k=
 			</data>
 			<key>hash2</key>
 			<data>
-			tkEgF9DmLZWiUNIAbT3mMmueNCugvIEejZHSEdaoQpg=
+			MwTLwtEXp1eE6Oz0ziOSQpyTEHi3ORgDmcievGrsQ0M=
+			</data>
+		</dict>
+		<key>Headers/YLSCallProtocol.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WhL1EjiZ5hD6Onq4c4jhkLCDllU=
+			</data>
+			<key>hash2</key>
+			<data>
+			ubeGoPZ+nz0hDRDBYJOONJvqeO3tfOugMtaI7pfNa4s=
 			</data>
 		</dict>
 		<key>Headers/YLSCallStatusManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jnDmA0ICGlhYYXFO8GSz+QLWHqk=
+			2wEcycgi5fgNlu7SNKALj/CEujQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			i1QTmXI9gY8SQUPbQSPK/jaPvrTeVTf5XpQf0G6Sq60=
-			</data>
-		</dict>
-		<key>Headers/YLSContactProtocol.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ES1/nPcJKPgPLLOgMwRSfpOc0KM=
-			</data>
-			<key>hash2</key>
-			<data>
-			8AnGS+dKbZZ3RTTatqqVlhs6EcAW3vSRk4sTw4hDWG0=
+			rAd/Zi58MDarN0JBJjmh8ktd+qbcCaC+85mPUBI5WKs=
 			</data>
 		</dict>
 		<key>Headers/YLSPJRegister.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			i77ew748Y4E96N8Mv76KfRIxT7o=
+			sPfhjfP020Ha+trX7vCLFygPpqw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Rwr0YKWXjyiPVd+cuGmAfSp9bbc7Gm3P1ijlsAALSTY=
+			MV0S2uF40t4marNb7O2hxVjdAj8/m028c15wy8ILCH0=
 			</data>
 		</dict>
 		<key>Headers/YLSSipCall.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+jMg2Y6a922PH2LrhOm4ce1nsLs=
+			BATjhMQs2j6PUdBOAtOXwJeheQc=
 			</data>
 			<key>hash2</key>
 			<data>
-			/pVXgI2CDEb9NXSTRCgTHSnU343drd5FUkRhRZTUso4=
+			CRHb5WTAEQxSv33DoSZmWNHKsJ9CezviTkkrV+1V1Bo=
 			</data>
 		</dict>
 		<key>Headers/YeastarLinkus.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8FldgJ8dEP0vBtXt9hjHfVC2eas=
+			ENg0r5yG6BIV2ZzuJ+Pv9wqtD1I=
 			</data>
 			<key>hash2</key>
 			<data>
-			1hW2iDH+p67wXDMe2yS20iAipeHkbq64iQMMxjlVhZo=
+			CBkwmpaIA1hutYl4He4PXws/IaN+Daw0RLwMr98ZTYM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -180,28 +172,6 @@
 			<key>hash2</key>
 			<data>
 			ttPokWt255z01m6+deTcFmeE6TizLr/fgltgYAphnkA=
-			</data>
-		</dict>
-		<key>Sounds.bundle/Alerting.wav</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fTwykb97FVH+62XOWYoVUAp/pLE=
-			</data>
-			<key>hash2</key>
-			<data>
-			EGRrsJbFSJvTD+wKO3O/I6uv39DyKSY9Mpqa3p2i5Ho=
-			</data>
-		</dict>
-		<key>Sounds.bundle/Hangup.wav</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jhcidhIFo5/FaY36RDc/faNJcuA=
-			</data>
-			<key>hash2</key>
-			<data>
-			oOuEB1THIm4mVp4mZFfnm0+i21GfpBFRlKyPdrt9b5c=
 			</data>
 		</dict>
 		<key>codec.ccode</key>
