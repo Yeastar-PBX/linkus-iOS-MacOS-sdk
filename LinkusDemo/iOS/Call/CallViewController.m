@@ -14,7 +14,7 @@
 #import "CallTransferView.h"
 #import "CallWaitingView.h"
 
-@interface CallViewController ()<CallStatusManagerDelegate,CallManagerDelegate,
+@interface CallViewController ()<CallStatusManagerDelegate,CallManagerDelegate,PJRegisterDelegate,
                                  DialKeypadViewDelegate,CallWaitingViewDelegate,MenuPanViewDelegate>
 
 @property (nonatomic,strong) UIImageView *backgroundView;
@@ -56,11 +56,17 @@
 - (void)setupConfigurator {
     [[YLSCallManager shareCallManager] addDelegate:self];
     [[YLSCallStatusManager shareCallStatusManager] addDelegate:self];
-//    [[PJRegister sharePJRegister] addDelegate:self];
+    [[YLSPJRegister sharePJRegister] addDelegate:self];
 }
 
 - (void)setupData {
     [self callStatusManager:[YLSCallStatusManager shareCallStatusManager] currentCall:[YLSCallManager shareCallManager].currentSipCall];
+}
+
+- (void)dealloc {
+    [[YLSCallManager shareCallManager] removeDelegate:self];
+    [[YLSCallStatusManager shareCallStatusManager] removeDelegate:self];
+    [[YLSPJRegister sharePJRegister] removeDelegate:self];
 }
 
 #pragma mark - CallStatusManagerDelegate
@@ -94,18 +100,10 @@
     [self.menuView callReload:sipCall];
 }
 
-#pragma mark - NetWorkStatusDelegate
-//- (void)netWorkStatus:(NetWorkStatus)netWorkStatus {
-//    if (netWorkStatus == NetWorkStatusNone) {
-//        [NotifyView notifyView:LocalizedString(@"sip_nonetwork") showView:self.containerView hidden:NO];
-//    }else{
-//        [NotifyView notifyView:LocalizedString(@"sip_nonetwork") showView:self.containerView hidden:YES];
-//    }
-//    SipCallInfo *currentCall = [CallManager shareCallManager].currentCall;
-//    if (netWorkStatus == NetWorkStatusWWAN && currentCall.videoType == VideoTypeAnswerViedo) {
-//        [self showToastWithText:LocalizedString(@"call_video_wwan_tip")];
-//    }
-//}
+#pragma mark - PJRegisterDelegate
+- (void)pjRegister:(YLSPJRegister *)pjRegister callid:(int)callid callStatus:(BOOL)quality {
+    [NotifyView notifyView:@"Network status is abnormal." showView:self.containerView hidden:!quality];
+}
 
 #pragma mark- MenuPanViewDelegate
 - (void)menuPanView:(MenuPanView *)menuPanView touch:(MenuPanViewType)type selected:(BOOL)selected {
@@ -312,9 +310,9 @@
 - (void)qualityAction {
     YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
     if (sipCall.status == CallStatusBridge) {
-//        [QualityView qualityViewData:^CallQualityModel *{
-//            return [[CallTool shareCallTool] callQuality];
-//        } showInView:self.view];
+        [QualityView qualityViewData:^NSString *{
+            return [[CallTool shareCallTool] callQuality];
+        } showInView:self.view];
     }
 }
 

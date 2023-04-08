@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "CallQualityModel.h"
 
 @interface QualityView : UIView
 
-//+ (void)qualityViewData:(CallQualityModel *(^)(void))handler showInView:(UIView *)view;
++ (void)qualityViewData:(NSString *(^)(void))handler showInView:(UIView *)view;
 
 @end
