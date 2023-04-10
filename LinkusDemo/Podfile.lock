@@ -1,27 +1,15 @@
 PODS:
   - AliyunOSSiOS (2.10.16)
   - HWPanModal (0.8.9)
-  - linkus-vivo (0.0.14):
+  - linkus-vivo (0.0.15):
     - OpenSSL-Universal (~> 1.0.2.20)
   - Masonry (1.1.0)
-  - ObjectMapper (4.2.0)
   - OpenSSL-Universal (1.0.2.20):
     - OpenSSL-Universal/Static (= 1.0.2.20)
   - OpenSSL-Universal/Static (1.0.2.20)
-  - OptimizedSQLCipher (1.2.2)
   - ReactiveObjC (3.1.1)
-  - SDWebImage (5.15.5):
-    - SDWebImage/Core (= 5.15.5)
-  - SDWebImage/Core (5.15.5)
-  - SDWebImageSwiftUI (2.2.2):
-    - SDWebImage (~> 5.10)
-  - SQLiteRepair (1.2.2):
-    - OptimizedSQLCipher
   - SVProgressHUD (2.2.5)
   - Toast (4.0.0)
-  - WCDBSwift (1.0.2):
-    - OptimizedSQLCipher
-    - SQLiteRepair
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
@@ -29,15 +17,11 @@ PODS:
 DEPENDENCIES:
   - AliyunOSSiOS (~> 2.10.13)
   - HWPanModal (~> 0.8.9)
-  - linkus-vivo (~> 0.0.14)
+  - linkus-vivo (~> 0.0.15)
   - Masonry (~> 1.1.0)
-  - ObjectMapper
-  - OpenSSL-Universal (~> 1.0.2.20)
   - ReactiveObjC (~> 3.1.1)
-  - SDWebImageSwiftUI
   - SVProgressHUD (~> 2.2.5)
   - Toast (~> 4.0.0)
-  - WCDBSwift
   - YYCategories (~> 1.0.4)
 
 SPEC REPOS:
@@ -46,35 +30,23 @@ SPEC REPOS:
     - HWPanModal
     - linkus-vivo
     - Masonry
-    - ObjectMapper
     - OpenSSL-Universal
-    - OptimizedSQLCipher
     - ReactiveObjC
-    - SDWebImage
-    - SDWebImageSwiftUI
-    - SQLiteRepair
     - SVProgressHUD
     - Toast
-    - WCDBSwift
     - YYCategories
 
 SPEC CHECKSUMS:
   AliyunOSSiOS: d624effdd24535da414a2bacf0027bedf64cc90e
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
-  linkus-vivo: d0b766d0a06aa411ab53c827d5c373328c590c2f
+  linkus-vivo: f771166f220e6d1e45b0df3c0fc4d22492ab0e8f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
-  OptimizedSQLCipher: 92a1bf5cc94139e1da49de9c883ff9891bcd2a37
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
-  SDWebImageSwiftUI: 54ded4115b4ac6cd60b78f61415f86d070892d98
-  SQLiteRepair: 65ac4472667ac8cdeb93c3765f2fcae4dd259204
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  WCDBSwift: 6687dc2d4bebce2b237017ca367730f5f8409e67
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: fdf4f8bc92f86050182a00055e1e53c1df723154
+PODFILE CHECKSUM: 362d940ff27e869b25f10e943f1d2828b1aaaca8
 
 COCOAPODS: 1.11.3
