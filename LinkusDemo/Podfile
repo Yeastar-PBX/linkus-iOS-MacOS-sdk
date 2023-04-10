@@ -12,7 +12,7 @@ platform :ios, '11.0'
     pod 'HWPanModal', '~> 0.8.9'
     pod 'Masonry', '~> 1.1.0'
     pod 'ReactiveObjC', '~> 3.1.1'
-#    pod 'linkus-vivo', '~> 0.0.15'
+    pod 'linkus-vivo', '~> 0.0.16'
 end
 
 target 'LinkusDemo (macOS)' do
@@ -21,7 +21,7 @@ platform :osx, '12.1'
 #    pod 'WCDBSwift'
 #    pod 'ObjectMapper'
 #    pod 'SDWebImageSwiftUI'
-    pod 'linkus-vivo', '~> 0.0.15'
+#    pod 'linkus-vivo', '~> 0.0.16'
 end
 
 post_install do |installer|
