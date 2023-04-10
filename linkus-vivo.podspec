@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true  
   spec.platform     = :ios, "11.0"
   spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
-  spec.vendored_frameworks ='linkus_vivo.framework'
+  spec.vendored_frameworks ='Framework/iOS/linkus_vivo.framework'
   spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libc++" }
   spec.dependency "OpenSSL-Universal", "~> 1.0.2.20"
