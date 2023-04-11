@@ -1,0 +1,6 @@
+framework module linkus_vivo_iOS {
+  umbrella header "linkus_vivo_iOS.h"
+
+  export *
+  module * { export * }
+}

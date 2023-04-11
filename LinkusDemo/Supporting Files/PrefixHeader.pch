@@ -16,7 +16,7 @@
 #import "LocalFontConfig.h"
 
 #import "CallProvider.h"
-#import <YeastarLinkus/YeastarLinkus.h>
+#import <linkus_vivo/linkus-vivo.h>
 
 #import "Masonry.h"
 #import <ReactiveObjC/ReactiveObjC.h>
