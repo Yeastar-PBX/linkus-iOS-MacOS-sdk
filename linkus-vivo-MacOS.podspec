@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
-  spec.name         = "linkus-vivo"
-  spec.version      = "0.0.19"
+  spec.name         = "linkus-vivo-MacOS"
+  spec.version      = "0.0.18"
   spec.summary      = "为V消息提供Sip通话能力"
 
   spec.homepage     = "https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo.git"
@@ -13,6 +13,8 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true  
   spec.platform     = :osx, "10.13"
   spec.vendored_frameworks ='linkus_vivo_MacOS.framework'
+  spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/curl" }
   spec.dependency "OpenSSL-Universal", "~> 1.0.2.20"
 
 end
