@@ -25,4 +25,4 @@
 #import "UIDevice+YLS.h"
 #import "UIView+Alert.h"
 
-#endif /* PrefixHeader_h */
+#endif /* PrefixHeaderiOS_h */

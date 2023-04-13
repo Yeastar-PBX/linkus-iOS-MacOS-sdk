@@ -48,6 +48,9 @@
 		5937A8EB29D577550089B0A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5937A8EA29D577550089B0A2 /* main.m */; };
 		59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59438CA229E52E8500B4DAA7 /* libcurl.tbd */; };
 		59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
+		59438CE929E7ABF600B4DAA7 /* linkus_vivo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59438CE829E7ABF600B4DAA7 /* linkus_vivo_iOS.framework */; };
+		59438CED29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59438CEC29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework */; };
+		59438CF329E7D19700B4DAA7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59438CF229E7D19700B4DAA7 /* LoginView.swift */; };
 		5987172329DEE44A0023936C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AEF929D6AC0E00E41926 /* libc++.tbd */; };
 		5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
 		A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */; };
@@ -138,6 +141,10 @@
 		5937A8E529D576470089B0A2 /* LinkusDemo (iOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinkusDemo (iOS)-Bridging-Header.h"; sourceTree = "<group>"; };
 		5937A8EA29D577550089B0A2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59438CA229E52E8500B4DAA7 /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
+		59438CE829E7ABF600B4DAA7 /* linkus_vivo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_vivo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59438CEC29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_vivo_MacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59438CF229E7D19700B4DAA7 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		59438CF429E7D47300B4DAA7 /* LinkusDemo (macOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinkusDemo (macOS)-Bridging-Header.h"; sourceTree = "<group>"; };
 		775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +158,7 @@
 				5987172329DEE44A0023936C /* libc++.tbd in Frameworks */,
 				5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */,
 				5902A00F29D5849E00E41926 /* UIKit.framework in Frameworks */,
+				59438CE929E7ABF600B4DAA7 /* linkus_vivo_iOS.framework in Frameworks */,
 				A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +169,7 @@
 			files = (
 				59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */,
 				59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */,
+				59438CED29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework in Frameworks */,
 				494ECB49BD690BE7A5B795DB /* Pods_LinkusDemo__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,21 +182,11 @@
 			children = (
 				5937A8E429D576030089B0A2 /* iOS */,
 				0C392DD429D56FB2006C8E6F /* macOS */,
-				0C392DC529D56FB0006C8E6F /* Shared */,
 				5937A8E929D576B30089B0A2 /* Supporting Files */,
 				0C392DCE29D56FB2006C8E6F /* Products */,
 				5937A8EC29D5778F0089B0A2 /* Frameworks */,
 				E354D6B2201469225EE7F4BA /* Pods */,
 			);
-			sourceTree = "<group>";
-		};
-		0C392DC529D56FB0006C8E6F /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				0C392DC629D56FB0006C8E6F /* LinkusDemoApp.swift */,
-				0C392DC729D56FB0006C8E6F /* ContentView.swift */,
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		0C392DCE29D56FB2006C8E6F /* Products */ = {
@@ -202,6 +201,9 @@
 		0C392DD429D56FB2006C8E6F /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				0C392DC629D56FB0006C8E6F /* LinkusDemoApp.swift */,
+				0C392DC729D56FB0006C8E6F /* ContentView.swift */,
+				59438CF229E7D19700B4DAA7 /* LoginView.swift */,
 				0C392DD529D56FB2006C8E6F /* macOS.entitlements */,
 			);
 			path = macOS;
@@ -431,6 +433,7 @@
 				5937A8EA29D577550089B0A2 /* main.m */,
 				5902A03B29D58C7500E41926 /* Storyboard.storyboard */,
 				5902A01029D584E100E41926 /* PrefixHeader.pch */,
+				59438CF429E7D47300B4DAA7 /* LinkusDemo (macOS)-Bridging-Header.h */,
 				5937A8E529D576470089B0A2 /* LinkusDemo (iOS)-Bridging-Header.h */,
 				0C392DC829D56FB2006C8E6F /* Assets.xcassets */,
 			);
@@ -440,6 +443,8 @@
 		5937A8EC29D5778F0089B0A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59438CEC29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework */,
+				59438CE829E7ABF600B4DAA7 /* linkus_vivo_iOS.framework */,
 				59438CA229E52E8500B4DAA7 /* libcurl.tbd */,
 				5902AEF929D6AC0E00E41926 /* libc++.tbd */,
 				5902AED529D6A8CF00E41926 /* libxml2.tbd */,
@@ -517,6 +522,7 @@
 					};
 					0C392DD229D56FB2006C8E6F = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -667,6 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59438CF329E7D19700B4DAA7 /* LoginView.swift in Sources */,
 				0C392DD929D56FB2006C8E6F /* ContentView.swift in Sources */,
 				0C392DD729D56FB2006C8E6F /* LinkusDemoApp.swift in Sources */,
 			);
@@ -866,6 +873,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -873,6 +881,8 @@
 				DEVELOPMENT_TEAM = E5BHZ9VK49;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -885,6 +895,8 @@
 				PRODUCT_NAME = LinkusDemo;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/LinkusDemo (macOS)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -895,6 +907,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -902,6 +915,8 @@
 				DEVELOPMENT_TEAM = E5BHZ9VK49;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -914,6 +929,7 @@
 				PRODUCT_NAME = LinkusDemo;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/LinkusDemo (macOS)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

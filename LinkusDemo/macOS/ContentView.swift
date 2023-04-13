@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isLogin = UserDefaults.standard.bool(forKey: "isLogin")
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+//        if isLogin {
+//            SidebarView()
+//                .frame(minWidth: 500, minHeight: 340)
+//        } else {
+            LoginView(isLogin: $isLogin)
+//        }
     }
 }
 

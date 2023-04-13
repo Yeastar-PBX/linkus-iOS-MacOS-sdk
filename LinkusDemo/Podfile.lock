@@ -1,10 +1,6 @@
 PODS:
   - AliyunOSSiOS (2.10.16)
   - HWPanModal (0.8.9)
-  - linkus-vivo (0.0.18):
-    - OpenSSL-Universal (~> 1.0.2.20)
-  - linkus-vivo-MacOS (0.0.18):
-    - OpenSSL-Universal (~> 1.0.2.20)
   - Masonry (1.1.0)
   - OpenSSL-Universal (1.0.2.20):
     - OpenSSL-Universal/Static (= 1.0.2.20)
@@ -19,9 +15,8 @@ PODS:
 DEPENDENCIES:
   - AliyunOSSiOS (~> 2.10.13)
   - HWPanModal (~> 0.8.9)
-  - linkus-vivo (= 0.0.18)
-  - linkus-vivo-MacOS (~> 0.0.18)
   - Masonry (~> 1.1.0)
+  - OpenSSL-Universal (~> 1.0.2.20)
   - ReactiveObjC (~> 3.1.1)
   - SVProgressHUD (~> 2.2.5)
   - Toast (~> 4.0.0)
@@ -31,8 +26,6 @@ SPEC REPOS:
   trunk:
     - AliyunOSSiOS
     - HWPanModal
-    - linkus-vivo
-    - linkus-vivo-MacOS
     - Masonry
     - OpenSSL-Universal
     - ReactiveObjC
@@ -43,8 +36,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AliyunOSSiOS: d624effdd24535da414a2bacf0027bedf64cc90e
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
-  linkus-vivo: 7352dcada0278ddea820a82c8d3f7ab9d9c2de7c
-  linkus-vivo-MacOS: 91605b92e1786fac966a82702e563325288ef277
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
@@ -52,6 +43,6 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 1d951938d42933b35fe2433c29dbc6a3ad98aa53
+PODFILE CHECKSUM: 94f8fee0dd4fa02763fd5efe2fc30f0d3cd9a316
 
 COCOAPODS: 1.11.3
