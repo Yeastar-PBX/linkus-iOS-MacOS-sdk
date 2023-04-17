@@ -63,8 +63,8 @@ struct LoginView: View {
 //                    LoginTool.loginFirst(name, password: password, domain: domain, localAddress: localAddress, localPort: localPort) { errorTime, resultCode, errorCount in
 //
 //                    }
-                    YLSPJRegister.share()
-                    YLSPJRegister.registerPJSip()
+//                    YLSPJRegister.share()
+//                    YLSPJRegister.registerPJSip()
                     
                     print("用户输入的没有问题,可以提交至服务器")
                     UserDefaults.standard.set(true,forKey:"isLogin")

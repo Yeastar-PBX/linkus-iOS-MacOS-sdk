@@ -22,10 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [YLSPJRegister sharePJRegister];
-    [YLSPJRegister registerPJSip];
-    
+        
     self.view.backgroundColor = [UIColor whiteColor];
     
     [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {

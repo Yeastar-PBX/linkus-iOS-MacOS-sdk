@@ -131,7 +131,6 @@
 		5902A02A29D5887600E41926 /* NotifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyView.h; sourceTree = "<group>"; };
 		5902A02B29D5887600E41926 /* DefActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefActionView.h; sourceTree = "<group>"; };
 		5902A03629D589A800E41926 /* LocalFontConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFontConfig.h; sourceTree = "<group>"; };
-		5902A03729D589A800E41926 /* LocalPathConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalPathConfig.h; sourceTree = "<group>"; };
 		5902A03829D589A800E41926 /* LocalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalConfig.h; sourceTree = "<group>"; };
 		5902A03929D589A800E41926 /* LoginConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginConfig.h; sourceTree = "<group>"; };
 		5902A03A29D58A6D00E41926 /* LinkusDemo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkusDemo--iOS--Info.plist"; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 		59438CEC29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_vivo_MacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59438CF229E7D19700B4DAA7 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		59438CF429E7D47300B4DAA7 /* LinkusDemo (macOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinkusDemo (macOS)-Bridging-Header.h"; sourceTree = "<group>"; };
+		5985CA3A29ECEC8A003E9616 /* LinkusDemo--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkusDemo--macOS--Info.plist"; sourceTree = "<group>"; };
 		775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -405,7 +405,6 @@
 			children = (
 				5902A03829D589A800E41926 /* LocalConfig.h */,
 				5902A03629D589A800E41926 /* LocalFontConfig.h */,
-				5902A03729D589A800E41926 /* LocalPathConfig.h */,
 				5902A03929D589A800E41926 /* LoginConfig.h */,
 			);
 			path = Config;
@@ -429,6 +428,7 @@
 		5937A8E929D576B30089B0A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5985CA3A29ECEC8A003E9616 /* LinkusDemo--macOS--Info.plist */,
 				5902A03A29D58A6D00E41926 /* LinkusDemo--iOS--Info.plist */,
 				5937A8EA29D577550089B0A2 /* main.m */,
 				5902A03B29D58C7500E41926 /* Storyboard.storyboard */,
@@ -884,6 +884,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Supporting Files/LinkusDemo--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -918,6 +919,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Supporting Files/LinkusDemo--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

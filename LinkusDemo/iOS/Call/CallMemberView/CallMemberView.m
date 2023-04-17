@@ -193,10 +193,10 @@
     self.fourthLabel.textColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.87];
     self.stateLabel.textColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.87];
     
-    if (![YLSPJRegister sharePJRegister].isSucRegis && (currentCall.status == CallStatusConnect || currentCall.status == CallStatusCalling)) {
-        self.stateLabel.text = @"Registering…";
-        return;
-    }
+//    if (![YLSPJRegister sharePJRegister].isSucRegis && (currentCall.status == CallStatusConnect || currentCall.status == CallStatusCalling)) {
+//        self.stateLabel.text = @"Registering…";
+//        return;
+//    }
     
     switch (currentCall.status) {
         case CallStatusConnect:{//callKit连接服务器的过程中

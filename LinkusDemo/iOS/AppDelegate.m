@@ -18,7 +18,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
     
-    if (1) {
+    [CallProvider shareCallProvider];
+    [[YLSSDK sharedYLSSDK] initApp];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"EVER_LOGIN"]) {
         CalllogsViewController *calllogsVC = [[CalllogsViewController alloc] init];
         self.window.rootViewController = calllogsVC;
     }else{
@@ -26,12 +29,10 @@
         self.window.rootViewController = loginVC;
     }
 
-    [CallProvider shareCallProvider];
-    PKPushRegistry *pushRegistry = [[PKPushRegistry alloc] initWithQueue:dispatch_get_global_queue(0, 0)];
-    pushRegistry.delegate = self;
-    pushRegistry.desiredPushTypes = [NSSet setWithObject:PKPushTypeVoIP];
-
-    [[NetWorkStatusObserver sharedNetWorkStatusObserver] startMonitoring];
+//    [CallProvider shareCallProvider];
+//    PKPushRegistry *pushRegistry = [[PKPushRegistry alloc] initWithQueue:dispatch_get_global_queue(0, 0)];
+//    pushRegistry.delegate = self;
+//    pushRegistry.desiredPushTypes = [NSSet setWithObject:PKPushTypeVoIP];
     
     return YES;
 }

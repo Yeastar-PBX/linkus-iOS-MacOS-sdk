@@ -14,7 +14,7 @@
 #import "CallTransferView.h"
 #import "CallWaitingView.h"
 
-@interface CallViewController ()<CallStatusManagerDelegate,CallManagerDelegate,PJRegisterDelegate,
+@interface CallViewController ()<YLSCallStatusManagerDelegate,YLSCallManagerDelegate,
                                  DialKeypadViewDelegate,CallWaitingViewDelegate,MenuPanViewDelegate>
 
 @property (nonatomic,strong) UIImageView *backgroundView;
@@ -54,19 +54,23 @@
 }
 
 - (void)setupConfigurator {
-    [[YLSCallManager shareCallManager] addDelegate:self];
-    [[YLSCallStatusManager shareCallStatusManager] addDelegate:self];
-    [[YLSPJRegister sharePJRegister] addDelegate:self];
+    [[[YLSSDK sharedYLSSDK] callManager] addDelegate:self];
+    [[[YLSSDK sharedYLSSDK] callStatusManager] addDelegate:self];
 }
 
 - (void)setupData {
-    [self callStatusManager:[YLSCallStatusManager shareCallStatusManager] currentCall:[YLSCallManager shareCallManager].currentSipCall];
+    YLSSipCall *currentCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
+    self.backgroundView.image = currentCall.contact.sipImage;
+    [self.memberView callNormal:currentCall];
+    [self.menuView callNormal:currentCall waitingCall:nil transferCall:nil];
+    self.transferView.hidden = YES;
+    self.waitingView.hidden = YES;
+    self.qualityButton.hidden = NO;
 }
 
 - (void)dealloc {
-    [[YLSCallManager shareCallManager] removeDelegate:self];
-    [[YLSCallStatusManager shareCallStatusManager] removeDelegate:self];
-    [[YLSPJRegister sharePJRegister] removeDelegate:self];
+    [[[YLSSDK sharedYLSSDK] callManager] removeDelegate:self];
+    [[[YLSSDK sharedYLSSDK] callStatusManager] removeDelegate:self];
 }
 
 #pragma mark - CallStatusManagerDelegate
@@ -96,19 +100,19 @@
 
 #pragma mark - CallManagerDelegate
 - (void)callManagerRecordType:(YLSCallManager *)callManager {
-    YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+    YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
     [self.menuView callReload:sipCall];
 }
 
 #pragma mark - PJRegisterDelegate
-- (void)pjRegister:(YLSPJRegister *)pjRegister callid:(int)callid callStatus:(BOOL)quality {
+- (void)callManager:(YLSCallManager *)callManager callQuality:(BOOL)quality {
     [NotifyView notifyView:@"Network status is abnormal." showView:self.containerView hidden:!quality];
 }
 
 #pragma mark- MenuPanViewDelegate
 - (void)menuPanView:(MenuPanView *)menuPanView touch:(MenuPanViewType)type selected:(BOOL)selected {
     if (type == MenuPanViewTypeHold) {
-        YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+        YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
         if (sipCall.mute) {//hold住的时候，取消静音
             sipCall.mute = NO;
             [[CallTool shareCallTool] setMute:sipCall];
@@ -117,12 +121,12 @@
         [[CallTool shareCallTool] setHeld:sipCall];
         [self.menuView reloadData];
     }else if (type == MenuPanViewTypeMute) {
-        YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+        YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
         sipCall.mute = !selected;
         [[CallTool shareCallTool] setMute:sipCall];
         [self.menuView reloadData];
     }else if (type == MenuPanViewTypeHangup) {
-        YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+        YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
         sipCall.hangUpType = HangUpTypeByHand;
         [[CallTool shareCallTool] endCall:sipCall];
     }else if (type == MenuPanViewTypeCancelFlip) {
@@ -130,7 +134,7 @@
     }else if (type == MenuPanViewTypeCamera) {
         
     }else if (type == MenuPanViewTypeRecord) {
-        YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+        YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
         if (sipCall.onHold) {
             [self showHUDInfoWithText:@"Please stop holding the call"];
         }else{
@@ -143,14 +147,14 @@
         
     }else {
         if (type == MenuPanViewTypeAttended && selected) {
-            YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+            YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
             [[CallTool shareCallTool] transferConsultation:sipCall];
         }else{
             if (type == MenuPanViewTypeKeypad) {
                 self.keypadView.dtmf = YES;
             }else{
                 self.keypadView.dtmf = NO;
-                YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+                YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
                 if (!sipCall.onHold) {
                     sipCall.onHold = YES;
                     [[CallTool shareCallTool] setHeld:sipCall];
@@ -175,8 +179,8 @@
 
 #pragma mark - CallWaitingViewDelegate
 - (void)callWaitingView:(CallWaitingView *)waitingView callInfo:(YLSSipCall *)SipCall {
-    if ([YLSCallManager shareCallManager].currenCallArr.count == 2) {
-        [[YLSCallStatusManager shareCallStatusManager] callChange:SipCall];
+    if ([[YLSSDK sharedYLSSDK] callManager].currentSipCalls.count == 2) {
+        [[[YLSSDK sharedYLSSDK] callStatusManager] callChange:SipCall];
     }
 }
 
@@ -195,7 +199,7 @@
 
 - (void)dialKeypadViewCancel:(UIButton *)button {
     [self dialKeypadViewAnimation:NO];
-    YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+    YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
     if (sipCall.onHold) {
         sipCall.onHold = NO;
         [[CallTool shareCallTool] setHeld:sipCall];
@@ -204,7 +208,7 @@
 }
 
 - (void)dialKeypadViewDtmf:(NSString *)str {
-    [[CallTool shareCallTool] setDTMF:[YLSCallManager shareCallManager].currentSipCall string:str];
+    [[CallTool shareCallTool] setDTMF:[[YLSSDK sharedYLSSDK] callManager].currentSipCall string:str];
 }
 
 #pragma mark - UI
@@ -212,7 +216,7 @@
     UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     self.backgroundView = backgroundView;
     backgroundView.userInteractionEnabled = YES;
-    backgroundView.image = [YLSCallManager shareCallManager].currentSipCall.contact.sipImage;
+    backgroundView.image = [[YLSSDK sharedYLSSDK] callManager].currentSipCall.contact.sipImage;
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
     effectView.frame = backgroundView.frame;
@@ -308,7 +312,7 @@
 }
 
 - (void)qualityAction {
-    YLSSipCall *sipCall = [YLSCallManager shareCallManager].currentSipCall;
+    YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
     if (sipCall.status == CallStatusBridge) {
         [QualityView qualityViewData:^NSString *{
             return [[CallTool shareCallTool] callQuality];

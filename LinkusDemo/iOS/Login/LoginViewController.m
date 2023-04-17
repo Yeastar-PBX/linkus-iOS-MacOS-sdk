@@ -7,6 +7,7 @@
 
 #import "LoginViewController.h"
 #import "YLSUnderlineTextField.h"
+#import "CalllogsViewController.h"
 
 @interface LoginViewController ()
 
@@ -32,7 +33,8 @@
     userNameTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"用户名" attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     userNameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     userNameTF.returnKeyType = UIReturnKeyDone;
-    userNameTF.secureTextEntry = YES;
+    userNameTF.text = @"1009";
+//    userNameTF.secureTextEntry = YES;
     userNameTF.textColor = [UIColor whiteColor];
     [self.view addSubview:userNameTF];
     
@@ -41,7 +43,8 @@
     passwordTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"密码" attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     passwordTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     passwordTF.returnKeyType = UIReturnKeyDone;
-    passwordTF.secureTextEntry = YES;
+    passwordTF.text = @"Yeastar123";
+//    passwordTF.secureTextEntry = YES;
     passwordTF.textColor = [UIColor whiteColor];
     [self.view addSubview:passwordTF];
     
@@ -50,7 +53,8 @@
     identifyTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"域名/SN" attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     identifyTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     identifyTF.returnKeyType = UIReturnKeyDone;
-    identifyTF.secureTextEntry = YES;
+    identifyTF.text = @"192.168.21.228";
+//    identifyTF.secureTextEntry = YES;
     identifyTF.textColor = [UIColor whiteColor];
     [self.view addSubview:identifyTF];
     
@@ -68,12 +72,20 @@
 
 #pragma mark - action
 - (void)loginEvent:(UIButton *)sender {
-    [self showHUDWithText:@"登录中"];
-    double delayInSeconds = 0.5;
-    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(delayTime, dispatch_get_main_queue(), ^(void){
-        [self hideHUD];
-    });
+    [self showHUD];
+//    [[[YLSSDK sharedYLSSDK] loginManager] login:self.userNameTF.text
+//                                          token:self.passwordTF.text
+//                                     pbxAddress:self.identifyTF.text completion:^(NSError * _Nullable error) {
+//        [self hideHUD];
+//        if (!error) {
+//            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"EVER_LOGIN"];
+//            [[NSUserDefaults standardUserDefaults] synchronize];
+//            CalllogsViewController *calllogsVC = [[CalllogsViewController alloc] init];
+//            [UIApplication sharedApplication].keyWindow.rootViewController = calllogsVC;
+//        }else{
+//            [self showHUDErrorWithText:[NSString stringWithFormat:@"Failed to connect to server (%ld)",error.code]];
+//        }
+//    }];
 }
 
 @end

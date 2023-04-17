@@ -11,12 +11,11 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 
-#import "LocalPathConfig.h"
 #import "LocalConfig.h"
 #import "LocalFontConfig.h"
 
 #import "CallProvider.h"
-#import <linkus_vivo_iOS/linkus_vivo_iOS.h>
+#import <linkus_vivo_iOS/linkus_vivo.h>
 
 #import "Masonry.h"
 #import <ReactiveObjC/ReactiveObjC.h>

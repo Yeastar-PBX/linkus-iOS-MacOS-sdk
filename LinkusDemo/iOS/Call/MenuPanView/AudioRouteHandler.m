@@ -47,39 +47,7 @@
 }
 
 #pragma mark - Notification
-- (void)onAudioRouteChangeListenerCallbackNotification:(NSNotification*)notification {
-    NSDictionary *interuptionDict = notification.userInfo;
-    NSInteger routeChangeReason = [[interuptionDict valueForKey:AVAudioSessionRouteChangeReasonKey] integerValue];
-    switch (routeChangeReason) {
-        case AVAudioSessionRouteChangeReasonNewDeviceAvailable: {
-            NSLog(@"耳机插入");
-            [YLSPJRegister audioSendSetDev];
-            [[AVAudioSession sharedInstance] setMode:AVAudioSessionModeVoiceChat error:nil];//优化VOIP音频
-        }
-            break;
-        case AVAudioSessionRouteChangeReasonOldDeviceUnavailable: {
-            NSLog(@"耳机拔出");
-            [YLSPJRegister audioSendSetDev];
-        }
-            break;
-        case AVAudioSessionRouteChangeReasonCategoryChange: {//类别改变了:听筒
-            NSLog(@"听筒");
-            [YLSPJRegister audioSendSetDev];
-        }
-            break;
-        case AVAudioSessionRouteChangeReasonOverride: {//App重置了输出设置:扬声器
-            NSLog(@"扬声器、断开蓝牙耳机");
-            [YLSPJRegister audioSendSetDev];
-        }
-            break;
-        case AVAudioSessionRouteChangeReasonUnknown:
-        case AVAudioSessionRouteChangeReasonWakeFromSleep:
-        case AVAudioSessionRouteChangeReasonNoSuitableRouteForCategory:
-        case AVAudioSessionRouteChangeReasonRouteConfigurationChange: {
-        }
-            break;
-    }
-    
+- (void)onAudioRouteChangeListenerCallbackNotification:(NSNotification*)notification {    
     //外设改变，同步"免提"按钮状态
     AVAudioSessionRouteDescription *route = [[AVAudioSession sharedInstance] currentRoute];
     for (AVAudioSessionPortDescription *desc in [route outputs]) {

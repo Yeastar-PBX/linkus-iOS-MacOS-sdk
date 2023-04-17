@@ -9,7 +9,7 @@
 #import "Contact.h"
 #import "CallViewController.h"
 
-@interface CallProvider ()<CallManagerDelegate>
+@interface CallProvider ()<YLSCallManagerDelegate>
 
 @end
 
@@ -27,7 +27,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [YLSCallManager shareCallManager].delegate = self;
+        [[[YLSSDK sharedYLSSDK] callManager] addDelegate:self];
     }
     return self;
 }
