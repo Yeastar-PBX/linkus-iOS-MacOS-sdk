@@ -27,6 +27,10 @@ NSString *NotificationLogout = @"NotificationLogout";
     
     [CallProvider shareCallProvider];
     [[YLSSDK sharedYLSSDK] initApp];
+    [YLSSDKConfig sharedConfig].localizedName = @"LinkusDemo";
+    [YLSSDKConfig sharedConfig].iconTemplateImageData = UIImagePNGRepresentation([UIImage imageNamed:@"AppCallMaskIcon"]);
+    [YLSSDKConfig sharedConfig].hangupAudioFileName = @"Hangup.wav";
+    [YLSSDKConfig sharedConfig].alertAudioFileName = @"Alerting.wav";
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"EVER_LOGIN"]) {
         [[[YLSSDK sharedYLSSDK] loginManager] autoLogin];

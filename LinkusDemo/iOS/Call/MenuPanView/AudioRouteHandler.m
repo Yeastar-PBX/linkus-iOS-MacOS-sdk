@@ -17,14 +17,6 @@
         if (self.bluetoothHeadsetConnected) {
             _type = AudioRouteTypeBluetooth;
             _selected = NO;
-        }else {
-            AVAudioSessionRouteDescription *route = [[AVAudioSession sharedInstance] currentRoute];
-            for (AVAudioSessionPortDescription *desc in [route outputs]) {
-                if ([[desc portType] isEqualToString:AVAudioSessionPortBuiltInSpeaker]) {
-                    _type = AudioRouteTypeSpeaker;
-                    _selected = YES;
-                }
-            }
         }
     }
     return self;

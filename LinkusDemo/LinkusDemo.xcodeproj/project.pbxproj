@@ -55,6 +55,10 @@
 		5985CA5929EF86CB003E9616 /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5629EF86CB003E9616 /* SegmentedView.swift */; };
 		5985CA5A29EF86CB003E9616 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5729EF86CB003E9616 /* SearchBar.swift */; };
 		5985CA5B29EF86CB003E9616 /* ViewComponet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5829EF86CB003E9616 /* ViewComponet.swift */; };
+		5985CA6529EFD831003E9616 /* Hangup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6329EFD831003E9616 /* Hangup.wav */; };
+		5985CA6629EFD831003E9616 /* Hangup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6329EFD831003E9616 /* Hangup.wav */; };
+		5985CA6729EFD831003E9616 /* Alerting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6429EFD831003E9616 /* Alerting.wav */; };
+		5985CA6829EFD831003E9616 /* Alerting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6429EFD831003E9616 /* Alerting.wav */; };
 		5987172329DEE44A0023936C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AEF929D6AC0E00E41926 /* libc++.tbd */; };
 		5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
 		A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */; };
@@ -153,6 +157,8 @@
 		5985CA5629EF86CB003E9616 /* SegmentedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
 		5985CA5729EF86CB003E9616 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		5985CA5829EF86CB003E9616 /* ViewComponet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewComponet.swift; sourceTree = "<group>"; };
+		5985CA6329EFD831003E9616 /* Hangup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hangup.wav; sourceTree = "<group>"; };
+		5985CA6429EFD831003E9616 /* Alerting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Alerting.wav; sourceTree = "<group>"; };
 		775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +197,7 @@
 				5937A8E429D576030089B0A2 /* iOS */,
 				0C392DD429D56FB2006C8E6F /* macOS */,
 				5937A8E929D576B30089B0A2 /* Supporting Files */,
+				5985CA6229EFD7D9003E9616 /* Resource */,
 				0C392DCE29D56FB2006C8E6F /* Products */,
 				5937A8EC29D5778F0089B0A2 /* Frameworks */,
 				E354D6B2201469225EE7F4BA /* Pods */,
@@ -445,7 +452,6 @@
 				5902A01029D584E100E41926 /* PrefixHeader.pch */,
 				59438CF429E7D47300B4DAA7 /* LinkusDemo (macOS)-Bridging-Header.h */,
 				5937A8E529D576470089B0A2 /* LinkusDemo (iOS)-Bridging-Header.h */,
-				0C392DC829D56FB2006C8E6F /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -473,6 +479,16 @@
 				5985CA5829EF86CB003E9616 /* ViewComponet.swift */,
 			);
 			path = ViewComponet;
+			sourceTree = "<group>";
+		};
+		5985CA6229EFD7D9003E9616 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0C392DC829D56FB2006C8E6F /* Assets.xcassets */,
+				5985CA6429EFD831003E9616 /* Alerting.wav */,
+				5985CA6329EFD831003E9616 /* Hangup.wav */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		E354D6B2201469225EE7F4BA /* Pods */ = {
@@ -570,7 +586,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5985CA6529EFD831003E9616 /* Hangup.wav in Resources */,
 				0C392DDA29D56FB2006C8E6F /* Assets.xcassets in Resources */,
+				5985CA6729EFD831003E9616 /* Alerting.wav in Resources */,
 				5902A03C29D58C7500E41926 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,7 +597,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5985CA6829EFD831003E9616 /* Alerting.wav in Resources */,
 				0C392DDB29D56FB2006C8E6F /* Assets.xcassets in Resources */,
+				5985CA6629EFD831003E9616 /* Hangup.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
