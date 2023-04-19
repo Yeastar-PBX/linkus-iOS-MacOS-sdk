@@ -60,11 +60,9 @@ struct LoginView: View {
                     isFocused = .domain
                 } else {
                     isFocused = nil
-//                    LoginTool.loginFirst(name, password: password, domain: domain, localAddress: localAddress, localPort: localPort) { errorTime, resultCode, errorCount in
-//
-//                    }
-//                    YLSPJRegister.share()
-//                    YLSPJRegister.registerPJSip()
+                    YLSSDK.shared().loginManager.login(name, token: password, pbxAddress: localAddress) { _ in 
+                        
+                    }
                     
                     print("用户输入的没有问题,可以提交至服务器")
                     UserDefaults.standard.set(true,forKey:"isLogin")

@@ -5,7 +5,6 @@ use_frameworks!
 
 target 'LinkusDemo (iOS)' do
 platform :ios, '11.0'
-    pod 'AliyunOSSiOS', '~> 2.10.13'
     pod 'SVProgressHUD', '~> 2.2.5'
     pod 'Toast', '~> 4.0.0'
     pod 'YYCategories', '~> 1.0.4'

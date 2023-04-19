@@ -22,8 +22,6 @@
 
 @property (nonatomic,strong) UILabel *thirdLabel;
 
-@property (nonatomic,strong) UILabel *fourthLabel;
-
 @property (nonatomic,strong) UILabel *stateLabel;
 
 @property (nonatomic,strong) dispatch_source_t timer;
@@ -88,12 +86,6 @@
     thirdLabel.font = [UIFont systemFontOfSize:14.f * ScreenScale weight:UIFontWeightRegular];
     thirdLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:thirdLabel];
-    
-    UILabel *fourthLabel = [[UILabel alloc] init];
-    self.fourthLabel = fourthLabel;
-    fourthLabel.font = [UIFont systemFontOfSize:14.f * ScreenScale weight:UIFontWeightRegular];
-    fourthLabel.textAlignment = NSTextAlignmentCenter;
-    [self addSubview:fourthLabel];
 }
 
 - (void)layoutSubviews {
@@ -121,11 +113,6 @@
         make.centerX.mas_equalTo(self.mas_centerX);
         make.top.mas_equalTo(self.secondLabel.mas_bottom).offset(4);
     }];
-    
-    [self.fourthLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(self.mas_centerX);
-        make.top.mas_equalTo(self.thirdLabel.mas_bottom).offset(4);
-    }];
 }
 
 #pragma mark - 页面设置
@@ -134,63 +121,15 @@
     self.imageView.image = currentCall.contact.sipImage;
     self.firstLabel.marqueeLabel.text = currentCall.serverName;
     if (self.numberNameSame) {
-        if (self.showTrunk) {
-            if (self.showCompany.length > 0) {
-                self.secondLabel.text = [NSString stringWithFormat:@"%@",currentCall.sipTrunkName];
-                self.thirdLabel.text = self.showCompany;
-                self.stateLabel = self.fourthLabel;
-                self.thirdLabel.hidden = NO;
-                self.fourthLabel.hidden = NO;
-            } else {
-                self.secondLabel.text = [NSString stringWithFormat:@"%@",currentCall.sipTrunkName];
-                self.stateLabel = self.thirdLabel;
-                self.thirdLabel.hidden = NO;
-                self.fourthLabel.hidden = YES;
-            }
-        } else {
-            if (self.showCompany.length > 0) {
-                self.secondLabel.text = self.showCompany;
-                self.stateLabel = self.thirdLabel;
-                self.thirdLabel.hidden = NO;
-                self.fourthLabel.hidden = YES;
-            } else {
-                self.stateLabel = self.secondLabel;
-                self.thirdLabel.hidden = YES;
-                self.fourthLabel.hidden = YES;
-            }
-        }
+        self.stateLabel = self.secondLabel;
+        self.thirdLabel.hidden = YES;
     } else {
-        if (self.showTrunk) {
-            if (self.showCompany.length > 0) {
-                self.secondLabel.text = [NSString stringWithFormat:@"%@ | %@",currentCall.call_num,currentCall.sipTrunkName];
-                self.thirdLabel.text = self.showCompany;
-                self.stateLabel = self.fourthLabel;
-                self.thirdLabel.hidden = NO;
-                self.fourthLabel.hidden = NO;
-            } else {
-                self.secondLabel.text = [NSString stringWithFormat:@"%@ | %@",currentCall.call_num,currentCall.sipTrunkName];
-                self.stateLabel = self.thirdLabel;
-                self.thirdLabel.hidden = NO;
-                self.fourthLabel.hidden = YES;
-            }
-        } else {
-            if (self.showCompany.length > 0) {
-                self.secondLabel.text = [NSString stringWithFormat:@"%@",currentCall.call_num];
-                self.thirdLabel.text = self.showCompany;
-                self.stateLabel = self.fourthLabel;
-                self.thirdLabel.hidden = NO;
-                self.fourthLabel.hidden = NO;
-            }else{
-                self.secondLabel.text = [NSString stringWithFormat:@"%@",currentCall.call_num];
-                self.stateLabel = self.thirdLabel;
-                self.thirdLabel.hidden = NO;
-                self.fourthLabel.hidden = YES;
-            }
-        }
+        self.secondLabel.text = [NSString stringWithFormat:@"%@",currentCall.callNumber];
+        self.stateLabel = self.thirdLabel;
+        self.thirdLabel.hidden = NO;
     }
     self.secondLabel.textColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.38];
     self.thirdLabel.textColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.38];
-    self.fourthLabel.textColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.87];
     self.stateLabel.textColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.87];
     
 //    if (![YLSPJRegister sharePJRegister].isSucRegis && (currentCall.status == CallStatusConnect || currentCall.status == CallStatusCalling)) {
@@ -204,7 +143,7 @@
         }
             break;
         case CallStatusRemoteRinging:{
-            if (currentCall.call_in) {
+            if (currentCall.callIn) {
                 self.stateLabel.text = @"";
             }else{
                 self.stateLabel.text = @"Ringing…";
@@ -231,18 +170,7 @@
 }
 
 - (BOOL)numberNameSame {
-    return [self.currentCall.serverName isEqualToString:self.currentCall.call_num];
-}
-
-- (BOOL)showTrunk {
-    return self.currentCall.sipTrunkName.length > 0;
-}
-
-- (NSString *)showCompany {
-    if (self.currentCall.companyName.length > 0) {
-        return self.currentCall.companyName;
-    }
-    return @"";
+    return [self.currentCall.serverName isEqualToString:self.currentCall.callNumber];
 }
 
 @end

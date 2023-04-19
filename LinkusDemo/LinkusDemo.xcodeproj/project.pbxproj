@@ -51,6 +51,10 @@
 		59438CE929E7ABF600B4DAA7 /* linkus_vivo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59438CE829E7ABF600B4DAA7 /* linkus_vivo_iOS.framework */; };
 		59438CED29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59438CEC29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework */; };
 		59438CF329E7D19700B4DAA7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59438CF229E7D19700B4DAA7 /* LoginView.swift */; };
+		5985CA5429EF8649003E9616 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5329EF8649003E9616 /* SidebarView.swift */; };
+		5985CA5929EF86CB003E9616 /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5629EF86CB003E9616 /* SegmentedView.swift */; };
+		5985CA5A29EF86CB003E9616 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5729EF86CB003E9616 /* SearchBar.swift */; };
+		5985CA5B29EF86CB003E9616 /* ViewComponet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5829EF86CB003E9616 /* ViewComponet.swift */; };
 		5987172329DEE44A0023936C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AEF929D6AC0E00E41926 /* libc++.tbd */; };
 		5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
 		A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */; };
@@ -145,6 +149,10 @@
 		59438CF229E7D19700B4DAA7 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		59438CF429E7D47300B4DAA7 /* LinkusDemo (macOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinkusDemo (macOS)-Bridging-Header.h"; sourceTree = "<group>"; };
 		5985CA3A29ECEC8A003E9616 /* LinkusDemo--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkusDemo--macOS--Info.plist"; sourceTree = "<group>"; };
+		5985CA5329EF8649003E9616 /* SidebarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		5985CA5629EF86CB003E9616 /* SegmentedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
+		5985CA5729EF86CB003E9616 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		5985CA5829EF86CB003E9616 /* ViewComponet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewComponet.swift; sourceTree = "<group>"; };
 		775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +212,8 @@
 				0C392DC629D56FB0006C8E6F /* LinkusDemoApp.swift */,
 				0C392DC729D56FB0006C8E6F /* ContentView.swift */,
 				59438CF229E7D19700B4DAA7 /* LoginView.swift */,
+				5985CA5329EF8649003E9616 /* SidebarView.swift */,
+				5985CA5529EF86CB003E9616 /* ViewComponet */,
 				0C392DD529D56FB2006C8E6F /* macOS.entitlements */,
 			);
 			path = macOS;
@@ -455,6 +465,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5985CA5529EF86CB003E9616 /* ViewComponet */ = {
+			isa = PBXGroup;
+			children = (
+				5985CA5629EF86CB003E9616 /* SegmentedView.swift */,
+				5985CA5729EF86CB003E9616 /* SearchBar.swift */,
+				5985CA5829EF86CB003E9616 /* ViewComponet.swift */,
+			);
+			path = ViewComponet;
+			sourceTree = "<group>";
+		};
 		E354D6B2201469225EE7F4BA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -674,8 +694,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				59438CF329E7D19700B4DAA7 /* LoginView.swift in Sources */,
+				5985CA5929EF86CB003E9616 /* SegmentedView.swift in Sources */,
+				5985CA5429EF8649003E9616 /* SidebarView.swift in Sources */,
 				0C392DD929D56FB2006C8E6F /* ContentView.swift in Sources */,
 				0C392DD729D56FB2006C8E6F /* LinkusDemoApp.swift in Sources */,
+				5985CA5B29EF86CB003E9616 /* ViewComponet.swift in Sources */,
+				5985CA5A29EF86CB003E9616 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -52,11 +52,10 @@
 #pragma mark - 发起通话
 + (void)baseCallByNumber:(NSString *)number {
     YLSSipCall *sipCall = [[YLSSipCall alloc] init];
-    sipCall.call_num = number;
-    sipCall.call_ID = DefaultSipCallID;
-    sipCall.call_in = NO;
+    sipCall.callNumber = number;
+    sipCall.callID = DefaultSipCallID;
+    sipCall.callIn = NO;
     sipCall.status = CallStatusConnect; //CallStatusConnect;
-    sipCall.linkedid = nil;
     Contact *model = [[Contact alloc] init];
     model.name = number;
     sipCall.contact = model;

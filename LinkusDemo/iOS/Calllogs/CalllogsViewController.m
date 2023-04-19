@@ -22,9 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        
+    self.navigationItem.title = @"Calls";
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Login out" style:UIBarButtonItemStylePlain target:self action:@selector(loginOut)];
+    self.navigationItem.rightBarButtonItem = rightButtonItem;
+
     [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
         AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
         if (granted) {
@@ -94,6 +96,16 @@
 
 - (void)dialpadCallViewCallAction:(DialpadCallView *)dialpadCallView touchAction:(BOOL)longTouch {
     [CallProvider baseCallByNumber:self.dialpadView.number];
+}
+
+#pragma mark - DialpadCallViewDelegate
+- (void)loginOut {
+    [self showHUD];
+    [[[YLSSDK sharedYLSSDK] loginManager] logout:^(NSError * _Nullable error) {
+        [self hideHUD];
+        extern NSString *NotificationLogout;
+        [[NSNotificationCenter defaultCenter] postNotificationOnMainThreadWithName:NotificationLogout object:nil];
+    }];
 }
 
 @end

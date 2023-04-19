@@ -73,19 +73,18 @@
 #pragma mark - action
 - (void)loginEvent:(UIButton *)sender {
     [self showHUD];
-//    [[[YLSSDK sharedYLSSDK] loginManager] login:self.userNameTF.text
-//                                          token:self.passwordTF.text
-//                                     pbxAddress:self.identifyTF.text completion:^(NSError * _Nullable error) {
-//        [self hideHUD];
-//        if (!error) {
-//            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"EVER_LOGIN"];
-//            [[NSUserDefaults standardUserDefaults] synchronize];
-//            CalllogsViewController *calllogsVC = [[CalllogsViewController alloc] init];
-//            [UIApplication sharedApplication].keyWindow.rootViewController = calllogsVC;
-//        }else{
-//            [self showHUDErrorWithText:[NSString stringWithFormat:@"Failed to connect to server (%ld)",error.code]];
-//        }
-//    }];
+    [[[YLSSDK sharedYLSSDK] loginManager] login:self.userNameTF.text
+                                          token:self.passwordTF.text
+                                     pbxAddress:self.identifyTF.text completion:^(NSError * _Nullable error) {
+        [self hideHUD];
+        if (!error) {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"EVER_LOGIN"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [UIApplication sharedApplication].keyWindow.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[CalllogsViewController alloc] init]];
+        }else{
+            [self showHUDErrorWithText:[NSString stringWithFormat:@"Failed to connect to server (%ld)",error.code]];
+        }
+    }];
 }
 
 @end

@@ -337,15 +337,15 @@
             }
         }else{
             if (self.currentCall.callRecordType == CallRecordTypeStop) {
-//                if ([[ServerInformation sharedServerInformation].authRecord isEqualToString:@"start"]) {
-//                    model.selected = NO;
-//                    model.enabled = YES;
-//                }else{
+                if ([[YLSSDK sharedYLSSDK] callManager].adminRecord) {
+                    model.selected = NO;
+                    model.enabled = YES;
+                }else{
                     model.selected = NO;
                     model.enabled = NO;
-//                }
+                }
             }else if (self.currentCall.callRecordType == CallRecordTypeRecording) {
-                if (self.recordEnable) {
+                if ([[YLSSDK sharedYLSSDK] callManager].enableRecord) {
                     model.selected = YES;
                     model.enabled = YES;
                 }else{
@@ -354,7 +354,7 @@
                     model.enabled = NO;
                 }
             }else if (self.currentCall.callRecordType == CallRecordTypePause) {
-                if (self.recordEnable) {
+                if ([[YLSSDK sharedYLSSDK] callManager].enableRecord) {
                     model.selected = NO;
                     model.enabled = YES;
                 }else{
@@ -434,14 +434,6 @@
 }
 
 #pragma mark - private
-- (BOOL)recordEnable {
-//    if ([[ServerInformation sharedServerInformation].authRecord isEqualToString:@"yes"] || [[ServerInformation sharedServerInformation].authRecord isEqualToString:@"start"]) {
-//        return YES;
-//    }else{
-        return NO;
-//    }
-}
-
 - (void)addDragBorder {
     self.backgroundColor = [UIColor colorWithRGB:0x000000 alpha:0.38];
     CGFloat cornerRadius = self.collectionView.layer.cornerRadius;
