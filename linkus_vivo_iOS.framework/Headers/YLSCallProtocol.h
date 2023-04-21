@@ -1,8 +1,8 @@
 //
-//  YLSContactProtocol.h
-//  Linkus (iOS)
+//  YLSCallManagerProtocol.h
+//  linkus-vivo
 //
-//  Created by 杨桂福 on 2023/3/29.
+//  Created by 杨桂福 on 2023/4/17.
 //
 
 #import <Foundation/Foundation.h>
@@ -10,12 +10,11 @@
 #import <UIKit/UIKit.h>
 #endif
 
-NS_ASSUME_NONNULL_BEGIN
-
 @class YLSSipCall;
 @class YLSCallManager;
 @class YLSCallStatusManager;
-@class YLSPJRegister;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol YLSContactProtocol <NSObject>
 
@@ -27,31 +26,82 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@protocol CallManagerDelegate <NSObject>
-
-@optional
-
-//系统来电
-- (void)callManager:(YLSCallManager *)callManager systemCall:(BOOL)systemCall;
-
-//来电
-- (void)callManager:(YLSCallManager *)callManager contact:(void (^)(id<YLSContactProtocol> (^block)(NSString *number)))contact completion:(void (^)(void (^controllerBlock)(void),void (^errorBlock)(NSError *error)))completion;
-
-//通话状态
-- (void)callManager:(YLSCallManager *)callManager callInfoStatus:(NSMutableArray<YLSSipCall *> *)currenCallArr;
-
-//录音状态
-- (void)callManagerRecordType:(YLSCallManager *)callManager;
-
-@end
-
-
-@protocol CallStatusManagerDelegate <NSObject>
+@protocol YLSCallManagerDelegate <NSObject>
 
 @optional
 
 /**
- *  界面消失，没有通话
+ *  来电
+ */
+- (void)callManager:(YLSCallManager *)callManager contact:(void (^)(id<YLSContactProtocol> (^block)(NSString *number)))contact completion:(void (^)(void (^controllerBlock)(void),void (^errorBlock)(NSError *error)))completion;
+
+/**
+ *  通话信息
+ */
+- (void)callManager:(YLSCallManager *)callManager callInfoStatus:(NSMutableArray<YLSSipCall *> *)currenCallArr;
+
+/**
+ *  Sip错误码
+ */
+- (void)callManager:(YLSCallManager *)callManager callFaild:(NSError *)error;
+
+/**
+ *  录音状态
+ */
+- (void)callManagerRecordType:(YLSCallManager *)callManager;
+
+/**
+ *  当前通话质量
+ */
+- (void)callManager:(YLSCallManager *)callManager callQuality:(BOOL)quality;
+
+@end
+
+@protocol YLSCallManager <NSObject>
+
+/**
+ *  处理Voip推送
+ */
+- (void)receiveIncomingPushWithPayload:(NSDictionary *)dictionaryPayload;
+
+/**
+ *  正在进行的通话信息
+ */
+- (YLSSipCall *)currentSipCall;
+
+/**
+ *  所有通话信息
+ */
+- (NSArray<YLSSipCall *> *)currentSipCalls;
+
+/**
+ *  录音功能是否可用
+ */
+- (BOOL)enableRecord;
+
+/**
+ *  管理员录音功能
+ */
+- (BOOL)adminRecord;
+
+/**
+ *  添加委托
+ */
+- (void)addDelegate:(id<YLSCallManagerDelegate>)delegate;
+
+/**
+ *  移除委托
+ */
+- (void)removeDelegate:(id<YLSCallManagerDelegate>)delegate;
+
+@end
+
+@protocol YLSCallStatusManagerDelegate <NSObject>
+
+@optional
+
+/**
+ *  挂断所有通话
  */
 - (void)callStatusManagerDissmiss:(YLSCallStatusManager *)callStatusManager;
 
@@ -68,17 +118,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
-@protocol PJRegisterDelegate <NSObject>
-
-@optional
+@protocol YLSCallStatusManager <NSObject>
 
 /**
- *  通话质量回调
- *  @param quality  Yes 差   No 好
- *  @discussion 通话质量变化每三秒调用一次
+ *  呼叫等待切换通话
  */
-- (void)pjRegister:(YLSPJRegister *)pjRegister callid:(int)callid callStatus:(BOOL)quality;
+- (void)callChange:(YLSSipCall *)waitingCall;
+
+/**
+ *  添加委托
+ */
+- (void)addDelegate:(id<YLSCallStatusManagerDelegate>)delegate;
+
+/**
+ *  移除委托
+ */
+- (void)removeDelegate:(id<YLSCallStatusManagerDelegate>)delegate;
 
 @end
 

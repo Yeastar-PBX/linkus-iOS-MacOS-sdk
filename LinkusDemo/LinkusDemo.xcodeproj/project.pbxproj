@@ -48,8 +48,6 @@
 		5937A8EB29D577550089B0A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5937A8EA29D577550089B0A2 /* main.m */; };
 		59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59438CA229E52E8500B4DAA7 /* libcurl.tbd */; };
 		59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
-		59438CE929E7ABF600B4DAA7 /* linkus_vivo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59438CE829E7ABF600B4DAA7 /* linkus_vivo_iOS.framework */; };
-		59438CED29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59438CEC29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework */; };
 		59438CF329E7D19700B4DAA7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59438CF229E7D19700B4DAA7 /* LoginView.swift */; };
 		5985CA5429EF8649003E9616 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5329EF8649003E9616 /* SidebarView.swift */; };
 		5985CA5929EF86CB003E9616 /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5629EF86CB003E9616 /* SegmentedView.swift */; };
@@ -180,7 +178,6 @@
 				5987172329DEE44A0023936C /* libc++.tbd in Frameworks */,
 				5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */,
 				5902A00F29D5849E00E41926 /* UIKit.framework in Frameworks */,
-				59438CE929E7ABF600B4DAA7 /* linkus_vivo_iOS.framework in Frameworks */,
 				A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,7 +188,6 @@
 			files = (
 				59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */,
 				59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */,
-				59438CED29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework in Frameworks */,
 				494ECB49BD690BE7A5B795DB /* Pods_LinkusDemo__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

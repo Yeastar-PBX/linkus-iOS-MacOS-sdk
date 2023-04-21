@@ -6,43 +6,39 @@
 	<dict>
 		<key>Headers/CallTool.h</key>
 		<data>
-		0Svi23YabEAd9rdBgXFwmUCszfs=
-		</data>
-		<key>Headers/NetWorkStatusObserver.h</key>
-		<data>
-		rePs9ZR/P+cQmweRMY+CY42irPU=
-		</data>
-		<key>Headers/YLSCallManager.h</key>
-		<data>
-		f+WC68XiDc94X4uIKwzM3vz9woE=
+		NDNgCyg1IPCz3pwTFE9PleWcke8=
 		</data>
 		<key>Headers/YLSCallProtocol.h</key>
 		<data>
-		qawKIh5S4+UefSQoOECc00mgnpk=
+		V1rKP/5GWrN3zw/m+u0+C9eUR9Y=
 		</data>
-		<key>Headers/YLSCallStatusManager.h</key>
+		<key>Headers/YLSHistory.h</key>
 		<data>
-		mnQxh6ZWjHzd8JTs0hDskdE4e2E=
+		QDlkz06BAflmJzq51g/rdFvM9H4=
 		</data>
-		<key>Headers/YLSPJRegister.h</key>
+		<key>Headers/YLSLoginProtocol.h</key>
 		<data>
-		iAZbK/O/yPCLYDK/MZjAcX0YvKo=
+		cBWms9uO4exIpKzKs3p0QUBAiCo=
+		</data>
+		<key>Headers/YLSSDK.h</key>
+		<data>
+		gFtnJgT3vdg18nAzajWFlMUFFbI=
+		</data>
+		<key>Headers/YLSSDKConfig.h</key>
+		<data>
+		wucasif/MDLCPYCohRhYOC300lo=
 		</data>
 		<key>Headers/YLSSipCall.h</key>
 		<data>
-		t1bPxMsBmcD78f5DUaHTCFDcbJk=
+		Dd/JpXkXelQfbvvFko1iwHN4pnE=
 		</data>
-		<key>Headers/linkus_vivo_iOS.h</key>
+		<key>Headers/linkus_vivo.h</key>
 		<data>
-		AJiiFBOJ1o0k4elZwwpY7up1SKs=
+		cfc8X1qtjnzFNwFtq04EtvcfyLw=
 		</data>
 		<key>Info.plist</key>
 		<data>
 		kNOrgGols6vNIoW+4eecyPlpfnQ=
-		</data>
-		<key>Modules/module.modulemap</key>
-		<data>
-		TbotK+UTDOwyPA3B4M0MCqGG3qc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -51,99 +47,88 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0Svi23YabEAd9rdBgXFwmUCszfs=
+			NDNgCyg1IPCz3pwTFE9PleWcke8=
 			</data>
 			<key>hash2</key>
 			<data>
-			oRf0QTVyLX2xMlL7RK1bGuFVhosICbKgcch5e8QKzuM=
-			</data>
-		</dict>
-		<key>Headers/NetWorkStatusObserver.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rePs9ZR/P+cQmweRMY+CY42irPU=
-			</data>
-			<key>hash2</key>
-			<data>
-			o8NsDNPRfeqJ0fjQpy35fk1GUydq7Deg4ta5tVjX01c=
-			</data>
-		</dict>
-		<key>Headers/YLSCallManager.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			f+WC68XiDc94X4uIKwzM3vz9woE=
-			</data>
-			<key>hash2</key>
-			<data>
-			xSUrSu4d4dezleQVvJJ4iKqT2GMY+gnw5y7lErJscy8=
+			sPd2Y1bpyfUKKIRDHNH9uYnqqDvwk1sPEm6F8y4Et4I=
 			</data>
 		</dict>
 		<key>Headers/YLSCallProtocol.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qawKIh5S4+UefSQoOECc00mgnpk=
+			V1rKP/5GWrN3zw/m+u0+C9eUR9Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			JnRoZDKY0scVzkE0nkVBb6xaS1sGKYMILtIvDp9Sy0k=
+			F6ThAl1caKH9dyLK4aSY3NxSrbr/ddoLbMcyYnAJ4TU=
 			</data>
 		</dict>
-		<key>Headers/YLSCallStatusManager.h</key>
+		<key>Headers/YLSHistory.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mnQxh6ZWjHzd8JTs0hDskdE4e2E=
+			QDlkz06BAflmJzq51g/rdFvM9H4=
 			</data>
 			<key>hash2</key>
 			<data>
-			5QFvSR3RjVZHQ5BKNzCT2bgZyg6461JwQWDLIgBlkY8=
+			GRTymTEYgeFWX9TC2Qi4zoEYBebN1Ia3KyIxmMrn8Ac=
 			</data>
 		</dict>
-		<key>Headers/YLSPJRegister.h</key>
+		<key>Headers/YLSLoginProtocol.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iAZbK/O/yPCLYDK/MZjAcX0YvKo=
+			cBWms9uO4exIpKzKs3p0QUBAiCo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Gp6YME0IPtnh9aJ+Zen2IYzP/MkMgqbA2sCNC833X+Q=
+			mKIgA9kX+gM+zhkuTWiXRjW+1ugZW4Q5oLmmsTYXYU8=
+			</data>
+		</dict>
+		<key>Headers/YLSSDK.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gFtnJgT3vdg18nAzajWFlMUFFbI=
+			</data>
+			<key>hash2</key>
+			<data>
+			m9hbximTkmVbOJarVFVsPmeFcSeZ6KI7BgyoMw9EMww=
+			</data>
+		</dict>
+		<key>Headers/YLSSDKConfig.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wucasif/MDLCPYCohRhYOC300lo=
+			</data>
+			<key>hash2</key>
+			<data>
+			WglFccRR2Ab9o3iy8H9S5GA0dUGr50peXquUao9NlAc=
 			</data>
 		</dict>
 		<key>Headers/YLSSipCall.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			t1bPxMsBmcD78f5DUaHTCFDcbJk=
+			Dd/JpXkXelQfbvvFko1iwHN4pnE=
 			</data>
 			<key>hash2</key>
 			<data>
-			hp9QsFLIKyrMqqUqilMkFLlvFCnPmtw7EQoUT0pzeJg=
+			P6xdBfg0LAGVLxB3Ev4kl8yoYSB3FMNxc2aoDcYI9LY=
 			</data>
 		</dict>
-		<key>Headers/linkus_vivo_iOS.h</key>
+		<key>Headers/linkus_vivo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AJiiFBOJ1o0k4elZwwpY7up1SKs=
+			cfc8X1qtjnzFNwFtq04EtvcfyLw=
 			</data>
 			<key>hash2</key>
 			<data>
-			UhuSB29aVCbMGYIvXkBEkFl4f/NBscnSS4eJ2WdEVdM=
-			</data>
-		</dict>
-		<key>Modules/module.modulemap</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TbotK+UTDOwyPA3B4M0MCqGG3qc=
-			</data>
-			<key>hash2</key>
-			<data>
-			FOexEbXzSVigKeL+rkopJibFDj41YIDAvnh0BCqAqqY=
+			6DGFzDvTWLjMjifLRYxxL0vQDvkMBRBKXbWu9Piz660=
 			</data>
 		</dict>
 	</dict>

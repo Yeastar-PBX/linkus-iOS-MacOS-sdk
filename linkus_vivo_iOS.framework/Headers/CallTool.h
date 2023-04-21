@@ -6,7 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#if TARGET_OS_IPHONE
 #import <linkus_vivo_iOS/YLSSipCall.h>
+#else
+#import <linkus_vivo_MacOS/YLSSipCall.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

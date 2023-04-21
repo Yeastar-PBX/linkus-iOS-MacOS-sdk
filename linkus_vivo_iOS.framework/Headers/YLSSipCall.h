@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <linkus_vivo_iOS/YLSCallProtocol.h>
+#import "YLSCallProtocol.h"
+
+@class YLSHistory;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -33,95 +35,59 @@ typedef NS_ENUM(NSInteger, CallRecordType) {
     CallRecordTypeConferenceRecording      = 3,
 };
 
-typedef NS_ENUM(NSInteger, CallType) {
-    CallTypeNormal        = 0,
-    CallTypeRingGroup     = 1,
-    CallTypeQueue         = 2,
-};
-
-typedef NS_ENUM(NSInteger, CallAutoAnswerType) {
-    CallAutoAnswerTypeNormal                   = 0,
-    CallAutoAnswerTypeTalkbackOrBroadcast      = 1,
-    CallAutoAnswerTypeConference               = 2,
-};
-
 typedef void(^hasConnectedDidChange)(void);
 typedef void(^hasAnswerCallSuc)(void);
 
 @interface YLSSipCall : NSObject
 
-@property (nonatomic,assign)  struct callerinfo *callerinfo;
-
-@property (nonatomic,assign)  int call_ID;
-
-@property (nonatomic,assign)  BOOL call_in;
-
-@property (nonatomic,copy)    NSString *callIdStr;
-
-@property (nonatomic,assign)  BOOL autoAnswer;
-
-@property (nonatomic,copy)    NSString *call_num;
-
-@property (nonatomic,assign)  CallStatus status;
-
-@property (nonatomic,assign)  HangUpType hangUpType;
+@property (nonatomic,copy)    NSString *callNumber;
 
 @property (nonatomic,strong)  id<YLSContactProtocol> contact;
 
 @property (nonatomic,copy)   NSString *serverName;
 
-@property (nonatomic,copy)   NSString *sipTrunkName;
+@property (nonatomic,assign) BOOL mute;
 
-@property (nonatomic,copy)   NSString *companyName;
+@property (nonatomic,assign) BOOL onHold;
 
-@property (nonatomic,assign) NSUInteger durationTime;
+@property (nonatomic,assign)  CallStatus status;
+
+@property (nonatomic,assign)  HangUpType hangUpType;
+
+@property (nonatomic,assign) NSTimeInterval durationTime;
 
 @property (nonatomic,assign) NSTimeInterval holdTime;
 
-@property (nonatomic,assign) BOOL holdVideo;
 
-//P系列全局录音
+#pragma mark - 对SDK使用
+@property (nonatomic,strong) YLSHistory *historyCDR;//cdr生成
+
+@property (nonatomic,assign)  int callID;
+
+@property (nonatomic,assign)  BOOL callIn;
+
+@property (nonatomic,copy)    NSString *callIdStr;
+
+@property (nonatomic,assign)  BOOL autoAnswer;
+
 @property (nonatomic,assign) BOOL callRecordConferenceType;
 
 @property (nonatomic,assign) CallRecordType callRecordType;
 
-@property (nonatomic,assign) BOOL mute;
-
-@property (nonatomic,assign) BOOL remoteMute;
-
-@property (nonatomic,assign) BOOL onHold;
-
-@property (nonatomic,assign) BOOL speaker;
-
-//@property (nonatomic,strong) History *historyCDR;//cdr生成
-
-@property (nonatomic,assign) BOOL donotCreateCDR;//是否不生成CDR
-
 @property (nonatomic,strong) NSUUID *uuid;
 
-@property (nonatomic,copy)   NSString *callPrefix;//前缀
+@property (nonatomic,copy)   NSString *linkedid;
 
-@property (nonatomic,copy)   NSString *linkedid;//推送标识
+@property (nonatomic,assign) BOOL tryRegister;
 
-@property (nonatomic,assign) BOOL tryRegister;//是否正在连接服务器
+@property (nonatomic,assign) BOOL answeredElsewhere;
 
-@property (nonatomic,assign) BOOL routeLocal;//前缀是否是本地生成的
+@property (nonatomic,copy)   NSString *startTimeStamp;
 
-@property (nonatomic,assign) BOOL answeredElsewhere;//是否其它端接听
-
-@property (nonatomic,assign) CallType callType;//来电类型
-
-@property (nonatomic,assign) CallAutoAnswerType autoAnswerType;//来电类型
-
-@property (nonatomic,copy)   NSString *startTimeStamp;//来电创建的时间
-
-//打电话，连接成功记数的回调
 @property (nonatomic,copy) hasConnectedDidChange hasConnectedDidChangeBlock;
 
-//用于推送来电先弹出界面 有时候接听没连上服务器 这里需要回调通知callkit状态变更
 @property (nonatomic,copy) hasAnswerCallSuc answercallSuc;
 
-//是否需要播放挂断提示音
 - (BOOL)isPlayHangupVoice;
 
 @end
