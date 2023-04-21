@@ -44,7 +44,7 @@ Linkus提供两种集成方式供iOS开发者选择：
 
 #### 2.2 初始化SDK
 
-在工程`AppDelegate.m`的`application:didFinishLaunchingWithOptions:`方法中初始化Bugly：
+在工程`AppDelegate.m`的`application:didFinishLaunchingWithOptions:`方法中初始化：
 
 - **Objective-C**
 
