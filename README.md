@@ -1,3 +1,5 @@
+![linkus-vivo.GIF](https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo/blob/main/linkus-vivo.gif)
+
 # Linkus iOS SDK 接入指南
 
 ## 一. SDK 集成
