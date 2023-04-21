@@ -66,52 +66,7 @@ NSString *NotificationLogout = @"NotificationLogout";
 }
 
 - (void)pushRegistry:(PKPushRegistry *)registry didReceiveIncomingPushWithPayload:(PKPushPayload *)payload forType:(PKPushType)type withCompletionHandler:(void(^)(void))completion {
-    NSDictionary *dic = payload.dictionaryPayload[@"custom"];
-    
-    YLSSipCall *sipCall = [[YLSSipCall alloc] init];
-//    sipCall.call_num = dic[@"Caller"];
-//    sipCall.call_ID = DefaultSipCallID;
-////    sipCall.callPrefix = nil;
-//    sipCall.call_in = YES;
-//    sipCall.status = CallStatusConnect;
-//    sipCall.linkedid = dic[@"Linkedid"];
-//    sipCall.serverName = @"Name";
-//
-//    
-//    sipCall.startTimeStamp = dic[@"starttimestamp"];
-    
-//    PushModel *infoClear = [PushModel yy_modelWithJSON:payload.dictionaryPayload[@"clearpush"]];
-//    DDLogInfo(@"pushRegistry %@", payload.dictionaryPayload[@"clearpush"]);
-//
-//    if (infoClear.clearuser.length > 0 && (![infoClear.clearuser isEqualToString:[LoginManager sharedLoginManager].userNumber] || ![info.serverSN isEqualToString:[ServerInformation sharedServerInformation].serverSN] || ![LoginManager sharedLoginManager].isLogined)) {
-//        [LoginManager clearPushFlag:infoClear.localaddr remoteAddress:infoClear.externaladdr lcsAddress:infoClear.lcs extension:infoClear.clearuser];
-//        callInfo.hangUpType = HangUpTypeByHand;
-//    }else{
-//        //保活、发起注册登录
-//        [[NetWorkStatusObserver sharedNetWorkStatusObserver] applicationReceivePush];
-//    }
-//
-//    if ([UIApplication sharedApplication].applicationState != UIApplicationStateActive) {
-//        if ([info.pushType isEqualToString:@"NewCall"]) {
-//            [[CallManager shareCallManager] callManagerDealIncomingCall:callInfo];
-//        } else if ([info.pushType isEqualToString:@"Conference"]) {
-//            if (info.confId > 0) {
-//                ConferenceInfo *model = [[ConferenceInfo alloc] init];
-//                model.confid = info.confId;
-//                model.host   = [[info.confInfo componentsSeparatedByString:@"="] lastObject];
-//                model.meetname = info.confName;
-//                model.datetime = [NSString stringWithFormat:@"%ld",(long)[[NSDate date] timeIntervalSince1970]];
-//                model.inviteMembers = [NSMutableArray arrayWithArray:[info.confMemberInfo componentsSeparatedByString:@"-"]];
-//                callInfo.conferece = model;
-//                [[ConferenceManager shareConferenceManager] conferenceManagerDealIncomingCall:callInfo];
-//            } else {
-//                [[CallManager shareCallManager] callManagerDealIncomingCall:callInfo];
-//            }
-//        }
-//    } else {
-//        DDLogInfo(@"过滤前台推送");
-//    }
-//
+    [[[YLSSDK sharedYLSSDK] callManager] receiveIncomingPushWithPayload:payload.dictionaryPayload];
     completion();
 }
 

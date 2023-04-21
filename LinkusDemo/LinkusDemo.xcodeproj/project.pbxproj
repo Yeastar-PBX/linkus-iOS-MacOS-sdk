@@ -59,6 +59,9 @@
 		5985CA6629EFD831003E9616 /* Hangup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6329EFD831003E9616 /* Hangup.wav */; };
 		5985CA6729EFD831003E9616 /* Alerting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6429EFD831003E9616 /* Alerting.wav */; };
 		5985CA6829EFD831003E9616 /* Alerting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6429EFD831003E9616 /* Alerting.wav */; };
+		5985CA8C29F156F8003E9616 /* MergeHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA8B29F156F8003E9616 /* MergeHistory.m */; };
+		5985CA8F29F15A0E003E9616 /* HistoryProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA8E29F15A0E003E9616 /* HistoryProvider.m */; };
+		5985CA9229F161E7003E9616 /* HistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA9129F161E6003E9616 /* HistoryTableViewCell.m */; };
 		5987172329DEE44A0023936C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AEF929D6AC0E00E41926 /* libc++.tbd */; };
 		5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
 		A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */; };
@@ -140,7 +143,6 @@
 		5902A02B29D5887600E41926 /* DefActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefActionView.h; sourceTree = "<group>"; };
 		5902A03629D589A800E41926 /* LocalFontConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFontConfig.h; sourceTree = "<group>"; };
 		5902A03829D589A800E41926 /* LocalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalConfig.h; sourceTree = "<group>"; };
-		5902A03929D589A800E41926 /* LoginConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginConfig.h; sourceTree = "<group>"; };
 		5902A03A29D58A6D00E41926 /* LinkusDemo--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkusDemo--iOS--Info.plist"; sourceTree = "<group>"; };
 		5902A03B29D58C7500E41926 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		5902AED529D6A8CF00E41926 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
@@ -159,6 +161,12 @@
 		5985CA5829EF86CB003E9616 /* ViewComponet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewComponet.swift; sourceTree = "<group>"; };
 		5985CA6329EFD831003E9616 /* Hangup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hangup.wav; sourceTree = "<group>"; };
 		5985CA6429EFD831003E9616 /* Alerting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Alerting.wav; sourceTree = "<group>"; };
+		5985CA8A29F156F8003E9616 /* MergeHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeHistory.h; sourceTree = "<group>"; };
+		5985CA8B29F156F8003E9616 /* MergeHistory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MergeHistory.m; sourceTree = "<group>"; };
+		5985CA8D29F15A0E003E9616 /* HistoryProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryProvider.h; sourceTree = "<group>"; };
+		5985CA8E29F15A0E003E9616 /* HistoryProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryProvider.m; sourceTree = "<group>"; };
+		5985CA9029F161E6003E9616 /* HistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewCell.h; sourceTree = "<group>"; };
+		5985CA9129F161E6003E9616 /* HistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewCell.m; sourceTree = "<group>"; };
 		775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +239,7 @@
 			children = (
 				59029FC629D5838D00E41926 /* CalllogsViewController.h */,
 				59029FC529D5838D00E41926 /* CalllogsViewController.m */,
+				5985CA8929F1569D003E9616 /* History */,
 				59029FC729D5838D00E41926 /* Dialpad */,
 			);
 			path = Calllogs;
@@ -422,7 +431,6 @@
 			children = (
 				5902A03829D589A800E41926 /* LocalConfig.h */,
 				5902A03629D589A800E41926 /* LocalFontConfig.h */,
-				5902A03929D589A800E41926 /* LoginConfig.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -489,6 +497,19 @@
 				5985CA6329EFD831003E9616 /* Hangup.wav */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		5985CA8929F1569D003E9616 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				5985CA8A29F156F8003E9616 /* MergeHistory.h */,
+				5985CA8B29F156F8003E9616 /* MergeHistory.m */,
+				5985CA8D29F15A0E003E9616 /* HistoryProvider.h */,
+				5985CA8E29F15A0E003E9616 /* HistoryProvider.m */,
+				5985CA9029F161E6003E9616 /* HistoryTableViewCell.h */,
+				5985CA9129F161E6003E9616 /* HistoryTableViewCell.m */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		E354D6B2201469225EE7F4BA /* Pods */ = {
@@ -680,6 +701,7 @@
 				59029FFC29D5838E00E41926 /* DialpadView.m in Sources */,
 				5902A02D29D5887600E41926 /* UIView+Alert.m in Sources */,
 				5902A02E29D5887600E41926 /* UIDevice+YLS.m in Sources */,
+				5985CA8C29F156F8003E9616 /* MergeHistory.m in Sources */,
 				5902A00D29D5838E00E41926 /* CallViewController.m in Sources */,
 				5902A00A29D5838E00E41926 /* DialKeypadViewCell.m in Sources */,
 				5902A03229D5887600E41926 /* DefActionView.m in Sources */,
@@ -690,6 +712,7 @@
 				5902A03029D5887600E41926 /* UIViewController+Hierarchy.m in Sources */,
 				5902A00329D5838E00E41926 /* MenuPanView.m in Sources */,
 				5902A02F29D5887600E41926 /* NSString+YLS.m in Sources */,
+				5985CA8F29F15A0E003E9616 /* HistoryProvider.m in Sources */,
 				5937A8EB29D577550089B0A2 /* main.m in Sources */,
 				59029FF929D5838E00E41926 /* DialpadViewCell.m in Sources */,
 				5902A00629D5838E00E41926 /* CallWaitingView.m in Sources */,
@@ -697,6 +720,7 @@
 				5902A00429D5838E00E41926 /* PanHandler.m in Sources */,
 				5902A00729D5838E00E41926 /* CallTransferView.m in Sources */,
 				5902A00029D5838E00E41926 /* AppDelegate.m in Sources */,
+				5985CA9229F161E7003E9616 /* HistoryTableViewCell.m in Sources */,
 				5902A00129D5838E00E41926 /* AudioRouteHandler.m in Sources */,
 				59029FFA29D5838E00E41926 /* DialpadCallView.m in Sources */,
 				59029FFD29D5838E00E41926 /* Contact.m in Sources */,

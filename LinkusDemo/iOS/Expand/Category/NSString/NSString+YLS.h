@@ -13,4 +13,6 @@
 
 + (NSString *)smartTranslation:(NSString *)string;
 
++ (NSString *)timeCompare:(NSString *)timeStamp;
+
 @end
