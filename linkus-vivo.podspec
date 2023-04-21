@@ -16,6 +16,7 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks ='linkus_vivo_iOS.framework'
   spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libc++" }
+  spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libresolv" }
   spec.dependency "OpenSSL-Universal", "~> 1.0.2.20"
 
 end
