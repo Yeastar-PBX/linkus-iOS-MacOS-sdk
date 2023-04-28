@@ -1,19 +1,26 @@
 ![linkus-vivo.GIF](https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo/blob/main/linkus-vivo.gif)
+![linkus-vivo.GIF](https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo/blob/main/MacOS.gif)
 
-# Linkus iOS SDK 接入指南
+# linkus-vivo SDK 接入指南
 
 ## 一. SDK 集成
-Linkus提供两种集成方式供iOS开发者选择：
+系统要求：
+`iOS 11`
+`MacOS 10.13`
+MacOS是用SwiftUI实现的，因此要求`Xcode 14.3`
+
+Linkus提供两种集成方式供开发者选择：
 
 - CocoaPods
 - 手动集成
 
 #### 1.1 CocoaPods集成方式
 
-**命令行下执行`pod search linkus-vivo`,如显示的`linkus-vivo`版本不是最新的，则先执行`pod repo update`操作**
-
-在工程的Podfile里面添加以下代码：
+在iOS工程的Podfile里面添加以下代码：
 > **pod 'linkus-vivo'**
+
+在MacOS工程的Podfile里面添加以下代码：
+> **pod 'linkus-vivo-MacOS'**
 
 保存并执行`pod install`,然后用后缀为`.xcworkspace`的文件打开工程。
 
@@ -42,7 +49,7 @@ Linkus提供两种集成方式供iOS开发者选择：
 
 > `#import <linkus_vivo_iOS/linkus_vivo.h>` 或者 `#import <linkus_vivo_MacOS/linkus_vivo.h>`
 
-#### 2.2 初始化SDK
+#### 2.2 初始化iOS SDK
 
 在工程`AppDelegate.m`的`application:didFinishLaunchingWithOptions:`方法中初始化：
 
@@ -55,7 +62,9 @@ Linkus提供两种集成方式供iOS开发者选择：
 }
 ```
 
-# Linkus iOS SDK 使用指南
+#### 2.2 初始化MacOS SDK,参考Demo
+
+# Linkus SDK 使用指南
 ## 一. 接口声明
 
 ### 1. 配置
@@ -70,6 +79,9 @@ Linkus提供两种集成方式供iOS开发者选择：
 
 /// Image should be a square with side length of 40 points
 @property (nonatomic,copy,nullable) NSData *iconTemplateImageData;
+
+/// 来电声音频文件
+@property (nonatomic,copy) NSString *comeAudioFileName API_AVAILABLE(macos(10.13));
 
 /// 挂断声音频文件
 @property (nonatomic,copy) NSString *hangupAudioFileName;
@@ -90,7 +102,7 @@ Linkus提供两种集成方式供iOS开发者选择：
 /**
  *  自动登录
  */
-- (void)autoLogin;
+- (void)autoLogin API_AVAILABLE(ios(11.0));
 
 /**
  *  登出
@@ -171,6 +183,21 @@ Linkus提供两种集成方式供iOS开发者选择：
 - (NSArray<YLSSipCall *> *)currentSipCalls;
 
 /**
+ *  获取MacOS 麦克风与扬声器
+ */
+- (NSArray<YLSCaptureDevice *> *)audioALLDevice API_AVAILABLE(macos(10.13));
+
+/**
+ *  设置MacOS 麦克风与扬声器
+ */
+- (void)audioSetDevice:(NSInteger)microphone speaker:(NSInteger)speaker API_AVAILABLE(macos(10.13));
+
+/**
+ *  Sip 注册状态
+ */
+- (BOOL)sipRegister;
+
+/**
  *  录音功能是否可用
  */
 - (BOOL)enableRecord;
@@ -179,6 +206,16 @@ Linkus提供两种集成方式供iOS开发者选择：
  *  管理员录音功能
  */
 - (BOOL)adminRecord;
+
+/**
+ *  添加委托
+ */
+- (void)addDelegate:(id<YLSCallManagerDelegate>)delegate;
+
+/**
+ *  移除委托
+ */
+- (void)removeDelegate:(id<YLSCallManagerDelegate>)delegate;
 
 /**
  *  来电回调
@@ -213,6 +250,16 @@ Linkus提供两种集成方式供iOS开发者选择：
  *  呼叫等待切换通话
  */
 - (void)callChange:(YLSSipCall *)waitingCall;
+
+/**
+ *  添加委托
+ */
+- (void)addDelegate:(id<YLSCallStatusManagerDelegate>)delegate;
+
+/**
+ *  移除委托
+ */
+- (void)removeDelegate:(id<YLSCallStatusManagerDelegate>)delegate;
 
 /**
  *  挂断所有通话
@@ -265,3 +312,7 @@ Linkus提供两种集成方式供iOS开发者选择：
 - (void)historyMissCallCount:(NSInteger)count;
 
 ```
+
+
+# 更新日志
+- 20230428 提交尚未测试过的开源库，版本号：1.0.0
