@@ -12,6 +12,7 @@
 
 @class YLSSipCall;
 @class YLSCallManager;
+@class YLSCaptureDevice;
 @class YLSCallStatusManager;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -73,6 +74,21 @@ NS_ASSUME_NONNULL_BEGIN
  *  所有通话信息
  */
 - (NSArray<YLSSipCall *> *)currentSipCalls;
+
+/**
+ *  获取MacOS 麦克风与扬声器
+ */
+- (NSArray<YLSCaptureDevice *> *)audioALLDevice API_AVAILABLE(macos(11.0));
+
+/**
+ *  设置MacOS 麦克风与扬声器
+ */
+- (void)audioSetDevice:(NSInteger)microphone speaker:(NSInteger)speaker API_AVAILABLE(macos(11.0));
+
+/**
+ *  Sip 注册状态
+ */
+- (BOOL)sipRegister;
 
 /**
  *  录音功能是否可用

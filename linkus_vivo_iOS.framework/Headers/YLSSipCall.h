@@ -23,6 +23,7 @@ typedef NS_ENUM(NSInteger, CallStatus) {
 };
 
 typedef NS_ENUM(NSInteger, HangUpType) {
+    HangUpTypeByNone            = 0, 
     HangUpTypeByPJSip           = 1, //pjsip发送过来的挂断通话
     HangUpTypeByHand            = 2, //手动挂断通话
     HangUpTypeByMissCall        = 3, //推送挂断通话

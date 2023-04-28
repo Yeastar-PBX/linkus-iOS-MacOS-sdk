@@ -61,7 +61,7 @@ typedef NS_ENUM(NSInteger, LoginStep) {
 /**
  *  自动登录
  */
-- (void)autoLogin;
+- (void)autoLogin API_AVAILABLE(ios(11.0));
 
 /**
  *  登出

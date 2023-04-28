@@ -4,13 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/CallTool.h</key>
-		<data>
-		NDNgCyg1IPCz3pwTFE9PleWcke8=
-		</data>
 		<key>Headers/YLSCallProtocol.h</key>
 		<data>
-		V1rKP/5GWrN3zw/m+u0+C9eUR9Y=
+		RfDoyj0O7ewEYxIeYfzEktXhWoI=
+		</data>
+		<key>Headers/YLSCaptureDevice.h</key>
+		<data>
+		iVIakS9x+YwvKoB+aoKlknPkRUE=
 		</data>
 		<key>Headers/YLSHistory.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/YLSLoginProtocol.h</key>
 		<data>
-		cBWms9uO4exIpKzKs3p0QUBAiCo=
+		X8nCLoPWDohdv4J/cU3FlhEzL1Y=
 		</data>
 		<key>Headers/YLSSDK.h</key>
 		<data>
@@ -26,15 +26,19 @@
 		</data>
 		<key>Headers/YLSSDKConfig.h</key>
 		<data>
-		wucasif/MDLCPYCohRhYOC300lo=
+		x6P1nfEWCcVoN4ce/+zqWHc6Dls=
 		</data>
 		<key>Headers/YLSSipCall.h</key>
 		<data>
-		Dd/JpXkXelQfbvvFko1iwHN4pnE=
+		tmMoCZ8Qi8Z/58DVF+Co3M8pr4k=
+		</data>
+		<key>Headers/YSLCallTool.h</key>
+		<data>
+		nl6UlF6jkziP9c7D21BcDObGC8k=
 		</data>
 		<key>Headers/linkus_vivo.h</key>
 		<data>
-		cfc8X1qtjnzFNwFtq04EtvcfyLw=
+		RNQdBNypKBbjf7czgp+iDrnKo6k=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -43,26 +47,26 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/CallTool.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			NDNgCyg1IPCz3pwTFE9PleWcke8=
-			</data>
-			<key>hash2</key>
-			<data>
-			sPd2Y1bpyfUKKIRDHNH9uYnqqDvwk1sPEm6F8y4Et4I=
-			</data>
-		</dict>
 		<key>Headers/YLSCallProtocol.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			V1rKP/5GWrN3zw/m+u0+C9eUR9Y=
+			RfDoyj0O7ewEYxIeYfzEktXhWoI=
 			</data>
 			<key>hash2</key>
 			<data>
-			F6ThAl1caKH9dyLK4aSY3NxSrbr/ddoLbMcyYnAJ4TU=
+			prte7l9HO9h+aaLXK8Fcq376xqbADp4FBEePA7f1vMw=
+			</data>
+		</dict>
+		<key>Headers/YLSCaptureDevice.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iVIakS9x+YwvKoB+aoKlknPkRUE=
+			</data>
+			<key>hash2</key>
+			<data>
+			IIi2zBMtXeI/V3hS7Uv/V6rgo8wiuM8zs6rvSXFaG6A=
 			</data>
 		</dict>
 		<key>Headers/YLSHistory.h</key>
@@ -80,11 +84,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cBWms9uO4exIpKzKs3p0QUBAiCo=
+			X8nCLoPWDohdv4J/cU3FlhEzL1Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			mKIgA9kX+gM+zhkuTWiXRjW+1ugZW4Q5oLmmsTYXYU8=
+			LXXfvq9i5pmRG5w7QE8dwx+wxMsa5c0dnEbAbnt3Lew=
 			</data>
 		</dict>
 		<key>Headers/YLSSDK.h</key>
@@ -102,33 +106,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wucasif/MDLCPYCohRhYOC300lo=
+			x6P1nfEWCcVoN4ce/+zqWHc6Dls=
 			</data>
 			<key>hash2</key>
 			<data>
-			WglFccRR2Ab9o3iy8H9S5GA0dUGr50peXquUao9NlAc=
+			mQn4ASc7gBMTjW3I+uMLdBeCqbZLfpKvQvJeobS+40Q=
 			</data>
 		</dict>
 		<key>Headers/YLSSipCall.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Dd/JpXkXelQfbvvFko1iwHN4pnE=
+			tmMoCZ8Qi8Z/58DVF+Co3M8pr4k=
 			</data>
 			<key>hash2</key>
 			<data>
-			P6xdBfg0LAGVLxB3Ev4kl8yoYSB3FMNxc2aoDcYI9LY=
+			R7jEo+2w79l8Z0WDN5TeSk+tpFe/g4p56SxAOhcpvvc=
+			</data>
+		</dict>
+		<key>Headers/YSLCallTool.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nl6UlF6jkziP9c7D21BcDObGC8k=
+			</data>
+			<key>hash2</key>
+			<data>
+			tG2hNSzTcljLkf5IkJWQ5v8sKznCyyykIVUuAToZBnE=
 			</data>
 		</dict>
 		<key>Headers/linkus_vivo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cfc8X1qtjnzFNwFtq04EtvcfyLw=
+			RNQdBNypKBbjf7czgp+iDrnKo6k=
 			</data>
 			<key>hash2</key>
 			<data>
-			6DGFzDvTWLjMjifLRYxxL0vQDvkMBRBKXbWu9Piz660=
+			Z2ZBpAWWuZmfnv+DbrfUERHqhqGn61RpDS5Pnu1UJK0=
 			</data>
 		</dict>
 	</dict>
