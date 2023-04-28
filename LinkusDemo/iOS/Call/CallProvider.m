@@ -40,8 +40,8 @@
         return model;
     });
     completion(^(void){
-        CallViewController *audioCall = [[CallViewController alloc] init];
-        UINavigationController *mainNav = [[UINavigationController alloc]initWithRootViewController:audioCall];
+        UINavigationController *mainNav = [[UINavigationController alloc]initWithRootViewController:[[CallViewController alloc] init]];
+        mainNav.modalPresentationStyle = UIModalPresentationFullScreen;
         [TopestViewController presentViewController:mainNav animated:NO completion:nil];
     },^(NSError *error){
         //提示用户来电失败的原因，例如系统免打扰、黑名单等
@@ -131,36 +131,38 @@
 + (void)baseCallByNumber:(NSString *)number {
     YLSSipCall *sipCall = [[YLSSipCall alloc] init];
     sipCall.callNumber = number;
-    sipCall.callID = DefaultSipCallID;
-    sipCall.callIn = NO;
-    sipCall.status = CallStatusConnect; //CallStatusConnect;
     Contact *model = [[Contact alloc] init];
     model.name = number;
     sipCall.contact = model;
     
-    [[CallTool shareCallTool] startCall:sipCall completion:^(NSError *error) {
-        if (!error) {
-            dispatch_async_main_safe(^ {
-                //通话界面点击"转移"按钮，在“转移”界面选择”通讯录“,选择联系人拨打的时候需退回到通话界面
-                BOOL find = NO;
-                for (UIViewController *vc in TopestNavigationController.viewControllers) {
-                    if ([vc isKindOfClass:[CallViewController class]]) {
-                        find = YES;
-                        CallViewController *audioVC = (CallViewController *)vc;
-                        [TopestNavigationController popToViewController:audioVC animated:YES];
+    if ([CallProvider shareCallProvider].dialCallType == DialCallTypeBlind) {
+        [[YSLCallTool shareCallTool] tranforBlind:sipCall];
+    }else {
+        [[YSLCallTool shareCallTool] startCall:sipCall completion:^(NSError *error) {
+            if (!error) {
+                dispatch_async_main_safe(^ {
+                    //通话界面点击"转移"按钮，在“转移”界面选择”通讯录“,选择联系人拨打的时候需退回到通话界面
+                    BOOL find = NO;
+                    for (UIViewController *vc in TopestNavigationController.viewControllers) {
+                        if ([vc isKindOfClass:[CallViewController class]]) {
+                            find = YES;
+                            CallViewController *audioVC = (CallViewController *)vc;
+                            [TopestNavigationController popToViewController:audioVC animated:YES];
+                        }
                     }
-                }
-                if (!find) {
-                    CallViewController *audioCall = [[CallViewController alloc] init];
-                    UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:audioCall];
-                    mainNav.modalPresentationStyle = UIModalPresentationFullScreen;
-                    [TopestViewController presentViewController:mainNav animated:YES completion:nil];
-                }
-            })
-        }else{
-            NSLog(@"创建通话失败 Error requesting transaction: %@",error);
-        }
-    }];
+                    if (!find) {
+                        CallViewController *audioCall = [[CallViewController alloc] init];
+                        UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:audioCall];
+                        mainNav.modalPresentationStyle = UIModalPresentationFullScreen;
+                        [TopestViewController presentViewController:mainNav animated:YES completion:nil];
+                    }
+                })
+            }else{
+                NSLog(@"创建通话失败 Error requesting transaction: %@",error);
+            }
+        }];
+    }
+    [CallProvider shareCallProvider].dialCallType = DialCallTypeNormal;
 }
 
 @end

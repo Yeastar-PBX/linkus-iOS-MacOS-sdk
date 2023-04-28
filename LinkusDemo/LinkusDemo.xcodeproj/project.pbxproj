@@ -49,10 +49,6 @@
 		59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59438CA229E52E8500B4DAA7 /* libcurl.tbd */; };
 		59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
 		59438CF329E7D19700B4DAA7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59438CF229E7D19700B4DAA7 /* LoginView.swift */; };
-		5985CA5429EF8649003E9616 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5329EF8649003E9616 /* SidebarView.swift */; };
-		5985CA5929EF86CB003E9616 /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5629EF86CB003E9616 /* SegmentedView.swift */; };
-		5985CA5A29EF86CB003E9616 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5729EF86CB003E9616 /* SearchBar.swift */; };
-		5985CA5B29EF86CB003E9616 /* ViewComponet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985CA5829EF86CB003E9616 /* ViewComponet.swift */; };
 		5985CA6529EFD831003E9616 /* Hangup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6329EFD831003E9616 /* Hangup.wav */; };
 		5985CA6629EFD831003E9616 /* Hangup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6329EFD831003E9616 /* Hangup.wav */; };
 		5985CA6729EFD831003E9616 /* Alerting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6429EFD831003E9616 /* Alerting.wav */; };
@@ -63,6 +59,12 @@
 		5985CA9729F227D6003E9616 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5985CA9629F227CB003E9616 /* libresolv.tbd */; };
 		5987172329DEE44A0023936C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AEF929D6AC0E00E41926 /* libc++.tbd */; };
 		5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
+		59C49EEB29F4BE4200164ECE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49EEA29F4BE4200164ECE /* MenuView.swift */; };
+		59C49EEE29F5371A00164ECE /* YLSSDKData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49EED29F5371A00164ECE /* YLSSDKData.swift */; };
+		59C49F1C29F650EB00164ECE /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = 59C49F1B29F650EB00164ECE /* incoming.wav */; };
+		59C49F1F29F7618900164ECE /* MacCallProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C49F1E29F7618900164ECE /* MacCallProvider.m */; };
+		59C49F2129F7728F00164ECE /* CallUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49F2029F7728F00164ECE /* CallUIView.swift */; };
+		59C49F2329FA4D4700164ECE /* NSString+YLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A01D29D5887600E41926 /* NSString+YLS.m */; };
 		A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */; };
 /* End PBXBuildFile section */
 
@@ -154,10 +156,6 @@
 		59438CF229E7D19700B4DAA7 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		59438CF429E7D47300B4DAA7 /* LinkusDemo (macOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinkusDemo (macOS)-Bridging-Header.h"; sourceTree = "<group>"; };
 		5985CA3A29ECEC8A003E9616 /* LinkusDemo--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkusDemo--macOS--Info.plist"; sourceTree = "<group>"; };
-		5985CA5329EF8649003E9616 /* SidebarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
-		5985CA5629EF86CB003E9616 /* SegmentedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
-		5985CA5729EF86CB003E9616 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		5985CA5829EF86CB003E9616 /* ViewComponet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewComponet.swift; sourceTree = "<group>"; };
 		5985CA6329EFD831003E9616 /* Hangup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hangup.wav; sourceTree = "<group>"; };
 		5985CA6429EFD831003E9616 /* Alerting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Alerting.wav; sourceTree = "<group>"; };
 		5985CA8A29F156F8003E9616 /* MergeHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeHistory.h; sourceTree = "<group>"; };
@@ -167,6 +165,14 @@
 		5985CA9029F161E6003E9616 /* HistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewCell.h; sourceTree = "<group>"; };
 		5985CA9129F161E6003E9616 /* HistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewCell.m; sourceTree = "<group>"; };
 		5985CA9629F227CB003E9616 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/usr/lib/libresolv.tbd; sourceTree = DEVELOPER_DIR; };
+		59C49EE229F288CF00164ECE /* linkus_vivo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_vivo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C49EE629F288D700164ECE /* linkus_vivo_MacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_vivo_MacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C49EEA29F4BE4200164ECE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		59C49EED29F5371A00164ECE /* YLSSDKData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLSSDKData.swift; sourceTree = "<group>"; };
+		59C49F1B29F650EB00164ECE /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incoming.wav; sourceTree = "<group>"; };
+		59C49F1D29F7618900164ECE /* MacCallProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacCallProvider.h; sourceTree = "<group>"; };
+		59C49F1E29F7618900164ECE /* MacCallProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacCallProvider.m; sourceTree = "<group>"; };
+		59C49F2029F7728F00164ECE /* CallUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallUIView.swift; sourceTree = "<group>"; };
 		775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -226,8 +232,11 @@
 				0C392DC629D56FB0006C8E6F /* LinkusDemoApp.swift */,
 				0C392DC729D56FB0006C8E6F /* ContentView.swift */,
 				59438CF229E7D19700B4DAA7 /* LoginView.swift */,
-				5985CA5329EF8649003E9616 /* SidebarView.swift */,
-				5985CA5529EF86CB003E9616 /* ViewComponet */,
+				59C49EEA29F4BE4200164ECE /* MenuView.swift */,
+				59C49F2029F7728F00164ECE /* CallUIView.swift */,
+				59C49EED29F5371A00164ECE /* YLSSDKData.swift */,
+				59C49F1D29F7618900164ECE /* MacCallProvider.h */,
+				59C49F1E29F7618900164ECE /* MacCallProvider.m */,
 				0C392DD529D56FB2006C8E6F /* macOS.entitlements */,
 			);
 			path = macOS;
@@ -466,6 +475,8 @@
 		5937A8EC29D5778F0089B0A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59C49EE629F288D700164ECE /* linkus_vivo_MacOS.framework */,
+				59C49EE229F288CF00164ECE /* linkus_vivo_iOS.framework */,
 				5985CA9629F227CB003E9616 /* libresolv.tbd */,
 				59438CEC29E7AC5400B4DAA7 /* linkus_vivo_MacOS.framework */,
 				59438CE829E7ABF600B4DAA7 /* linkus_vivo_iOS.framework */,
@@ -479,20 +490,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5985CA5529EF86CB003E9616 /* ViewComponet */ = {
-			isa = PBXGroup;
-			children = (
-				5985CA5629EF86CB003E9616 /* SegmentedView.swift */,
-				5985CA5729EF86CB003E9616 /* SearchBar.swift */,
-				5985CA5829EF86CB003E9616 /* ViewComponet.swift */,
-			);
-			path = ViewComponet;
-			sourceTree = "<group>";
-		};
 		5985CA6229EFD7D9003E9616 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				0C392DC829D56FB2006C8E6F /* Assets.xcassets */,
+				59C49F1B29F650EB00164ECE /* incoming.wav */,
 				5985CA6429EFD831003E9616 /* Alerting.wav */,
 				5985CA6329EFD831003E9616 /* Hangup.wav */,
 			);
@@ -618,6 +620,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C49F1C29F650EB00164ECE /* incoming.wav in Resources */,
 				5985CA6829EFD831003E9616 /* Alerting.wav in Resources */,
 				0C392DDB29D56FB2006C8E6F /* Assets.xcassets in Resources */,
 				5985CA6629EFD831003E9616 /* Hangup.wav in Resources */,
@@ -737,13 +740,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C49F2129F7728F00164ECE /* CallUIView.swift in Sources */,
+				59C49F1F29F7618900164ECE /* MacCallProvider.m in Sources */,
 				59438CF329E7D19700B4DAA7 /* LoginView.swift in Sources */,
-				5985CA5929EF86CB003E9616 /* SegmentedView.swift in Sources */,
-				5985CA5429EF8649003E9616 /* SidebarView.swift in Sources */,
+				59C49EEB29F4BE4200164ECE /* MenuView.swift in Sources */,
+				59C49F2329FA4D4700164ECE /* NSString+YLS.m in Sources */,
+				59C49EEE29F5371A00164ECE /* YLSSDKData.swift in Sources */,
 				0C392DD929D56FB2006C8E6F /* ContentView.swift in Sources */,
 				0C392DD729D56FB2006C8E6F /* LinkusDemoApp.swift in Sources */,
-				5985CA5B29EF86CB003E9616 /* ViewComponet.swift in Sources */,
-				5985CA5A29EF86CB003E9616 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -954,6 +958,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Supporting Files/LinkusDemo--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Used to open Microphone";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -989,6 +994,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Supporting Files/LinkusDemo--macOS--Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Used to open Microphone";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

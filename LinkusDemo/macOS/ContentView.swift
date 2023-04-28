@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isLogin = UserDefaults.standard.bool(forKey: "isLogin")
+    var modelData = YLSSDKData.shared
+    @State var isLogin = false
     var body: some View {
         if isLogin {
-            SidebarView()
+            MenuView(isLogin: $isLogin)
                 .frame(minWidth: 500, minHeight: 340)
         } else {
             LoginView(isLogin: $isLogin)

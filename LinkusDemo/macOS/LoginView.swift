@@ -11,16 +11,14 @@ struct LoginView: View {
     @Binding var isLogin: Bool
     enum Field: Hashable { case name, password, domain, localAddress, localPort }
     
-    @State private var name = "1003"
+    @State private var name = "1009"
     @State private var password = "Yeastar123"
-    @State private var domain = "pbx.ras.yeastar.com"
-    @State private var localAddress = "192.168.4.100"
-    @State private var localPort = "8111"
+    @State private var localAddress = "192.168.22.138"
 
     @FocusState private var isFocused: Field?
     
     var invalidInput: Bool {
-        name.isEmpty || password.isEmpty || domain.isEmpty || localAddress.isEmpty || localPort.isEmpty
+        name.isEmpty || password.isEmpty || localAddress.isEmpty
     }
     
     var body: some View {
@@ -30,43 +28,33 @@ struct LoginView: View {
                 Text("Username")
             }
             .focused($isFocused, equals: .name)
+            .frame(width: 200)
             
             TextField(text: $password, prompt: Text("Required")) {
                 Text("password")
             }
             .focused($isFocused, equals: .password)
-            
-            TextField(text: $domain, prompt: Text("Required")) {
-                Text("$domain")
-            }
-            .focused($isFocused, equals: .domain)
-            
+            .frame(width: 200)
+                        
             TextField(text: $localAddress, prompt: Text("Required")) {
                 Text("localAddress")
             }
             .focused($isFocused, equals: .localAddress)
-            
-            TextField(text: $localPort, prompt: Text("Required")) {
-                Text("localPort")
-            }
-            .focused($isFocused, equals: .localPort)
-            
+            .frame(width: 200)
+                        
             Button("登录") {
                 if name.isEmpty {
                     isFocused = .name
                 } else if password.isEmpty {
                     isFocused = .password
-                } else if domain.isEmpty {
-                    isFocused = .domain
                 } else {
                     isFocused = nil
-                    YLSSDK.shared().loginManager.login(name, token: password, pbxAddress: localAddress) { _ in 
-                        
-                    }
-                    
                     print("用户输入的没有问题,可以提交至服务器")
-                    UserDefaults.standard.set(true,forKey:"isLogin")
-                    isLogin = true
+                    YLSSDK.shared().loginManager.login(name, token: password, pbxAddress: localAddress) { err in
+                        if err == nil {
+                            isLogin = true
+                        }
+                    }
                 }
             }
             .disabled(invalidInput)

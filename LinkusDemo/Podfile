@@ -12,7 +12,7 @@ platform :ios, '11.0'
     pod 'Masonry', '~> 1.1.0'
     pod 'ReactiveObjC', '~> 3.1.1'
 #    pod 'OpenSSL-Universal', '~> 1.0.2.20'
-    pod 'linkus-vivo', '0.0.19'
+    pod 'linkus-vivo', '1.0.0'
 end
 
 target 'LinkusDemo (macOS)' do
@@ -21,7 +21,7 @@ platform :osx, '10.13'
 #    pod 'WCDBSwift'
 #    pod 'ObjectMapper'
 #    pod 'SDWebImageSwiftUI'
-    pod 'linkus-vivo-MacOS', '~> 0.0.19'
+    pod 'linkus-vivo-MacOS', '~> 1.0.0'
 end
 
 post_install do |installer|

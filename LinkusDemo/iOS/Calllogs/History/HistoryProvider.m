@@ -32,7 +32,7 @@
     }
 }
 
-+ (NSMutableArray<MergeHistory *> *)MergeDataWithData:(NSArray<YLSHistory *> *)historys{
++ (NSMutableArray<MergeHistory *> *)MergeDataWithData:(NSArray<YLSHistory *> *)historys {
     NSMutableArray<MergeHistory *> *dealArray = [NSMutableArray array];
     for (unsigned i = 0; i < historys.count ; i++){
         YLSHistory *history = [historys objectAtIndex:historys.count - i -1];

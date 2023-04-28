@@ -86,13 +86,11 @@
     tableView.estimatedSectionHeaderHeight = 0;
     tableView.rowHeight = UITableViewAutomaticDimension;
     tableView.separatorColor = [UIColor colorWithRGB:0xF2F2F2];
+    tableView.contentInset = UIEdgeInsetsMake(0, 0, 104, 0);
     if (@available(iOS 15.0, *)) {
         tableView.sectionHeaderTopPadding = 0;
     }
     [self.view addSubview:tableView];
-    [tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(50.0f, 0.f, 0.f, 0.f));
-    }];
     [self updataHistory:0];
 }
 
@@ -230,6 +228,7 @@
         [self hideHUD];
         extern NSString *NotificationLogout;
         [[NSNotificationCenter defaultCenter] postNotificationOnMainThreadWithName:NotificationLogout object:nil];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"EVER_LOGIN"];
     }];
 }
 

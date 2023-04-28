@@ -33,7 +33,7 @@
     userNameTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"用户名" attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     userNameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     userNameTF.returnKeyType = UIReturnKeyDone;
-    userNameTF.text = @"1009";
+    userNameTF.text = @"1019";
 //    userNameTF.secureTextEntry = YES;
     userNameTF.textColor = [UIColor whiteColor];
     [self.view addSubview:userNameTF];
@@ -53,7 +53,7 @@
     identifyTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"域名/SN" attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     identifyTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     identifyTF.returnKeyType = UIReturnKeyDone;
-    identifyTF.text = @"192.168.21.228";
+    identifyTF.text = @"192.168.22.138";
 //    identifyTF.secureTextEntry = YES;
     identifyTF.textColor = [UIColor whiteColor];
     [self.view addSubview:identifyTF];

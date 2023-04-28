@@ -3,3 +3,5 @@
 //
 
 #import <linkus_vivo_MacOS/linkus_vivo.h>
+#import "MacCallProvider.h"
+#import "NSString+YLS.h"
