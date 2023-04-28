@@ -62,7 +62,7 @@ Linkus提供两种集成方式供开发者选择：
 }
 ```
 
-#### 2.2 初始化MacOS SDK,参考Demo
+#### 2.3 初始化MacOS SDK,参考Demo
 
 # Linkus SDK 使用指南
 ## 一. 接口声明
