@@ -56,8 +56,10 @@ typedef NS_ENUM(NSInteger, LoginStep) {
  *  登录
  */
 - (void)login:(NSString *)account token:(NSString *)token
-   pbxAddress:(NSString *)address completion:(void (^)(NSError * _Nullable error))completion;
-
+      localIP:(NSString *)localIP localPort:(NSString *)localPort
+     remoteIP:(NSString *)remoteIP remotePort:(NSString *)remotePort
+   completion:(void (^)(NSError * _Nullable error))completion;
+  
 /**
  *  自动登录
  */

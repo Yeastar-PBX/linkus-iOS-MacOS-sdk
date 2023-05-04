@@ -9,11 +9,14 @@ import SwiftUI
 
 struct LoginView: View {
     @Binding var isLogin: Bool
-    enum Field: Hashable { case name, password, domain, localAddress, localPort }
+    enum Field: Hashable { case name, password, localAddress, localPort, remoteAddress, remotePort }
     
-    @State private var name = "1009"
-    @State private var password = "Yeastar123"
+    @State private var name = "1014"
+    @State private var password = "eyJleHBpcmUiOjAsInNpZ24iOiJLYWdmYnpPMWg0R2taYjl2VUdRUUEvVllxVjZrUUZCVWl0cW4vdlc5ZStVPSIsInVzZXJuYW1lIjoiMTAxNCIsInZlcnNpb24iOiIxLjAifQ__"
     @State private var localAddress = "192.168.22.138"
+    @State private var localPort = "8111"
+    @State private var remoteAddress = ""
+    @State private var remotePort = ""
 
     @FocusState private var isFocused: Field?
     
@@ -41,6 +44,24 @@ struct LoginView: View {
             }
             .focused($isFocused, equals: .localAddress)
             .frame(width: 200)
+            
+            TextField(text: $localPort, prompt: Text("Required")) {
+                Text("localPort")
+            }
+            .focused($isFocused, equals: .localPort)
+            .frame(width: 200)
+            
+            TextField(text: $remoteAddress, prompt: Text("Not Required")) {
+                Text("remoteAddress")
+            }
+            .focused($isFocused, equals: .remoteAddress)
+            .frame(width: 200)
+            
+            TextField(text: $remotePort, prompt: Text("Not Required")) {
+                Text("remotePort")
+            }
+            .focused($isFocused, equals: .remotePort)
+            .frame(width: 200)
                         
             Button("登录") {
                 if name.isEmpty {
@@ -50,8 +71,8 @@ struct LoginView: View {
                 } else {
                     isFocused = nil
                     print("用户输入的没有问题,可以提交至服务器")
-                    YLSSDK.shared().loginManager.login(name, token: password, pbxAddress: localAddress) { err in
-                        if err == nil {
+                    YLSSDK.shared().loginManager.login(name, token: password, localIP: localAddress, localPort: localPort, remoteIP: remoteAddress, remotePort: remotePort) { error in
+                        if error == nil {
                             isLogin = true
                         }
                     }

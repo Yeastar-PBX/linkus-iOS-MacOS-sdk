@@ -24,7 +24,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     // Set the line color and width
-    CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:161 green:163 blue:168 alpha:0.2f].CGColor);
+    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
     CGContextSetLineWidth(context, 1.0f);
 
     // Start a new Path

@@ -78,12 +78,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  获取MacOS 麦克风与扬声器
  */
-- (NSArray<YLSCaptureDevice *> *)audioALLDevice API_AVAILABLE(macos(11.0));
+- (NSArray<YLSCaptureDevice *> *)audioALLDevice API_AVAILABLE(macos(10.13));
 
 /**
  *  设置MacOS 麦克风与扬声器
  */
-- (void)audioSetDevice:(NSInteger)microphone speaker:(NSInteger)speaker API_AVAILABLE(macos(11.0));
+- (void)audioSetDevice:(NSInteger)microphone speaker:(NSInteger)speaker API_AVAILABLE(macos(10.13));
 
 /**
  *  Sip 注册状态

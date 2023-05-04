@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy,nullable) NSData *iconTemplateImageData;
 
 /// 来电声音频文件
-@property (nonatomic,copy) NSString *comeAudioFileName;
+@property (nonatomic,copy) NSString *comeAudioFileName API_AVAILABLE(macos(10.13));
 
 /// 挂断声音频文件
 @property (nonatomic,copy) NSString *hangupAudioFileName;

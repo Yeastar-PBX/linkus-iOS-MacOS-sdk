@@ -15,7 +15,13 @@
 
 @property (nonatomic,strong) UITextField *passwordTF;
 
-@property (nonatomic,strong) UITextField *identifyTF;
+@property (nonatomic,strong) UITextField *localIPTF;
+
+@property (nonatomic,strong) UITextField *localPortTF;
+
+@property (nonatomic,strong) UITextField *remoteIPTF;
+
+@property (nonatomic,strong) UITextField *remotePortTF;
 
 @property (nonatomic,strong) UIButton *loginButton;
 
@@ -26,39 +32,64 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    YLSUnderlineTextField *userNameTF = [[YLSUnderlineTextField alloc] initWithFrame:CGRectMake(10, 200, self.view.frame.size.width - 20, 60)];
+    YLSUnderlineTextField *userNameTF = [[YLSUnderlineTextField alloc] initWithFrame:CGRectMake(10, 140, self.view.frame.size.width - 20, 60)];
     self.userNameTF = userNameTF;
-    userNameTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"用户名" attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    userNameTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"用户名" attributes:@{NSForegroundColorAttributeName : [UIColor grayColor]}];
     userNameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     userNameTF.returnKeyType = UIReturnKeyDone;
-    userNameTF.text = @"1019";
-//    userNameTF.secureTextEntry = YES;
-    userNameTF.textColor = [UIColor whiteColor];
+    userNameTF.text = @"1015";
+    userNameTF.textColor = [UIColor grayColor];
     [self.view addSubview:userNameTF];
     
-    YLSUnderlineTextField *passwordTF = [[YLSUnderlineTextField alloc] initWithFrame:CGRectMake(10, 260, self.view.frame.size.width - 20, 60)];
+    YLSUnderlineTextField *passwordTF = [[YLSUnderlineTextField alloc] initWithFrame:CGRectMake(10, 200, self.view.frame.size.width - 20, 60)];
     self.passwordTF = passwordTF;
-    passwordTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"密码" attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    passwordTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"密码" attributes:@{NSForegroundColorAttributeName : [UIColor grayColor]}];
     passwordTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     passwordTF.returnKeyType = UIReturnKeyDone;
-    passwordTF.text = @"Yeastar123";
-//    passwordTF.secureTextEntry = YES;
-    passwordTF.textColor = [UIColor whiteColor];
+    passwordTF.text = @"eyJleHBpcmUiOjAsInNpZ24iOiJ6R2NVNUtTdCtVSTc4V3VFUnc3VHNtKzZycktjVy9OSXhsdTVYUm1yeFVFPSIsInVzZXJuYW1lIjoiMTAxNSIsInZlcnNpb24iOiIxLjAifQ__";
+    passwordTF.secureTextEntry = YES;
+    passwordTF.textColor = [UIColor grayColor];
     [self.view addSubview:passwordTF];
     
-    YLSUnderlineTextField *identifyTF = [[YLSUnderlineTextField alloc] initWithFrame:CGRectMake(10, 320, self.view.frame.size.width - 20, 60)];
-    self.identifyTF = identifyTF;
-    identifyTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"域名/SN" attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    identifyTF.clearButtonMode = UITextFieldViewModeWhileEditing;
-    identifyTF.returnKeyType = UIReturnKeyDone;
-    identifyTF.text = @"192.168.22.138";
-//    identifyTF.secureTextEntry = YES;
-    identifyTF.textColor = [UIColor whiteColor];
-    [self.view addSubview:identifyTF];
+    YLSUnderlineTextField *localIPTF = [[YLSUnderlineTextField alloc] initWithFrame:CGRectMake(10, 260, self.view.frame.size.width - 140, 60)];
+    self.localIPTF = localIPTF;
+    localIPTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Local Hostname/IP" attributes:@{NSForegroundColorAttributeName : [UIColor grayColor]}];
+    localIPTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+    localIPTF.returnKeyType = UIReturnKeyDone;
+    localIPTF.text = @"192.168.22.138";
+    localIPTF.textColor = [UIColor grayColor];
+    [self.view addSubview:localIPTF];
     
-    UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 400, self.view.frame.size.width - 20, 45)];
+    YLSUnderlineTextField *localPortTF = [[YLSUnderlineTextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 120, 260, 110, 60)];
+    self.localPortTF = localPortTF;
+    localPortTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Local Port" attributes:@{NSForegroundColorAttributeName : [UIColor grayColor]}];
+    localPortTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+    localPortTF.returnKeyType = UIReturnKeyDone;
+    localPortTF.text = @"8111";
+    localPortTF.textColor = [UIColor grayColor];
+    [self.view addSubview:localPortTF];
+    
+    YLSUnderlineTextField *remoteIPTF = [[YLSUnderlineTextField alloc] initWithFrame:CGRectMake(10, 320, self.view.frame.size.width - 140, 60)];
+    self.remoteIPTF = remoteIPTF;
+    remoteIPTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"External Hostname/IP" attributes:@{NSForegroundColorAttributeName : [UIColor grayColor]}];
+    remoteIPTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+    remoteIPTF.returnKeyType = UIReturnKeyDone;
+    remoteIPTF.text = @"";
+    remoteIPTF.textColor = [UIColor grayColor];
+    [self.view addSubview:remoteIPTF];
+    
+    YLSUnderlineTextField *remotePortTF = [[YLSUnderlineTextField alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 120, 320, 110, 60)];
+    self.remotePortTF = remotePortTF;
+    remotePortTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"External Port" attributes:@{NSForegroundColorAttributeName : [UIColor grayColor]}];
+    remotePortTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+    remotePortTF.returnKeyType = UIReturnKeyDone;
+    remotePortTF.text = @"";
+    remotePortTF.textColor = [UIColor grayColor];
+    [self.view addSubview:remotePortTF];
+    
+    UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 380, self.view.frame.size.width - 20, 45)];
     self.loginButton = loginButton;
     [loginButton addTarget:self action:@selector(loginEvent:) forControlEvents:UIControlEventTouchUpInside];
     [loginButton setTitle:@"登录" forState:UIControlStateNormal];
@@ -73,9 +104,8 @@
 #pragma mark - action
 - (void)loginEvent:(UIButton *)sender {
     [self showHUD];
-    [[[YLSSDK sharedYLSSDK] loginManager] login:self.userNameTF.text
-                                          token:self.passwordTF.text
-                                     pbxAddress:self.identifyTF.text completion:^(NSError * _Nullable error) {
+    [[[YLSSDK sharedYLSSDK] loginManager] login:self.userNameTF.text token:self.passwordTF.text
+    localIP:self.localIPTF.text localPort:self.localPortTF.text remoteIP:self.remoteIPTF.text remotePort:self.remotePortTF.text completion:^(NSError * _Nullable error) {
         [self hideHUD];
         if (!error) {
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"EVER_LOGIN"];
