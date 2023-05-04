@@ -96,8 +96,8 @@ Linkus提供两种集成方式供开发者选择：
 /**
  *  登录
  */
-- (void)login:(NSString *)account token:(NSString *)token
-   pbxAddress:(NSString *)address completion:(void (^)(NSError * _Nullable error))completion;
+- (void)login:(NSString *)account token:(NSString *)token localIP:(NSString *)localIP localPort:(NSString *)localPort
+     remoteIP:(NSString *)remoteIP remotePort:(NSString *)remotePort completion:(void (^)(NSError * _Nullable error))completion;
 
 /**
  *  自动登录
