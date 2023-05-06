@@ -14,7 +14,7 @@
 
 NSString *NotificationLogout = @"NotificationLogout";
 
-@interface AppDelegate () <PKPushRegistryDelegate,UNUserNotificationCenterDelegate>
+@interface AppDelegate () <PKPushRegistryDelegate,UNUserNotificationCenterDelegate,YLSLoginManagerDelegate>
 
 @end
 
@@ -25,12 +25,13 @@ NSString *NotificationLogout = @"NotificationLogout";
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
     
-    [CallProvider shareCallProvider];
-    [[YLSSDK sharedYLSSDK] initApp];
     [YLSSDKConfig sharedConfig].localizedName = @"LinkusDemo";
     [YLSSDKConfig sharedConfig].iconTemplateImageData = UIImagePNGRepresentation([UIImage imageNamed:@"AppCallMaskIcon"]);
     [YLSSDKConfig sharedConfig].hangupAudioFileName = @"Hangup.wav";
     [YLSSDKConfig sharedConfig].alertAudioFileName = @"Alerting.wav";
+    [YLSSDKConfig sharedConfig].logPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    [[YLSSDK sharedYLSSDK] initApp];
+    [CallProvider shareCallProvider];
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"EVER_LOGIN"]) {
         [[[YLSSDK sharedYLSSDK] loginManager] autoLogin];
@@ -39,6 +40,7 @@ NSString *NotificationLogout = @"NotificationLogout";
         self.window.rootViewController = [[LoginViewController alloc] init];
     }
 
+    [[YLSSDK sharedYLSSDK].loginManager addDelegate:self];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logout:) name:NotificationLogout object:nil];
     
     PKPushRegistry *pushRegistry = [[PKPushRegistry alloc] initWithQueue:dispatch_get_global_queue(0, 0)];
@@ -68,6 +70,18 @@ NSString *NotificationLogout = @"NotificationLogout";
 - (void)pushRegistry:(PKPushRegistry *)registry didReceiveIncomingPushWithPayload:(PKPushPayload *)payload forType:(PKPushType)type withCompletionHandler:(void(^)(void))completion {
     [[[YLSSDK sharedYLSSDK] callManager] receiveIncomingPushWithPayload:payload.dictionaryPayload];
     completion();
+}
+
+#pragma mark - LoginDataDelegate
+- (void)onKickStep:(KickReason)code {
+    NSString *reason = [NSString stringWithFormat:@"Login information expired. Please log in again. (%ld)",code];
+    [[[YLSSDK sharedYLSSDK] loginManager] logout:^(NSError * _Nullable error) {
+        [[NSNotificationCenter defaultCenter] postNotificationOnMainThreadWithName:NotificationLogout object:nil];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Tip" message:reason preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+        [RootTabBarController presentViewController:alert animated:YES completion:nil];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"EVER_LOGIN"];
+    }];
 }
 
 @end

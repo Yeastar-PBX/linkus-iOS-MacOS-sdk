@@ -50,6 +50,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        [self setupConfigurator];
         [self setupControls];
     }
     return self;

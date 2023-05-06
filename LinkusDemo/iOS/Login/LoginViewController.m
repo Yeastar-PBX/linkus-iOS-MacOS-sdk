@@ -97,7 +97,6 @@
     [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     loginButton.layer.cornerRadius = 3;
     loginButton.titleLabel.font = [UIFont systemFontOfSize:23];
-    loginButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:loginButton];
 }
 
