@@ -23,5 +23,6 @@
 #import "UIViewController+Hierarchy.h"
 #import "UIDevice+YLS.h"
 #import "UIView+Alert.h"
+#import "NSString+YLS.h"
 
 #endif /* PrefixHeaderiOS_h */

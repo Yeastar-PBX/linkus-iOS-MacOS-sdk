@@ -6,7 +6,6 @@
 //
 
 #import "HistoryTableViewCell.h"
-#import "NSString+YLS.h"
 
 @interface HistoryTableViewCell()
 

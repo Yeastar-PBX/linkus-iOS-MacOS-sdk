@@ -6,7 +6,6 @@
 //
 
 #import "CallWaitingView.h"
-#import "NSString+YLS.h"
 
 @interface CallWaitingView ()
 

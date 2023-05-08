@@ -15,4 +15,6 @@
 
 + (NSString *)timeCompare:(NSString *)timeStamp;
 
++ (void)pushNotificationWithTitle:(NSString *)title body:(NSString *)body identifier:(NSString *)identifier;
+
 @end

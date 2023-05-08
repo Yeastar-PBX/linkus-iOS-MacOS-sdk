@@ -6,6 +6,7 @@
 //
 
 #import "NSString+YLS.h"
+#import <UserNotifications/UserNotifications.h>
 
 @implementation NSString (YLS)
 
@@ -117,6 +118,35 @@
         showPeriodOfTime = [[NSString alloc] initWithFormat:@"%d:%02d",(int)time,(int)minute];
     }
     return showPeriodOfTime;
+}
+
++ (void)pushNotificationWithTitle:(NSString *)title body:(NSString *)body identifier:(NSString *)identifier {
+    // 1、创建通知对象
+    if (identifier.length > 0) {
+        UNUserNotificationCenter *center  = [UNUserNotificationCenter currentNotificationCenter];
+        // 权限
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (granted) {
+                // 2、创建通知内容
+                UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+                // 标题
+                content.title = title;
+                content.body = body;
+                // 声音
+                content.sound = [UNNotificationSound defaultSound];
+                            
+                // 3、创建通知触发时间
+                UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1.0 repeats:NO];
+                // 4、创建通知请求
+                
+                UNNotificationRequest *notificationRequest = [UNNotificationRequest requestWithIdentifier:identifier content:content trigger:trigger];
+                // 5、将请求加入通知中心
+                [center addNotificationRequest:notificationRequest withCompletionHandler:^(NSError * _Nullable error) {
+                    
+                }];
+            }
+        }];
+    }
 }
 
 + (NSString*)weekdayStr:(NSInteger)dayOfWeek {

@@ -7,7 +7,6 @@
 //
 
 #import "CallTransferView.h"
-#import "NSString+YLS.h"
 
 @interface CallTransferView ()
 

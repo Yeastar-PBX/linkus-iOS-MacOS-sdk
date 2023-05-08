@@ -8,7 +8,6 @@
 
 #import "CallMemberView.h"
 #import "MarqueeView.h"
-#import "NSString+YLS.h"
 
 @interface CallMemberView ()
 

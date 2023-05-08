@@ -29,7 +29,7 @@ NSString *NotificationLogout = @"NotificationLogout";
     [YLSSDKConfig sharedConfig].iconTemplateImageData = UIImagePNGRepresentation([UIImage imageNamed:@"AppCallMaskIcon"]);
     [YLSSDKConfig sharedConfig].hangupAudioFileName = @"Hangup.wav";
     [YLSSDKConfig sharedConfig].alertAudioFileName = @"Alerting.wav";
-    [YLSSDKConfig sharedConfig].logPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//    [YLSSDKConfig sharedConfig].logPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     [[YLSSDK sharedYLSSDK] initApp];
     [CallProvider shareCallProvider];
     
@@ -69,6 +69,13 @@ NSString *NotificationLogout = @"NotificationLogout";
 #pragma mark - 远程通知(推送)回调
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(nonnull NSData *)deviceToken {
     [[YLSSDK sharedYLSSDK] updateApnsToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler {
+    BOOL notification = [[[YLSSDK sharedYLSSDK] callManager] didReceiveRemoteNotification:userInfo];
+    if (notification) {
+        [NSString pushNotificationWithTitle:userInfo[@"custom"][@"Caller"] body:@"Missed Call" identifier:userInfo[@"custom"][@"Linkedid"]];
+    }
 }
 
 #pragma mark - PKPushRegistryDelegate
