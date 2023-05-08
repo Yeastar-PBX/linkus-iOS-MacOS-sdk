@@ -80,6 +80,9 @@ Linkus提供两种集成方式供开发者选择：
 /// Image should be a square with side length of 40 points
 @property (nonatomic,copy,nullable) NSData *iconTemplateImageData;
 
+/// 日志文件路径,外层需创建文件夹
+@property (nonatomic,copy) NSString *logPath;
+
 /// 来电声音频文件
 @property (nonatomic,copy) NSString *comeAudioFileName API_AVAILABLE(macos(10.13));
 
@@ -171,6 +174,11 @@ Linkus提供两种集成方式供开发者选择：
  *  处理Voip推送
  */
 - (void)receiveIncomingPushWithPayload:(NSDictionary *)dictionaryPayload;
+
+/**
+ *  处理Miss Call未接来电
+ */
+- (BOOL)didReceiveRemoteNotification:(NSDictionary *)userInfo;
 
 /**
  *  正在进行的通话信息
@@ -316,3 +324,4 @@ Linkus提供两种集成方式供开发者选择：
 
 # 更新日志
 - 20230428 提交尚未测试过的开源库，版本号：1.0.0
+- 20230508 开放日志路径、处理Voip推送、未接来电推送

@@ -66,6 +66,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)receiveIncomingPushWithPayload:(NSDictionary *)dictionaryPayload;
 
 /**
+ *  处理Miss Call未接来电
+ */
+- (BOOL)didReceiveRemoteNotification:(NSDictionary *)userInfo;
+
+/**
  *  正在进行的通话信息
  */
 - (YLSSipCall *)currentSipCall;
