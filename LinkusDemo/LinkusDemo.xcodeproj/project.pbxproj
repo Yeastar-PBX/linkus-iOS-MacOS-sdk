@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09E52C35BD828145EE22E620 /* libPods-LinkusDemo (macOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD72E61761B1A98137FC680E /* libPods-LinkusDemo (macOS).a */; };
 		0C392DD729D56FB2006C8E6F /* LinkusDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C392DC629D56FB0006C8E6F /* LinkusDemoApp.swift */; };
 		0C392DD929D56FB2006C8E6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C392DC729D56FB0006C8E6F /* ContentView.swift */; };
 		0C392DDA29D56FB2006C8E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C392DC829D56FB2006C8E6F /* Assets.xcassets */; };
 		0C392DDB29D56FB2006C8E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C392DC829D56FB2006C8E6F /* Assets.xcassets */; };
-		494ECB49BD690BE7A5B795DB /* Pods_LinkusDemo__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */; };
+		2BE5155D5E10355681017F16 /* libPods-LinkusDemo (iOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = E86F75538AFC44F7A7582A41 /* libPods-LinkusDemo (iOS).a */; };
 		59029FF829D5838E00E41926 /* CalllogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FC529D5838D00E41926 /* CalllogsViewController.m */; };
 		59029FF929D5838E00E41926 /* DialpadViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FC829D5838D00E41926 /* DialpadViewCell.m */; };
 		59029FFA29D5838E00E41926 /* DialpadCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59029FCD29D5838D00E41926 /* DialpadCallView.m */; };
@@ -65,7 +66,7 @@
 		59C49F1F29F7618900164ECE /* MacCallProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C49F1E29F7618900164ECE /* MacCallProvider.m */; };
 		59C49F2129F7728F00164ECE /* CallUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49F2029F7728F00164ECE /* CallUIView.swift */; };
 		59C49F2329FA4D4700164ECE /* NSString+YLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A01D29D5887600E41926 /* NSString+YLS.m */; };
-		A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */; };
+		59CA6AA62A0887A3003CDBAC /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CA6AA52A0887A2003CDBAC /* PushKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,8 +76,6 @@
 		0C392DCD29D56FB2006C8E6F /* LinkusDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkusDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C392DD329D56FB2006C8E6F /* LinkusDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkusDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C392DD529D56FB2006C8E6F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		16F932768551D1340252FA57 /* Pods-LinkusDemo (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (macOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (macOS)/Pods-LinkusDemo (macOS).debug.xcconfig"; sourceTree = "<group>"; };
-		307EF8EE4F0D0BE6AA7F6F55 /* Pods-LinkusDemo (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (macOS).release.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (macOS)/Pods-LinkusDemo (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		30895D9E68FA529573BE55AA /* Pods-LinkusDemo (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).release.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		59029FC529D5838D00E41926 /* CalllogsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalllogsViewController.m; sourceTree = "<group>"; };
 		59029FC629D5838D00E41926 /* CalllogsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalllogsViewController.h; sourceTree = "<group>"; };
@@ -169,9 +168,13 @@
 		59C49F1D29F7618900164ECE /* MacCallProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacCallProvider.h; sourceTree = "<group>"; };
 		59C49F1E29F7618900164ECE /* MacCallProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacCallProvider.m; sourceTree = "<group>"; };
 		59C49F2029F7728F00164ECE /* CallUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallUIView.swift; sourceTree = "<group>"; };
-		775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkusDemo__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59CA6AA52A0887A2003CDBAC /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/PushKit.framework; sourceTree = DEVELOPER_DIR; };
+		59CA6AA72A089962003CDBAC /* LinkusDemo (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LinkusDemo (iOS).entitlements"; sourceTree = "<group>"; };
+		AD72E61761B1A98137FC680E /* libPods-LinkusDemo (macOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LinkusDemo (macOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		C0BF24A44CB92E9892674375 /* Pods-LinkusDemo (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (macOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (macOS)/Pods-LinkusDemo (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		E86F75538AFC44F7A7582A41 /* libPods-LinkusDemo (iOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LinkusDemo (iOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBF2DB72492FA955E3FA0FE /* Pods-LinkusDemo (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (macOS).release.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (macOS)/Pods-LinkusDemo (macOS).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +186,8 @@
 				5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */,
 				5985CA9729F227D6003E9616 /* libresolv.tbd in Frameworks */,
 				5902A00F29D5849E00E41926 /* UIKit.framework in Frameworks */,
-				A313D7FC5A967D4C4A5CF381 /* Pods_LinkusDemo__iOS_.framework in Frameworks */,
+				2BE5155D5E10355681017F16 /* libPods-LinkusDemo (iOS).a in Frameworks */,
+				59CA6AA62A0887A3003CDBAC /* PushKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +197,7 @@
 			files = (
 				59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */,
 				59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */,
-				494ECB49BD690BE7A5B795DB /* Pods_LinkusDemo__macOS_.framework in Frameworks */,
+				09E52C35BD828145EE22E620 /* libPods-LinkusDemo (macOS).a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +461,7 @@
 		5937A8E929D576B30089B0A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				59CA6AA72A089962003CDBAC /* LinkusDemo (iOS).entitlements */,
 				5985CA3A29ECEC8A003E9616 /* LinkusDemo--macOS--Info.plist */,
 				5902A03A29D58A6D00E41926 /* LinkusDemo--iOS--Info.plist */,
 				5937A8EA29D577550089B0A2 /* main.m */,
@@ -471,13 +476,14 @@
 		5937A8EC29D5778F0089B0A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59CA6AA52A0887A2003CDBAC /* PushKit.framework */,
 				5985CA9629F227CB003E9616 /* libresolv.tbd */,
 				59438CA229E52E8500B4DAA7 /* libcurl.tbd */,
 				5902AEF929D6AC0E00E41926 /* libc++.tbd */,
 				5902AED529D6A8CF00E41926 /* libxml2.tbd */,
 				5902A00E29D5849E00E41926 /* UIKit.framework */,
-				7D9575A9E06248357DE8181F /* Pods_LinkusDemo__iOS_.framework */,
-				775D040E319CCE913DDD4DA7 /* Pods_LinkusDemo__macOS_.framework */,
+				E86F75538AFC44F7A7582A41 /* libPods-LinkusDemo (iOS).a */,
+				AD72E61761B1A98137FC680E /* libPods-LinkusDemo (macOS).a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -511,8 +517,8 @@
 			children = (
 				BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */,
 				30895D9E68FA529573BE55AA /* Pods-LinkusDemo (iOS).release.xcconfig */,
-				16F932768551D1340252FA57 /* Pods-LinkusDemo (macOS).debug.xcconfig */,
-				307EF8EE4F0D0BE6AA7F6F55 /* Pods-LinkusDemo (macOS).release.xcconfig */,
+				C0BF24A44CB92E9892674375 /* Pods-LinkusDemo (macOS).debug.xcconfig */,
+				EFBF2DB72492FA955E3FA0FE /* Pods-LinkusDemo (macOS).release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -528,7 +534,7 @@
 				0C392DC929D56FB2006C8E6F /* Sources */,
 				0C392DCA29D56FB2006C8E6F /* Frameworks */,
 				0C392DCB29D56FB2006C8E6F /* Resources */,
-				22B1B14DB2FD729DE45EEEE2 /* [CP] Embed Pods Frameworks */,
+				D6C8E3CB57F55C9C17E61D26 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -543,7 +549,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C392DE129D56FB2006C8E6F /* Build configuration list for PBXNativeTarget "LinkusDemo (macOS)" */;
 			buildPhases = (
-				4ACB27D2D8C234600E2C864E /* [CP] Check Pods Manifest.lock */,
+				A66BC7336A7398EECA1F1631 /* [CP] Check Pods Manifest.lock */,
 				0C392DCF29D56FB2006C8E6F /* Sources */,
 				0C392DD029D56FB2006C8E6F /* Frameworks */,
 				0C392DD129D56FB2006C8E6F /* Resources */,
@@ -622,24 +628,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		22B1B14DB2FD729DE45EEEE2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS)-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4ACB27D2D8C234600E2C864E /* [CP] Check Pods Manifest.lock */ = {
+		A66BC7336A7398EECA1F1631 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -659,6 +648,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6C8E3CB57F55C9C17E61D26 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS)-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS)-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS)-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E4EE8D82E4F88BB8284724FD /* [CP] Check Pods Manifest.lock */ = {
@@ -862,9 +868,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Supporting Files/LinkusDemo (iOS).entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E5BHZ9VK49;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = E5BHZ9VK49;
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_ARCHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -885,6 +894,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yeastar.LinkusPush;
 				PRODUCT_NAME = LinkusDemo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = com.yeastar.LinkusPush.dev;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/LinkusDemo (iOS)-Bridging-Header.h";
@@ -901,9 +912,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Supporting Files/LinkusDemo (iOS).entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E5BHZ9VK49;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = E5BHZ9VK49;
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_ARCHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -924,6 +938,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yeastar.LinkusPush;
 				PRODUCT_NAME = LinkusDemo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = comyeastarLinkusPushAdhoc;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/LinkusDemo (iOS)-Bridging-Header.h";
@@ -935,7 +951,7 @@
 		};
 		0C392DE229D56FB2006C8E6F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16F932768551D1340252FA57 /* Pods-LinkusDemo (macOS).debug.xcconfig */;
+			baseConfigurationReference = C0BF24A44CB92E9892674375 /* Pods-LinkusDemo (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -971,7 +987,7 @@
 		};
 		0C392DE329D56FB2006C8E6F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 307EF8EE4F0D0BE6AA7F6F55 /* Pods-LinkusDemo (macOS).release.xcconfig */;
+			baseConfigurationReference = EFBF2DB72492FA955E3FA0FE /* Pods-LinkusDemo (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

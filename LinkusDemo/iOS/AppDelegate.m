@@ -43,6 +43,18 @@ NSString *NotificationLogout = @"NotificationLogout";
     [[YLSSDK sharedYLSSDK].loginManager addDelegate:self];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logout:) name:NotificationLogout object:nil];
     
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    // 必须写代理，不然无法监听通知的接收与点击
+    center.delegate = self;
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (granted) {
+            // 点击允许
+            [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            }];
+        }
+    }];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
     PKPushRegistry *pushRegistry = [[PKPushRegistry alloc] initWithQueue:dispatch_get_global_queue(0, 0)];
     pushRegistry.delegate = self;
     pushRegistry.desiredPushTypes = [NSSet setWithObject:PKPushTypeVoIP];
@@ -55,14 +67,14 @@ NSString *NotificationLogout = @"NotificationLogout";
 }
 
 #pragma mark - 远程通知(推送)回调
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(nonnull NSData *)deviceToken {
     [[YLSSDK sharedYLSSDK] updateApnsToken:deviceToken];
 }
 
 #pragma mark - PKPushRegistryDelegate
-- (void)pushRegistry:(PKPushRegistry *)registry didUpdatePushCredentials:(PKPushCredentials *)credentials forType:(PKPushType)type {
+- (void)pushRegistry:(PKPushRegistry *)registry didUpdatePushCredentials:(PKPushCredentials *)pushCredentials forType:(PKPushType)type {
     if ([type isEqualToString:PKPushTypeVoIP]) {
-        NSData *tokenData = credentials.token;
+        NSData *tokenData = pushCredentials.token;
         [[YLSSDK sharedYLSSDK] updatePushKitToken:tokenData];
     }
 }
