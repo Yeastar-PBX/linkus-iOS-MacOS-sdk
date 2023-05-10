@@ -20,5 +20,5 @@ platform :osx, '10.13'
 #    pod 'WCDBSwift'
 #    pod 'ObjectMapper'
 #    pod 'SDWebImageSwiftUI'
-    pod 'linkus-vivo-MacOS', '~> 1.0.2'
+    pod 'linkus-vivo-MacOS', '~> 1.0.4'
 end
