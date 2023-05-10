@@ -16,6 +16,5 @@ Pod::Spec.new do |spec|
   spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/curl" }
   spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libc++" }
-  spec.dependency "OpenSSL-Universal", "~> 1.0.2.20"
 
 end

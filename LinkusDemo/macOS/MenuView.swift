@@ -60,7 +60,6 @@ struct MenuView: View {
                                 }
                             }
                         }
-        
                         HStack(alignment: .bottom, spacing: 16) {
                             Button("呼叫") {
                                 let sipCall = YLSSipCall()
@@ -73,7 +72,6 @@ struct MenuView: View {
                                 Text("拨打的号码")
                             }.frame(width: 80)
                         }
-        
                         Button("退出登录") {
                             YLSSDK.shared().loginManager.logout { _ in
                                 isLogin = false
