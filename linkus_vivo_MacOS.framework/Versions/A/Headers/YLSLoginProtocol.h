@@ -70,6 +70,16 @@ typedef NS_ENUM(NSInteger, LoginStep) {
  */
 - (void)logout:(void (^)(NSError * _Nullable error))completion;
 
+/**
+ *  添加委托
+ */
+- (void)addDelegate:(id<YLSLoginManagerDelegate>)delegate;
+
+/**
+ *  移除委托
+ */
+- (void)removeDelegate:(id<YLSLoginManagerDelegate>)delegate;
+
 @end
 
 

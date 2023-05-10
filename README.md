@@ -31,6 +31,7 @@ Linkus提供两种集成方式供开发者选择：
 * 下载[iOS SDK](https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo/tree/main/linkus_vivo_iOS.framework) 
 * 拖拽`linkus_vivo_iOS.framework`文件到Xcode工程内(请勾选`Copy items if needed`选项)
 * 添加依赖库
+    - `libz.dylib`
     - `libc++.dylib`
     - `libxml2.dylib`
     - `libresolvdylib`
@@ -40,6 +41,7 @@ Linkus提供两种集成方式供开发者选择：
 * 添加依赖库
     - `libcurl.dylib`
     - `libxml2.dylib`
+    - `libc++.dylib`
 
 ## 二. 初始化SDK
 
@@ -82,6 +84,9 @@ Linkus提供两种集成方式供开发者选择：
 
 /// 日志文件路径,外层需创建文件夹
 @property (nonatomic,copy) NSString *logPath;
+
+/// 数据文件路径,外层需创建文件夹
+@property (nonatomic,copy) NSString *dataPath;
 
 /// 来电声音频文件
 @property (nonatomic,copy) NSString *comeAudioFileName API_AVAILABLE(macos(10.13));
@@ -325,3 +330,4 @@ Linkus提供两种集成方式供开发者选择：
 # 更新日志
 - 20230428 提交尚未测试过的开源库，版本号：1.0.0
 - 20230508 开放日志路径、处理Voip推送、未接来电推送
+- 20230510 修复自测MacOS发现的问题

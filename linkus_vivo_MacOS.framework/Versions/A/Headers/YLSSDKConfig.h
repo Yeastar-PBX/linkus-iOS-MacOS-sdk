@@ -22,6 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// Image should be a square with side length of 40 points
 @property (nonatomic,copy,nullable) NSData *iconTemplateImageData;
 
+/// 日志文件路径,外层需创建文件夹
+@property (nonatomic,copy) NSString *logPath;
+
+/// 数据文件路径,外层需创建文件夹
+@property (nonatomic,copy) NSString *dataPath;
+
 /// 来电声音频文件
 @property (nonatomic,copy) NSString *comeAudioFileName API_AVAILABLE(macos(10.13));
 

@@ -60,7 +60,6 @@
 		5985CA9729F227D6003E9616 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5985CA9629F227CB003E9616 /* libresolv.tbd */; };
 		5987172329DEE44A0023936C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AEF929D6AC0E00E41926 /* libc++.tbd */; };
 		5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
-		59ADA0222A0A381600DB2D94 /* linkus_vivo_MacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ADA0212A0A381600DB2D94 /* linkus_vivo_MacOS.framework */; };
 		59C49EEB29F4BE4200164ECE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49EEA29F4BE4200164ECE /* MenuView.swift */; };
 		59C49EEE29F5371A00164ECE /* YLSSDKData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49EED29F5371A00164ECE /* YLSSDKData.swift */; };
 		59C49F1C29F650EB00164ECE /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = 59C49F1B29F650EB00164ECE /* incoming.wav */; };
@@ -162,7 +161,6 @@
 		5985CA9029F161E6003E9616 /* HistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewCell.h; sourceTree = "<group>"; };
 		5985CA9129F161E6003E9616 /* HistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewCell.m; sourceTree = "<group>"; };
 		5985CA9629F227CB003E9616 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/usr/lib/libresolv.tbd; sourceTree = DEVELOPER_DIR; };
-		59ADA0212A0A381600DB2D94 /* linkus_vivo_MacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_vivo_MacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C49EEA29F4BE4200164ECE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		59C49EED29F5371A00164ECE /* YLSSDKData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLSSDKData.swift; sourceTree = "<group>"; };
 		59C49F1B29F650EB00164ECE /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incoming.wav; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 			files = (
 				59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */,
 				59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */,
-				59ADA0222A0A381600DB2D94 /* linkus_vivo_MacOS.framework in Frameworks */,
 				09E52C35BD828145EE22E620 /* libPods-LinkusDemo (macOS).a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,7 +473,6 @@
 		5937A8EC29D5778F0089B0A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				59ADA0212A0A381600DB2D94 /* linkus_vivo_MacOS.framework */,
 				5985CA9629F227CB003E9616 /* libresolv.tbd */,
 				59438CA229E52E8500B4DAA7 /* libcurl.tbd */,
 				5902AEF929D6AC0E00E41926 /* libc++.tbd */,
