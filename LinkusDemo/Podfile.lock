@@ -1,6 +1,19 @@
 PODS:
+  - BaiduMapKit (6.5.7):
+    - BaiduMapKit/Base (= 6.5.7)
+    - BaiduMapKit/Map (= 6.5.7)
+    - BaiduMapKit/Search (= 6.5.7)
+    - BaiduMapKit/Utils (= 6.5.7)
+  - BaiduMapKit/Base (6.5.7)
+  - BaiduMapKit/Map (6.5.7):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Search (6.5.7):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Utils (6.5.7):
+    - BaiduMapKit/Base
   - HWPanModal (0.8.9)
   - Masonry (1.1.0)
+  - OpenSSL-Universal (1.1.2000)
   - ReactiveObjC (3.1.1)
   - SVProgressHUD (2.2.5)
   - Toast (4.0.0)
@@ -9,8 +22,10 @@ PODS:
   - YYCategories/no-arc (1.0.4)
 
 DEPENDENCIES:
+  - BaiduMapKit (~> 6.5.7)
   - HWPanModal (~> 0.8.9)
   - Masonry (~> 1.1.0)
+  - OpenSSL-Universal (~> 1.1.1g)
   - ReactiveObjC (~> 3.1.1)
   - SVProgressHUD (~> 2.2.5)
   - Toast (~> 4.0.0)
@@ -18,21 +33,25 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - BaiduMapKit
     - HWPanModal
     - Masonry
+    - OpenSSL-Universal
     - ReactiveObjC
     - SVProgressHUD
     - Toast
     - YYCategories
 
 SPEC CHECKSUMS:
+  BaiduMapKit: aa6e7f70bf2446cd67b9dd0960b763602f359107
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  OpenSSL-Universal: 708e3d1e616a2c40f09a880aafc4b14d2f2a61ec
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 1268865684a10504ac9267666a5aeb3684c21c52
+PODFILE CHECKSUM: 8f8c17d6946662f3a22814aef6448793f6191a8c
 
 COCOAPODS: 1.11.3
