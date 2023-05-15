@@ -12,7 +12,7 @@
 #import <PushKit/PushKit.h>
 #import <UserNotifications/UserNotifications.h>
 
-//#import <BaiduMapAPI_Base/BMKBaseComponent.h>
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>
 
 NSString *NotificationLogout = @"NotificationLogout";
 
@@ -24,7 +24,7 @@ NSString *NotificationLogout = @"NotificationLogout";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-//    BMKMapManager *manager = [[BMKMapManager alloc] init];
+    BMKMapManager *manager = [[BMKMapManager alloc] init];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
