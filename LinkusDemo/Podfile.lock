@@ -1,19 +1,7 @@
 PODS:
-  - BaiduMapKit (6.5.7):
-    - BaiduMapKit/Base (= 6.5.7)
-    - BaiduMapKit/Map (= 6.5.7)
-    - BaiduMapKit/Search (= 6.5.7)
-    - BaiduMapKit/Utils (= 6.5.7)
-  - BaiduMapKit/Base (6.5.7)
-  - BaiduMapKit/Map (6.5.7):
-    - BaiduMapKit/Base
-  - BaiduMapKit/Search (6.5.7):
-    - BaiduMapKit/Base
-  - BaiduMapKit/Utils (6.5.7):
-    - BaiduMapKit/Base
   - HWPanModal (0.8.9)
-  - linkus-vivo (1.0.6)
-  - linkus-vivo-MacOS (1.0.6)
+  - linkus-vivo (1.0.7)
+  - linkus-vivo-MacOS (1.0.7)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.1)
   - SVProgressHUD (2.2.5)
@@ -23,10 +11,9 @@ PODS:
   - YYCategories/no-arc (1.0.4)
 
 DEPENDENCIES:
-  - BaiduMapKit (~> 6.5.7)
   - HWPanModal (~> 0.8.9)
-  - linkus-vivo (~> 1.0.6)
-  - linkus-vivo-MacOS (~> 1.0.6)
+  - linkus-vivo (~> 1.0.7)
+  - linkus-vivo-MacOS (~> 1.0.7)
   - Masonry (~> 1.1.0)
   - ReactiveObjC (~> 3.1.1)
   - SVProgressHUD (~> 2.2.5)
@@ -35,7 +22,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - BaiduMapKit
     - HWPanModal
     - linkus-vivo
     - linkus-vivo-MacOS
@@ -46,16 +32,15 @@ SPEC REPOS:
     - YYCategories
 
 SPEC CHECKSUMS:
-  BaiduMapKit: aa6e7f70bf2446cd67b9dd0960b763602f359107
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
-  linkus-vivo: 13a459bcd5ba40afba899235fc37d38d33c429dd
-  linkus-vivo-MacOS: 695f72e637a2a6bd01250c8a3825758541cc0f02
+  linkus-vivo: 9fad8780e25d56d42483c76193eb615739b10852
+  linkus-vivo-MacOS: 7c0eca6ec039b8a992e106c0f0617780c712d78c
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 312e3460aacca8b3c668a0ec45247b09fcde8056
+PODFILE CHECKSUM: 700a0491f23af45e5916925c04e2ec29ad4853b4
 
 COCOAPODS: 1.11.3

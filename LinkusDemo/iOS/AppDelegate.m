@@ -12,8 +12,6 @@
 #import <PushKit/PushKit.h>
 #import <UserNotifications/UserNotifications.h>
 
-#import <BaiduMapAPI_Base/BMKBaseComponent.h>
-
 NSString *NotificationLogout = @"NotificationLogout";
 
 @interface AppDelegate () <PKPushRegistryDelegate,UNUserNotificationCenterDelegate,YLSLoginManagerDelegate>
@@ -23,9 +21,6 @@ NSString *NotificationLogout = @"NotificationLogout";
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    BMKMapManager *manager = [[BMKMapManager alloc] init];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
     
