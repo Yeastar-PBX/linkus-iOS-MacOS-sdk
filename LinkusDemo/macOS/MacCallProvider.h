@@ -18,6 +18,8 @@
 
 - (void)reloadCurrentCall:(YLSSipCall *)sipCall;
 
+- (void)loginOut;
+
 @end
 
 

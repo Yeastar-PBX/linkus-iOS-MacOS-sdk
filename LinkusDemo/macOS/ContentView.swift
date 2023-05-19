@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    var modelData = YLSSDKData.shared
-    @State var isLogin = false
+    @ObservedObject var sdkData = YLSSDKData.shared
     var body: some View {
-        if isLogin {
-            MenuView(isLogin: $isLogin)
+        if sdkData.isLogin {
+            MenuView(isLogin: $sdkData.isLogin)
                 .frame(minWidth: 500, minHeight: 340)
         } else {
-            LoginView(isLogin: $isLogin)
+            LoginView(isLogin: $sdkData.isLogin)
         }
     }
 }

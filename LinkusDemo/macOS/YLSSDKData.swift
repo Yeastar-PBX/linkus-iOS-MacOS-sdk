@@ -22,6 +22,7 @@ final class YLSSDKData: NSObject, ObservableObject, MacCallProviderDelegate{
     }()
     
     @Published var sipCall = YLSSipCall()
+    @Published var isLogin = false
     var microphone = -1
     var speaker = -1
     
@@ -47,6 +48,10 @@ final class YLSSDKData: NSObject, ObservableObject, MacCallProviderDelegate{
     func dismissCallView() {
         window.close()
         window.orderOut(nil)
+    }
+    
+    func loginOut() {
+        isLogin = false
     }
     
     func reloadCurrentCall(_ sipCall :YLSSipCall) {

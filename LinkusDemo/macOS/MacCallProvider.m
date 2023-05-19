@@ -54,11 +54,7 @@
 - (void)onKickStep:(KickReason)code {
     NSLog(@"Login information expired. Please log in again. (%ld)",code);
     [[[YLSSDK sharedYLSSDK] loginManager] logout:^(NSError * _Nullable error) {
-//        [[NSNotificationCenter defaultCenter] postNotificationOnMainThreadWithName:NotificationLogout object:nil];
-//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Tip" message:reason preferredStyle:UIAlertControllerStyleAlert];
-//        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
-//        [RootTabBarController presentViewController:alert animated:YES completion:nil];
-//        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"EVER_LOGIN"];
+        [self.delegate loginOut];
     }];
 }
 
