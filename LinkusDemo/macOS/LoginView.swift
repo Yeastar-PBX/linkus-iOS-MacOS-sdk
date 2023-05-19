@@ -11,9 +11,9 @@ struct LoginView: View {
     @Binding var isLogin: Bool
     enum Field: Hashable { case name, password, localAddress, localPort, remoteAddress, remotePort }
     
-    @State private var name = "1014"
-    @State private var password = "eyJleHBpcmUiOjAsInNpZ24iOiJLYWdmYnpPMWg0R2taYjl2VUdRUUEvVllxVjZrUUZCVWl0cW4vdlc5ZStVPSIsInVzZXJuYW1lIjoiMTAxNCIsInZlcnNpb24iOiIxLjAifQ__"
-    @State private var localAddress = "192.168.22.138"
+    @State private var name = "1010"
+    @State private var password = "eyJleHBpcmUiOjE2ODcyNjE0MTYsInNpZ24iOiJERTBNY2VXR0hFOFM5c0NROE84cEh0UWk4UTE3b2l0VGZ0TWxZeE1EeDFzPSIsInVzZXJuYW1lIjoiMTAxMCIsInZlcnNpb24iOiIxLjAifQ__"
+    @State private var localAddress = "192.168.25.110"
     @State private var localPort = "8111"
     @State private var remoteAddress = ""
     @State private var remotePort = ""
@@ -70,10 +70,12 @@ struct LoginView: View {
                     isFocused = .password
                 } else {
                     isFocused = nil
-                    print("用户输入的没有问题,可以提交至服务器")
                     YLSSDK.shared().loginManager.login(name, token: password, localIP: localAddress, localPort: localPort, remoteIP: remoteAddress, remotePort: remotePort) { error in
                         if error == nil {
                             isLogin = true
+                            print("登录成功")
+                        } else {
+                            print("登录失败")
                         }
                     }
                 }

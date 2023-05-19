@@ -16,7 +16,7 @@ enum Panel: Hashable {
 
 struct MenuView: View {
     @Binding var isLogin: Bool
-    @State private var number = "1019"
+    @State private var number = "1011"
     @ObservedObject var historyData = HistoryData.shared
     @State private var selection: Panel? = Panel.callLogs
     var body: some View {
