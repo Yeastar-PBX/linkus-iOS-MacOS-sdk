@@ -27,7 +27,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [[[YLSSDK sharedYLSSDK] callManager] addDelegate:self];
+        [[[YLSSDK sharedYLSSDK] callManager] setIncomingCallDelegate:self];
     }
     return self;
 }

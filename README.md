@@ -221,6 +221,11 @@ Linkus提供两种集成方式供开发者选择：
 - (BOOL)adminRecord;
 
 /**
+ *  来电委托
+ */
+- (void)setIncomingCallDelegate:(id<YLSCallManagerDelegate>)delegate;
+
+/**
  *  添加委托
  */
 - (void)addDelegate:(id<YLSCallManagerDelegate>)delegate;
@@ -331,3 +336,4 @@ Linkus提供两种集成方式供开发者选择：
 - 20230428 提交尚未测试过的开源库，版本号：1.0.0
 - 20230508 开放日志路径、处理Voip推送、未接来电推送
 - 20230510 修复自测MacOS发现的问题
+- 20230608 修复iOS通话界面内存释放问题
