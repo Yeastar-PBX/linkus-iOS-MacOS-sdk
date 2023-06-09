@@ -106,6 +106,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)adminRecord;
 
 /**
+ *  来电委托
+ */
+- (void)setIncomingCallDelegate:(id<YLSCallManagerDelegate>)delegate;
+
+/**
  *  添加委托
  */
 - (void)addDelegate:(id<YLSCallManagerDelegate>)delegate;
