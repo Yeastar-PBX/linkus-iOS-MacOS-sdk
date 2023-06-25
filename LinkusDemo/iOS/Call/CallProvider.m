@@ -49,6 +49,10 @@
     });
 }
 
+- (BOOL)callWaitingSupport {
+    return NO;
+}
+
 - (void)callManager:(YLSCallManager *)callManager callFaild:(NSError *)error {
     NSString *text = @"";
     switch (error.code) {

@@ -12,7 +12,7 @@ struct LoginView: View {
     enum Field: Hashable { case name, password, localAddress, localPort, remoteAddress, remotePort }
     
     @State private var name = "1010"
-    @State private var password = "eyJleHBpcmUiOjE2ODcyNjE0MTYsInNpZ24iOiJERTBNY2VXR0hFOFM5c0NROE84cEh0UWk4UTE3b2l0VGZ0TWxZeE1EeDFzPSIsInVzZXJuYW1lIjoiMTAxMCIsInZlcnNpb24iOiIxLjAifQ__"
+    @State private var password = "eyJleHBpcmUiOjE3MDU3NTQ4NTUsInNpZ24iOiJyS0RURGs0MHhrRFY1blF2N2h0VkJIYlFEQ3kxTWw5cGxlTldzb1VYcEhzPSIsInVzZXJuYW1lIjoiMTAxMCIsInZlcnNpb24iOiIxLjAifQ__"
     @State private var localAddress = "192.168.25.110"
     @State private var localPort = "8111"
     @State private var remoteAddress = ""

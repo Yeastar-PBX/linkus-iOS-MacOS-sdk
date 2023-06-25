@@ -26,6 +26,7 @@
     self = [super init];
     if (self) {
         [[[YLSSDK sharedYLSSDK] callManager] addDelegate:self];
+        [[[YLSSDK sharedYLSSDK] callManager] setIncomingCallDelegate:self];
         [[[YLSSDK sharedYLSSDK] callStatusManager] addDelegate:self];
         [[[YLSSDK sharedYLSSDK] loginManager] addDelegate:self];
     }
@@ -35,6 +36,10 @@
 #pragma mark - YLSCallManagerDelegate来电
 - (void)callManager:(YLSCallManager *)callManager contact:(void (^)(id<YLSContactProtocol> (^block)(NSString *number)))contact completion:(void (^)(void (^controllerBlock)(void),void (^errorBlock)(NSError *error)))completion {
     [self.delegate popCallView];
+}
+
+- (BOOL)callWaitingSupport {
+    return NO;
 }
 
 #pragma mark - YLSCallStatusManagerDelegate

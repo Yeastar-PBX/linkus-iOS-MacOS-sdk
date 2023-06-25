@@ -260,6 +260,11 @@ Linkus提供两种集成方式供开发者选择：
  */
 - (void)callManager:(YLSCallManager *)callManager callQuality:(BOOL)quality;
 
+/**
+ *  呼叫等待回调
+ */
+- (BOOL)callWaitingSupport;
+
 ```
 
 ### 5. 通话类型、呼叫等待、呼叫转移
@@ -337,3 +342,4 @@ Linkus提供两种集成方式供开发者选择：
 - 20230508 开放日志路径、处理Voip推送、未接来电推送
 - 20230510 修复自测MacOS发现的问题
 - 20230608 修复iOS通话界面内存释放问题
+- 20230625 新增呼叫等待回调、修复Mac端日志数据路径异常

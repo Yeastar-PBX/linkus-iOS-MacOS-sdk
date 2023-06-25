@@ -56,6 +56,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)callManager:(YLSCallManager *)callManager callQuality:(BOOL)quality;
 
+/**
+ *  呼叫等待回调
+ */
+- (BOOL)callWaitingSupport;
+
 @end
 
 @protocol YLSCallManager <NSObject>

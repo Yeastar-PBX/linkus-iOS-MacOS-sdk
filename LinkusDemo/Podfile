@@ -10,7 +10,7 @@ platform :ios, '11.0'
     pod 'HWPanModal', '~> 0.8.9'
     pod 'Masonry', '~> 1.1.0'
     pod 'ReactiveObjC', '~> 3.1.1'
-    pod 'linkus-vivo', '~> 1.0.8'
+    pod 'linkus-vivo', '~> 1.0.10'
 end
 
 target 'LinkusDemo (macOS)' do
@@ -18,5 +18,5 @@ platform :osx, '10.13'
 #    pod 'WCDBSwift'
 #    pod 'ObjectMapper'
 #    pod 'SDWebImageSwiftUI'
-    pod 'linkus-vivo-MacOS', '~> 1.0.8'
+    pod 'linkus-vivo-MacOS', '~> 1.0.10'
 end
