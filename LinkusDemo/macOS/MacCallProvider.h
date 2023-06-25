@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <linkus_vivo_MacOS/linkus_vivo.h>
+#import <linkus_sdk_MacOS/linkus_sdk.h>
 
 @protocol MacCallProviderDelegate <NSObject>
 

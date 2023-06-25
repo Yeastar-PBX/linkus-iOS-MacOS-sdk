@@ -15,7 +15,7 @@
 #import "LocalFontConfig.h"
 
 #import "CallProvider.h"
-#import <linkus_vivo_iOS/linkus_vivo.h>
+#import <linkus_sdk_iOS/linkus_sdk.h>
 
 #import "Masonry.h"
 #import <ReactiveObjC/ReactiveObjC.h>
