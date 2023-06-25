@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
 
   spec.requires_arc = true  
   spec.platform     = :osx, "10.13"
-  spec.vendored_frameworks ='linkus_vivo_MacOS.framework'
+  spec.vendored_frameworks ='linkus_sdk_MacOS.framework'
   spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/curl" }
   spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libc++" }
