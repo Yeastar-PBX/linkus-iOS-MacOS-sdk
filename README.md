@@ -1,7 +1,7 @@
-![linkus-vivo.GIF](https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo/blob/main/linkus-vivo.gif)
-![linkus-vivo.GIF](https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo/blob/main/MacOS.gif)
+![iOS.GIF](https://github.com/Yeastar-PBX/linkus-iOS-MacOS-sdk/blob/main/iOS.gif)
+![MacOS.GIF](https://github.com/Yeastar-PBX/linkus-iOS-MacOS-sdk/blob/main/MacOS.gif)
 
-# linkus-vivo SDK 接入指南
+# linkus SDK 接入指南
 
 ## 一. SDK 集成
 系统要求：
@@ -17,10 +17,10 @@ Linkus提供两种集成方式供开发者选择：
 #### 1.1 CocoaPods集成方式
 
 在iOS工程的Podfile里面添加以下代码：
-> **pod 'linkus-vivo'**
+> **pod 'linkus-sdk'**
 
 在MacOS工程的Podfile里面添加以下代码：
-> **pod 'linkus-vivo-MacOS'**
+> **pod 'linkus-sdk-MacOS'**
 
 保存并执行`pod install`,然后用后缀为`.xcworkspace`的文件打开工程。
 
@@ -28,16 +28,16 @@ Linkus提供两种集成方式供开发者选择：
 
 #### 1.2 手动集成方式
 
-* 下载[iOS SDK](https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo/tree/main/linkus_vivo_iOS.framework) 
-* 拖拽`linkus_vivo_iOS.framework`文件到Xcode工程内(请勾选`Copy items if needed`选项)
+* 下载[iOS SDK](https://github.com/Yeastar-PBX/linkus-iOS-MacOS-sdk/tree/main/linkus_sdk_iOS.framework) 
+* 拖拽`linkus_sdk_iOS.framework`文件到Xcode工程内(请勾选`Copy items if needed`选项)
 * 添加依赖库
     - `libz.dylib`
     - `libc++.dylib`
     - `libxml2.dylib`
     - `libresolvdylib`
     
-* 下载[MacOS SDK](https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo/tree/main/linkus_vivo_MacOS.framework) 
-* 拖拽`linkus_vivo_MacOS.framework`文件到Xcode工程内(请勾选`Copy items if needed`选项)
+* 下载[MacOS SDK](https://github.com/Yeastar-PBX/linkus-iOS-MacOS-sdk/tree/main/linkus_sdk_MacOS.framework) 
+* 拖拽`linkus_sdk_MacOS.framework`文件到Xcode工程内(请勾选`Copy items if needed`选项)
 * 添加依赖库
     - `libcurl.dylib`
     - `libxml2.dylib`
@@ -49,7 +49,7 @@ Linkus提供两种集成方式供开发者选择：
 
 在工程的`PrefixHeader.pch`文件导入头文件
 
-> `#import <linkus_vivo_iOS/linkus_vivo.h>` 或者 `#import <linkus_vivo_MacOS/linkus_vivo.h>`
+> `#import <linkus_sdk_iOS/linkus_sdk.h>` 或者 `#import <linkus_sdk_MacOS/linkus_sdk.h>`
 
 #### 2.2 初始化iOS SDK
 
@@ -343,3 +343,4 @@ Linkus提供两种集成方式供开发者选择：
 - 20230510 修复自测MacOS发现的问题
 - 20230608 修复iOS通话界面内存释放问题
 - 20230625 新增呼叫等待回调、修复Mac端日志数据路径异常
+- 20230625 更新SDK名称
