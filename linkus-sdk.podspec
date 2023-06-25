@@ -1,14 +1,14 @@
 Pod::Spec.new do |spec|
 
-  spec.name         = "linkus-vivo"
-  spec.version      = "1.0.10"
-  spec.summary      = "为V消息提供Sip通话能力"
+  spec.name         = "linkus-sdk"
+  spec.version      = "1.0.11"
+  spec.summary      = "为第三方应用提供Sip通话能力"
 
-  spec.homepage     = "https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo.git"
+  spec.homepage     = "https://github.com/Yeastar-PBX/linkus-iOS-MacOS-sdk.git"
   spec.license      = { :type => 'MIT' }
   spec.author       = { "杨桂福" => "ygf@yeastar.com" }
 
-  spec.source       = { :git => "https://github.com/Yeastar-PBX/linkus-ios-sdk-vivo.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/Yeastar-PBX/linkus-iOS-MacOS-sdk.git", :tag => "#{spec.version}" }
 
   spec.requires_arc = true  
   spec.platform     = :ios, "11.0"
