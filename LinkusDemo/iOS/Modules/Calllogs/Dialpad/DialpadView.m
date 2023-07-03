@@ -258,7 +258,7 @@
 
 #pragma mark - HWPanModalPresentable
 - (PanModalHeight)longFormHeight {
-    return PanModalHeightMake(PanModalHeightTypeContent, 408);
+    return PanModalHeightMake(PanModalHeightTypeContent, 456);
 }
 
 - (HWBackgroundConfig *)backgroundConfig {

@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
-#import "CalllogsViewController.h"
+#import "TabBarController.h"
 #import "CallProvider.h"
 #import <PushKit/PushKit.h>
 #import <UserNotifications/UserNotifications.h>
@@ -34,7 +34,7 @@ NSString *NotificationLogout = @"NotificationLogout";
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"EVER_LOGIN"]) {
         [[[YLSSDK sharedYLSSDK] loginManager] autoLogin];
-        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[CalllogsViewController alloc] init]];
+        self.window.rootViewController = [[TabBarController alloc] init];
     }else{
         self.window.rootViewController = [[LoginViewController alloc] init];
     }
