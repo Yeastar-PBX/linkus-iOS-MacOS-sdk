@@ -1,5 +1,5 @@
 //
-//  TabBarController.h
+//  ConfHeaderView.h
 //  LinkusDemo (iOS)
 //
 //  Created by 杨桂福 on 2023/7/3.
@@ -7,6 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabBarController : UITabBarController
+@interface ConfHeaderView : UIView
 
 @end

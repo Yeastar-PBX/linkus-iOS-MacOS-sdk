@@ -1,4 +1,5 @@
 PODS:
+  - DZNEmptyDataSet (1.8.1)
   - HWPanModal (0.8.9)
   - linkus-sdk (1.0.12)
   - linkus-sdk-MacOS (1.0.12)
@@ -11,6 +12,7 @@ PODS:
   - YYCategories/no-arc (1.0.4)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet (~> 1.8.1)
   - HWPanModal (~> 0.8.9)
   - linkus-sdk (~> 1.0.12)
   - linkus-sdk-MacOS (~> 1.0.12)
@@ -22,6 +24,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - DZNEmptyDataSet
     - HWPanModal
     - linkus-sdk
     - linkus-sdk-MacOS
@@ -32,6 +35,7 @@ SPEC REPOS:
     - YYCategories
 
 SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
   linkus-sdk: f0fe71696dfba25f080bffab3f9ec5fc963b2f71
   linkus-sdk-MacOS: c63cf1f5cfb65b14084a531bca08a2b92b13361c
@@ -41,6 +45,6 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 3c9f27e246b765228fb18320d3b0730fe05e9aaa
+PODFILE CHECKSUM: 4d22f147f95fb771d5067dcbd607dc72b0e35827
 
 COCOAPODS: 1.11.3
