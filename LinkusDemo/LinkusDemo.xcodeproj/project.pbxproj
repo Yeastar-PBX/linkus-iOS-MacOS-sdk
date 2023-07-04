@@ -72,6 +72,7 @@
 		59C49F1F29F7618900164ECE /* MacCallProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C49F1E29F7618900164ECE /* MacCallProvider.m */; };
 		59C49F2129F7728F00164ECE /* CallUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49F2029F7728F00164ECE /* CallUIView.swift */; };
 		59C49F2329FA4D4700164ECE /* NSString+YLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A01D29D5887600E41926 /* NSString+YLS.m */; };
+		59C9153E2A53B86100FCFCC0 /* MemberSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9153D2A53B86100FCFCC0 /* MemberSelectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -185,6 +186,8 @@
 		59C49F1D29F7618900164ECE /* MacCallProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacCallProvider.h; sourceTree = "<group>"; };
 		59C49F1E29F7618900164ECE /* MacCallProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacCallProvider.m; sourceTree = "<group>"; };
 		59C49F2029F7728F00164ECE /* CallUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallUIView.swift; sourceTree = "<group>"; };
+		59C9153C2A53B86100FCFCC0 /* MemberSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberSelectViewController.h; sourceTree = "<group>"; };
+		59C9153D2A53B86100FCFCC0 /* MemberSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberSelectViewController.m; sourceTree = "<group>"; };
 		59CA6AA72A089962003CDBAC /* LinkusDemo (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LinkusDemo (iOS).entitlements"; sourceTree = "<group>"; };
 		AD72E61761B1A98137FC680E /* libPods-LinkusDemo (macOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LinkusDemo (macOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -479,6 +482,8 @@
 				592B35872A529C26009CD7AA /* ConferenceListController.m */,
 				592B35892A52B6EE009CD7AA /* ConferenceDetailsController.h */,
 				592B358A2A52B6EE009CD7AA /* ConferenceDetailsController.m */,
+				59C9153C2A53B86100FCFCC0 /* MemberSelectViewController.h */,
+				59C9153D2A53B86100FCFCC0 /* MemberSelectViewController.m */,
 				592B358C2A52B903009CD7AA /* View */,
 			);
 			path = Conference;
@@ -766,6 +771,7 @@
 				5902A00329D5838E00E41926 /* MenuPanView.m in Sources */,
 				5902A02F29D5887600E41926 /* NSString+YLS.m in Sources */,
 				5985CA8F29F15A0E003E9616 /* HistoryProvider.m in Sources */,
+				59C9153E2A53B86100FCFCC0 /* MemberSelectViewController.m in Sources */,
 				5937A8EB29D577550089B0A2 /* main.m in Sources */,
 				59029FF929D5838E00E41926 /* DialpadViewCell.m in Sources */,
 				5902A00629D5838E00E41926 /* CallWaitingView.m in Sources */,

@@ -6,7 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Contact.h"
 
 @interface ConfHeaderView : UIView
+
+@property (nonatomic,strong) Contact *contact;
 
 @end

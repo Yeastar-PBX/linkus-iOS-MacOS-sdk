@@ -35,7 +35,7 @@
     
     UITextField *textField = [[UITextField alloc] init];
     self.textField = textField;
-    textField.text = @"Conference";
+    textField.placeholder = @"Conference";
     textField.font = [UIFont systemFontOfSize:17.0f weight:UIFontWeightMedium];
     textField.textColor = [UIColor colorWithRGB:0x000000 alpha:0.87];
     [self addSubview:textField];

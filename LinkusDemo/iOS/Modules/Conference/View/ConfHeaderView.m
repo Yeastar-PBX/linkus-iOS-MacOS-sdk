@@ -44,15 +44,21 @@
     [super layoutSubviews];
     
     [self.iconView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(self.mas_left).offset(16);
+        make.left.mas_equalTo(self.mas_left).offset(16);
         make.height.width.mas_equalTo(50);
         make.centerY.mas_equalTo(self.mas_centerY);
     }];
     
     [self.nameLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.iconView.mas_right).offset(16);
-        make.centerY.mas_equalTo(self.nameLabel.mas_centerY);
+        make.centerY.mas_equalTo(self.iconView.mas_centerY);
     }];
+}
+
+- (void)setContact:(Contact *)contact {
+    self.iconView.image = contact.iconImage;
+    self.nameLabel.text = contact.name;
+    _contact = contact;
 }
 
 @end
