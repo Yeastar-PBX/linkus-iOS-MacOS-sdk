@@ -6,6 +6,7 @@
 //
 
 #import "ConferenceDetailsController.h"
+#import "ConferenceBeginController.h"
 #import "MemberSelectViewController.h"
 #import "ConfCollectionViewCell.h"
 #import "ConfNameLabel.h"
@@ -137,6 +138,10 @@
 #pragma mark - 开始会议室
 - (void)beginConference {
     NSLog(@"开始会议室");
+    ConferenceBeginController *vc = [[ConferenceBeginController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (NSMutableArray<Contact *> *)dataArr {

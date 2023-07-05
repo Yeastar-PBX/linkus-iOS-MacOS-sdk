@@ -73,6 +73,10 @@
 		59C49F2129F7728F00164ECE /* CallUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49F2029F7728F00164ECE /* CallUIView.swift */; };
 		59C49F2329FA4D4700164ECE /* NSString+YLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A01D29D5887600E41926 /* NSString+YLS.m */; };
 		59C9153E2A53B86100FCFCC0 /* MemberSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9153D2A53B86100FCFCC0 /* MemberSelectViewController.m */; };
+		59C915412A541C8500FCFCC0 /* ConferenceBeginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C915402A541C8500FCFCC0 /* ConferenceBeginController.m */; };
+		59C915452A55118600FCFCC0 /* ConfTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C915442A55118600FCFCC0 /* ConfTopView.m */; };
+		59C915482A5511AF00FCFCC0 /* ConfBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C915472A5511AF00FCFCC0 /* ConfBottomView.m */; };
+		59C9154B2A5511D300FCFCC0 /* ConfCenterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9154A2A5511D300FCFCC0 /* ConfCenterViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -188,6 +192,14 @@
 		59C49F2029F7728F00164ECE /* CallUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallUIView.swift; sourceTree = "<group>"; };
 		59C9153C2A53B86100FCFCC0 /* MemberSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberSelectViewController.h; sourceTree = "<group>"; };
 		59C9153D2A53B86100FCFCC0 /* MemberSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberSelectViewController.m; sourceTree = "<group>"; };
+		59C9153F2A541C8500FCFCC0 /* ConferenceBeginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConferenceBeginController.h; sourceTree = "<group>"; };
+		59C915402A541C8500FCFCC0 /* ConferenceBeginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConferenceBeginController.m; sourceTree = "<group>"; };
+		59C915432A55118600FCFCC0 /* ConfTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfTopView.h; sourceTree = "<group>"; };
+		59C915442A55118600FCFCC0 /* ConfTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfTopView.m; sourceTree = "<group>"; };
+		59C915462A5511AF00FCFCC0 /* ConfBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfBottomView.h; sourceTree = "<group>"; };
+		59C915472A5511AF00FCFCC0 /* ConfBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfBottomView.m; sourceTree = "<group>"; };
+		59C915492A5511D300FCFCC0 /* ConfCenterViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfCenterViewCell.h; sourceTree = "<group>"; };
+		59C9154A2A5511D300FCFCC0 /* ConfCenterViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfCenterViewCell.m; sourceTree = "<group>"; };
 		59CA6AA72A089962003CDBAC /* LinkusDemo (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LinkusDemo (iOS).entitlements"; sourceTree = "<group>"; };
 		AD72E61761B1A98137FC680E /* libPods-LinkusDemo (macOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LinkusDemo (macOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -482,14 +494,17 @@
 				592B35872A529C26009CD7AA /* ConferenceListController.m */,
 				592B35892A52B6EE009CD7AA /* ConferenceDetailsController.h */,
 				592B358A2A52B6EE009CD7AA /* ConferenceDetailsController.m */,
+				59C9153F2A541C8500FCFCC0 /* ConferenceBeginController.h */,
+				59C915402A541C8500FCFCC0 /* ConferenceBeginController.m */,
 				59C9153C2A53B86100FCFCC0 /* MemberSelectViewController.h */,
 				59C9153D2A53B86100FCFCC0 /* MemberSelectViewController.m */,
-				592B358C2A52B903009CD7AA /* View */,
+				592B358C2A52B903009CD7AA /* DetailView */,
+				59C915422A55115000FCFCC0 /* BeginView */,
 			);
 			path = Conference;
 			sourceTree = "<group>";
 		};
-		592B358C2A52B903009CD7AA /* View */ = {
+		592B358C2A52B903009CD7AA /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
 				592B358D2A52BABD009CD7AA /* ConfNameLabel.h */,
@@ -499,7 +514,7 @@
 				592B35932A52BCF1009CD7AA /* ConfCollectionViewCell.h */,
 				592B35942A52BCF1009CD7AA /* ConfCollectionViewCell.m */,
 			);
-			path = View;
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 		5937A8E429D576030089B0A2 /* iOS */ = {
@@ -565,6 +580,19 @@
 				5985CA9129F161E6003E9616 /* HistoryTableViewCell.m */,
 			);
 			path = History;
+			sourceTree = "<group>";
+		};
+		59C915422A55115000FCFCC0 /* BeginView */ = {
+			isa = PBXGroup;
+			children = (
+				59C915432A55118600FCFCC0 /* ConfTopView.h */,
+				59C915442A55118600FCFCC0 /* ConfTopView.m */,
+				59C915492A5511D300FCFCC0 /* ConfCenterViewCell.h */,
+				59C9154A2A5511D300FCFCC0 /* ConfCenterViewCell.m */,
+				59C915462A5511AF00FCFCC0 /* ConfBottomView.h */,
+				59C915472A5511AF00FCFCC0 /* ConfBottomView.m */,
+			);
+			path = BeginView;
 			sourceTree = "<group>";
 		};
 		E354D6B2201469225EE7F4BA /* Pods */ = {
@@ -757,8 +785,10 @@
 				59029FFE29D5838E00E41926 /* LoginViewController.m in Sources */,
 				5902A00B29D5838E00E41926 /* DialKeypadView.m in Sources */,
 				59029FFC29D5838E00E41926 /* DialpadView.m in Sources */,
+				59C915482A5511AF00FCFCC0 /* ConfBottomView.m in Sources */,
 				5902A02D29D5887600E41926 /* UIView+Alert.m in Sources */,
 				5902A02E29D5887600E41926 /* UIDevice+YLS.m in Sources */,
+				59C9154B2A5511D300FCFCC0 /* ConfCenterViewCell.m in Sources */,
 				5985CA8C29F156F8003E9616 /* MergeHistory.m in Sources */,
 				5902A00D29D5838E00E41926 /* CallViewController.m in Sources */,
 				5902A00A29D5838E00E41926 /* DialKeypadViewCell.m in Sources */,
@@ -783,6 +813,7 @@
 				5902A00029D5838E00E41926 /* AppDelegate.m in Sources */,
 				5985CA9229F161E7003E9616 /* HistoryTableViewCell.m in Sources */,
 				5902A00129D5838E00E41926 /* AudioRouteHandler.m in Sources */,
+				59C915452A55118600FCFCC0 /* ConfTopView.m in Sources */,
 				59029FFA29D5838E00E41926 /* DialpadCallView.m in Sources */,
 				59029FFD29D5838E00E41926 /* Contact.m in Sources */,
 				59029FFB29D5838E00E41926 /* DialPadTextField.m in Sources */,
@@ -791,6 +822,7 @@
 				59029FFF29D5838E00E41926 /* YLSUnderlineTextField.m in Sources */,
 				592B35922A52BB14009CD7AA /* ConfHeaderView.m in Sources */,
 				592B35952A52BCF1009CD7AA /* ConfCollectionViewCell.m in Sources */,
+				59C915412A541C8500FCFCC0 /* ConferenceBeginController.m in Sources */,
 				59029FF829D5838E00E41926 /* CalllogsViewController.m in Sources */,
 				5902A00529D5838E00E41926 /* MenuPanViewCell.m in Sources */,
 			);
