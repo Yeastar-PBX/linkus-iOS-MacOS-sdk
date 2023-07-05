@@ -11,6 +11,8 @@
 
 @property (nonatomic,copy) NSString *name;
 
+@property (nonatomic,copy) NSString *number;
+
 @property (nonatomic,strong) UIImage *iconImage;
 
 @end

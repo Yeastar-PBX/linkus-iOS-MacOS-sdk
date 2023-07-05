@@ -26,4 +26,8 @@
     return self.iconImage;
 }
 
+- (NSString *)sipNumber {
+    return _number;
+}
+
 @end

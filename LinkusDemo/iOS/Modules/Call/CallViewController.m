@@ -115,20 +115,20 @@
         YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
         if (sipCall.mute) {//hold住的时候，取消静音
             sipCall.mute = NO;
-            [[YSLCallTool shareCallTool] setMute:sipCall];
+            [[YLSCallTool shareCallTool] setMute:sipCall];
         }
         sipCall.onHold = !selected;
-        [[YSLCallTool shareCallTool] setHeld:sipCall];
+        [[YLSCallTool shareCallTool] setHeld:sipCall];
         [self.menuView reloadData];
     }else if (type == MenuPanViewTypeMute) {
         YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
         sipCall.mute = !selected;
-        [[YSLCallTool shareCallTool] setMute:sipCall];
+        [[YLSCallTool shareCallTool] setMute:sipCall];
         [self.menuView reloadData];
     }else if (type == MenuPanViewTypeHangup) {
         YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
         sipCall.hangUpType = HangUpTypeByHand;
-        [[YSLCallTool shareCallTool] endCall:sipCall];
+        [[YLSCallTool shareCallTool] endCall:sipCall];
     }else if (type == MenuPanViewTypeCancelFlip) {
         
     }else if (type == MenuPanViewTypeCamera) {
@@ -138,7 +138,7 @@
         if (sipCall.onHold) {
             [self showHUDInfoWithText:@"Please stop holding the call"];
         }else{
-            BOOL isSuc = [[YSLCallTool shareCallTool] setRecord:sipCall];
+            BOOL isSuc = [[YLSCallTool shareCallTool] setRecord:sipCall];
             if (!isSuc) {
                 [self showHUDInfoWithText:@"Record failed"];
             }
@@ -147,7 +147,7 @@
         
     }else {
         if (type == MenuPanViewTypeAttended && selected) {
-            [[YSLCallTool shareCallTool] transferConsultation];
+            [[YLSCallTool shareCallTool] transferConsultation];
         }else{
             if (type == MenuPanViewTypeKeypad) {
                 self.keypadView.dtmf = YES;
@@ -156,11 +156,11 @@
                 YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
                 if (!sipCall.onHold) {
                     sipCall.onHold = YES;
-                    [[YSLCallTool shareCallTool] setHeld:sipCall];
+                    [[YLSCallTool shareCallTool] setHeld:sipCall];
                 }
                 if (sipCall.mute) {
                     sipCall.mute = NO;
-                    [[YSLCallTool shareCallTool] setMute:sipCall];
+                    [[YLSCallTool shareCallTool] setMute:sipCall];
                 }
                 [self.menuView reloadData];
             }
@@ -201,13 +201,13 @@
     YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
     if (sipCall.onHold) {
         sipCall.onHold = NO;
-        [[YSLCallTool shareCallTool] setHeld:sipCall];
+        [[YLSCallTool shareCallTool] setHeld:sipCall];
         [self.menuView reloadData];
     }
 }
 
 - (void)dialKeypadViewDtmf:(NSString *)str {
-    [[YSLCallTool shareCallTool] setDTMF:[[YLSSDK sharedYLSSDK] callManager].currentSipCall string:str];
+    [[YLSCallTool shareCallTool] setDTMF:[[YLSSDK sharedYLSSDK] callManager].currentSipCall string:str];
 }
 
 #pragma mark - UI
@@ -314,7 +314,7 @@
     YLSSipCall *sipCall = [[YLSSDK sharedYLSSDK] callManager].currentSipCall;
     if (sipCall.status == CallStatusBridge) {
         [QualityView qualityViewData:^NSString *{
-            return [[YSLCallTool shareCallTool] callQuality];
+            return [[YLSCallTool shareCallTool] callQuality];
         } showInView:self.view];
     }
 }

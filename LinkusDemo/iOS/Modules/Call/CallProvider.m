@@ -140,9 +140,9 @@
     sipCall.contact = model;
     
     if ([CallProvider shareCallProvider].dialCallType == DialCallTypeBlind) {
-        [[YSLCallTool shareCallTool] tranforBlind:sipCall];
+        [[YLSCallTool shareCallTool] tranforBlind:sipCall];
     }else {
-        [[YSLCallTool shareCallTool] startCall:sipCall completion:^(NSError *error) {
+        [[YLSCallTool shareCallTool] startCall:sipCall completion:^(NSError *error) {
             if (!error) {
                 dispatch_async_main_safe(^ {
                     //通话界面点击"转移"按钮，在“转移”界面选择”通讯录“,选择联系人拨打的时候需退回到通话界面
