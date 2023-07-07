@@ -8,8 +8,9 @@
 #import "CallProvider.h"
 #import "Contact.h"
 #import "CallViewController.h"
+#import "ConferenceBeginController.h"
 
-@interface CallProvider ()<YLSCallManagerDelegate>
+@interface CallProvider ()<YLSCallManagerDelegate,YLSConfManagerDelegate>
 
 @end
 
@@ -28,6 +29,7 @@
     self = [super init];
     if (self) {
         [[[YLSSDK sharedYLSSDK] callManager] setIncomingCallDelegate:self];
+        [[[YLSSDK sharedYLSSDK] confManager] setIncomingCallDelegate:self];
     }
     return self;
 }
@@ -40,7 +42,7 @@
         return model;
     });
     completion(^(void){
-        UINavigationController *mainNav = [[UINavigationController alloc]initWithRootViewController:[[CallViewController alloc] init]];
+        UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:[[CallViewController alloc] init]];
         mainNav.modalPresentationStyle = UIModalPresentationFullScreen;
         [TopestViewController presentViewController:mainNav animated:NO completion:nil];
     },^(NSError *error){
@@ -129,6 +131,18 @@
             break;
     }
     [TopestViewController showHUDErrorWithText:text];
+}
+
+#pragma mark - ConfManagerDelegate会议室来电
+- (void)conferenceManager:(YLSConfManager *)manager callStatus:(YLSSipCall *)sipCall reportIncomingCall:(void (^)(void (^controllerBlock)(void),void (^errorBlock)(NSError *error)))completion {
+    completion(^(void){
+        UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:[[ConferenceBeginController alloc] init]];
+        mainNav.modalPresentationStyle = UIModalPresentationFullScreen;
+        [TopestViewController presentViewController:mainNav animated:NO completion:nil];
+    },^(NSError *error){
+        //提示用户来电失败的原因，例如系统免打扰、黑名单等
+        NSLog(@"发起callKit失败，状态码是：%@ (Code: 0.Unkonwn 1.Unentitled 2.CallUUIDAlreadyExists, 3.DND, 4.BlockList)",error);
+    });
 }
 
 #pragma mark - 发起通话
