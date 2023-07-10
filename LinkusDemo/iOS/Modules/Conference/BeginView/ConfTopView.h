@@ -19,4 +19,6 @@
 
 @property (nonatomic,weak) id<ConfTopViewDelegate> delegate;
 
+@property (nonatomic,strong) YLSConfCall *confCall;
+
 @end

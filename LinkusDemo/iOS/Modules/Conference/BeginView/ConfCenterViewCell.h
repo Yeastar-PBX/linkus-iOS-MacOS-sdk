@@ -7,10 +7,21 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+typedef void(^ClickPicture)(YLSConfMember *member);
 
 @interface ConfCenterViewCell : UICollectionViewCell
 
-@end
++ (instancetype)dequeueCellWithCollectionView:(UICollectionView *)collectionView
+                                    indexPath:(NSIndexPath *)indexPath;
 
-NS_ASSUME_NONNULL_END
+@property (nonatomic,strong) UIButton *iconButton;
+
+@property (nonatomic,strong) UILabel *nameLabel;
+
+@property (nonatomic,strong) YLSConfMember *member;
+
+@property (nonatomic,strong) ClickPicture clickPicture;
+
+@property (nonatomic,strong) UIImageView *stateView;
+
+@end

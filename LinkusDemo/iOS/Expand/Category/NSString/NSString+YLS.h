@@ -11,6 +11,8 @@
 
 + (NSString *)holdTimeHoursMinutesSecond:(NSTimeInterval)holdTime;
 
++ (NSString *)timeFormatted:(int)totalSeconds;
+
 + (NSString *)smartTranslation:(NSString *)string;
 
 + (NSString *)timeCompare:(NSString *)timeStamp;
