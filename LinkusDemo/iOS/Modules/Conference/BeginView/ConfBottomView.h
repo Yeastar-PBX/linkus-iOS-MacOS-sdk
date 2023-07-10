@@ -7,10 +7,20 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class ConfBottomView;
 
-@interface ConfBottomView : UIView
+@protocol ConfBottomViewDelegate <NSObject>
+
+- (void)conferenceHangup;
+
+- (void)conferenceMute:(BOOL)select;
 
 @end
 
-NS_ASSUME_NONNULL_END
+@interface ConfBottomView : UIView
+
+@property (nonatomic,weak) id<ConfBottomViewDelegate> delegate;
+
+@property (nonatomic,strong) UIButton *muteButton;
+
+@end

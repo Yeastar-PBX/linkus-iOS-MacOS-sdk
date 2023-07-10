@@ -6,15 +6,19 @@
 //
 
 #import "ConferenceBeginController.h"
+#import "MemberSelectViewController.h"
 #import "ConfTopView.h"
 #import "ConfCenterViewCell.h"
-#import "MemberSelectViewController.h"
+#import "ConfBottomView.h"
+#import "NotifyView.h"
 
-@interface ConferenceBeginController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, YLSConfManagerDelegate,YLSCallStatusManagerDelegate,ConfTopViewDelegate>
+@interface ConferenceBeginController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, YLSConfManagerDelegate, YLSCallStatusManagerDelegate, YLSCallManagerDelegate, ConfTopViewDelegate, ConfBottomViewDelegate>
 
 @property (nonatomic,strong) ConfTopView *topView;
 
 @property (nonatomic,strong) UICollectionView *collectionView;
+
+@property (nonatomic,strong) ConfBottomView *bottomView;
 
 @end
 
@@ -37,11 +41,13 @@
 }
 
 - (void)setupData {
+    [[[YLSSDK sharedYLSSDK] callManager] addDelegate:self];
     [[[YLSSDK sharedYLSSDK] callStatusManager] addDelegate:self];
     [[[YLSSDK sharedYLSSDK] confManager] addDelegate:self];
 }
 
 - (void)dealloc {
+    [[[YLSSDK sharedYLSSDK] callManager] removeDelegate:self];
     [[[YLSSDK sharedYLSSDK] callStatusManager] removeDelegate:self];
     [[[YLSSDK sharedYLSSDK] confManager] removeDelegate:self];
 }
@@ -139,7 +145,7 @@
             }
             if (alert.actions.count > 0) {
                 [self presentViewController:alert animated:YES completion:nil];
-            }            
+            }
         };
         YLSConfMember *member = self.confCall.confMembers[indexPath.row];
         cell.member = member;
@@ -181,6 +187,41 @@
     }
 }
 
+#pragma mark - CallStatusManagerDelegate
+- (void)callStatusManager:(YLSCallStatusManager *)callStatusManager currentCall:(YLSSipCall *)currentCall {
+    self.bottomView.muteButton.selected = currentCall.mute;
+}
+
+- (void)callManager:(YLSCallManager *)callManager callQuality:(BOOL)quality {
+    [NotifyView notifyView:@"Network status is abnormal." showView:self.view hidden:!quality];
+}
+
+#pragma mark - ConfBottomViewDelegate
+- (void)conferenceHangup {
+    YLSSipCall *sipCall = [YLSSDK sharedYLSSDK].confManager.currentConfSipCall;
+    sipCall.hangUpType = HangUpTypeByHand;
+    [[YLSCallTool shareCallTool] endCall:sipCall];
+
+    if (!sipCall) {
+        [self showHUD];
+        [[YLSSDK sharedYLSSDK].confManager operationConferenceMember:self.confCall.host confid:self.confCall.confid operationType:ConferenceOperationClosingConference complete:^(NSError *error) {
+            if (!error) {
+                [self hideHUD];
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }else{
+                [self showHUDErrorWithText:@"Server Connection Failure"];
+            }
+        }];
+    }
+}
+
+- (void)conferenceMute:(BOOL)select {
+    self.bottomView.muteButton.selected = !select;
+    YLSSipCall *sipCall = [YLSSDK sharedYLSSDK].confManager.currentConfSipCall;
+    sipCall.mute = !select;
+    [[YLSCallTool shareCallTool] setMute:sipCall];
+}
+
 #pragma mark - UI
 - (void)setupControls {
     ConfTopView *topView = [[ConfTopView alloc] init];
@@ -210,6 +251,17 @@
         make.centerX.mas_equalTo(self.view.mas_centerX);
         make.top.mas_equalTo(topView.mas_bottom);
         make.height.mas_equalTo(self.view.width * 22/25);
+    }];
+    
+    ConfBottomView *bottomView = [[ConfBottomView alloc] init];
+    self.bottomView = bottomView;
+    bottomView.delegate = self;
+    [self.view addSubview:bottomView];
+    [bottomView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left);
+        make.height.mas_equalTo(44);
+        make.right.mas_equalTo(self.view.mas_right);
+        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-50);
     }];
 }
 
