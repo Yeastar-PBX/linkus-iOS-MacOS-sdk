@@ -9,4 +9,6 @@
 
 @interface ConferenceDetailsController : UIViewController
 
+@property (nonatomic,strong) YLSConfCall *confCall;
+
 @end

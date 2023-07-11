@@ -78,6 +78,7 @@
 		59C915482A5511AF00FCFCC0 /* ConfBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C915472A5511AF00FCFCC0 /* ConfBottomView.m */; };
 		59C9154B2A5511D300FCFCC0 /* ConfCenterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9154A2A5511D300FCFCC0 /* ConfCenterViewCell.m */; };
 		59C9154D2A55176A00FCFCC0 /* linkus_sdk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9154C2A55176A00FCFCC0 /* linkus_sdk_iOS.framework */; };
+		59C9157B2A5D54FF00FCFCC0 /* ConfListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9157A2A5D54FF00FCFCC0 /* ConfListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,6 +203,8 @@
 		59C915492A5511D300FCFCC0 /* ConfCenterViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfCenterViewCell.h; sourceTree = "<group>"; };
 		59C9154A2A5511D300FCFCC0 /* ConfCenterViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfCenterViewCell.m; sourceTree = "<group>"; };
 		59C9154C2A55176A00FCFCC0 /* linkus_sdk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_sdk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C915792A5D54FF00FCFCC0 /* ConfListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfListTableViewCell.h; sourceTree = "<group>"; };
+		59C9157A2A5D54FF00FCFCC0 /* ConfListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfListTableViewCell.m; sourceTree = "<group>"; };
 		59CA6AA72A089962003CDBAC /* LinkusDemo (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LinkusDemo (iOS).entitlements"; sourceTree = "<group>"; };
 		AD72E61761B1A98137FC680E /* libPods-LinkusDemo (macOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LinkusDemo (macOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84987F5ADF4132C57611C7 /* Pods-LinkusDemo (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkusDemo (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinkusDemo (iOS)/Pods-LinkusDemo (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -516,6 +519,8 @@
 				592B35912A52BB14009CD7AA /* ConfHeaderView.m */,
 				592B35932A52BCF1009CD7AA /* ConfCollectionViewCell.h */,
 				592B35942A52BCF1009CD7AA /* ConfCollectionViewCell.m */,
+				59C915792A5D54FF00FCFCC0 /* ConfListTableViewCell.h */,
+				59C9157A2A5D54FF00FCFCC0 /* ConfListTableViewCell.m */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -783,6 +788,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C9157B2A5D54FF00FCFCC0 /* ConfListTableViewCell.m in Sources */,
 				592B358B2A52B6EE009CD7AA /* ConferenceDetailsController.m in Sources */,
 				592B35882A529C26009CD7AA /* ConferenceListController.m in Sources */,
 				5902A03129D5887600E41926 /* UITextField+YLS.m in Sources */,

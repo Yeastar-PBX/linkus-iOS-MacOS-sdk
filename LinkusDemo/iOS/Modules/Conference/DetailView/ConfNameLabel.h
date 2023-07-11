@@ -9,6 +9,6 @@
 
 @interface ConfNameLabel : UIView
 
-@property (nonatomic,copy) NSString *name;
+@property (nonatomic,strong) UITextField *textField;
 
 @end

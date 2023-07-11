@@ -29,6 +29,7 @@
     self.view.backgroundColor = [UIColor colorWithRGB:0xFFFFFF];
     
     ConfNameLabel *nameLabel = [[ConfNameLabel alloc] init];
+    nameLabel.textField.text = self.confCall.meetname;
     self.nameLabel = nameLabel;
     [self.view addSubview:nameLabel];
     [nameLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -40,7 +41,7 @@
     
     ConfHeaderView *headerView = [[ConfHeaderView alloc] init];
     Contact *contact = [[Contact alloc] init];
-    contact.name = @"1011";
+    contact.name = [YLSSDK sharedYLSSDK].loginManager.ylsUserNumber;
     headerView.contact = contact;
     [self.view addSubview:headerView];
     [headerView mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -143,7 +144,7 @@
     [self showHUDWithText:@"Start Conference"];
     YLSConfCall *confCall = [[YLSConfCall alloc] init];
     confCall.host = [YLSSDK sharedYLSSDK].loginManager.ylsUserNumber;
-    confCall.meetname = self.nameLabel.name;
+    confCall.meetname = self.nameLabel.textField.text;
     NSMutableArray *members = [NSMutableArray array];
     for (Contact *contact in self.dataArr) {
         [members addObject:contact.number];
@@ -181,6 +182,16 @@
         _dataArr = [NSMutableArray array];
     }
     return _dataArr;
+}
+
+- (void)setConfCall:(YLSConfCall *)confCall {
+    for (NSString *number in confCall.members) {
+        Contact *contact = [[Contact alloc] init];
+        contact.number = number;
+        contact.name = number;
+        [self.dataArr addObject:contact];
+    }
+    _confCall = confCall;
 }
 
 @end

@@ -9,8 +9,6 @@
 
 @interface ConfNameLabel ()
 
-@property (nonatomic,strong) UITextField *textField;
-
 @property (nonatomic,strong) UILabel *nameLabel;
 
 @end
@@ -54,10 +52,6 @@
         make.right.mas_lessThanOrEqualTo(self.mas_right).offset(-16);
         make.centerY.mas_equalTo(self.nameLabel.mas_centerY);
     }];
-}
-
-- (NSString *)name {
-    return self.textField.text;
 }
 
 @end
