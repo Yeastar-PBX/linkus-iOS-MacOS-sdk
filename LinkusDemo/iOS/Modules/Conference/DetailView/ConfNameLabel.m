@@ -56,4 +56,8 @@
     }];
 }
 
+- (NSString *)name {
+    return self.textField.text;
+}
+
 @end

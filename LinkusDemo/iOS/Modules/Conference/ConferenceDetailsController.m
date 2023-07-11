@@ -29,6 +29,7 @@
     self.view.backgroundColor = [UIColor colorWithRGB:0xFFFFFF];
     
     ConfNameLabel *nameLabel = [[ConfNameLabel alloc] init];
+    self.nameLabel = nameLabel;
     [self.view addSubview:nameLabel];
     [nameLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view.mas_left);
@@ -142,7 +143,7 @@
     [self showHUDWithText:@"Start Conference"];
     YLSConfCall *confCall = [[YLSConfCall alloc] init];
     confCall.host = [YLSSDK sharedYLSSDK].loginManager.ylsUserNumber;
-    confCall.meetname = @"Conference";
+    confCall.meetname = self.nameLabel.name;
     NSMutableArray *members = [NSMutableArray array];
     for (Contact *contact in self.dataArr) {
         [members addObject:contact.number];
@@ -166,6 +167,9 @@
             });
         }else if (error.code == ConferenceErrorCustom){
             [self showHUDErrorWithText:@"You have a conference going on."];
+        }else if (error.code == ConferenceErrorIllegal){
+            //@"[^:!$()/#;,\\[\\]\"=<>&\\\\'`^%@{}|]*"
+            [self showHUDErrorWithText:@"非法会议室名称，长度不能超过63且不能有特殊字符"];
         }else{
             [self showHUDErrorWithText:@"Server Connection Failure"];
         }
