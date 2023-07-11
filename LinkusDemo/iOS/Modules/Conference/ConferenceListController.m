@@ -8,16 +8,23 @@
 #import "ConferenceListController.h"
 #import "ConferenceDetailsController.h"
 #import "UIScrollView+EmptyDataSet.h"
+#import "ConferenceBeginController.h"
 
-@interface ConferenceListController ()<UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
+@interface ConferenceListController ()<UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, YLSConfManagerDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
 
 @property (nonatomic,strong) NSArray *dataArr;
 
+@property (nonatomic,strong) YLSConfCall *confCall;
+
 @end
 
 @implementation ConferenceListController
+
+- (void)dealloc {
+    [[YLSSDK sharedYLSSDK].confManager removeDelegate:self];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +51,8 @@
         tableView.sectionHeaderTopPadding = 0;
     }
     [self.view addSubview:tableView];
+    
+    [[YLSSDK sharedYLSSDK].confManager addDelegate:self];
 }
 
 #pragma mark - UITableViewDataSource
@@ -57,6 +66,36 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DailpadHistoryCell"];
     }
     return cell;
+}
+
+#pragma mark - YLSConfManagerDelegate
+- (void)conferenceManager:(YLSConfManager *)manager abnormal:(YLSConfCall *)confCall {
+    if (!confCall) {
+        self.navigationItem.rightBarButtonItem = nil;
+    }else{
+        UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"异常会议室" style:UIBarButtonItemStylePlain target:self action:@selector(leftAction)];
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    }
+    self.confCall = confCall;
+}
+
+#pragma mark - 左上角点击事件
+- (void)leftAction {
+    [self showHUDWithText:@"Getting conference information"];
+    [[YLSSDK sharedYLSSDK].confManager operationConferenceMember:[YLSSDK sharedYLSSDK].loginManager.ylsUserNumber confid:self.confCall.confid operationType:ConferenceOperationRecoveryConference complete:^(NSError *error) {
+        if (!error) {
+            [self hideHUD];
+            ConferenceBeginController *vc = [[ConferenceBeginController alloc] init];
+            vc.confCall = self.confCall;
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+            nav.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:nav animated:YES completion:nil];
+        }else if (error.code == ConferenceErrorCustom){
+            [self showHUDErrorWithText:@"The conference has ended"];
+        }else{
+            [self showHUDErrorWithText:@"Server Connection Failure"];
+        }
+    }];
 }
 
 #pragma mark - DZNEmptyDataSetSource

@@ -159,9 +159,12 @@
     self.nameLabel.text = [NSString stringWithFormat:@"Host: %@",member.number];
     self.numberLabel.text = member.number;
     
-    Contact *model = [[Contact alloc] init];
-    model.name = member.number;
-    [self.iconButton setBackgroundImage:model.iconImage forState:UIControlStateNormal];
+    if (!member.contact) {
+        Contact *model = [[Contact alloc] init];
+        model.name = member.number;
+        member.contact = model;
+    }
+    [self.iconButton setBackgroundImage:member.contact.sipImage forState:UIControlStateNormal];
     
     _confCall = confCall;
 }

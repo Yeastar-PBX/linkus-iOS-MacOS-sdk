@@ -227,6 +227,7 @@
     ConfTopView *topView = [[ConfTopView alloc] init];
     self.topView = topView;
     topView.delegate = self;
+    topView.confCall = self.confCall;
     [self.view addSubview:topView];
     [topView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view.mas_left);

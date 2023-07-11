@@ -72,7 +72,8 @@
     beginButton.layer.masksToBounds = YES;
     [beginButton setTitle:@"Start Conference" forState:UIControlStateNormal];
     [beginButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    [beginButton addTarget:self action:@selector(beginConference) forControlEvents:UIControlEventTouchUpInside];
+    [beginButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    [beginButton addTarget:self action:@selector(beginConference:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:beginButton];
     [beginButton mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.view.mas_centerX);
@@ -103,6 +104,7 @@
             vc.block = ^(NSString *number) {
                 @strongify(self)
                 Contact *contact = [[Contact alloc] init];
+                contact.number = number;
                 contact.name = number;
                 [self.dataArr addObject:contact];
                 [collectionView reloadData];
@@ -136,12 +138,38 @@
 }
 
 #pragma mark - 开始会议室
-- (void)beginConference {
-    NSLog(@"开始会议室");
-    ConferenceBeginController *vc = [[ConferenceBeginController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    nav.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:nav animated:YES completion:nil];
+- (void)beginConference:(UIButton *)sender {
+    [self showHUDWithText:@"Start Conference"];
+    YLSConfCall *confCall = [[YLSConfCall alloc] init];
+    confCall.host = [YLSSDK sharedYLSSDK].loginManager.ylsUserNumber;
+    confCall.meetname = @"Conference";
+    NSMutableArray *members = [NSMutableArray array];
+    for (Contact *contact in self.dataArr) {
+        [members addObject:contact.number];
+    }
+    confCall.members = members;
+    [[YLSSDK sharedYLSSDK].confManager createConference:confCall complete:^(NSError * _Nullable error, NSString * _Nonnull confid) {
+        if (!error) {
+            [self hideHUD];
+            ConferenceBeginController *vc = [[ConferenceBeginController alloc] init];
+            confCall.confid = confid;
+            vc.confCall = confCall;
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+            nav.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:nav animated:YES completion:nil];
+            
+            sender.enabled = NO;
+            double delayInSeconds = 10;
+            dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+            dispatch_after(delayTime, dispatch_get_main_queue(), ^(void){
+                sender.enabled = YES;
+            });
+        }else if (error.code == ConferenceErrorCustom){
+            [self showHUDErrorWithText:@"You have a conference going on."];
+        }else{
+            [self showHUDErrorWithText:@"Server Connection Failure"];
+        }
+    }];
 }
 
 - (NSMutableArray<Contact *> *)dataArr {
