@@ -28,6 +28,8 @@
 
 - (void)callReload:(YLSSipCall *)currentCall;
 
+- (void)callMulti:(YLSSipCall *)currentCall;
+
 - (void)callNormal:(YLSSipCall *)currentCall waitingCall:(YLSSipCall *)waitingCall transferCall:(YLSSipCall *)transferCall;
 
 - (void)reloadData;

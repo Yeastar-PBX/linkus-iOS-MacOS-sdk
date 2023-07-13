@@ -13,6 +13,7 @@
 #import "CallMemberView.h"
 #import "CallTransferView.h"
 #import "CallWaitingView.h"
+#import "Contact.h"
 
 @interface CallViewController ()<YLSCallStatusManagerDelegate,YLSCallManagerDelegate,
                                  DialKeypadViewDelegate,CallWaitingViewDelegate,MenuPanViewDelegate>
@@ -22,6 +23,8 @@
 @property (nonatomic,strong) UIView *containerView;
 
 @property (nonatomic,strong) UIButton *qualityButton;
+
+@property (nonatomic,strong) UIButton *adminButton;
 
 @property (nonatomic,strong) CallMemberView *memberView;
 
@@ -85,6 +88,7 @@
     self.transferView.hidden = YES;
     self.waitingView.hidden = YES;
     self.qualityButton.hidden = NO;
+    self.adminButton.hidden = YES;
 }
 
 - (void)callStatusManager:(YLSCallStatusManager *)callStatusManager currentCall:(YLSSipCall *)currentCall callWaiting:(YLSSipCall *)callWaitingCall transferCall:(YLSSipCall *)transferCall {
@@ -95,6 +99,24 @@
     [self.menuView callNormal:currentCall waitingCall:callWaitingCall transferCall:transferCall];
     self.waitingView.hidden = !callWaitingCall;
     self.transferView.hidden = !transferCall;
+    [self dialKeypadViewAnimation:NO];
+}
+
+- (void)callStatusManager:(YLSCallStatusManager *)callStatusManager multiCall:(YLSSipCall *)multiCall waitingCall:(YLSSipCall *)waitingCall {
+    if (!multiCall.contact) {
+        Contact *contact = [[Contact alloc] init];
+        contact.name = multiCall.callNumber;
+        contact.iconImage = [UIImage imageNamed:@"Avatar_CallAdmin"];
+        multiCall.contact = contact;
+    }
+    self.backgroundView.image = multiCall.contact.sipImage;
+    [self.memberView callNormal:multiCall];
+    [self.transferView callNormal:waitingCall];
+    [self.menuView callMulti:multiCall];
+    self.adminButton.hidden = ![multiCall.callNumber hasPrefix:MultiCall];
+    self.qualityButton.hidden = [multiCall.callNumber hasPrefix:MultiCall];
+    self.waitingView.hidden = YES;
+    self.transferView.hidden = !waitingCall;
     [self dialKeypadViewAnimation:NO];
 }
 
@@ -169,7 +191,7 @@
             }else if (type == MenuPanViewTypeBlind) {
                 [CallProvider shareCallProvider].dialCallType = DialCallTypeBlind;
             }else if (type == MenuPanViewTypeAddCall) {
-
+                [CallProvider shareCallProvider].dialCallType = DialCallTypeMultiCall;
             }
             [self dialKeypadViewAnimation:YES];
         }
@@ -240,6 +262,16 @@
     qualityButton.layer.cornerRadius = 4;
     qualityButton.layer.masksToBounds = YES;
     [containerView addSubview:qualityButton];
+    
+    UIButton *adminButton = [[UIButton alloc] init];
+    self.adminButton = adminButton;
+    adminButton.hidden = YES;
+    adminButton.backgroundColor = [UIColor colorWithRGB:0x000000 alpha:0.24];
+    [adminButton setImage:[UIImage imageNamed:@"Call_Admin"] forState:UIControlStateNormal];
+    [adminButton addTarget:self action:@selector(adminAction) forControlEvents:UIControlEventTouchUpInside];
+    adminButton.layer.cornerRadius = 4;
+    adminButton.layer.masksToBounds = YES;
+    [containerView addSubview:adminButton];
             
     CallWaitingView *waitingView = [[CallWaitingView alloc] init];
     self.waitingView = waitingView;
@@ -287,6 +319,12 @@
         make.right.mas_equalTo(self.view.mas_right).offset(-16);
         make.height.width.mas_equalTo(32);
     }];
+    
+    [self.adminButton mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.qualityButton.mas_top);
+        make.right.mas_equalTo(self.view.mas_right).offset(-16);
+        make.height.width.mas_equalTo(32);
+    }];
         
     [self.memberView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.qualityButton.mas_bottom).offset(4);
@@ -317,6 +355,12 @@
             return [[YLSCallTool shareCallTool] callQuality];
         } showInView:self.view];
     }
+}
+
+- (void)adminAction {
+//    CallAdminTableViewController *adminVC = [[CallAdminTableViewController alloc] init];
+//    [self.navigationController pushViewController:adminVC animated:YES];
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 #pragma mark - Private

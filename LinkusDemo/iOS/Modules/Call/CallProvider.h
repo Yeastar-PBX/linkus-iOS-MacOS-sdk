@@ -11,6 +11,7 @@ typedef NS_ENUM(NSInteger, DialCallType) {
     DialCallTypeNormal        = 0,
     DialCallTypeTransfer      = 1,
     DialCallTypeBlind         = 2,
+    DialCallTypeMultiCall     = 3,
 };
 
 @interface CallProvider : NSObject

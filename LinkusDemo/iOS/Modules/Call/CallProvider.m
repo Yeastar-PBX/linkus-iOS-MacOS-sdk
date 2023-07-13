@@ -153,6 +153,10 @@
     model.name = number;
     sipCall.contact = model;
     
+    if ([YLSSDK sharedYLSSDK].callManager.currentSipCalls.count > 0) {
+        sipCall.multiCall = [CallProvider shareCallProvider].dialCallType == DialCallTypeMultiCall;
+    }
+    
     if ([CallProvider shareCallProvider].dialCallType == DialCallTypeBlind) {
         [[YLSCallTool shareCallTool] tranforBlind:sipCall];
     }else {

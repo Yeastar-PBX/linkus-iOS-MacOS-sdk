@@ -12,6 +12,8 @@
 
 @interface MenuPanView ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout,MenuPanViewCellDelegate,AudioRouteHandlerDelegate>
 
+@property (nonatomic,assign) BOOL multiCall;
+
 @property (nonatomic,assign) BOOL transfer;
 
 @property (nonatomic,assign) BOOL waiting;
@@ -180,6 +182,14 @@
     [self reloadData];
 }
 
+#pragma mark - 多方通话页面设置
+- (void)callMulti:(YLSSipCall *)currentCall {
+    self.currentCall = currentCall;
+    self.multiCall = YES;
+    self.transfer = NO;
+    [self reloadData];
+}
+
 - (void)reloadData {
     self.dataArr = nil;
     [self.collectionView reloadData];
@@ -280,7 +290,19 @@
     model.normalColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.13];
     model.selectedColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.93];
     model.selected = NO;
-    model.enabled = NO;
+    if (self.currentCall.status == CallStatusBridge && !self.transfer && !self.waiting) {
+        if (self.multiCall) {
+            if ([YLSSDK sharedYLSSDK].callManager.multiSipCalls.count < 4 && [[YLSSDK sharedYLSSDK].callManager.currentSipCalls.lastObject.multiCallStatus isEqualToString:MultiCallAnswer]) {
+                model.enabled = YES;
+            }else{
+                model.enabled = NO;
+            }
+        }else{
+            model.enabled = YES;
+        }
+    }else{
+        model.enabled = NO;
+    }
     model.fontColor = model.enabled ? [UIColor colorWithRGB:0xFFFFFF alpha:0.87] : [UIColor colorWithRGB:0xFFFFFF alpha:0.6];
     return model;
 }
