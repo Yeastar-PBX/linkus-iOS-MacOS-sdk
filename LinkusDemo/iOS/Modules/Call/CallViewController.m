@@ -6,6 +6,7 @@
 //
 
 #import "CallViewController.h"
+#import "AdminTableViewController.h"
 #import "QualityView.h"
 #import "NotifyView.h"
 #import "MenuPanView.h"
@@ -127,7 +128,7 @@
 }
 
 #pragma mark - PJRegisterDelegate
-- (void)callManager:(YLSCallManager *)callManager callQuality:(BOOL)quality {
+- (void)callManager:(YLSCallManager *)callManager callid:(int)callid callQuality:(BOOL)quality {
     [NotifyView notifyView:@"Network status is abnormal." showView:self.containerView hidden:!quality];
 }
 
@@ -358,9 +359,9 @@
 }
 
 - (void)adminAction {
-//    CallAdminTableViewController *adminVC = [[CallAdminTableViewController alloc] init];
-//    [self.navigationController pushViewController:adminVC animated:YES];
-//    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    AdminTableViewController *vc = [[AdminTableViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 #pragma mark - Private

@@ -66,6 +66,8 @@
 		5985CA9729F227D6003E9616 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5985CA9629F227CB003E9616 /* libresolv.tbd */; };
 		5987172329DEE44A0023936C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AEF929D6AC0E00E41926 /* libc++.tbd */; };
 		5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
+		59BFACA32A5FFE2200843DA3 /* AdminTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFACA22A5FFE2200843DA3 /* AdminTableViewController.m */; };
+		59BFACA62A60024300843DA3 /* AdminTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFACA52A60024300843DA3 /* AdminTableViewCell.m */; };
 		59C49EEB29F4BE4200164ECE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49EEA29F4BE4200164ECE /* MenuView.swift */; };
 		59C49EEE29F5371A00164ECE /* YLSSDKData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49EED29F5371A00164ECE /* YLSSDKData.swift */; };
 		59C49F1C29F650EB00164ECE /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = 59C49F1B29F650EB00164ECE /* incoming.wav */; };
@@ -186,6 +188,10 @@
 		5985CA9029F161E6003E9616 /* HistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewCell.h; sourceTree = "<group>"; };
 		5985CA9129F161E6003E9616 /* HistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewCell.m; sourceTree = "<group>"; };
 		5985CA9629F227CB003E9616 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/usr/lib/libresolv.tbd; sourceTree = DEVELOPER_DIR; };
+		59BFACA12A5FFE2200843DA3 /* AdminTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdminTableViewController.h; sourceTree = "<group>"; };
+		59BFACA22A5FFE2200843DA3 /* AdminTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminTableViewController.m; sourceTree = "<group>"; };
+		59BFACA42A60024300843DA3 /* AdminTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdminTableViewCell.h; sourceTree = "<group>"; };
+		59BFACA52A60024300843DA3 /* AdminTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminTableViewCell.m; sourceTree = "<group>"; };
 		59C49EEA29F4BE4200164ECE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		59C49EED29F5371A00164ECE /* YLSSDKData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLSSDKData.swift; sourceTree = "<group>"; };
 		59C49F1B29F650EB00164ECE /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incoming.wav; sourceTree = "<group>"; };
@@ -334,6 +340,7 @@
 				59029FE629D5838E00E41926 /* CallMemberView */,
 				59029FF129D5838E00E41926 /* DialkeypadView */,
 				59029FDB29D5838D00E41926 /* MenuPanView */,
+				59BFACA02A5FFDF600843DA3 /* MultiCall */,
 			);
 			path = Call;
 			sourceTree = "<group>";
@@ -591,6 +598,17 @@
 			path = History;
 			sourceTree = "<group>";
 		};
+		59BFACA02A5FFDF600843DA3 /* MultiCall */ = {
+			isa = PBXGroup;
+			children = (
+				59BFACA12A5FFE2200843DA3 /* AdminTableViewController.h */,
+				59BFACA22A5FFE2200843DA3 /* AdminTableViewController.m */,
+				59BFACA42A60024300843DA3 /* AdminTableViewCell.h */,
+				59BFACA52A60024300843DA3 /* AdminTableViewCell.m */,
+			);
+			path = MultiCall;
+			sourceTree = "<group>";
+		};
 		59C915422A55115000FCFCC0 /* BeginView */ = {
 			isa = PBXGroup;
 			children = (
@@ -815,6 +833,7 @@
 				5937A8EB29D577550089B0A2 /* main.m in Sources */,
 				59029FF929D5838E00E41926 /* DialpadViewCell.m in Sources */,
 				5902A00629D5838E00E41926 /* CallWaitingView.m in Sources */,
+				59BFACA62A60024300843DA3 /* AdminTableViewCell.m in Sources */,
 				592B358F2A52BABD009CD7AA /* ConfNameLabel.m in Sources */,
 				592B35842A529303009CD7AA /* TabBarController.m in Sources */,
 				5902A02C29D5887600E41926 /* UIImage+YLS.m in Sources */,
@@ -825,6 +844,7 @@
 				5902A00129D5838E00E41926 /* AudioRouteHandler.m in Sources */,
 				59C915452A55118600FCFCC0 /* ConfTopView.m in Sources */,
 				59029FFA29D5838E00E41926 /* DialpadCallView.m in Sources */,
+				59BFACA32A5FFE2200843DA3 /* AdminTableViewController.m in Sources */,
 				59029FFD29D5838E00E41926 /* Contact.m in Sources */,
 				59029FFB29D5838E00E41926 /* DialPadTextField.m in Sources */,
 				5902A03329D5887600E41926 /* NotifyView.m in Sources */,
