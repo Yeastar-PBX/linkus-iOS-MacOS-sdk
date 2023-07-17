@@ -10,8 +10,9 @@
 #import "UIScrollView+EmptyDataSet.h"
 #import "ConferenceBeginController.h"
 #import "ConfListTableViewCell.h"
+#import "ConfHistoryBuild.h"
 
-@interface ConferenceListController ()<UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, YLSConfManagerDelegate, YLSConfHistoryBuildDelegate>
+@interface ConferenceListController ()<UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, YLSConfManagerDelegate, ConfHistoryBuildDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
 
@@ -25,7 +26,6 @@
 
 - (void)dealloc {
     [[YLSSDK sharedYLSSDK].confManager removeDelegate:self];
-    [[YLSSDK sharedYLSSDK].confHistoryManager removeDelegate:self];
 }
 
 - (void)viewDidLoad {
@@ -56,7 +56,7 @@
     [self.view addSubview:tableView];
     
     [[YLSSDK sharedYLSSDK].confManager addDelegate:self];
-    [[YLSSDK sharedYLSSDK].confHistoryManager addDelegate:self];
+    [ConfHistoryBuild shareConfHistoryBuild].delegate = self;
 }
 
 #pragma mark - UITableViewDataSource
@@ -90,7 +90,7 @@
     UIContextualAction *deleteAction = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal title:@"Delete" handler:^(UIContextualAction * _Nonnull action, __kindof UIView * _Nonnull sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
         @strongify(self)
         YLSConfCall *confCall = self.dataArr[indexPath.row];
-        [[YLSSDK sharedYLSSDK].confHistoryManager conferenceHistoryDelete:confCall];
+        [[ConfHistoryBuild shareConfHistoryBuild] conferenceHistoryDelete:confCall];
     }];
     deleteAction.backgroundColor = [UIColor colorWithRGB:0xF63B3B];
 
@@ -107,7 +107,7 @@
 
 - (NSArray *)dataArr {
     if (!_dataArr) {
-        _dataArr = [YLSSDK sharedYLSSDK].confHistoryManager.conferenceHistorys;
+        _dataArr = [ConfHistoryBuild shareConfHistoryBuild].conferenceHistorys;
     }
     return _dataArr;
 }

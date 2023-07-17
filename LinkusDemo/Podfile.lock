@@ -3,8 +3,14 @@ PODS:
   - HWPanModal (0.8.9)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.1)
+  - SQLiteRepairKit (1.2.2):
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
   - SVProgressHUD (2.2.5)
   - Toast (4.0.0)
+  - WCDB (1.0.7.5):
+    - SQLiteRepairKit (~> 1.2.0)
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDBOptimizedSQLCipher (1.2.1)
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
@@ -16,6 +22,7 @@ DEPENDENCIES:
   - ReactiveObjC (~> 3.1.1)
   - SVProgressHUD (~> 2.2.5)
   - Toast (~> 4.0.0)
+  - WCDB (~> 1.0.7.5)
   - YYCategories (~> 1.0.4)
 
 SPEC REPOS:
@@ -24,8 +31,11 @@ SPEC REPOS:
     - HWPanModal
     - Masonry
     - ReactiveObjC
+    - SQLiteRepairKit
     - SVProgressHUD
     - Toast
+    - WCDB
+    - WCDBOptimizedSQLCipher
     - YYCategories
 
 SPEC CHECKSUMS:
@@ -33,10 +43,13 @@ SPEC CHECKSUMS:
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  WCDB: 8e90babdeb7784c569353a4bd22a66c0a175a882
+  WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 1f0f39e1be18db1594579fe5a20ffd30a40a4bb1
+PODFILE CHECKSUM: d819d55d1ca5a95964e0828aec9d2b98790f9f50
 
 COCOAPODS: 1.11.3

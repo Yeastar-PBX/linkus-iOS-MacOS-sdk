@@ -68,6 +68,9 @@
 		5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
 		59BFACA32A5FFE2200843DA3 /* AdminTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFACA22A5FFE2200843DA3 /* AdminTableViewController.m */; };
 		59BFACA62A60024300843DA3 /* AdminTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFACA52A60024300843DA3 /* AdminTableViewCell.m */; };
+		59BFACA82A60234500843DA3 /* linkus_sdk_MacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BFACA72A60234500843DA3 /* linkus_sdk_MacOS.framework */; };
+		59BFACAE2A60EF0C00843DA3 /* ConfHistoryBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFACAD2A60EF0C00843DA3 /* ConfHistoryBuild.m */; };
+		59BFACB12A60F3F800843DA3 /* ConfCallTable.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59BFACB02A60F3F800843DA3 /* ConfCallTable.mm */; };
 		59C49EEB29F4BE4200164ECE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49EEA29F4BE4200164ECE /* MenuView.swift */; };
 		59C49EEE29F5371A00164ECE /* YLSSDKData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49EED29F5371A00164ECE /* YLSSDKData.swift */; };
 		59C49F1C29F650EB00164ECE /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = 59C49F1B29F650EB00164ECE /* incoming.wav */; };
@@ -192,6 +195,12 @@
 		59BFACA22A5FFE2200843DA3 /* AdminTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminTableViewController.m; sourceTree = "<group>"; };
 		59BFACA42A60024300843DA3 /* AdminTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdminTableViewCell.h; sourceTree = "<group>"; };
 		59BFACA52A60024300843DA3 /* AdminTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminTableViewCell.m; sourceTree = "<group>"; };
+		59BFACA72A60234500843DA3 /* linkus_sdk_MacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_sdk_MacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59BFACAC2A60EF0C00843DA3 /* ConfHistoryBuild.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfHistoryBuild.h; sourceTree = "<group>"; };
+		59BFACAD2A60EF0C00843DA3 /* ConfHistoryBuild.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfHistoryBuild.m; sourceTree = "<group>"; };
+		59BFACAF2A60F3F800843DA3 /* ConfCallTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfCallTable.h; sourceTree = "<group>"; };
+		59BFACB02A60F3F800843DA3 /* ConfCallTable.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ConfCallTable.mm; sourceTree = "<group>"; };
+		59BFACB22A64EF2F00843DA3 /* ConfCallTable+WCTTableCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ConfCallTable+WCTTableCoding.h"; sourceTree = "<group>"; };
 		59C49EEA29F4BE4200164ECE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		59C49EED29F5371A00164ECE /* YLSSDKData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLSSDKData.swift; sourceTree = "<group>"; };
 		59C49F1B29F650EB00164ECE /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incoming.wav; sourceTree = "<group>"; };
@@ -240,6 +249,7 @@
 				59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */,
 				59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */,
 				09E52C35BD828145EE22E620 /* libPods-LinkusDemo (macOS).a in Frameworks */,
+				59BFACA82A60234500843DA3 /* linkus_sdk_MacOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +521,7 @@
 				59C915402A541C8500FCFCC0 /* ConferenceBeginController.m */,
 				59C9153C2A53B86100FCFCC0 /* MemberSelectViewController.h */,
 				59C9153D2A53B86100FCFCC0 /* MemberSelectViewController.m */,
+				59BFACAB2A60EE4500843DA3 /* History */,
 				592B358C2A52B903009CD7AA /* DetailView */,
 				59C915422A55115000FCFCC0 /* BeginView */,
 			);
@@ -562,6 +573,7 @@
 		5937A8EC29D5778F0089B0A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59BFACA72A60234500843DA3 /* linkus_sdk_MacOS.framework */,
 				59C9154C2A55176A00FCFCC0 /* linkus_sdk_iOS.framework */,
 				5985CA9629F227CB003E9616 /* libresolv.tbd */,
 				59438CA229E52E8500B4DAA7 /* libcurl.tbd */,
@@ -607,6 +619,18 @@
 				59BFACA52A60024300843DA3 /* AdminTableViewCell.m */,
 			);
 			path = MultiCall;
+			sourceTree = "<group>";
+		};
+		59BFACAB2A60EE4500843DA3 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				59BFACAF2A60F3F800843DA3 /* ConfCallTable.h */,
+				59BFACB02A60F3F800843DA3 /* ConfCallTable.mm */,
+				59BFACB22A64EF2F00843DA3 /* ConfCallTable+WCTTableCoding.h */,
+				59BFACAC2A60EF0C00843DA3 /* ConfHistoryBuild.h */,
+				59BFACAD2A60EF0C00843DA3 /* ConfHistoryBuild.m */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		59C915422A55115000FCFCC0 /* BeginView */ = {
@@ -809,6 +833,7 @@
 				59C9157B2A5D54FF00FCFCC0 /* ConfListTableViewCell.m in Sources */,
 				592B358B2A52B6EE009CD7AA /* ConferenceDetailsController.m in Sources */,
 				592B35882A529C26009CD7AA /* ConferenceListController.m in Sources */,
+				59BFACAE2A60EF0C00843DA3 /* ConfHistoryBuild.m in Sources */,
 				5902A03129D5887600E41926 /* UITextField+YLS.m in Sources */,
 				59029FFE29D5838E00E41926 /* LoginViewController.m in Sources */,
 				5902A00B29D5838E00E41926 /* DialKeypadView.m in Sources */,
@@ -847,6 +872,7 @@
 				59BFACA32A5FFE2200843DA3 /* AdminTableViewController.m in Sources */,
 				59029FFD29D5838E00E41926 /* Contact.m in Sources */,
 				59029FFB29D5838E00E41926 /* DialPadTextField.m in Sources */,
+				59BFACB12A60F3F800843DA3 /* ConfCallTable.mm in Sources */,
 				5902A03329D5887600E41926 /* NotifyView.m in Sources */,
 				5902A00C29D5838E00E41926 /* CallProvider.m in Sources */,
 				59029FFF29D5838E00E41926 /* YLSUnderlineTextField.m in Sources */,

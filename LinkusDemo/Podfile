@@ -11,6 +11,7 @@ platform :ios, '11.0'
     pod 'Masonry', '~> 1.1.0'
     pod 'ReactiveObjC', '~> 3.1.1'
     pod 'DZNEmptyDataSet', '~> 1.8.1'
+    pod 'WCDB', '~>1.0.7.5'
 #    pod 'linkus-sdk', '~> 1.0.12'
 end
 

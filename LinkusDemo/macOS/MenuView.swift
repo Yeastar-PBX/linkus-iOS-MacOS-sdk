@@ -64,7 +64,7 @@ struct MenuView: View {
                             Button("呼叫") {
                                 let sipCall = YLSSipCall()
                                 sipCall.callNumber = number
-                                YSLCallTool.share().start(sipCall) {_ in
+                                YLSCallTool.share().start(sipCall) {_ in
                                     YLSSDKData.shared.popCallView()
                                 }
                             }

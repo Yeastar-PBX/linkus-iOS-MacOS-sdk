@@ -11,6 +11,7 @@
 #import "CallProvider.h"
 #import <PushKit/PushKit.h>
 #import <UserNotifications/UserNotifications.h>
+#import "ConfHistoryBuild.h"
 
 NSString *NotificationLogout = @"NotificationLogout";
 
@@ -31,6 +32,7 @@ NSString *NotificationLogout = @"NotificationLogout";
 //    [YLSSDKConfig sharedConfig].logPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     [[YLSSDK sharedYLSSDK] initApp];
     [CallProvider shareCallProvider];
+    [ConfHistoryBuild shareConfHistoryBuild];
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"EVER_LOGIN"]) {
         [[[YLSSDK sharedYLSSDK] loginManager] autoLogin];

@@ -31,29 +31,29 @@ struct CallUIView: View {
                                 if sipCall.mute {
                                     sipCall.mute = false
                                     isMuteSelected = false
-                                    YSLCallTool.share().setMute(sipCall)
+                                    YLSCallTool.share().setMute(sipCall)
                                 }
                                 sipCall.onHold = isHoldSelected;
-                                YSLCallTool.share().setHeld(sipCall)
+                                YLSCallTool.share().setHeld(sipCall)
                             }
                             .background(isHoldSelected ? Color.blue : Color.white)
                             Button("Mute") {
                                 isMuteSelected.toggle()
                                 let sipCall = sdkData.sipCall
                                 sipCall.mute = isMuteSelected;
-                                YSLCallTool.share().setMute(sipCall)
+                                YLSCallTool.share().setMute(sipCall)
                             }
                             .background(isMuteSelected ? Color.blue : Color.white)
                             Button("挂断") {
                                 let sipCall = sdkData.sipCall
                                 sipCall.hangUpType = HangUpType.byHand
-                                YSLCallTool.share().end(sipCall)
+                                YLSCallTool.share().end(sipCall)
                             }
                         }
                         HStack(alignment: .bottom, spacing: 16) {
                             Button("Dialpad") {
                                 for char in dtmfText {
-                                    YSLCallTool.share().setDTMF(sdkData.sipCall, string: String(char))
+                                    YLSCallTool.share().setDTMF(sdkData.sipCall, string: String(char))
                                     print(String(char))
                                 }
                             }
@@ -65,7 +65,7 @@ struct CallUIView: View {
                             Button("Attended") {
                                 let sipCall = YLSSipCall()
                                 sipCall.callNumber = attendNumber
-                                YSLCallTool.share().start(sipCall) {_ in
+                                YLSCallTool.share().start(sipCall) {_ in
                                     sureAttend = true
                                 }
                             }
@@ -74,7 +74,7 @@ struct CallUIView: View {
                             .frame(width: 100)
                             if sureAttend {
                                 Button("确认转移") {
-                                    YSLCallTool.share().transferConsultation()
+                                    YLSCallTool.share().transferConsultation()
                                 }
                             }
                         }
@@ -82,44 +82,44 @@ struct CallUIView: View {
                             Button("Blind") {
                                 let sipCall = YLSSipCall()
                                 sipCall.callNumber = blindNumber
-                                YSLCallTool.share().tranforBlind(sipCall)
+                                YLSCallTool.share().tranforBlind(sipCall)
                             }
                             .disabled(blindNumber.isEmpty)
                             TextField(text: $blindNumber, prompt: Text("Blind Number")) { }
                             .frame(width: 100)
                         }
                         Button("录音") {
-                            YSLCallTool.share().setRecord(YLSSDK.shared().callManager.currentSipCall())
+                            YLSCallTool.share().setRecord(YLSSDK.shared().callManager.currentSipCall())
                         }
                     }
                     Text(callQuality)
                 }
                 .onReceive(timer) { input in
-                    callQuality = YSLCallTool.share().callQuality()
+                    callQuality = YLSCallTool.share().callQuality()
                 }
             } else {
                 if sdkData.sipCall.callIn {
                     HStack(alignment: .bottom, spacing: 16) {
                         Button("接听") {
-                            YSLCallTool.share().answer(sdkData.sipCall)
+                            YLSCallTool.share().answer(sdkData.sipCall)
                         }
                         Button("挂断") {
                             let sipCall = sdkData.sipCall
                             sipCall.hangUpType = HangUpType.byHand
-                            YSLCallTool.share().end(sipCall)
+                            YLSCallTool.share().end(sipCall)
                         }
                     }
                 } else {
                     HStack(alignment: .bottom, spacing: 16) {
                         if sureAttend {
                             Button("确认转移") {
-                                YSLCallTool.share().transferConsultation()
+                                YLSCallTool.share().transferConsultation()
                             }
                         }
                         Button("挂断") {
                             let sipCall = sdkData.sipCall
                             sipCall.hangUpType = HangUpType.byHand
-                            YSLCallTool.share().end(sipCall)
+                            YLSCallTool.share().end(sipCall)
                         }
                     }
                 }
