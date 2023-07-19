@@ -336,11 +336,71 @@ Linkus提供两种集成方式供开发者选择：
 
 ```
 
+### 6. 历史记录
+```
+/**
+ *  会议室来电
+ */
+- (void)conferenceManager:(YLSConfManager *)manager
+               callStatus:(YLSSipCall *)sipCall
+       reportIncomingCall:(void (^)(void (^controllerBlock)(void),void (^errorBlock)(NSError * _Nullable error)))completion;
+
+/**
+ *  会议室通话状态
+ */
+- (void)conferenceManager:(YLSConfManager *)manager callStatus:(YLSSipCall *)sipCall;
+
+/**
+ *  会议室成员状态
+ */
+- (void)conferenceManager:(YLSConfManager *)manager conferenceInfo:(YLSConfCall *)confCall;
+
+/**
+ *  异常会议室
+ */
+- (void)conferenceManager:(YLSConfManager *)manager abnormal:(nullable YLSConfCall *)confCall;
+
+/**
+ *  正在进行的会议室通话信息
+ */
+- (YLSSipCall *)currentConfSipCall;
+
+/**
+ *  创建会议室
+ */
+- (void)createConference:(YLSConfCall *)confCall
+                complete:(void(^)(NSError * _Nullable error,NSString *confid))complete;
+/**
+ *  邀请成员
+ */
+- (void)inviteConferenceMembers:(NSArray<NSString *> *)contacts
+                         confid:(NSString *)confid
+                       complete:(void(^)(NSError * _Nullable error))complete;
+
+/**
+ *  操作成员
+ */
+- (void)operationConferenceMember:(NSString *)member
+                           confid:(NSString *)confid
+                    operationType:(int)type
+                         complete:(void(^)(NSError * _Nullable error))complete;
+
+/**
+ *  会议室来电委托
+ */
+- (void)setIncomingCallDelegate:(id<YLSConfManagerDelegate>)delegate;
+
+/**
+ *  添加委托
+ */
+- (void)addDelegate:(id<YLSConfManagerDelegate>)delegate;
+
+/**
+ *  移除委托
+ */
+- (void)removeDelegate:(id<YLSConfManagerDelegate>)delegate;
+
+```
 
 # 更新日志
-- 20230428 提交尚未测试过的开源库，版本号：1.0.0
-- 20230508 开放日志路径、处理Voip推送、未接来电推送
-- 20230510 修复自测MacOS发现的问题
-- 20230608 修复iOS通话界面内存释放问题
-- 20230625 新增呼叫等待回调、修复Mac端日志数据路径异常
-- 20230625 更新SDK名称
+- 20230719 提交尚未测试过的开源库，版本号：1.1.0
