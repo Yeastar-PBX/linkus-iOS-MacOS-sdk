@@ -9,10 +9,13 @@
 #import "YLSCallProtocol.h"
 
 @class YLSHistory;
+@class YLSConfCall;
 
 NS_ASSUME_NONNULL_BEGIN
 
 #define DefaultSipCallID       -1 //本地默认通话ID为-1
+#define MultiCall              @"multiCall"
+#define MultiCallAnswer        @"answer"
 
 typedef NS_ENUM(NSInteger, CallStatus) {
     CallStatusNoNetwork        = 0, //sip连接失败
@@ -49,6 +52,8 @@ typedef void(^hasAnswerCallSuc)(void);
 
 @property (nonatomic,assign) BOOL mute;
 
+@property (nonatomic,assign) BOOL remoteMute;
+
 @property (nonatomic,assign) BOOL onHold;
 
 @property (nonatomic,assign)  CallStatus status;
@@ -62,6 +67,8 @@ typedef void(^hasAnswerCallSuc)(void);
 
 #pragma mark - 对SDK使用
 @property (nonatomic,strong) YLSHistory *historyCDR;//cdr生成
+
+@property (nonatomic,strong) YLSConfCall *confCall;
 
 @property (nonatomic,assign)  int callID;
 
@@ -85,11 +92,17 @@ typedef void(^hasAnswerCallSuc)(void);
 
 @property (nonatomic,copy)   NSString *startTimeStamp;
 
+@property (nonatomic,copy)   NSString *multiCallStatus;
+
+@property (nonatomic,assign) BOOL multiCall;
+
 @property (nonatomic,copy) hasConnectedDidChange hasConnectedDidChangeBlock;
 
 @property (nonatomic,copy) hasAnswerCallSuc answercallSuc;
 
 - (BOOL)isPlayHangupVoice;
+
++ (YLSConfCall *)confCall:(NSString *)confid members:(NSString *)member conInfo:(NSString *)conInfo;
 
 @end
 

@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "YLSLoginProtocol.h"
 #import "YLSCallProtocol.h"
+#import "YLSConfProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -29,7 +30,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong,readonly)   id<YLSCallStatusManager> callStatusManager;
 
 /**
- *  通话状态管理类,负责挂断、呼叫等待、转移展示
+ *  会议室管理类,负责发起、邀请、结束
+ */
+@property (nonatomic,strong,readonly)   id<YLSConfManager> confManager;
+
+/**
+ *  通话记录
  */
 @property (nonatomic,strong,readonly)   id<YLSHistoryManager> historyManager;
 

@@ -6,11 +6,27 @@
 	<dict>
 		<key>Headers/YLSCallProtocol.h</key>
 		<data>
-		DL7Vxlsw+Kvk9o1D7u2VeKZo7mE=
+		wlwJknxk1euvgf34+dgsiM64JD0=
+		</data>
+		<key>Headers/YLSCallTool.h</key>
+		<data>
+		bqVi9wlvaWU0G3sLoKwk6QJ/8qg=
 		</data>
 		<key>Headers/YLSCaptureDevice.h</key>
 		<data>
 		iVIakS9x+YwvKoB+aoKlknPkRUE=
+		</data>
+		<key>Headers/YLSConfCall.h</key>
+		<data>
+		OYw18w0vJhZgIbHGkL+KKNj419Y=
+		</data>
+		<key>Headers/YLSConfMember.h</key>
+		<data>
+		iZnMDuD85lnDrU1MDW38DFzoyg8=
+		</data>
+		<key>Headers/YLSConfProtocol.h</key>
+		<data>
+		OljpmeKG8eoMsO5sd/pd5KONvEk=
 		</data>
 		<key>Headers/YLSHistory.h</key>
 		<data>
@@ -18,11 +34,11 @@
 		</data>
 		<key>Headers/YLSLoginProtocol.h</key>
 		<data>
-		c6o8RI77eCghO3vQ2Wc4xyaB0G8=
+		na8VadjN1nXOAycuUifgxKH3MjY=
 		</data>
 		<key>Headers/YLSSDK.h</key>
 		<data>
-		gFtnJgT3vdg18nAzajWFlMUFFbI=
+		5hxmuZ6877cyLIo4Ohu7mH9Tx7I=
 		</data>
 		<key>Headers/YLSSDKConfig.h</key>
 		<data>
@@ -30,15 +46,11 @@
 		</data>
 		<key>Headers/YLSSipCall.h</key>
 		<data>
-		tmMoCZ8Qi8Z/58DVF+Co3M8pr4k=
-		</data>
-		<key>Headers/YSLCallTool.h</key>
-		<data>
-		nl6UlF6jkziP9c7D21BcDObGC8k=
+		OA8wqI1UgNnvCCN3HcRqX7siDcI=
 		</data>
 		<key>Headers/linkus_sdk.h</key>
 		<data>
-		RNQdBNypKBbjf7czgp+iDrnKo6k=
+		c2bssdvZbOUANYq1ryKA2N09fGs=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -51,11 +63,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DL7Vxlsw+Kvk9o1D7u2VeKZo7mE=
+			wlwJknxk1euvgf34+dgsiM64JD0=
 			</data>
 			<key>hash2</key>
 			<data>
-			GoJKudMEXj5o75h1iagQ6IYeIINfjbdWNGd3fhyKFHI=
+			zMrGqD+dXJQnrqNmV5EeDk3fiJZxR9FtGWGV56p7Zug=
+			</data>
+		</dict>
+		<key>Headers/YLSCallTool.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bqVi9wlvaWU0G3sLoKwk6QJ/8qg=
+			</data>
+			<key>hash2</key>
+			<data>
+			CfFqqn5nc1kig/I+agilOSbHz9rP8MQmyZs1FEs8xXo=
 			</data>
 		</dict>
 		<key>Headers/YLSCaptureDevice.h</key>
@@ -67,6 +90,39 @@
 			<key>hash2</key>
 			<data>
 			IIi2zBMtXeI/V3hS7Uv/V6rgo8wiuM8zs6rvSXFaG6A=
+			</data>
+		</dict>
+		<key>Headers/YLSConfCall.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OYw18w0vJhZgIbHGkL+KKNj419Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			se8c+z5GDOKp/P2xCEWgP+jZRzOOScHNpuI4vmdPU/s=
+			</data>
+		</dict>
+		<key>Headers/YLSConfMember.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iZnMDuD85lnDrU1MDW38DFzoyg8=
+			</data>
+			<key>hash2</key>
+			<data>
+			9yh6SwjpbzPJSemmrpp74t+8vHsUyNLcd6FAjIq5z9w=
+			</data>
+		</dict>
+		<key>Headers/YLSConfProtocol.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OljpmeKG8eoMsO5sd/pd5KONvEk=
+			</data>
+			<key>hash2</key>
+			<data>
+			VToBjGru3d5N6Up12Ux98kOjBvwD2dIIk2tn4q8+K8w=
 			</data>
 		</dict>
 		<key>Headers/YLSHistory.h</key>
@@ -84,22 +140,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c6o8RI77eCghO3vQ2Wc4xyaB0G8=
+			na8VadjN1nXOAycuUifgxKH3MjY=
 			</data>
 			<key>hash2</key>
 			<data>
-			/C/YU8KoczdkJSwfUAxxoe9CZmi7R9mCwtDjYOOlr10=
+			noyFnpNMFCdGokw3fnaY3/inOIyAxp+KctM+INvd18U=
 			</data>
 		</dict>
 		<key>Headers/YLSSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gFtnJgT3vdg18nAzajWFlMUFFbI=
+			5hxmuZ6877cyLIo4Ohu7mH9Tx7I=
 			</data>
 			<key>hash2</key>
 			<data>
-			m9hbximTkmVbOJarVFVsPmeFcSeZ6KI7BgyoMw9EMww=
+			8ZQ4QhxyFREeffTNCOcdLX5KmrsxH1yWcqPHs0iJXgY=
 			</data>
 		</dict>
 		<key>Headers/YLSSDKConfig.h</key>
@@ -117,33 +173,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tmMoCZ8Qi8Z/58DVF+Co3M8pr4k=
+			OA8wqI1UgNnvCCN3HcRqX7siDcI=
 			</data>
 			<key>hash2</key>
 			<data>
-			R7jEo+2w79l8Z0WDN5TeSk+tpFe/g4p56SxAOhcpvvc=
-			</data>
-		</dict>
-		<key>Headers/YSLCallTool.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			nl6UlF6jkziP9c7D21BcDObGC8k=
-			</data>
-			<key>hash2</key>
-			<data>
-			tG2hNSzTcljLkf5IkJWQ5v8sKznCyyykIVUuAToZBnE=
+			UGbi1z32DlgciQt8VC5Hopwl3BVbv/HgFTO5hFdCwxk=
 			</data>
 		</dict>
 		<key>Headers/linkus_sdk.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RNQdBNypKBbjf7czgp+iDrnKo6k=
+			c2bssdvZbOUANYq1ryKA2N09fGs=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z2ZBpAWWuZmfnv+DbrfUERHqhqGn61RpDS5Pnu1UJK0=
+			UzoMyPItL80Zn0d8GgCk4M4QoNcW5KpX/A5njriBTYY=
 			</data>
 		</dict>
 	</dict>
