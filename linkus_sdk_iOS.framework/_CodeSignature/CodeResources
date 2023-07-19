@@ -8,9 +8,25 @@
 		<data>
 		DL7Vxlsw+Kvk9o1D7u2VeKZo7mE=
 		</data>
+		<key>Headers/YLSCallTool.h</key>
+		<data>
+		JIhytMclmhTz7r/8/Nuk3tkE41M=
+		</data>
 		<key>Headers/YLSCaptureDevice.h</key>
 		<data>
 		iVIakS9x+YwvKoB+aoKlknPkRUE=
+		</data>
+		<key>Headers/YLSConfCall.h</key>
+		<data>
+		OYw18w0vJhZgIbHGkL+KKNj419Y=
+		</data>
+		<key>Headers/YLSConfMember.h</key>
+		<data>
+		iZnMDuD85lnDrU1MDW38DFzoyg8=
+		</data>
+		<key>Headers/YLSConfProtocol.h</key>
+		<data>
+		l1GzrWslXifwFA1DoK7M3CElqY4=
 		</data>
 		<key>Headers/YLSHistory.h</key>
 		<data>
@@ -58,6 +74,17 @@
 			GoJKudMEXj5o75h1iagQ6IYeIINfjbdWNGd3fhyKFHI=
 			</data>
 		</dict>
+		<key>Headers/YLSCallTool.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JIhytMclmhTz7r/8/Nuk3tkE41M=
+			</data>
+			<key>hash2</key>
+			<data>
+			KVZoSrS8NZ4Ke98ktROh7WMhKEECVCERdIbGfv9liBw=
+			</data>
+		</dict>
 		<key>Headers/YLSCaptureDevice.h</key>
 		<dict>
 			<key>hash</key>
@@ -67,6 +94,39 @@
 			<key>hash2</key>
 			<data>
 			IIi2zBMtXeI/V3hS7Uv/V6rgo8wiuM8zs6rvSXFaG6A=
+			</data>
+		</dict>
+		<key>Headers/YLSConfCall.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OYw18w0vJhZgIbHGkL+KKNj419Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			se8c+z5GDOKp/P2xCEWgP+jZRzOOScHNpuI4vmdPU/s=
+			</data>
+		</dict>
+		<key>Headers/YLSConfMember.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iZnMDuD85lnDrU1MDW38DFzoyg8=
+			</data>
+			<key>hash2</key>
+			<data>
+			9yh6SwjpbzPJSemmrpp74t+8vHsUyNLcd6FAjIq5z9w=
+			</data>
+		</dict>
+		<key>Headers/YLSConfProtocol.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			l1GzrWslXifwFA1DoK7M3CElqY4=
+			</data>
+			<key>hash2</key>
+			<data>
+			mB1G0u8OjzfAQLmewPcc5Sp1ut7wlP6WsgVGGHEibtI=
 			</data>
 		</dict>
 		<key>Headers/YLSHistory.h</key>
