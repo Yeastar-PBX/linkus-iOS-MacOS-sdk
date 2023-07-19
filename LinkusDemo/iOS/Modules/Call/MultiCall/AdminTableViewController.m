@@ -30,9 +30,7 @@
     [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [backBtn setImage:[UIImage imageNamed:@"CallAdminView_Back"] forState:UIControlStateNormal];
 
-    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 88, 44)];
-    [leftView addSubview:backBtn];
-    UIBarButtonItem *leftButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftView];
+    UIBarButtonItem *leftButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = leftButtonItem;
     
     [[[YLSSDK sharedYLSSDK] callManager] addDelegate:self];
@@ -122,7 +120,7 @@
 
 - (void)adminTableViewCell:(AdminTableViewCell *)cell sipCall:(YLSSipCall *)sipCall detailButton:(UIButton *)button {
     [QualityView qualityViewData:^NSString *{
-        return [[YLSCallTool shareCallTool] callQuality];
+        return [[YLSCallTool shareCallTool] callQuality:sipCall];
     } showInView:self.view];
 }
 

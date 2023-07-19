@@ -35,8 +35,7 @@ WCDB_PRIMARY(ConfCallTable, confid)
     NSData *password = [@"hMaCFIX#2dW/k]sE-yo(Zf]UJ6SunC" dataUsingEncoding:NSASCIIStringEncoding];
     [database setCipherKey:password];
     [database createTableAndIndexesOfName:NSStringFromClass(ConfCallTable.class) withClass:ConfCallTable.class];
-    BOOL result = [database insertOrReplaceObject:object into:NSStringFromClass(ConfCallTable.class)];
-    NSLog(@"1111");
+    [database insertOrReplaceObject:object into:NSStringFromClass(ConfCallTable.class)];
 }
 
 #pragma mark - 查询
@@ -51,7 +50,7 @@ WCDB_PRIMARY(ConfCallTable, confid)
         }];
         [database createTableAndIndexesOfName:NSStringFromClass(ConfCallTable.class) withClass:ConfCallTable.class];
         
-        NSArray *objects = [database getObjectsOfClass:ConfCallTable.class fromTable:NSStringFromClass(ConfCallTable.class) orderBy:ConfCallTable.datetime.order()];
+        NSArray *objects = [database getObjectsOfClass:ConfCallTable.class fromTable:NSStringFromClass(ConfCallTable.class) orderBy:ConfCallTable.datetime.order(WCTOrderedDescending)];
         if (!objects){
             objects = [NSArray array];
         }

@@ -35,7 +35,9 @@
 
 #pragma mark - YLSCallManagerDelegate来电
 - (void)callManager:(YLSCallManager *)callManager contact:(void (^)(id<YLSContactProtocol> (^block)(NSString *number)))contact completion:(void (^)(void (^controllerBlock)(void),void (^errorBlock)(NSError *error)))completion {
-    [self.delegate popCallView];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.delegate popCallView];
+    });
 }
 
 - (BOOL)callWaitingSupport {

@@ -118,7 +118,11 @@
 - (void)callNormal:(YLSSipCall *)currentCall {
     self.currentCall = currentCall;
     self.imageView.image = currentCall.contact.sipImage;
-    self.firstLabel.marqueeLabel.text = currentCall.serverName;
+    if ([currentCall.callNumber isEqualToString:MultiCall]) {
+        self.firstLabel.marqueeLabel.text = [NSString stringWithFormat:@"With %d Participants",(int)[YLSSDK sharedYLSSDK].callManager.multiSipCalls.count];
+    }else{
+        self.firstLabel.marqueeLabel.text = currentCall.serverName;
+    }
     if (self.numberNameSame) {
         self.stateLabel = self.secondLabel;
         self.thirdLabel.hidden = YES;

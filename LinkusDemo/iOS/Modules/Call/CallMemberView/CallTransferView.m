@@ -104,7 +104,11 @@
 - (void)callNormal:(YLSSipCall *)currentCall {
     self.currentCall = currentCall;
     self.imageView.image = currentCall.contact.sipImage;
-    self.nameLabel.text = currentCall.serverName;
+    if ([currentCall.callNumber isEqualToString:MultiCall]) {
+        self.nameLabel.text = [NSString stringWithFormat:@"With %d Participants",(int)[YLSSDK sharedYLSSDK].callManager.multiSipCalls.count];
+    }else{
+        self.nameLabel.text = currentCall.serverName;
+    }
     self.stateLabel.textColor = [UIColor colorWithRGB:0xFF6B66];
     self.stateLabel.text = [NSString stringWithFormat:@"%@ %@",@"Hold",[NSString holdTimeHoursMinutesSecond:self.currentCall.holdTime]];
 }

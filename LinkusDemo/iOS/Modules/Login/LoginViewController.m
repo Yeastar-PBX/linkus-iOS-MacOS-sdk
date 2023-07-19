@@ -7,7 +7,7 @@
 
 #import "LoginViewController.h"
 #import "YLSUnderlineTextField.h"
-#import "CalllogsViewController.h"
+#import "TabBarController.h"
 
 @interface LoginViewController ()
 
@@ -109,7 +109,7 @@
         if (!error) {
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"EVER_LOGIN"];
             [[NSUserDefaults standardUserDefaults] synchronize];
-            [UIApplication sharedApplication].keyWindow.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[CalllogsViewController alloc] init]];
+            [UIApplication sharedApplication].keyWindow.rootViewController = [[TabBarController alloc] init];
         }else{
             [self showHUDErrorWithText:[NSString stringWithFormat:@"Failed to connect to server (%ld)",error.code]];
         }

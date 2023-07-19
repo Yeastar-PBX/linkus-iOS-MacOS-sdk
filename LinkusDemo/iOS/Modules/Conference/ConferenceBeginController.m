@@ -144,6 +144,7 @@
                 }]];
             }
             if (alert.actions.count > 0) {
+                [alert addAction:([UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil])];
                 [self presentViewController:alert animated:YES completion:nil];
             }
         };
@@ -183,6 +184,7 @@
                 }
             }];
         }]];
+        [alert addAction:([UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil])];
         [self presentViewController:alert animated:YES completion:nil];
     }
 }
@@ -236,6 +238,17 @@
         make.height.mas_equalTo(160);
     }];
     
+    ConfBottomView *bottomView = [[ConfBottomView alloc] init];
+    self.bottomView = bottomView;
+    bottomView.delegate = self;
+    [self.view addSubview:bottomView];
+    [bottomView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left);
+        make.height.mas_equalTo(44);
+        make.right.mas_equalTo(self.view.mas_right);
+        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-50);
+    }];
+    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
@@ -251,18 +264,7 @@
         make.width.mas_equalTo(self.view.width);
         make.centerX.mas_equalTo(self.view.mas_centerX);
         make.top.mas_equalTo(topView.mas_bottom);
-        make.height.mas_equalTo(self.view.width * 22/25);
-    }];
-    
-    ConfBottomView *bottomView = [[ConfBottomView alloc] init];
-    self.bottomView = bottomView;
-    bottomView.delegate = self;
-    [self.view addSubview:bottomView];
-    [bottomView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.view.mas_left);
-        make.height.mas_equalTo(44);
-        make.right.mas_equalTo(self.view.mas_right);
-        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-50);
+        make.bottom.mas_equalTo(bottomView.mas_top);
     }];
 }
 

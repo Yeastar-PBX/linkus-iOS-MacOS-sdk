@@ -94,7 +94,11 @@
     }else{
         self.stateImageView.image = [UIImage imageNamed:@"Conference_in"];
     }
-    self.timeLabel.text = [NSString timeCompare:confCall.datetime];
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[confCall.datetime longLongValue]];
+    NSCalendarUnit components = (NSCalendarUnit)(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond);
+    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:components fromDate:date];
+    self.timeLabel.text = [NSString stringWithFormat:@"%ld-%02d-%02d %02d:%02d:%02d", (long)dateComponents.year, (int)dateComponents.month, (int)dateComponents.day,(int)dateComponents.hour,(int)dateComponents.minute,(int)dateComponents.second];
 
     _confCall = confCall;
 }
