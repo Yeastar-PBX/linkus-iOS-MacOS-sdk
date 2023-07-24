@@ -102,7 +102,13 @@ Linkus提供两种集成方式供开发者选择：
 ### 2. 登录接口
 ```
 /**
- *  登录
+ *  登录接口返回值
+ *  1：  连接不上服务器
+ *  -5： 连接服务器成功但是登录请求没有响应
+ *  403：用户名或密码错误
+ *  405：客户端被禁用
+ *  407：账号被锁定
+ *  416：请求ip被禁止（pbx开启国家防御）
  */
 - (void)login:(NSString *)account token:(NSString *)token localIP:(NSString *)localIP localPort:(NSString *)localPort
      remoteIP:(NSString *)remoteIP remotePort:(NSString *)remotePort completion:(void (^)(NSError * _Nullable error))completion;
