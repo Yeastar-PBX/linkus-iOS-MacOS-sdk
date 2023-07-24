@@ -68,7 +68,6 @@
 		5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
 		59BFACA32A5FFE2200843DA3 /* AdminTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFACA22A5FFE2200843DA3 /* AdminTableViewController.m */; };
 		59BFACA62A60024300843DA3 /* AdminTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFACA52A60024300843DA3 /* AdminTableViewCell.m */; };
-		59BFACA82A60234500843DA3 /* linkus_sdk_MacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BFACA72A60234500843DA3 /* linkus_sdk_MacOS.framework */; };
 		59BFACAE2A60EF0C00843DA3 /* ConfHistoryBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BFACAD2A60EF0C00843DA3 /* ConfHistoryBuild.m */; };
 		59BFACB12A60F3F800843DA3 /* ConfCallTable.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59BFACB02A60F3F800843DA3 /* ConfCallTable.mm */; };
 		59C49EEB29F4BE4200164ECE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C49EEA29F4BE4200164ECE /* MenuView.swift */; };
@@ -82,7 +81,6 @@
 		59C915452A55118600FCFCC0 /* ConfTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C915442A55118600FCFCC0 /* ConfTopView.m */; };
 		59C915482A5511AF00FCFCC0 /* ConfBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C915472A5511AF00FCFCC0 /* ConfBottomView.m */; };
 		59C9154B2A5511D300FCFCC0 /* ConfCenterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9154A2A5511D300FCFCC0 /* ConfCenterViewCell.m */; };
-		59C9154D2A55176A00FCFCC0 /* linkus_sdk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9154C2A55176A00FCFCC0 /* linkus_sdk_iOS.framework */; };
 		59C9157B2A5D54FF00FCFCC0 /* ConfListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9157A2A5D54FF00FCFCC0 /* ConfListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -195,7 +193,6 @@
 		59BFACA22A5FFE2200843DA3 /* AdminTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminTableViewController.m; sourceTree = "<group>"; };
 		59BFACA42A60024300843DA3 /* AdminTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdminTableViewCell.h; sourceTree = "<group>"; };
 		59BFACA52A60024300843DA3 /* AdminTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminTableViewCell.m; sourceTree = "<group>"; };
-		59BFACA72A60234500843DA3 /* linkus_sdk_MacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_sdk_MacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BFACAC2A60EF0C00843DA3 /* ConfHistoryBuild.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfHistoryBuild.h; sourceTree = "<group>"; };
 		59BFACAD2A60EF0C00843DA3 /* ConfHistoryBuild.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfHistoryBuild.m; sourceTree = "<group>"; };
 		59BFACAF2A60F3F800843DA3 /* ConfCallTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfCallTable.h; sourceTree = "<group>"; };
@@ -217,7 +214,6 @@
 		59C915472A5511AF00FCFCC0 /* ConfBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfBottomView.m; sourceTree = "<group>"; };
 		59C915492A5511D300FCFCC0 /* ConfCenterViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfCenterViewCell.h; sourceTree = "<group>"; };
 		59C9154A2A5511D300FCFCC0 /* ConfCenterViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfCenterViewCell.m; sourceTree = "<group>"; };
-		59C9154C2A55176A00FCFCC0 /* linkus_sdk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_sdk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C915792A5D54FF00FCFCC0 /* ConfListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfListTableViewCell.h; sourceTree = "<group>"; };
 		59C9157A2A5D54FF00FCFCC0 /* ConfListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfListTableViewCell.m; sourceTree = "<group>"; };
 		59CA6AA72A089962003CDBAC /* LinkusDemo (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LinkusDemo (iOS).entitlements"; sourceTree = "<group>"; };
@@ -238,7 +234,6 @@
 				5985CA9729F227D6003E9616 /* libresolv.tbd in Frameworks */,
 				5902A00F29D5849E00E41926 /* UIKit.framework in Frameworks */,
 				2BE5155D5E10355681017F16 /* libPods-LinkusDemo (iOS).a in Frameworks */,
-				59C9154D2A55176A00FCFCC0 /* linkus_sdk_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +244,6 @@
 				59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */,
 				59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */,
 				09E52C35BD828145EE22E620 /* libPods-LinkusDemo (macOS).a in Frameworks */,
-				59BFACA82A60234500843DA3 /* linkus_sdk_MacOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,8 +567,6 @@
 		5937A8EC29D5778F0089B0A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				59BFACA72A60234500843DA3 /* linkus_sdk_MacOS.framework */,
-				59C9154C2A55176A00FCFCC0 /* linkus_sdk_iOS.framework */,
 				5985CA9629F227CB003E9616 /* libresolv.tbd */,
 				59438CA229E52E8500B4DAA7 /* libcurl.tbd */,
 				5902AEF929D6AC0E00E41926 /* libc++.tbd */,

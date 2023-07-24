@@ -178,6 +178,7 @@
     }else{
         self.waiting = NO;
     }
+    self.multiCall = NO;
     self.currentCall = currentCall;
     [self reloadData];
 }
@@ -404,11 +405,11 @@
     if (self.transfer) {
         model.selectedColor = [UIColor colorWithRGB:0x20C161];
         model.selected = YES;
-        model.enabled = YES;
+        model.enabled = !self.multiCall;;
     }else{
         model.selectedColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.93];
         model.selected = NO;
-        model.enabled = self.currentCall.status == CallStatusBridge;
+        model.enabled = self.currentCall.status == CallStatusBridge && !self.multiCall;
     }
     model.fontColor = model.enabled ? [UIColor colorWithRGB:0xFFFFFF alpha:0.87] : [UIColor colorWithRGB:0xFFFFFF alpha:0.6];
     return model;
@@ -424,7 +425,7 @@
     model.normalColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.13];
     model.selectedColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.93];
     model.selected = NO;
-    model.enabled = self.currentCall.status == CallStatusBridge && !self.transfer;
+    model.enabled = self.currentCall.status == CallStatusBridge && !self.transfer && !self.multiCall;
     model.fontColor = model.enabled ? [UIColor colorWithRGB:0xFFFFFF alpha:0.87] : [UIColor colorWithRGB:0xFFFFFF alpha:0.6];
     return model;
 }

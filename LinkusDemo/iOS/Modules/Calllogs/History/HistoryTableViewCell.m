@@ -168,7 +168,11 @@
 -(void)setHistory:(MergeHistory *)history {
     self.typeLabel.text = @"Extension";
     self.stateImage.hidden = YES;
-    self.nameLabel.text=[NSString stringWithFormat:@"%@",history.contact.sipName];
+    if ([history.historyType isEqualToString:@"Conference"]) {//这边加上会议室标签
+        self.nameLabel.text = [NSString stringWithFormat:@"%@<%@>",history.contact.sipName,history.historyType];
+    }else{
+        self.nameLabel.text = [NSString stringWithFormat:@"%@",history.contact.sipName];
+    }
     self.countLabel.text = [NSString stringWithFormat:@"(%lu)",(unsigned long)history.theSameHistory.count];
     self.countLabel.hidden = history.theSameHistory.count == 1;
     

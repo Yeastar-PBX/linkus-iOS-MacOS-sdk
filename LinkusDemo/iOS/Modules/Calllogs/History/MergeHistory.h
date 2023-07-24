@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,assign) HistoryState state;
 
+//如果是会议室来电  里面字符串内容是 Conference
+@property (nonatomic,  copy) NSString *historyType;
+
 @property (nonatomic,strong) NSMutableArray<YLSHistory *> *theSameHistory;
 
 @end

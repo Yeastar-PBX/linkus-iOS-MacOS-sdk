@@ -49,13 +49,15 @@
         if ((saveHistory.state == HistoryStateCallOut && history.state == HistoryStateCallOut) || (saveHistory.state != HistoryStateCallOut && history.state != HistoryStateCallOut)) {
             second = YES;
         }
+        BOOL third = [saveHistory.historyType isEqualToString:history.historyType];
         
-        if (first && second) {
+        if (first && second && third) {
             [mergeHistory.theSameHistory insertObject:history atIndex:0];
             mergeHistory.state = history.state;
             mergeHistory.number = history.number;
         }else{
             MergeHistory *notFindHistory = [[MergeHistory alloc] init];
+            notFindHistory.historyType = history.historyType;
             notFindHistory.state = history.state;
             notFindHistory.number = history.number;
             [dealArray insertObject:notFindHistory atIndex:0];

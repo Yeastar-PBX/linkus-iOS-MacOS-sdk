@@ -141,6 +141,10 @@
 
 #pragma mark - 开始会议室
 - (void)beginConference:(UIButton *)sender {
+    if (self.dataArr.count == 0) {
+        [self showHUDErrorWithText:@"请添加联系人"];
+        return;
+    }
     [self showHUDWithText:@"Start Conference"];
     YLSConfCall *confCall = [[YLSConfCall alloc] init];
     confCall.host = [YLSSDK sharedYLSSDK].loginManager.ylsUserNumber;

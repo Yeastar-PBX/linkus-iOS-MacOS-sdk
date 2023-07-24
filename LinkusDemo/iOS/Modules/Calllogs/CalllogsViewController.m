@@ -108,7 +108,7 @@
     [self.view addSubview:dialpadCallView];
     
     [dialpadCallView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-72);
+        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-72-TabBarOffset);
         make.centerX.mas_equalTo(self.view.mas_centerX);
         make.height.mas_equalTo(56);
         make.width.mas_equalTo(56);
@@ -193,7 +193,7 @@
 - (void)dialpadViewHidden:(DialpadView *)dialpadView {
     self.dialpadCallView.dialpadShow = NO;
     [self.dialpadCallView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-72);
+        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-72-TabBarOffset);
         make.right.mas_equalTo(self.view.mas_right).offset(-15);
         make.height.mas_equalTo(56);
         make.width.mas_equalTo(56);
@@ -210,7 +210,7 @@
     dialpadCallView.dialpadShow = YES;
     [self.view insertSubview:dialpadCallView aboveSubview:self.dialpadView];
     [self.dialpadCallView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-72);
+        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-72-TabBarOffset);
         make.centerX.mas_equalTo(self.view.mas_centerX);
         make.height.mas_equalTo(56);
         make.width.mas_equalTo(56);
