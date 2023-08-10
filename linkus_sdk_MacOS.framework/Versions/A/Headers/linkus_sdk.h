@@ -6,8 +6,10 @@
 //
 
 #import "YLSSDK.h"
-#import "YSLCallTool.h"
+#import "YLSCallTool.h"
 #import "YLSSipCall.h"
+#import "YLSConfCall.h"
+#import "YLSConfMember.h"
 #import "YLSHistory.h"
 #import "YLSSDKConfig.h"
 #import "YLSCaptureDevice.h"

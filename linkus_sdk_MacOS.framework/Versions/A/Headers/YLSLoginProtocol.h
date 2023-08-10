@@ -29,6 +29,8 @@ typedef NS_ENUM(NSInteger, KickReason) {
     KickReasonByRASServerExpires         = 11,
     KickReasonByAllowedCountryIp         = 12,
     KickReasonByDeviceInactive           = 13,
+    KickReasonBySdkStatusChange          = 14,
+    KickReasonBySdkAccessKeyChange       = 15,
 };
 
 /**
@@ -69,6 +71,11 @@ typedef NS_ENUM(NSInteger, LoginStep) {
  *  登出
  */
 - (void)logout:(void (^)(NSError * _Nullable error))completion;
+
+/**
+ *  用户号码
+ */
+- (NSString *)ylsUserNumber;
 
 /**
  *  添加委托

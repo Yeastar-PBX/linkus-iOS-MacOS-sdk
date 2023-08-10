@@ -12,7 +12,7 @@ platform :ios, '11.0'
     pod 'ReactiveObjC', '~> 3.1.1'
     pod 'DZNEmptyDataSet', '~> 1.8.1'
     pod 'WCDB', '~>1.0.7.5'
-    pod 'linkus-sdk', '~> 1.1.1'
+    pod 'linkus-sdk', '~> 1.1.2'
 end
 
 target 'LinkusDemo (macOS)' do
@@ -20,5 +20,5 @@ platform :osx, '10.13'
 #    pod 'WCDBSwift'
 #    pod 'ObjectMapper'
 #    pod 'SDWebImageSwiftUI'
-    pod 'linkus-sdk-MacOS', '~> 1.0.12'
+    pod 'linkus-sdk-MacOS', '~> 1.1.2'
 end

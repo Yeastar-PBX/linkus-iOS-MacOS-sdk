@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)sipName;
 
+- (NSString *)sipNumber;
+
 #if TARGET_OS_IPHONE
 - (UIImage *)sipImage;
 #endif
@@ -34,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  来电
  */
-- (void)callManager:(YLSCallManager *)callManager contact:(void (^)(id<YLSContactProtocol> (^block)(NSString *number)))contact completion:(void (^)(void (^controllerBlock)(void),void (^errorBlock)(NSError *error)))completion;
+- (void)callManager:(YLSCallManager *)callManager contact:(void (^)(id<YLSContactProtocol> (^block)(NSString *number)))contact completion:(void (^)(void (^controllerBlock)(void),void (^errorBlock)(NSError * _Nullable error)))completion;
 
 /**
  *  通话信息
@@ -54,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  当前通话质量
  */
-- (void)callManager:(YLSCallManager *)callManager callQuality:(BOOL)quality;
+- (void)callManager:(YLSCallManager *)callManager callid:(int)callid callQuality:(BOOL)quality;
 
 /**
  *  呼叫等待回调
@@ -84,6 +86,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  所有通话信息
  */
 - (NSArray<YLSSipCall *> *)currentSipCalls;
+
+/**
+ *  多方通话信息
+ */
+- (NSArray<YLSSipCall *> *)multiSipCalls;
 
 /**
  *  获取MacOS 麦克风与扬声器
@@ -146,6 +153,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)callStatusManager:(YLSCallStatusManager *)callStatusManager currentCall:(YLSSipCall *)currentCall
               callWaiting:(nullable YLSSipCall *)callWaitingCall transferCall:(nullable YLSSipCall *)transferCall;
+
+/**
+ *  多方通话
+ */
+- (void)callStatusManager:(YLSCallStatusManager *)callStatusManager multiCall:(YLSSipCall *)multiCall
+                       waitingCall:(nullable YLSSipCall *)waitingCall;
 
 @end
 

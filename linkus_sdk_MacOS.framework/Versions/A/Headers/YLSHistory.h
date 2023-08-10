@@ -44,6 +44,9 @@ typedef NS_ENUM(NSInteger, HistoryState) {
 
 @property (nonatomic,copy) NSString *timeGMT;
 
+//如果是会议室来电  里面字符串内容是 Conference
+@property (nonatomic,copy) NSString *historyType;
+
 @end
 
 NS_ASSUME_NONNULL_END
