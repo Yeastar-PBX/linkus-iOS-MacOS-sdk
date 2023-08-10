@@ -29,6 +29,8 @@ typedef NS_ENUM(NSInteger, KickReason) {
     KickReasonByRASServerExpires         = 11,
     KickReasonByAllowedCountryIp         = 12,
     KickReasonByDeviceInactive           = 13,
+    KickReasonBySdkStatusChange          = 14,
+    KickReasonBySdkAccessKeyChange       = 15,
 };
 
 /**

@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "linkus-sdk"
-  spec.version      = "1.0.13"
+  spec.version      = "1.0.14"
   spec.summary      = "为第三方应用提供Sip通话能力"
 
   spec.homepage     = "https://github.com/Yeastar-PBX/linkus-iOS-MacOS-sdk.git"
