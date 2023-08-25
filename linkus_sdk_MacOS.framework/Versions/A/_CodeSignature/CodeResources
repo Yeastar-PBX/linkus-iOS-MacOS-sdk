@@ -22,17 +22,6 @@
 			GoJKudMEXj5o75h1iagQ6IYeIINfjbdWNGd3fhyKFHI=
 			</data>
 		</dict>
-		<key>Headers/YLSCallTool.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			bqVi9wlvaWU0G3sLoKwk6QJ/8qg=
-			</data>
-			<key>hash2</key>
-			<data>
-			CfFqqn5nc1kig/I+agilOSbHz9rP8MQmyZs1FEs8xXo=
-			</data>
-		</dict>
 		<key>Headers/YLSCaptureDevice.h</key>
 		<dict>
 			<key>hash</key>
@@ -42,39 +31,6 @@
 			<key>hash2</key>
 			<data>
 			IIi2zBMtXeI/V3hS7Uv/V6rgo8wiuM8zs6rvSXFaG6A=
-			</data>
-		</dict>
-		<key>Headers/YLSConfCall.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OYw18w0vJhZgIbHGkL+KKNj419Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			se8c+z5GDOKp/P2xCEWgP+jZRzOOScHNpuI4vmdPU/s=
-			</data>
-		</dict>
-		<key>Headers/YLSConfMember.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			iZnMDuD85lnDrU1MDW38DFzoyg8=
-			</data>
-			<key>hash2</key>
-			<data>
-			9yh6SwjpbzPJSemmrpp74t+8vHsUyNLcd6FAjIq5z9w=
-			</data>
-		</dict>
-		<key>Headers/YLSConfProtocol.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OljpmeKG8eoMsO5sd/pd5KONvEk=
-			</data>
-			<key>hash2</key>
-			<data>
-			VToBjGru3d5N6Up12Ux98kOjBvwD2dIIk2tn4q8+K8w=
 			</data>
 		</dict>
 		<key>Headers/YLSHistory.h</key>
