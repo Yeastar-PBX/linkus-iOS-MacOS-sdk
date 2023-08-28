@@ -11,9 +11,9 @@ struct LoginView: View {
     @Binding var isLogin: Bool
     enum Field: Hashable { case name, password, localAddress, localPort, remoteAddress, remotePort }
     
-    @State private var name = "1010"
-    @State private var password = "eyJleHBpcmUiOjE3MDU3NTQ4NTUsInNpZ24iOiJyS0RURGs0MHhrRFY1blF2N2h0VkJIYlFEQ3kxTWw5cGxlTldzb1VYcEhzPSIsInVzZXJuYW1lIjoiMTAxMCIsInZlcnNpb24iOiIxLjAifQ__"
-    @State private var localAddress = "192.168.25.110"
+    @State private var name = "1000"
+    @State private var password = "eyJleHBpcmUiOjAsInNpZ24iOiJFLzBmY1J1YjZDVlhXdFNRWS8xQWpHMzRGNVBGUEw4cE52Zm4wNzA3K3BrPSIsInVzZXJuYW1lIjoiMTAwMCIsInZlcnNpb24iOiIxLjAifQ__"
+    @State private var localAddress = "192.168.21.252"
     @State private var localPort = "8111"
     @State private var remoteAddress = ""
     @State private var remotePort = ""
