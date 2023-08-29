@@ -18,5 +18,5 @@ platform :osx, '10.13'
 #    pod 'WCDBSwift'
 #    pod 'ObjectMapper'
 #    pod 'SDWebImageSwiftUI'
-    pod 'linkus-sdk-MacOS', '~> 1.0.16'
+    pod 'linkus-sdk-MacOS', '~> 1.0.17'
 end
