@@ -1,6 +1,5 @@
 PODS:
   - HWPanModal (0.8.9)
-  - linkus-sdk (1.0.14)
   - linkus-sdk-MacOS (1.0.18)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.1)
@@ -12,7 +11,6 @@ PODS:
 
 DEPENDENCIES:
   - HWPanModal (~> 0.8.9)
-  - linkus-sdk (~> 1.0.14)
   - linkus-sdk-MacOS (~> 1.0.18)
   - Masonry (~> 1.1.0)
   - ReactiveObjC (~> 3.1.1)
@@ -23,7 +21,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - HWPanModal
-    - linkus-sdk
     - linkus-sdk-MacOS
     - Masonry
     - ReactiveObjC
@@ -33,7 +30,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
-  linkus-sdk: 3f354d9de31cd89d2e8b8775ddd1847d7c67b883
   linkus-sdk-MacOS: 7be7f0d23a5c47e5cab67febf86651d5690f994d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
@@ -41,6 +37,6 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: f4aa903e1b812582d6409baa37653af224bc6f65
+PODFILE CHECKSUM: 9d174220bce0174bbcb6fbdf0ffc8ac8f6532aeb
 
 COCOAPODS: 1.11.3
