@@ -50,7 +50,6 @@
 		59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59438CA229E52E8500B4DAA7 /* libcurl.tbd */; };
 		59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
 		59438CF329E7D19700B4DAA7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59438CF229E7D19700B4DAA7 /* LoginView.swift */; };
-		59461AB72AEA53A000F61989 /* linkus_sdk_MacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59461AB62AEA53A000F61989 /* linkus_sdk_MacOS.framework */; };
 		5985CA6529EFD831003E9616 /* Hangup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6329EFD831003E9616 /* Hangup.wav */; };
 		5985CA6629EFD831003E9616 /* Hangup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6329EFD831003E9616 /* Hangup.wav */; };
 		5985CA6729EFD831003E9616 /* Alerting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6429EFD831003E9616 /* Alerting.wav */; };
@@ -198,7 +197,6 @@
 				59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */,
 				59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */,
 				09E52C35BD828145EE22E620 /* libPods-LinkusDemo (macOS).a in Frameworks */,
-				59461AB72AEA53A000F61989 /* linkus_sdk_MacOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

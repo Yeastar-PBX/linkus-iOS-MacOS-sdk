@@ -1,6 +1,7 @@
 PODS:
   - HWPanModal (0.8.9)
   - linkus-sdk (1.0.19)
+  - linkus-sdk-MacOS (1.0.19)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.1)
   - SVProgressHUD (2.2.5)
@@ -12,6 +13,7 @@ PODS:
 DEPENDENCIES:
   - HWPanModal (~> 0.8.9)
   - linkus-sdk (~> 1.0.19)
+  - linkus-sdk-MacOS (~> 1.0.19)
   - Masonry (~> 1.1.0)
   - ReactiveObjC (~> 3.1.1)
   - SVProgressHUD (~> 2.2.5)
@@ -22,6 +24,7 @@ SPEC REPOS:
   trunk:
     - HWPanModal
     - linkus-sdk
+    - linkus-sdk-MacOS
     - Masonry
     - ReactiveObjC
     - SVProgressHUD
@@ -31,12 +34,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
   linkus-sdk: bd675d899ab42674c153f047d579916d762373c3
+  linkus-sdk-MacOS: 7a3ab090b1828ef8d02200ee9abde3edaeb1db5f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 351566df758b0a6d889c066af26ac0413d9cb713
+PODFILE CHECKSUM: 8a2a3d43a16feca3a3fb6ab43cac16cedfc0463b
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.14.0
