@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../CompileFramework/linkus-sdk.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:LinkusDemo.xcodeproj">
    </FileRef>
    <FileRef
