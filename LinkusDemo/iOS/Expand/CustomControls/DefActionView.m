@@ -19,9 +19,9 @@
 }
 
 - (void)setupControls {
-    UIButton *actionBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 56 * ScreenScale, 56 * ScreenScale)];
+    UIButton *actionBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 56, 56)];
     self.actionBtn = actionBtn;
-    actionBtn.layer.cornerRadius = 28 * ScreenScale;
+    actionBtn.layer.cornerRadius = 28;
     actionBtn.layer.masksToBounds = YES;
     [self addSubview:actionBtn];
 
@@ -29,7 +29,7 @@
     self.nameLabel = nameLabel;
     nameLabel.textAlignment = NSTextAlignmentCenter;
     nameLabel.textColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.87];
-    nameLabel.font = [UIFont systemFontOfSize:14.f * ScreenScale weight:UIFontWeightRegular];
+    nameLabel.font = [UIFont systemFontOfSize:14.f weight:UIFontWeightRegular];
     [self addSubview:nameLabel];
 }
 

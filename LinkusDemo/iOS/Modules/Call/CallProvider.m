@@ -52,7 +52,7 @@
 }
 
 - (BOOL)callWaitingSupport {
-    return NO;
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"CallWaiting"];
 }
 
 - (void)callManager:(YLSCallManager *)callManager callFaild:(NSError *)error {

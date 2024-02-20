@@ -48,6 +48,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)callQuality;
 - (NSString *)callQuality:(YLSSipCall *)sipCall;
 
+#pragma mark - 编码设置
++ (BOOL)setCodec:(NSString *)code;
+
 @end
 
 NS_ASSUME_NONNULL_END

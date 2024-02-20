@@ -166,41 +166,41 @@
     [self.callView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(self.mas_bottom).offset(-48-TabBarOffset);
         make.centerX.mas_equalTo(self.mas_centerX);
-        make.width.mas_equalTo(56 * ScreenScale);
-        make.height.mas_equalTo(86 * ScreenScale);
+        make.width.mas_equalTo(56);
+        make.height.mas_equalTo(86);
     }];
     
     [self.contactsView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(self.callView.mas_bottom);
-        make.right.mas_equalTo(self.callView.mas_left).offset(-40 * ScreenScale);
-        make.width.mas_equalTo(56 * ScreenScale);
-        make.height.mas_equalTo(86 * ScreenScale);
+        make.right.mas_equalTo(self.callView.mas_left).offset(-40);
+        make.width.mas_equalTo(56);
+        make.height.mas_equalTo(86);
     }];
     
     [self.callLogView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(self.callView.mas_bottom);
-        make.left.mas_equalTo(self.callView.mas_right).offset(40 * ScreenScale);
-        make.width.mas_equalTo(56 * ScreenScale);
-        make.height.mas_equalTo(86 * ScreenScale);
+        make.left.mas_equalTo(self.callView.mas_right).offset(40);
+        make.width.mas_equalTo(56);
+        make.height.mas_equalTo(86);
     }];
     
     [self.collectionView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.mas_centerX);
-        make.bottom.mas_equalTo(self.contactsView.mas_top).offset(-24 * ScreenScale);
+        make.bottom.mas_equalTo(self.contactsView.mas_top).offset(-24);
         make.width.mas_equalTo(self.width);
-        make.height.mas_equalTo(376 * ScreenScale);
+        make.height.mas_equalTo(376);
     }];
     
     [self.backspaceBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.collectionView.mas_top).offset(-24 * ScreenScale);
-        make.right.mas_equalTo(self.mas_right).offset(-24 * ScreenScale);
-        make.width.height.mas_equalTo(40 * ScreenScale);
+        make.bottom.mas_equalTo(self.collectionView.mas_top).offset(-24);
+        make.right.mas_equalTo(self.mas_right).offset(-24);
+        make.width.height.mas_equalTo(40);
     }];
     
     [self.textField mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self.backspaceBtn.mas_centerY);
-        make.right.mas_equalTo(self.mas_right).offset(-60 * ScreenScale);
-        make.left.mas_equalTo(self.mas_left).offset(60 * ScreenScale);
+        make.right.mas_equalTo(self.mas_right).offset(-60);
+        make.left.mas_equalTo(self.mas_left).offset(60);
     }];
 }
 
@@ -222,7 +222,7 @@
 
 #pragma mark- UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize size = CGSizeMake(76 * ScreenScale, 76 * ScreenScale);
+    CGSize size = CGSizeMake(76, 76);
     return size;
 }
 

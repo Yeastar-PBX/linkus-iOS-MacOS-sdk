@@ -8,6 +8,7 @@
 #import "TabBarController.h"
 #import "CalllogsViewController.h"
 #import "ConferenceListController.h"
+#import "MeListViewController.h"
 
 @interface TabBarController ()
 
@@ -25,8 +26,12 @@
     ConferenceListController *conferenceVC = [[ConferenceListController alloc] init];
     conferenceVC.tabBarItem = [self tabbar:@"TabBarItem_Conference_Normal" selectedImage:@"TabBarItem_Conference_Select"  title:@"Conference"];
     UINavigationController *conferenceNav = [[UINavigationController alloc] initWithRootViewController:conferenceVC];
+    
+    MeListViewController *meVC = [[MeListViewController alloc] init];
+    meVC.tabBarItem = [self tabbar:@"TabBarItem_Conference_Normal" selectedImage:@"TabBarItem_Conference_Select"  title:@"Me"];
+    UINavigationController *meNav = [[UINavigationController alloc] initWithRootViewController:meVC];
 
-    self.viewControllers = @[rootCallsNav,conferenceNav];
+    self.viewControllers = @[rootCallsNav,conferenceNav,meNav];
     
     if (@available(iOS 13.0, *)) {
         UITabBarAppearance *appearance = [[UITabBarAppearance alloc] init];

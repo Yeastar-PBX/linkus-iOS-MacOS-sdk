@@ -56,6 +56,7 @@
 		59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59438CA229E52E8500B4DAA7 /* libcurl.tbd */; };
 		59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902AED529D6A8CF00E41926 /* libxml2.tbd */; };
 		59438CF329E7D19700B4DAA7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59438CF229E7D19700B4DAA7 /* LoginView.swift */; };
+		596A54222B60B951007BDA5E /* MeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 596A54212B60B951007BDA5E /* MeListViewController.m */; };
 		5985CA6529EFD831003E9616 /* Hangup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6329EFD831003E9616 /* Hangup.wav */; };
 		5985CA6629EFD831003E9616 /* Hangup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6329EFD831003E9616 /* Hangup.wav */; };
 		5985CA6729EFD831003E9616 /* Alerting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5985CA6429EFD831003E9616 /* Alerting.wav */; };
@@ -179,6 +180,9 @@
 		59438CA229E52E8500B4DAA7 /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
 		59438CF229E7D19700B4DAA7 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		59438CF429E7D47300B4DAA7 /* LinkusDemo (macOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinkusDemo (macOS)-Bridging-Header.h"; sourceTree = "<group>"; };
+		596A541B2B60A467007BDA5E /* linkus_sdk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_sdk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		596A54202B60B951007BDA5E /* MeListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeListViewController.h; sourceTree = "<group>"; };
+		596A54212B60B951007BDA5E /* MeListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeListViewController.m; sourceTree = "<group>"; };
 		5985CA3A29ECEC8A003E9616 /* LinkusDemo--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkusDemo--macOS--Info.plist"; sourceTree = "<group>"; };
 		5985CA6329EFD831003E9616 /* Hangup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Hangup.wav; sourceTree = "<group>"; };
 		5985CA6429EFD831003E9616 /* Alerting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Alerting.wav; sourceTree = "<group>"; };
@@ -499,6 +503,7 @@
 				59029FC429D5838D00E41926 /* Calllogs */,
 				59029FDA29D5838D00E41926 /* Call */,
 				592B35852A529BA4009CD7AA /* Conference */,
+				596A541F2B60B7B0007BDA5E /* Me */,
 				59029FD129D5838D00E41926 /* Contact */,
 			);
 			path = Modules;
@@ -567,6 +572,7 @@
 		5937A8EC29D5778F0089B0A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				596A541B2B60A467007BDA5E /* linkus_sdk_iOS.framework */,
 				5985CA9629F227CB003E9616 /* libresolv.tbd */,
 				59438CA229E52E8500B4DAA7 /* libcurl.tbd */,
 				5902AEF929D6AC0E00E41926 /* libc++.tbd */,
@@ -576,6 +582,15 @@
 				AD72E61761B1A98137FC680E /* libPods-LinkusDemo (macOS).a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		596A541F2B60B7B0007BDA5E /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				596A54202B60B951007BDA5E /* MeListViewController.h */,
+				596A54212B60B951007BDA5E /* MeListViewController.m */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 		5985CA6229EFD7D9003E9616 /* Resource */ = {
@@ -872,6 +887,7 @@
 				592B35952A52BCF1009CD7AA /* ConfCollectionViewCell.m in Sources */,
 				59C915412A541C8500FCFCC0 /* ConferenceBeginController.m in Sources */,
 				59029FF829D5838E00E41926 /* CalllogsViewController.m in Sources */,
+				596A54222B60B951007BDA5E /* MeListViewController.m in Sources */,
 				5902A00529D5838E00E41926 /* MenuPanViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1013,7 +1029,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Supporting Files/LinkusDemo (iOS).entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = E5BHZ9VK49;
 				ENABLE_PREVIEWS = YES;
@@ -1035,7 +1051,8 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2.0;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yeastar.LinkusPush;
 				PRODUCT_NAME = LinkusDemo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1059,7 +1076,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Supporting Files/LinkusDemo (iOS).entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = E5BHZ9VK49;
 				ENABLE_PREVIEWS = YES;
@@ -1081,7 +1098,8 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2.0;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yeastar.LinkusPush;
 				PRODUCT_NAME = LinkusDemo;
 				PROVISIONING_PROFILE_SPECIFIER = "";

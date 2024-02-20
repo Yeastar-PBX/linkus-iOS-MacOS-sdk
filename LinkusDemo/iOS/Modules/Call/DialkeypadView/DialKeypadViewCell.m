@@ -32,7 +32,7 @@
 - (void)setupControls {
     UIButton *actionBtn = [[UIButton alloc] init];
     self.actionBtn = actionBtn;
-    actionBtn.layer.cornerRadius = 38 * ScreenScale;
+    actionBtn.layer.cornerRadius = 38;
     actionBtn.layer.masksToBounds = YES;
     [actionBtn setBackgroundImage:[UIImage imageByColor:[UIColor colorWithRGB:0xFFFFFF alpha:0.13] size:CGSizeMake(self.width, self.height)] forState:UIControlStateNormal];
     [self.contentView addSubview:actionBtn];
@@ -41,14 +41,14 @@
     self.nameLabel = nameLabel;
     nameLabel.textAlignment = NSTextAlignmentCenter;
     nameLabel.textColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.87];
-    nameLabel.font = [UIFont systemFontOfSize:26.f * ScreenScale weight:UIFontWeightMedium];
+    nameLabel.font = [UIFont systemFontOfSize:26.f weight:UIFontWeightMedium];
     [self.contentView addSubview:nameLabel];
     
     UILabel *numberLabel=[[UILabel alloc] init];
     self.numberLabel = numberLabel;
     numberLabel.textAlignment = NSTextAlignmentCenter;
     numberLabel.textColor = [UIColor colorWithRGB:0xFFFFFF alpha:0.60];
-    numberLabel.font = [UIFont systemFontOfSize:12.f * ScreenScale weight:UIFontWeightRegular];
+    numberLabel.font = [UIFont systemFontOfSize:12.f weight:UIFontWeightRegular];
     [self.contentView addSubview:numberLabel];
 }
 
@@ -58,7 +58,7 @@
     [self.nameLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.mas_centerX);
         if (self.numberLabel.text.length > 0) {
-            make.top.mas_equalTo(self.mas_top).offset(14 * ScreenScale);
+            make.top.mas_equalTo(self.mas_top).offset(14);
         }else{
             make.centerY.mas_equalTo(self.mas_centerY);
         }
@@ -66,7 +66,7 @@
     
     [self.numberLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.mas_centerX);
-        make.bottom.mas_equalTo(self.mas_bottom).offset(-16 * ScreenScale);
+        make.bottom.mas_equalTo(self.mas_bottom).offset(-16);
     }];
     
     [self.actionBtn mas_remakeConstraints:^(MASConstraintMaker *make) {

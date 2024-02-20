@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		/cU5Mm2zaYFqOopcLQ3xx4uKA1M=
+		zFz0qCsjPTMlUI53rT4MoEvGjcE=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -26,11 +26,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bqVi9wlvaWU0G3sLoKwk6QJ/8qg=
+			+dxQjLtXxxlCvQIPy/mtzWW+3Qw=
 			</data>
 			<key>hash2</key>
 			<data>
-			CfFqqn5nc1kig/I+agilOSbHz9rP8MQmyZs1FEs8xXo=
+			VNzK0XoqJB3HJjQBTScrRzw7fU1lIjhu/pZib+nzx/s=
 			</data>
 		</dict>
 		<key>Headers/YLSCaptureDevice.h</key>
@@ -132,6 +132,17 @@
 			UGbi1z32DlgciQt8VC5Hopwl3BVbv/HgFTO5hFdCwxk=
 			</data>
 		</dict>
+		<key>Headers/YSLCallTool.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nl6UlF6jkziP9c7D21BcDObGC8k=
+			</data>
+			<key>hash2</key>
+			<data>
+			tG2hNSzTcljLkf5IkJWQ5v8sKznCyyykIVUuAToZBnE=
+			</data>
+		</dict>
 		<key>Headers/linkus_sdk.h</key>
 		<dict>
 			<key>hash</key>
@@ -147,11 +158,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/cU5Mm2zaYFqOopcLQ3xx4uKA1M=
+			zFz0qCsjPTMlUI53rT4MoEvGjcE=
 			</data>
 			<key>hash2</key>
 			<data>
-			I5jGNjZ14iw7G6PDfbOeFZKqmyll5cgcLKFhjLSOVZQ=
+			GUw+19suGMwOLnKo/BNhUPgMcd5efAHyzeQYRoXf71w=
 			</data>
 		</dict>
 	</dict>

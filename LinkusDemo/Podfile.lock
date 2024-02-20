@@ -1,8 +1,6 @@
 PODS:
   - DZNEmptyDataSet (1.8.1)
   - HWPanModal (0.8.9)
-  - linkus-sdk (1.1.3)
-  - linkus-sdk-MacOS (1.1.2)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.1)
   - SQLiteRepairKit (1.2.2):
@@ -20,8 +18,6 @@ PODS:
 DEPENDENCIES:
   - DZNEmptyDataSet (~> 1.8.1)
   - HWPanModal (~> 0.8.9)
-  - linkus-sdk (~> 1.1.3)
-  - linkus-sdk-MacOS (~> 1.1.2)
   - Masonry (~> 1.1.0)
   - ReactiveObjC (~> 3.1.1)
   - SVProgressHUD (~> 2.2.5)
@@ -33,8 +29,6 @@ SPEC REPOS:
   trunk:
     - DZNEmptyDataSet
     - HWPanModal
-    - linkus-sdk
-    - linkus-sdk-MacOS
     - Masonry
     - ReactiveObjC
     - SQLiteRepairKit
@@ -47,8 +41,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
-  linkus-sdk: 3048caa06c092d5570c3cd195d1d00837d6aaf81
-  linkus-sdk-MacOS: dfe3bdbdde69e1125de5ce244e9f1ad4a0f0c2a9
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
@@ -58,6 +50,6 @@ SPEC CHECKSUMS:
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 78feffcf218761ec3858222c0d335e1d5e372e6b
+PODFILE CHECKSUM: d3ecdeb9dea8daf7feb9dc50dd8ee3f9ee31fdd4
 
 COCOAPODS: 1.14.3

@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/YLSCallTool.h</key>
 		<data>
-		bqVi9wlvaWU0G3sLoKwk6QJ/8qg=
+		+dxQjLtXxxlCvQIPy/mtzWW+3Qw=
 		</data>
 		<key>Headers/YLSCaptureDevice.h</key>
 		<data>
@@ -48,17 +48,13 @@
 		<data>
 		OA8wqI1UgNnvCCN3HcRqX7siDcI=
 		</data>
-		<key>Headers/YSLCallTool.h</key>
-		<data>
-		nl6UlF6jkziP9c7D21BcDObGC8k=
-		</data>
 		<key>Headers/linkus_sdk.h</key>
 		<data>
 		c2bssdvZbOUANYq1ryKA2N09fGs=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OYuiGzbbmyZxe8cpKx1pKt9FvSI=
+		kiqa8km16K2LMkqsKPccxQ1cNF0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -78,11 +74,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bqVi9wlvaWU0G3sLoKwk6QJ/8qg=
+			+dxQjLtXxxlCvQIPy/mtzWW+3Qw=
 			</data>
 			<key>hash2</key>
 			<data>
-			CfFqqn5nc1kig/I+agilOSbHz9rP8MQmyZs1FEs8xXo=
+			VNzK0XoqJB3HJjQBTScrRzw7fU1lIjhu/pZib+nzx/s=
 			</data>
 		</dict>
 		<key>Headers/YLSCaptureDevice.h</key>
@@ -182,17 +178,6 @@
 			<key>hash2</key>
 			<data>
 			UGbi1z32DlgciQt8VC5Hopwl3BVbv/HgFTO5hFdCwxk=
-			</data>
-		</dict>
-		<key>Headers/YSLCallTool.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			nl6UlF6jkziP9c7D21BcDObGC8k=
-			</data>
-			<key>hash2</key>
-			<data>
-			tG2hNSzTcljLkf5IkJWQ5v8sKznCyyykIVUuAToZBnE=
 			</data>
 		</dict>
 		<key>Headers/linkus_sdk.h</key>
