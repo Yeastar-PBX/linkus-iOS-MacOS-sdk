@@ -132,10 +132,10 @@
 }
 
 - (void)hangupAction {
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:nil
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
                                                                    message:nil
                                                             preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction* deleteAction = [UIAlertAction actionWithTitle:@"Delete this participant" style:UIAlertActionStyleDestructive
+    UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"Delete this participant" style:UIAlertActionStyleDestructive
                                                          handler:^(UIAlertAction * action) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(adminTableViewCell:sipCall:hangupButton:)]) {
             [self.delegate adminTableViewCell:self sipCall:self.sipCall hangupButton:self.hangupBtn];
@@ -144,7 +144,15 @@
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
     [alert addAction:cancel];
     [alert addAction:deleteAction];
-    [TopestViewController presentViewController:alert animated:YES completion:nil];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        UIViewController *vc = TopestViewController;
+        alert.popoverPresentationController.sourceView = self.hangupBtn;
+        alert.popoverPresentationController.sourceRect = self.hangupBtn.bounds;
+        [vc presentViewController:alert animated:YES completion:nil];
+    }else{
+        [TopestViewController presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 - (void)setSipCall:(YLSSipCall *)sipCall {

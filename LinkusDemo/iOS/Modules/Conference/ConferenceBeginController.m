@@ -145,7 +145,13 @@
             }
             if (alert.actions.count > 0) {
                 [alert addAction:([UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil])];
-                [self presentViewController:alert animated:YES completion:nil];
+                if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+                    alert.popoverPresentationController.sourceView = self.topView;
+                    alert.popoverPresentationController.sourceRect = self.topView.bounds;
+                    [self presentViewController:alert animated:YES completion:nil];
+                }else{
+                    [self presentViewController:alert animated:YES completion:nil];
+                }
             }
         };
         YLSConfMember *member = self.confCall.confMembers[indexPath.row];
@@ -163,7 +169,7 @@
 #pragma mark - ConfTopViewDelegate
 - (void)clickAvatar {
     if ([self.confCall.host isEqualToString:[YLSSDK sharedYLSSDK].loginManager.ylsUserNumber]) {
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
         [alert addAction:[UIAlertAction actionWithTitle:@"Mute All" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
             [self showHUD];
             [[YLSSDK sharedYLSSDK].confManager operationConferenceMember:self.confCall.host confid:self.confCall.confid operationType:ConferenceOperationMuteAllMembers complete:^(NSError *error) {
@@ -185,7 +191,14 @@
             }];
         }]];
         [alert addAction:([UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil])];
-        [self presentViewController:alert animated:YES completion:nil];
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            alert.popoverPresentationController.sourceView = self.topView;
+            alert.popoverPresentationController.sourceRect = self.topView.bounds;
+            [self presentViewController:alert animated:YES completion:nil];
+        }else{
+            [self presentViewController:alert animated:YES completion:nil];
+        }
     }
 }
 
