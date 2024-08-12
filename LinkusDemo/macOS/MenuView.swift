@@ -12,6 +12,7 @@ enum Panel: Hashable {
     case callLogs
     case call
     case devices
+    case codec
 }
 
 struct MenuView: View {
@@ -106,6 +107,30 @@ struct MenuView: View {
                     }
                 } label: {
                     Text("输出设备")
+                }
+                NavigationLink(tag: Panel.codec, selection: $selection) {
+                    VStack(alignment: .leading, spacing: 16) {
+                        Button("ulaw") {
+                            
+                        }
+                        Button("alaw") {
+                            
+                        }
+                        Button("ilbc") {
+                            
+                        }
+                        Button("g722") {
+                            
+                        }
+                        Button("g729") {
+                            
+                        }
+                        Button("opus") {
+                            
+                        }
+                    }
+                } label: {
+                    Text("编解码")
                 }
             }
             .listStyle(SidebarListStyle())

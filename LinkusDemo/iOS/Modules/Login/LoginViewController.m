@@ -39,7 +39,7 @@
     userNameTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"用户名" attributes:@{NSForegroundColorAttributeName : [UIColor grayColor]}];
     userNameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     userNameTF.returnKeyType = UIReturnKeyDone;
-    userNameTF.text = @"1000";
+    userNameTF.text = @"1006";
     userNameTF.textColor = [UIColor grayColor];
     [self.view addSubview:userNameTF];
     
@@ -48,7 +48,7 @@
     passwordTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"密码" attributes:@{NSForegroundColorAttributeName : [UIColor grayColor]}];
     passwordTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     passwordTF.returnKeyType = UIReturnKeyDone;
-    passwordTF.text = @"eyJleHBpcmUiOjAsInNpZ24iOiJFLzBmY1J1YjZDVlhXdFNRWS8xQWpHMzRGNVBGUEw4cE52Zm4wNzA3K3BrPSIsInVzZXJuYW1lIjoiMTAwMCIsInZlcnNpb24iOiIxLjAifQ__";
+    passwordTF.text = @"eyJleHBpcmUiOjE3OTg3MzA3MzksInNpZ24iOiJHb2Y1TUVpbXN2ci9wdUtjd2g3ckdlTW1kTURIcXdMeUgvRFZFaU5vaW9VPSIsInVzZXJuYW1lIjoiMTAwNiIsInZlcnNpb24iOiIxLjAifQ__";
     passwordTF.secureTextEntry = YES;
     passwordTF.textColor = [UIColor grayColor];
     [self.view addSubview:passwordTF];
@@ -58,7 +58,7 @@
     localIPTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Local Hostname/IP" attributes:@{NSForegroundColorAttributeName : [UIColor grayColor]}];
     localIPTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     localIPTF.returnKeyType = UIReturnKeyDone;
-    localIPTF.text = @"192.168.21.252";
+    localIPTF.text = @"192.168.21.228";
     localIPTF.textColor = [UIColor grayColor];
     [self.view addSubview:localIPTF];
     
