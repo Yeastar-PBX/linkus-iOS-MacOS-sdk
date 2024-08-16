@@ -29,6 +29,7 @@ NSString *NotificationLogout = @"NotificationLogout";
     [YLSSDKConfig sharedConfig].iconTemplateImageData = UIImagePNGRepresentation([UIImage imageNamed:@"AppCallMaskIcon"]);
     [YLSSDKConfig sharedConfig].hangupAudioFileName = @"Hangup.wav";
     [YLSSDKConfig sharedConfig].alertAudioFileName = @"Alerting.wav";
+    [YLSSDKConfig sharedConfig].sipCode = [[NSUserDefaults standardUserDefaults] stringForKey:@"sipCode"];
 //    [YLSSDKConfig sharedConfig].logPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     [[YLSSDK sharedYLSSDK] initApp];
     [CallProvider shareCallProvider];

@@ -40,7 +40,7 @@
     }
     [self.view addSubview:tableView];
     
-    UISwitch *switcher = [[UISwitch alloc] initWithFrame:CGRectMake(16.0f, 350.0f, 64, 64)];
+    UISwitch *switcher = [[UISwitch alloc] initWithFrame:CGRectMake(16.0f, 400.0f, 64, 64)];
     [switcher addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
     switcher.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"CallWaiting"];
     [tableView addSubview:switcher];
@@ -70,6 +70,8 @@
     NSString *text = self.dataArr[indexPath.row];
     BOOL result = [YLSCallTool setCodec:text];
     if (result) {
+        [[NSUserDefaults standardUserDefaults] setValue:text forKey:@"sipCode"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         [self showHUDSuccessWithText:@"成功"];
     }else{
         [self showHUDErrorWithText:@"失败"];
@@ -78,7 +80,7 @@
 
 - (NSArray *)dataArr {
     if (!_dataArr) {
-        _dataArr = @[@"ulaw",@"alaw",@"ilbc",@"g722",@"g729"];
+        _dataArr = @[@"ulaw",@"alaw",@"ilbc",@"g722",@"g729",@"opus"];
     }
     return _dataArr;
 }
