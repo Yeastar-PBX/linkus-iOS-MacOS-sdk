@@ -111,22 +111,58 @@ struct MenuView: View {
                 NavigationLink(tag: Panel.codec, selection: $selection) {
                     VStack(alignment: .leading, spacing: 16) {
                         Button("ulaw") {
-                            
+                            let result = YLSCallTool.setCodec("ulaw")
+                            if (result) {
+                                UserDefaults().setValue("ulaw", forKey: "sipCode")
+                                print("成功")
+                            }else{
+                                print("失败")
+                            }
                         }
                         Button("alaw") {
-                            
+                            let result = YLSCallTool.setCodec("alaw")
+                            if (result) {
+                                UserDefaults().setValue("alaw", forKey: "sipCode")
+                                print("成功")
+                            }else{
+                                print("失败")
+                            }
                         }
                         Button("ilbc") {
-                            
+                            let result = YLSCallTool.setCodec("ilbc")
+                            if (result) {
+                                UserDefaults().setValue("ilbc", forKey: "sipCode")
+                                print("成功")
+                            }else{
+                                print("失败")
+                            }
                         }
                         Button("g722") {
-                            
+                            let result = YLSCallTool.setCodec("g722")
+                            if (result) {
+                                UserDefaults().setValue("g722", forKey: "sipCode")
+                                print("成功")
+                            }else{
+                                print("失败")
+                            }
                         }
                         Button("g729") {
-                            
+                            let result = YLSCallTool.setCodec("g729")
+                            if (result) {
+                                UserDefaults().setValue("g729", forKey: "sipCode")
+                                print("成功")
+                            }else{
+                                print("失败")
+                            }
                         }
                         Button("opus") {
-                            
+                            let result = YLSCallTool.setCodec("opus")
+                            if (result) {
+                                UserDefaults().setValue("opus", forKey: "sipCode")
+                                print("成功")
+                            }else{
+                                print("失败")
+                            }
                         }
                     }
                 } label: {

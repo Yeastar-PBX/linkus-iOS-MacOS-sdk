@@ -31,6 +31,7 @@ final class YLSSDKData: NSObject, ObservableObject, MacCallProviderDelegate{
         YLSSDKConfig.shared().hangupAudioFileName = "Hangup.wav"
         YLSSDKConfig.shared().alertAudioFileName = "Alerting.wav"
         YLSSDKConfig.shared().comeAudioFileName = "incoming.wav"
+        YLSSDKConfig.shared().sipCode = UserDefaults().string(forKey: "sipCode") ?? ""
 //        YLSSDKConfig.shared().dataPath =  NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first ?? ""
 //        YLSSDKConfig.shared().logPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first ?? ""
         YLSSDK.shared().initApp()
