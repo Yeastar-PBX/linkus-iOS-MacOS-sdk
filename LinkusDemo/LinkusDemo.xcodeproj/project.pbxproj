@@ -46,10 +46,6 @@
 		5902A03429D5887600E41926 /* QualityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5902A02929D5887600E41926 /* QualityView.m */; };
 		5902A03C29D58C7500E41926 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5902A03B29D58C7500E41926 /* Storyboard.storyboard */; };
 		592196B72C6F1C000092FC4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5902A00E29D5849E00E41926 /* UIKit.framework */; };
-		592196BC2C6F1DD00092FC4E /* linkus_sdk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592196BB2C6F1DD00092FC4E /* linkus_sdk_iOS.framework */; };
-		592196BD2C6F1DD00092FC4E /* linkus_sdk_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 592196BB2C6F1DD00092FC4E /* linkus_sdk_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		592196F32C6F43610092FC4E /* linkus_sdk_MacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592196F22C6F43610092FC4E /* linkus_sdk_MacOS.framework */; };
-		592196F42C6F43610092FC4E /* linkus_sdk_MacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 592196F22C6F43610092FC4E /* linkus_sdk_MacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		592B35842A529303009CD7AA /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592B35832A529303009CD7AA /* TabBarController.m */; };
 		592B35882A529C26009CD7AA /* ConferenceListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592B35872A529C26009CD7AA /* ConferenceListController.m */; };
 		592B358B2A52B6EE009CD7AA /* ConferenceDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592B358A2A52B6EE009CD7AA /* ConferenceDetailsController.m */; };
@@ -96,7 +92,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				592196BD2C6F1DD00092FC4E /* linkus_sdk_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,7 +102,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				592196F42C6F43610092FC4E /* linkus_sdk_MacOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,9 +186,6 @@
 		5902A03B29D58C7500E41926 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		5902AED529D6A8CF00E41926 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
 		5902AEF929D6AC0E00E41926 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
-		592196B32C6F1BFD0092FC4E /* linkus_sdk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_sdk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		592196BB2C6F1DD00092FC4E /* linkus_sdk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_sdk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		592196F22C6F43610092FC4E /* linkus_sdk_MacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_sdk_MacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		592B35822A529303009CD7AA /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		592B35832A529303009CD7AA /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		592B35862A529C26009CD7AA /* ConferenceListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConferenceListController.h; sourceTree = "<group>"; };
@@ -212,7 +203,6 @@
 		59438CA229E52E8500B4DAA7 /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
 		59438CF229E7D19700B4DAA7 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		59438CF429E7D47300B4DAA7 /* LinkusDemo (macOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinkusDemo (macOS)-Bridging-Header.h"; sourceTree = "<group>"; };
-		596A541B2B60A467007BDA5E /* linkus_sdk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = linkus_sdk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		596A54202B60B951007BDA5E /* MeListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeListViewController.h; sourceTree = "<group>"; };
 		596A54212B60B951007BDA5E /* MeListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeListViewController.m; sourceTree = "<group>"; };
 		5985CA3A29ECEC8A003E9616 /* LinkusDemo--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LinkusDemo--macOS--Info.plist"; sourceTree = "<group>"; };
@@ -270,7 +260,6 @@
 				5987172429DEE44C0023936C /* libxml2.tbd in Frameworks */,
 				5985CA9729F227D6003E9616 /* libresolv.tbd in Frameworks */,
 				2BE5155D5E10355681017F16 /* libPods-LinkusDemo (iOS).a in Frameworks */,
-				592196BC2C6F1DD00092FC4E /* linkus_sdk_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +270,6 @@
 				59438CA429E52ED200B4DAA7 /* libxml2.tbd in Frameworks */,
 				59438CA329E52E9200B4DAA7 /* libcurl.tbd in Frameworks */,
 				09E52C35BD828145EE22E620 /* libPods-LinkusDemo (macOS).a in Frameworks */,
-				592196F32C6F43610092FC4E /* linkus_sdk_MacOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,10 +594,6 @@
 		5937A8EC29D5778F0089B0A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				592196F22C6F43610092FC4E /* linkus_sdk_MacOS.framework */,
-				592196BB2C6F1DD00092FC4E /* linkus_sdk_iOS.framework */,
-				592196B32C6F1BFD0092FC4E /* linkus_sdk_iOS.framework */,
-				596A541B2B60A467007BDA5E /* linkus_sdk_iOS.framework */,
 				5985CA9629F227CB003E9616 /* libresolv.tbd */,
 				59438CA229E52E8500B4DAA7 /* libcurl.tbd */,
 				5902AEF929D6AC0E00E41926 /* libc++.tbd */,

@@ -1,6 +1,7 @@
 inhibit_all_warnings!
 
 install! 'cocoapods', :deterministic_uuids => false
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'LinkusDemo (iOS)' do
 platform :ios, '11.0'
