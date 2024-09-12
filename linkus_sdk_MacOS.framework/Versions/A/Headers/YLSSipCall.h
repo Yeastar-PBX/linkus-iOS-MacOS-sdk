@@ -44,24 +44,54 @@ typedef void(^hasAnswerCallSuc)(void);
 
 @interface YLSSipCall : NSObject
 
+/**
+ *  通话号码
+ */
 @property (nonatomic,copy)    NSString *callNumber;
 
+/**
+ *  通话号码匹配到的联系人
+ */
 @property (nonatomic,strong)  id<YLSContactProtocol> contact;
 
+/**
+ *  服务器返回的来电显示名字
+ */
 @property (nonatomic,copy)   NSString *serverName;
 
+/**
+ *  本地静音状态
+ */
 @property (nonatomic,assign) BOOL mute;
 
+/**
+ *  远程静音状态
+ */
 @property (nonatomic,assign) BOOL remoteMute;
 
+/**
+ *  Hold状态
+ */
 @property (nonatomic,assign) BOOL onHold;
 
+/**
+ *  当前通话状态
+ */
 @property (nonatomic,assign)  CallStatus status;
 
+/**
+ *  通话挂断类型
+ */
 @property (nonatomic,assign)  HangUpType hangUpType;
 
+/**
+ *  通话开始时间
+ */
 @property (nonatomic,assign) NSTimeInterval durationTime;
 
+/**
+ *  被Hold住时间戳
+ */
 @property (nonatomic,assign) NSTimeInterval holdTime;
 
 

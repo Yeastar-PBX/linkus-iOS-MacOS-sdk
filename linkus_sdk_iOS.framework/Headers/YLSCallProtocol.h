@@ -44,11 +44,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)callManager:(YLSCallManager *)callManager callInfoStatus:(NSMutableArray<YLSSipCall *> *)currenCallArr;
 
 /**
- *  Sip错误码
- */
-- (void)callManager:(YLSCallManager *)callManager callFaild:(NSError *)error;
-
-/**
  *  录音状态
  */
 - (void)callManagerRecordType:(YLSCallManager *)callManager;
@@ -58,6 +53,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)callManager:(YLSCallManager *)callManager callid:(int)callid callQuality:(BOOL)quality;
 
+@required
+/**
+ *  Sip错误码
+ */
+- (void)callManager:(YLSCallManager *)callManager callFaild:(NSError *)error;
 /**
  *  呼叫等待回调
  */

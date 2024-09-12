@@ -37,6 +37,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 呼叫等待声音频文件
 @property (nonatomic,copy) NSString *alertAudioFileName;
 
+/// 编码
+@property (nonatomic,copy) NSString *sipCode;
+
 @end
 
 NS_ASSUME_NONNULL_END

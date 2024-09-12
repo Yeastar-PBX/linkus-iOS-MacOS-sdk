@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/YLSCallProtocol.h</key>
 		<data>
-		wlwJknxk1euvgf34+dgsiM64JD0=
+		2nR50tEsNo3txKICc+rKlQgV6xo=
 		</data>
 		<key>Headers/YLSCallTool.h</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Headers/YLSSDKConfig.h</key>
 		<data>
-		tjvAW/0nBJunUQXufDXW1+aMgu0=
+		50BJmJbg8KRwLfP5tuYWZ7KlwnM=
 		</data>
 		<key>Headers/YLSSipCall.h</key>
 		<data>
-		OA8wqI1UgNnvCCN3HcRqX7siDcI=
+		hf9C1xZfYbIbSxoeEttwJsc26SY=
 		</data>
 		<key>Headers/linkus_sdk.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		kiqa8km16K2LMkqsKPccxQ1cNF0=
+		SjvidIunqyiL1NnOPIZw8ZiSpms=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -63,11 +63,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wlwJknxk1euvgf34+dgsiM64JD0=
+			2nR50tEsNo3txKICc+rKlQgV6xo=
 			</data>
 			<key>hash2</key>
 			<data>
-			zMrGqD+dXJQnrqNmV5EeDk3fiJZxR9FtGWGV56p7Zug=
+			Bb/ujANzZMsLF65IJKHFIy2UEqriREAo175Ouzhww7Y=
 			</data>
 		</dict>
 		<key>Headers/YLSCallTool.h</key>
@@ -162,22 +162,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tjvAW/0nBJunUQXufDXW1+aMgu0=
+			50BJmJbg8KRwLfP5tuYWZ7KlwnM=
 			</data>
 			<key>hash2</key>
 			<data>
-			MC5m7ufvPoRx6+Mnn3CWkTnWOGjxI+RcK+isg1OfB7c=
+			24+izzC3qlfkqjJYXonMBnEapBm93DOmsf/aLN5mg4U=
 			</data>
 		</dict>
 		<key>Headers/YLSSipCall.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OA8wqI1UgNnvCCN3HcRqX7siDcI=
+			hf9C1xZfYbIbSxoeEttwJsc26SY=
 			</data>
 			<key>hash2</key>
 			<data>
-			UGbi1z32DlgciQt8VC5Hopwl3BVbv/HgFTO5hFdCwxk=
+			PdiAg5LPDjJJWojNcFup1/64nP+LQ2qXSB7MPceADqk=
 			</data>
 		</dict>
 		<key>Headers/linkus_sdk.h</key>
