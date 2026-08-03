@@ -6,17 +6,13 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		/cU5Mm2zaYFqOopcLQ3xx4uKA1M=
+		PB+UufHyJRmQtX7AYFTpHQGa1Wc=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Headers/YLSCallProtocol.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			DL7Vxlsw+Kvk9o1D7u2VeKZo7mE=
-			</data>
 			<key>hash2</key>
 			<data>
 			GoJKudMEXj5o75h1iagQ6IYeIINfjbdWNGd3fhyKFHI=
@@ -24,10 +20,6 @@
 		</dict>
 		<key>Headers/YLSCaptureDevice.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			iVIakS9x+YwvKoB+aoKlknPkRUE=
-			</data>
 			<key>hash2</key>
 			<data>
 			IIi2zBMtXeI/V3hS7Uv/V6rgo8wiuM8zs6rvSXFaG6A=
@@ -35,10 +27,6 @@
 		</dict>
 		<key>Headers/YLSHistory.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			QDlkz06BAflmJzq51g/rdFvM9H4=
-			</data>
 			<key>hash2</key>
 			<data>
 			GRTymTEYgeFWX9TC2Qi4zoEYBebN1Ia3KyIxmMrn8Ac=
@@ -46,10 +34,6 @@
 		</dict>
 		<key>Headers/YLSLoginProtocol.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			QwlYpiSVYFDdc8Dt6TseatJIhIE=
-			</data>
 			<key>hash2</key>
 			<data>
 			mR2wPI8zA52EO1FarwYSC3obRyOTq8TNbve5h1anigQ=
@@ -57,10 +41,6 @@
 		</dict>
 		<key>Headers/YLSSDK.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			gFtnJgT3vdg18nAzajWFlMUFFbI=
-			</data>
 			<key>hash2</key>
 			<data>
 			m9hbximTkmVbOJarVFVsPmeFcSeZ6KI7BgyoMw9EMww=
@@ -68,10 +48,6 @@
 		</dict>
 		<key>Headers/YLSSDKConfig.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			tjvAW/0nBJunUQXufDXW1+aMgu0=
-			</data>
 			<key>hash2</key>
 			<data>
 			MC5m7ufvPoRx6+Mnn3CWkTnWOGjxI+RcK+isg1OfB7c=
@@ -79,10 +55,6 @@
 		</dict>
 		<key>Headers/YLSSipCall.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			tmMoCZ8Qi8Z/58DVF+Co3M8pr4k=
-			</data>
 			<key>hash2</key>
 			<data>
 			R7jEo+2w79l8Z0WDN5TeSk+tpFe/g4p56SxAOhcpvvc=
@@ -90,10 +62,6 @@
 		</dict>
 		<key>Headers/YSLCallTool.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			nl6UlF6jkziP9c7D21BcDObGC8k=
-			</data>
 			<key>hash2</key>
 			<data>
 			tG2hNSzTcljLkf5IkJWQ5v8sKznCyyykIVUuAToZBnE=
@@ -101,10 +69,6 @@
 		</dict>
 		<key>Headers/linkus_sdk.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			RNQdBNypKBbjf7czgp+iDrnKo6k=
-			</data>
 			<key>hash2</key>
 			<data>
 			Z2ZBpAWWuZmfnv+DbrfUERHqhqGn61RpDS5Pnu1UJK0=
@@ -112,13 +76,9 @@
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/cU5Mm2zaYFqOopcLQ3xx4uKA1M=
-			</data>
 			<key>hash2</key>
 			<data>
-			I5jGNjZ14iw7G6PDfbOeFZKqmyll5cgcLKFhjLSOVZQ=
+			06RhNxhfUel0eocuFKJrcfFPPKMHpvNN6AAZjJFUMMU=
 			</data>
 		</dict>
 	</dict>
