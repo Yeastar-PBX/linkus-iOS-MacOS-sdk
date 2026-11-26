@@ -23,3 +23,18 @@ platform :osx, '10.13'
 #    pod 'SDWebImageSwiftUI'
     pod 'linkus-sdk-MacOS', '~> 1.2.1'
 end
+
+# WCDB 1.0.7.5 使用 std::list<const T> / std::initializer_list<const T>（非法 C++），
+# 新版 Xcode 的 libc++ 已不再容忍，统一去掉元素类型上的 const。
+post_install do |installer|
+  wcdb_dir = File.join(installer.sandbox.root, 'WCDB', 'objc')
+  next unless File.directory?(wcdb_dir)
+  Dir.glob(File.join(wcdb_dir, '**/*.{h,hpp,cpp,mm}')).each do |path|
+    content = File.read(path)
+    patched = content.gsub('std::list<const ', 'std::list<')
+                     .gsub('std::initializer_list<const ', 'std::initializer_list<')
+    next if patched == content
+    File.write(path, patched)
+    Pod::UI.puts "Patched const containers in #{path}"
+  end
+end
